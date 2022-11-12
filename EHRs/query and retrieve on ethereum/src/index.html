@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Images Center(Radiology)</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Images Center(Radiology)</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div id="petsRow" class="row">
+        <!-- PETS LOAD HERE -->
+      </div>
+    </div>
+
+    <div id="petTemplate" style="display: none;">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="panel panel-default panel-pet">
+          <div class="panel-heading">
+            <h3 class="panel-title">Scrappy</h3>
+          </div>
+          <div class="panel-body">
+            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;" src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
+            <br/><br/>
+   <strong>Breed</strong>: <span class="pet-breed">Golden Retriever</span><br/>
+            <strong>Age</strong>: <span class="pet-age">3</span><br/>
+            <strong>Location</strong>: <span class="pet-location">Warren, MI</span><br/><br/>
+            <button class="btn btn-default btn-query" type="button" data-id="0">Query</button>
+             <button class="btn btn-default btn-retreive" type="button" data-id="0">Retreive</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form id="myform" type="post">
+  <fieldset>
+    <legend>ADD  YOUR OWN ENTRY  </legend>
+    <p>We would love to hear from you. Please fill out this form</p>
+    <div class="elements">
+      <label for="name">Name :</label>
+      <input  required="required" type="text"  value="abc" name="fname"  size="20"  />
+    </div>
+	 <div class="elements">
+      <label for="Age">Age :</label>
+      <input required="required" type="number" value="29" id="age" name="age" size="10" />
+    </div>	
+    <div class="elements">
+      <label for="pro"> Category:</label>
+	  <input required="required" type="text" value="X-Ray" id="breed" name="breed" size="10" />
+   </select>
+    </div>  
+      <div class="elements">
+      <label for="pro"> Location:</label>
+	  <input required="required" type="text" value="Loc:" id="loc" name="loc" size="10" />
+   </select>
+    </div> 	
+		<input type="file" onchange="previewFile()"><br>
+
+    
+   
+    <div class="submit">
+       <input type="submit" id="btn" name="btn" class="btn" value="Submit" />
+    </div>
+
+  </fieldset>
+</form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+console.log(file);
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();
+      </script>
+
+
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+  $("#btn").click(function(e){
+	 var jsonData = {};
+	 
+   var formData = $("#myform").serializeArray();
+  // console.log(formData);
+   
+   $.each(formData, function() {
+        if (jsonData[this.name]) {
+           if (!jsonData[this.name].push) {
+               jsonData[this.name] = [jsonData[this.name]];
+              
+           }
+           jsonData[this.name].push(this.value || '');
+       } else {
+           jsonData[this.name] = this.value || '';
+       }
+	       
+	   
+   });
+   console.log(jsonData);
+  
+	$.ajax(
+	{
+		url : "action.php",
+		type: "POST",
+		data : jsonData,
+		
+	});
+    e.preventDefault();	
+});
+});
+</script>
+  </body>
+</html>

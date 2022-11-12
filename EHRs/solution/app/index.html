@@ -1,0 +1,613 @@
+<!--
+For HealthChainHack, Sep 2018
+Author: Xinghua Liang
+Copyright: BlockTEST LLC
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI4AI</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="mobile-web-app-capable">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+        integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css">
+
+  <script src="./app.js"></script>
+</head>
+<body>
+   <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+
+     <button class="navbar-toggler" type="button"
+             data-toggle="collapse" data-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent" aria-expanded="false"
+             aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <a class="navbar-brand" href="#">
+       <span style="color:teal"><b>AI<i>4</i>AI</b></span>
+     </a>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div>
+       <ul class="navbar-nav nav nav-pills" id="myTab" role="tablist">
+         <li class="nav-item">
+           <a class="nav-link active" id="home-tab" data-toggle="tab"
+              href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" id="profile-tab" data-toggle="tab"
+              href="#profile" role="tab"
+              aria-controls="profile" aria-selected="false">Tokens</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" id="tasks-tab" data-toggle="tab"
+              href="#tasks-pane" role="tab"
+              aria-controls="tasks-pane" aria-selected="false">Tasks</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" id="steps-tab" data-toggle="tab"
+              href="#steps-pane" role="tab"
+              aria-controls="steps-pane" aria-selected="false">Steps</a>
+         </li>
+       </ul>
+       </div>
+     </div>
+   </nav>
+
+   <div class="tab-content container-fluid" style="margin: 0; padding: 0">
+
+     <div class="modal fade" id="legitimationPanel" role="dialog"
+          tabindex="-1" data-backdrop="static" backdrop="static">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title">Authenticate</h5>
+           </div>
+           <div class="modal-body">
+             <div class="alert alert-info alert-dismissible">
+               <span id="legiStatus">
+                 Requires MetaMask for authentication.
+               </span>
+               <button type="button" class="close" data-dismiss="alert"
+                       aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+             <p>
+               <div class "input-group mb-3">
+                 <div class="custom-file">
+                   <label class="custom-file-label" for="legiFile"
+                          style="width:15em">Agreement</label>
+                   <input class="custom-file-input" type="file" id="legiFile"
+                          accept="*.*" onChange="App.openLegalFile(event)"></input>
+                 </div>
+               </div>
+             </p>
+             <p>
+               <div class="form-group mb-3">
+                 <label for="hashCode">SHA-256 Hash:</label>
+                 <input class="form-control" type="text" id="hashCode"
+                        readonly="true"></input>
+               </div>
+             </p>
+             <div class="form-group">
+               <label for="hashSign">Hash Signature:</label>
+               <input class="form-control" type="text" id="hashSign"
+                      readonly="true"
+                      placeholder="Filled in after validating the agreement in MetaMask"></input>
+             </div>
+             <div class="form-group">
+               <label for="fileURL">Agreement URL:</label>
+               <input class="form-control" type="text" id="fileURL"
+                      defaultValue="https://github.com/TerjeNorderhaug/ai4ai/blob/master/legal_agreement.docx"
+                      value="https://github.com/TerjeNorderhaug/ai4ai/blob/master/legal_agreement.docx"
+                      placeholder="Save agreement to cloud, and input share link here"></input>
+             </div>
+           </div>
+           <div class="modal-footer">
+             <button class="btn btn-primary btn-block" id="sign"
+                     type="button" role="button"
+                     disabled="true"
+                     onclick="App.signAgreement()">
+               Submit
+             </button>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- Home Pane -->
+     <div class="tab-pane fade show active" id="home" role="tabpanel"
+          aria-labelledby="home-tab">
+       <div class="row" style="margin-top: 0.2em">
+         <div class="col">
+           <div class="card text-white bg-info mb-3 mx-auto"
+                style="max-width: 18rem;">
+             <div class="card-header">
+               <div class="card-title">Workflow</div>
+             </div>
+             <div class="card-body">
+               <ol class="list-group list-group-flush">
+                 <li class="list-group-item">Collect Patient Data</li>
+                 <li class="list-group-item">Discover Biomarkers</li>
+                 <li class="list-group-item">Propose Pathways</li>
+                 <li class="list-group-item">Develop Therapies</li>
+                 <li class="list-group-item">Deliver Treatments</li>
+               </ol>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- Loyality Token Panel (top level) -->
+     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+       <div id="loyaltyTokenPanel">
+         <div>
+           <div class="row" style="margin-top: 0.2em">
+             <div class="col" id="tokenInitialization">
+               <div class="card">
+                 <div class="card-header">
+                   <h4 class="card-title">Reward Token Initialization</h4>
+                 </div>
+                 <div class="card-body">
+                   <label for="initSupply">Total Supply:</label>
+                   <input class="form-control" type="text" id="initSupply" placeholder="e.g., 1000000"></input>
+                   <div class="form-group">
+                     <label for="initBonus">Bonus Tokens:</label>
+                     <input class="form-control" type="text" id="initBonus" placeholder="e.g., 10000"></input>
+                   </div>
+                   <div class="form-group">
+                     <label for="initName">Token Name:</label>
+                     <input class="form-control" type="text" id="initName" placeholder="e.g., Loyalty Token"></input>
+                   </div>
+                   <div class="form-group">
+                     <label for="initSymbol">Token Symbol:</label>
+                     <input class="form-control" type="text" id="initSymbol" placeholder="e.g., LT"></input>
+                   </div>
+
+                   <button class="btn btn-primary" id="initToken" onclick="App.initLoyaltyToken()">
+                     Initialize Loyalty Token
+                   </button>
+                 </div>
+               </div>
+             </div>
+
+
+             <div class="col">
+               <div class="card">
+                 <div class="card-header">
+                   <h4 class="card-title">Token Availability</h4>
+                 </div>
+                 <div class="card-body">
+                     Total Supply: <span id="totalSupply"></span><br>
+                     Bonus Tokens: <span id="bonusToken"></span>
+                 </div>
+               </div>
+               <div class="card">
+                 <!--
+                 <div class="card-header">
+                   <h4 class="card-title">Account</h4>
+                 </div>
+                 -->
+                 <div class="card-body">
+                     Account: <span id="accountAddress"></span><br>
+                     Balance: <span id="accountBalance"></span>
+                 </div>
+               </div>
+               <div class="card">
+                 <div class="card-header">
+                   <h4 class="card-title">Reward Contributor</h4>
+                 </div>
+                 <div class="card-body">
+                   <div class="form-group">
+                     <label for="amount">Amount Tokens:</label>
+                     <input class="form-control" type="text" id="amount" placeholder="e.g., 100"></input>
+                   </div>
+                   <label for="receiver">To Address:</label>
+                   <div class="input-group">
+                     <input class="form-control" type="text" id="receiver"
+                            placeholder="e.g., 0xdf8114c4f533f72ea1bafafb7ca1836c54dbd3cc"></input>
+                     <div class="input-group-append">
+                       <button class="btn btn-success" id="sendToken"
+                               onclick="App.sendLoyaltyToken()">Send</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- Tasks Pane -->
+     <div class="tab-pane fade" role="tabpanel" aria-labelledby="tasks-tab"
+          id="tasks-pane">
+      <div id="taskManagementPanel">
+       <div class="row" style="margin-top: 0.2em">
+         <div class="col-md-6">
+           <div class="card" id="taskInitialization">
+             <div class="card-header">
+               <h4 class="card-title">Task Initialization</h4>
+             </div>
+             <div class="card-body">
+               <div class="form-group">
+                 <label for="initSupply">Tool Name:</label>
+                 <input class="form-control" type="text" id="initToolName" placeholder="e.g., ADMET"></input>
+                 <label for="initPlayerSalary">Contributor Salary:</label>
+                 <input class="form-control" type="text" id="initPlayerSalary"
+                        placeholder="Unit: ETH, e.g., 1"></input>
+               </div>
+               <button class="btn btn-primary" id="initTask"
+                       onclick="App.initTaskManage()">Initialize Task</button>
+             </div>
+           </div>
+
+           <div class="card">
+             <div class="card-header">
+               <h4 class="card-title">Task</h4>
+             </div>
+             <div class="card-body">
+               <p>Task Address: <span id="taskAddress"></span></p>
+               <p>Task Balance: <span id="taskBalance"></span> ETH</p>
+               <p>Task Name: <span id="taskName"></span><br>
+                  Tool Name: <span id="toolName"></span></p>
+               <p>Player Salary: <span id="playerSalary"></span> ETH</p>
+             </div>
+           </div>
+         </div>
+
+         <div class="col-md-6">
+           <div class="card">
+             <div class="card-header">
+               <h4 class="card-title">Contributors</h4>
+             </div>
+             <ul id="playerList"></ul>
+           </div>
+
+           <div class="card">
+             <div class="card-header">
+               <h4 class="card-title">Data Requests</h4>
+             </div>
+             <ul id="dataReqPool"></ul>
+           </div>
+
+           <div class="card">
+             <div class="card-header">
+               <h4 class="card-title">Data Access</h4>
+             </div>
+             <div class="card-body">
+               <div class="form-group">
+                 <label for="dataAccessCode">Data Access Code:</label>
+                 <div class="input-group mb-3">
+                   <input class="form-control" type="text" id="dataAccessCode"
+                          placeholder="If you don't have one, click generate"></input>
+                   <div class="input-group-append">
+                     <button class="btn btn-secondary" id="generateDataCode"
+                             onclick="App.generateDataCode()">Generate Code</button>
+                   </div>
+                 </div>
+                 <label for="comPublicKey">Public Key:</label>
+                 <input class="form-control" type="text" id="comPublicKey" readonly="true"></input>
+                 <label for="playerId">Player ID:</label>
+                 <input class="form-control" type="text" id="playerId"
+                        placeholder="Player ID to be approved"></input>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+     </div>
+
+     <!-- Steps pane -->
+     <div class="tab-pane fade" role="tabpanel" aria-labelledby="steps-tab"
+          id="steps-pane">
+       <div id="toolPlayerPanel">
+         <div class="row" style="margin-top: 0.2em">
+           <div class="col-md-6">
+
+             <div class="card">
+               <div class="card-header">
+                 <h4 class="card-title">
+                   <span class="badge badge-pill badge-info">1</span>
+                   Request Task
+                 </h4>
+               </div>
+               <div class="card-body">
+                 <div class="alert alert-info">Contributor should generate data access code,
+                   and submit request to accept the task.
+                   Then wait for task owner to approve the request</div>
+                 <button class="btn btn-primary" id="submitPlayerRequest"
+                         onclick="App.submitPlayerRequest()">Request Task</button>
+               </div>
+               <div class="card-header">
+                 <h4 class="card-title">
+                   <span class="badge badge-pill badge-info">2</span>
+                   Retrieve Task
+                 </h4>
+               </div>
+               <div class="card-body">
+                 <div class="alert alert-info">
+                   Contributor should enter data access code and player id,
+                   locate input data, decrypte input data,
+                   do AI computation with the input data.
+                 </div>
+                 <div id="playerDecryptPanel">
+                   <p>
+                     <!--<label for="playerDataDecryptURL">Data Cloud URL</label>-->
+                     <div class="input-group">
+                       <div class="input-group-prepend">
+                         <button class="btn btn-primary" id="getDataInfo"
+                                 onclick="App.getDataInfo()">Locate Input Data</button>
+                       </div>
+                       <input class="form-control" type="text" id="playerDataDecryptURL"
+                              readonly="true" placeholder="url will show after decrypting data">
+                     </div>
+                   </p>
+
+                   <p>
+                     <!--<label for="playerDataDecryptHash">Encrypted Data Hash</label>-->
+                     <div class="input-group">
+                       <div class="input-group-prepend">
+                         <span class="input-group-text">Data Hash</span>
+                       </div>
+                       <input class="form-control" type="text" id="playerDataDecryptHash"
+                              readonly="true" placeholder="will show after decrypting data"></input>
+                     </div>
+                   </p>
+
+                   <p>
+                     <div class="custom-file">
+                       <label class="custom-file-label" for="openDecryptedFile">Data File:</label>
+                       <input class="custom-file-input" type="file" id="openDecryptedFile" accept="*.*"
+                              onChange="App.openDataFile(event)"></input>
+                     </div>
+                   </p>
+                   <button class="btn btn-success" id="decryptDataFile"
+                           onclick="App.decryptDataFile()">Decrypt Data</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-md-6">
+             <div class="card">
+               <div class="card-header">
+                 <h4 class="card-title">
+                   <span class="badge badge-pill badge-info">3</span>
+                   Provide Task Result
+                 </h4>
+               </div>
+               <div class="card-body">
+                 <div class="alert alert-info">
+                   Contributor should
+                   locate result request, encrypt result data,
+                   and submit to blockchain with result value.
+                   Then wait for task owner to validate the result</div>
+                 <div id="playerEncryptPanel">
+                   <label for="playerEncryptCode">Data Encrypt Code:</label>
+                   <div class="input-group">
+                     <div class="input-group-prepend">
+                       <button class="btn btn-primary" id="getPlayerEncryptCode"
+                               onclick="App.getEncryptCode()">Locate Result Request</button>
+                     </div>
+                     <input class="form-control" type="text" id="playerEncryptCode"
+                            readonly="true" placeholder="Obtained from blockchain"></input>
+                   </div>
+
+                   <p>
+                     <div class="custom-file">
+                       <label class="custom-file-label" for="openDataFile">Result data file</label>
+                       <input class="custom-file-input" type="file" id="openDataFile" accept="*.*"
+                              onChange="App.openDataFile(event)"></input>
+                     </div>
+                   </p>
+
+                   <p>
+                     <label for="playerDataEncryptHash">Encrypted Data Hash:</label>
+                     <div class="input-group">
+                       <div class="input-group-prepend">
+                         <button class="btn btn-primary" id="encryptDataFile"
+                                 onclick="App.encryptDataFile()">Encrypt Data</button>
+                       </div>
+                       <input class="form-control" type="text" id="playerDataEncryptHash"
+                              readonly="true" placeholder="will show after encrypting result data"></input>
+                     </div>
+                   </p>
+
+                   <p>
+                     <label for="playerDataEncryptURL">Data Cloud URL:</label>
+                     <input class="form-control" type="text" id="playerDataEncryptURL"
+                            placeholder="Save encrypted file to cloud, and input share link here"></input>
+                   </p>
+                 </div>
+                 <p>
+                   <label for="playerResult">Result Value:</label>
+                   <input class="form-control" type="text" id="playerResult"
+                          placeholder="Final result"></input>
+                 </p>
+                 <p>
+                   <button class="btn btn-success" id="submitPlayerResult"
+                           onclick="App.submitPlayerResult()">Submit Result</button>
+                 </p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div id="taskOwnerPanel">
+         <div class="row row-eq-height">
+           <div class="col-md-6">
+             <!-- For Task Owner: -->
+             <div class="card" id="ownerEncryptPanel">
+               <div class="card-header">
+                 <h4 class="card-title">
+                   <span class="badge badge-pill badge-info">1</span>
+                   Process Request
+                 </h4>
+               </div>
+               <div class="card-body">
+                 <div class="alert alert-info">
+                   Task owner should generate data access code, enter player id,
+                   encrypt input data, upload encrypted data to cloud,
+                   then approve contributor's request.</div>
+                 <label for="ownerEncryptCode">Data Encrypt Code:</label>
+                 <div class="input-group">
+                   <div class="input-group-prepend">
+                     <button class="btn btn-primary" id="getOwnerEncryptCode"
+                             onclick="App.getEncryptCode()">Locate Data Request</button>
+                   </div>
+                   <input class="form-control" type="text" id="ownerEncryptCode"
+                          readonly="true" placeholder="Obtained from blockchain"></input>
+                 </div>
+                 <p>
+                   <div class="form-group">
+                     <div class="custom-file">
+                       <label class="custom-file-label" for="openDataFile">Data File:</label>
+                       <input class="custom-file-input" type="file" id="openDataFile" accept="*.*"
+                              onChange="App.openDataFile(event)"></input>
+                     </div>
+                   </div>
+                 </p>
+
+                 <p>
+                   <label for="ownerDataEncryptHash">Encrypted Data Hash:</label>
+                   <div class="input-group">
+                     <div class="input-group-prepend">
+                       <button class="btn btn-primary" id="encryptDataFile"
+                               onclick="App.encryptDataFile()">Encrypt Data</button>
+                     </div>
+                     <input class="form-control" type="text" id="ownerDataEncryptHash"
+                            readonly="true" placeholder="will show after encrypting data"></input>
+                   </div>
+                 </p>
+
+                 <p>
+                   <label for="ownerDataEncryptURL">Data Cloud URL:</label>
+                   <div class="input-group mb-3">
+                     <input class="form-control" type="text" id="ownerDataEncryptURL"
+                            placeholder="Save encrypted file to cloud, and input share link here"></input>
+                     <div class="input-group-append">
+                       <button class="btn btn-success" id="approvePlayerRequest"
+                               type="button"
+                               onclick="App.approvePlayerRequest()">
+                         Approve</button>
+                     </div>
+                   </div>
+                 </p>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-md-6">
+             <div class="card">
+               <div class="card-header">
+                 <h4 class="card-title">
+                   <span class="badge badge-pill badge-info">2</span>
+                   Process Result
+                 </h4>
+               </div>
+               <div class="card-body">
+                 <div class="alert alert-info">
+                   Task owner should enter data access code and player id,
+                   locate result data, decrypt result data,
+                   validate result with the value,
+                   then approve/reject the result.</div>
+                 <div id="ownerDecryptPanel">
+
+                   <label for="ownerDataDecryptURL">Data Cloud URL:</label>
+                   <div class="input-group">
+                     <button class="btn btn-primary" id="getDataInfo"
+                             onclick="App.getDataInfo()">Locate Result Data</button>
+                     <input class="form-control" type="text" id="ownerDataDecryptURL" readonly="true"
+                            placeholder="URL of data to decrypt"></input>
+                   </div>
+
+                   <!--<label for="ownerDataDecryptHash">Encrypted Data Hash:</label>-->
+                   <p>
+                     <div class="input-group">
+                       <div class="input-group-prepend">
+                         <span class="input-group-text">Data Hash</span>
+                       </div>
+                       <input class="form-control" type="text" id="ownerDataDecryptHash" readonly="true"
+                              placeholder="will show after decrypting data"></input>
+                     </div>
+                   </p>
+
+                   <p>
+                     <div class="custom-file">
+                       <label class="custom-file-label" for="openEncryptedFile">Result data file</label>
+                       <input class="custom-file-input" type="file" id="openEncryptedFile" accept="*.*"
+                              onChange="App.openDataFile(event)"></input>
+                     </div>
+                   </p>
+
+                   <p>
+                     <label for="ownerResult">Contributor Result Value:</label>
+                     <div class="input-group">
+                       <button class="btn btn-secondar" id="decryptDataFile"
+                               onclick="App.decryptDataFile()">Decrypt Data</button>
+
+                       <input class="form-control" type="text" id="ownerResult" readonly="true"
+                              placeholder="will show after decrypting data"></input>
+                     </div>
+                   </p>
+
+                   <p>
+                     <div class="input-group">
+                       <button class="btn btn-danger" id="rejectPlayerResult"
+                               style="margin-right: 1em"
+                               onclick="App.rejectPlayerResult()">Reject</button>
+                       <button class="btn btn-success" id="approvePlayerResult"
+                               onclick="App.approvePlayerResult()">Approve</button>
+                     </div>
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div style="height: 10em">&nbsp</div>
+   </div>
+
+   <footer class="fixed-bottom" style="padding-bottom:0">
+     <div class="alert alert-warning center alert-dismissible fade hide" role="alert"
+          style="margin-bottom:0">
+       <!-- <span class="hint">
+         <strong>Status: </strong>
+       </span> -->
+       <span id="status"></span>
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+   </footer>
+
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+         crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+         crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+         integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+         crossorigin="anonymous"></script>
+
+</body>
+</html>

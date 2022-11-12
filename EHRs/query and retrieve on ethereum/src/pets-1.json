@@ -1,0 +1,130 @@
+[
+  {
+    "id": 0,
+    "name": "Image-1",
+    "picture": "images/boxer.png",
+    "age": 3,
+    "breed": "Scottish Terrier",
+    "location": "Lisco, Alabama"
+  },
+  {
+    "id": 1,
+    "name": "Image-2",
+    "picture": "images/img-2.png",
+    "age": 3,
+    "breed": "Scottish Terrier",
+    "location": "Tooleville, West Virginia"
+  },
+  {
+    "id": 2,
+    "name": "Image-3",
+    "picture": "images/img-2.png",
+    "age": 2,
+    "breed": "French Bulldog",
+    "location": "Freeburn, Idaho"
+  },
+  {
+    "id": 3,
+    "name": "Image-4",
+    "picture": "images/boxer.png",
+    "age": 2,
+    "breed": "Boxer",
+    "location": "Camas, Pennsylvania"
+  },
+  {
+    "id": 4,
+    "name": "Image-5",
+    "picture": "images/img-2.png",
+    "age": 2,
+    "breed": "French Bulldog",
+    "location": "Gerber, South Dakota"
+  },
+  {
+    "id": 5,
+    "name": "Image-6",
+    "picture": "images/img-2.png",
+    "age": 3,
+    "breed": "French Bulldog",
+    "location": "Innsbrook, Illinois"
+  },
+  {
+    "id": 6,
+    "name": "Image-7",
+    "picture": "images/boxer.png",
+    "age": 3,
+    "breed": "Golden Retriever",
+    "location": "Soudan, Louisiana"
+  },
+  {
+    "id": 7,
+    "name": "Image-8",
+    "picture": "images/img-3.png",
+    "age": 3,
+    "breed": "Golden Retriever",
+    "location": "Jacksonwald, Palau"
+  },
+  {
+    "id": 8,
+    "name": "Image-9",
+    "picture": "images/img-2.png",
+    "age": 2,
+    "breed": "French Bulldog",
+    "location": "Honolulu, Hawaii"
+  },
+  {
+    "id": 9,
+    "name": "Iamge-10",
+    "picture": "images/boxer.png",
+    "age": 3,
+    "breed": "Boxer",
+    "location": "Matheny, Utah"
+  },
+  {
+    "id": 10,
+    "name": "Image-11",
+    "picture": "images/boxer.png",
+    "age": 2,
+    "breed": "Boxer",
+    "location": "Tyhee, Indiana"
+  },
+  {
+    "id": 11,
+    "name": "Image-12",
+    "picture": "images/img-2.png",
+    "age": 3,
+    "breed": "Scottish Terrier",
+    "location": "Windsor, Montana"
+  },
+  {
+    "id": 12,
+    "name": "Image-13",
+    "picture": "images/boxer.png",
+    "age": 3,
+    "breed": "French Bulldog",
+    "location": "Kingstowne, Nevada"
+  },
+  {
+    "id": 13,
+    "name": "Iamge-14",
+    "picture": "images/img-2.png",
+    "age": 4,
+    "breed": "Golden Retriever",
+    "location": "Sultana, Massachusetts"
+  },
+  {
+    "id": 14,
+    "name": "Image15",
+    "picture": "images/img-3.png",
+    "age": 2,
+    "breed": "Golden Retriever",
+    "location": "Broadlands, Oregon"
+  },
+  {
+    "id": 15,
+    "name": "Image-16",
+    "picture": "images/boxer.png",
+    "age": 2,
+    "breed": "Golden Retriever",
+    "location": "Dawn, Wisconsin"
+  }
+]

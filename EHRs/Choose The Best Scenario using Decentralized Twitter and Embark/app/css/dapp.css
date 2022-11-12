@@ -1,0 +1,96 @@
+
+nav.navbar-default{
+  background-image:none;
+  background-color:#363763;
+  border:0;
+}
+nav .navbar-form { display: inline-block; }
+nav .navbar-right a, nav .navbar-right a:hover {
+  color: #fff;
+}
+nav.navbar-default .navbar-brand { text-shadow:none;}
+nav .accounts-list.dropdown-menu {position:static; padding:2px 0; min-width:280px;}
+nav .accounts-list > li > a {
+  padding: 5px 10px;
+  line-height: 30px;
+}
+nav .accounts-list > li > a > img.profile {
+  margin-right: 5px;
+}
+nav .accounts-list small.balance {
+  font-size:75%;
+}
+nav .accounts-list > li > a > small.balance {
+  float:right;
+  margin-left:30px;
+}
+nav span.glyphicon-question-sign{
+  font-size:60px;
+  margin-right: 5px;
+}
+nav .accounts-list > li > a > span.glyphicon-question-sign{
+  font-size: 30px;
+  
+}
+nav .accounts-list > li > a > span.glyphicon-question-sign, nav .accounts-list > li > a > .address{
+  display: inline-block;
+  vertical-align: middle;
+}
+@media (min-width: 991.98px) {  
+  nav .navbar-brand {padding-top:30px;}
+  nav .accounts-list.dropdown-menu {position:absolute;}
+}
+nav.logged-out .navbar-brand {padding-top:10px;}
+nav .navbar-brand small {     
+  display: block;
+  color: #ddd;
+  margin-top: -5px;
+  font-size:66%;
+}
+nav .tooltip-inner {max-width:340px;}
+nav .profile-link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 10px 0 10px;
+  margin: 0 0 0 5px;
+}
+nav .profile-link .username{
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+nav .sk-spinner.pacman{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0 10px 30px;
+}
+nav .navbar-text a {
+  text-decoration:underline;
+}
+nav .navbar-text a:hover, nav .navbar-text a:focus {
+  text-decoration:none;
+}
+nav .error {color:red}
+nav.error .navbar-brand {padding-top:10px;}
+.tweets .tweet .list-group-item-text {
+  white-space: pre-line;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: rgba(221, 221, 221, 0.4);
+}
+nav #dropdown-accounts {
+  background:none;
+  border:0;
+  box-shadow: none;
+  color:#fff;
+  text-shadow:none;
+}
+nav .accounts-list.dropdown-menu { background-color: #aaa; border-color:#363763; }
+nav .profile-link .username {text-shadow:none;}
+nav .dropdown .caret {border-width: 7px; }
+nav .btn-toolbar {display:inline-block; vertical-align: middle;}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-image: linear-gradient(to bottom, #2a2b4eb3 0%, #2a2b4e38 100%);
+}
+.tweet h4, .profilePic .created { font-size: 1.25rem; opacity: 0.5;}
+.profilePic { padding:20px; }

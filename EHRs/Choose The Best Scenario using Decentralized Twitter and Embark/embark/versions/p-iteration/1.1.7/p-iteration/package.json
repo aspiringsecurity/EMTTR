@@ -1,0 +1,59 @@
+{
+  "name": "p-iteration",
+  "version": "1.1.7",
+  "description": "Make array iteration easy when using async/await and Promises",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "ava test/index.js",
+    "lint": "eslint lib test",
+    "generate-docs": "jsdoc -c .jsdoc.json -R README.md lib/static-methods.js"
+  },
+  "keywords": [
+    "async/await",
+    "async",
+    "await",
+    "asynchronous",
+    "awaitable",
+    "async function",
+    "array",
+    "iteration",
+    "forEach",
+    "map",
+    "every",
+    "some",
+    "filter",
+    "reduce"
+  ],
+  "author": "Antonio Valverde",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.0.0",
+    "jsdoc": "^3.4.3",
+    "jsdoc-strip-async-await": "^0.1.0",
+    "simple-jsdoc": "0.0.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "es2016",
+            "es2017"
+          ]
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toniov/p-iteration"
+  }
+}

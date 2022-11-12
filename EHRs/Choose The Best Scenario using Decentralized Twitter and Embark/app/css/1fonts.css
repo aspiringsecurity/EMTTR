@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Post Grotesk Medium";
+  src: url("../fonts/PostGrotesk-Medium.ttf") format("ttf"),
+          url("../fonts/PostGrotesk-Medium.woff") format("woff"),
+          url("../fonts/PostGrotesk-Medium.eot") format("eot");
+}
+@font-face {
+  font-family: "Post Grotesk Book";
+  src: url("../fonts/PostGrotesk-Book.ttf") format("ttf"),
+          url("../fonts/PostGrotesk-Book.woff") format("woff"),
+          url("../fonts/PostGrotesk-Book.eot") format("eot");
+}
