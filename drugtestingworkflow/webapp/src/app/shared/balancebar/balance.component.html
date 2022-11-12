@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="btn-group">
+        <button (click)="reload()" placement="bottom" ngbTooltip="Reload " class="btn btn-primary btn-raised">
+          <span>
+            <i class="fa fa-refresh"></i>
+          </span>
+        </button>
+        &nbsp;
+
+        <button placement="bottom" ngbTooltip="GAS Available {{balanceETH | number:'1.1-6'}} ETH" class="btn btn-primary btn-raised">
+          <span>
+            <i class="icon-wallet"></i>
+          </span>
+          <!--
+          &nbsp;
+          <span>
+            {{ balance | number:'1.1-6' }}
+          </span>
+          <span></span>&nbsp;ETH -->
+          &nbsp;
+          <span>
+              {{ balance | number:'1.1-6' }}
+            </span>
+            <span></span>&nbsp;HCOIN
+
+        </button>
+        &nbsp;
+        <button (click)="facet()" placement="bottom" class="btn btn-primary btn-raised">
+          <span>
+            <i class="fa fa-plus"></i>&nbsp;Free Coin
+          </span>
+        </button>
+
+
+      </div>
+
+    </div>
+    <div class="navbar-container">
+      <button (click)="gotoNewTask()" placement="bottom" class="btn btn-primary btn-raised">
+        <span>
+          <i class="fa fa-plus"></i>&nbsp;New Drug
+        </span>
+      </button>
+      <!--
+      <button (click)="gotoNewStudy()" placement="bottom" class="btn btn-primary btn-raised">
+        <span>
+          <i class="fa fa-plus"></i>&nbsp;New Study
+        </span>
+      </button>
+      <button placement="bottom" ngbTooltip="My ETH Balance" class="btn btn-primary btn-raised">
+                    <span></span>&nbsp;ETH
+                    <span>
+                      300
+                    </span>
+          
+                  </button>
+                  <button placement="bottom" ngbTooltip="My CLX Balance" class="btn btn-primary btn-raised ml-1">
+                    <span></span>&nbsp;CLX
+                    <span>
+                      300
+                    </span>
+          
+                  </button>-->
+    </div>
+  </div>
+</nav>

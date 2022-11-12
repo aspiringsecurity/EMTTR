@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-12">
+    <div class="content-header">All Drugs</div>
+    <p class="content-sub-header">Found {{ totalTask }} Items.</p>
+  </div>
+  <div class="col-sm-12">
+    <div class="card">
+
+      <div class="card-body">
+        <div class="card-block">
+          <table class="table">
+            <thead>
+              <tr>
+                <th width="5%">#</th>
+                <th width="20%">Title</th>
+                <th width="10%">Deposit</th>
+
+                <th width="30%">Description</th>
+
+                <th width="15%">Status</th>
+              
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let task of tasks;let i = index">
+                <th scope="row"> {{ i+1}}</th>
+                <td>
+                  <a (click)="goTo(i+1)">
+                    <u>
+                      {{ task.title }}
+                    </u>
+                    
+                  </a>
+                </td>
+                <td>{{ task.deposit }} HCOIN</td>
+
+                <td>
+                  <span class="font-small-2">
+                    {{ task.description }}
+                  </span>
+                </td>
+
+                <td>
+                  <span class="font-small-3">
+                    <span class="badge badge-warning" *ngIf="task.status==0">Pending</span>
+                    <span class="badge  badge-primary" *ngIf="task.status==1">Approved</span>
+                    <span class="badge  badge-secondary" *ngIf="task.status==2">Screened</span>
+                  </span>
+
+                </td>
+                
+                <td>
+                  <button (click)="goTo(i+1)" class="btn btn-primary btn-sm btn-raised">
+                    <span>
+                      <i class="fa fa-info"></i>
+                    </span>
+                  </button>
+                  <button disabled class="btn btn-danger btn-sm btn-raised">
+                    <span>
+                      <i class="fa fa-times"></i>
+                    </span>
+                  </button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

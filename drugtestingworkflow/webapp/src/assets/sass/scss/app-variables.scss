@@ -1,0 +1,123 @@
+$padding-base:              1rem !default;
+$margin-base:               1rem !default;
+
+$padding-base-vertical:     0.5rem !default;
+$padding-base-horizontal:   0.75rem !default;
+
+$padding-large-vertical:    0.6rem !default;
+$padding-large-horizontal:  1rem !default;
+
+$padding-small-vertical:    0.4rem !default;
+$padding-small-horizontal:  0.75rem !default;
+
+$padding-xs-vertical:       0.1rem !default;
+$padding-xs-horizontal:     0.33rem !default;
+
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.5 !default;
+
+$border-radius: .125rem !default;
+$border-radius-sm: .0625rem !default;
+
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+$border-radius-extreme:     30px !default;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       #009DA0 !default;
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+$caret-width-base:          4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px !default;
+
+// Line Height
+$line-height-base:                1.5 !default;
+$line-height-computed:    ($font-size-base * $line-height-base) !default;
+
+//  Transitions
+$general-transition-time:  300ms !default;
+
+$slow-transition-time:           370ms !default;
+$fast-transition-time:           150ms !default;
+
+$transition-linear:                                   linear !default;
+$transition-bezier:         cubic-bezier(0.34, 1.61, 0.7, 1) !default;
+$transition-ease:           ease 0s;
+
+//variables for social
+$social-facebook: 			#3b5998;
+$social-twitter: 			#55acee;
+$social-pinterest: 			#cc2127;
+$social-google: 			#dd4b39;
+$social-linkedin: 			#0976b4;
+$social-dribbble: 			#ea4c89;
+$social-github: 			#333333;
+$social-youtube: 			#e52d27;
+$social-instagram: 		    #125688;
+$social-reddit: 			#ff4500;
+$social-tumblr: 			#35465c;
+$social-behance: 			#1769ff;
+
+$transparent-bg:             transparent !default;
+
+$background-light-grey:     #E8E7E3 !default;
+$background-lighter-grey:   #F0EFEB !default;
+$font-background-light-grey: #9C9B99 !default;
+$font-hover-background-light-grey: #5E5E5C !default;
+
+
+// variables from lbd
+
+$transition-ease-in:              ease-in !default;
+$transition-ease-out:             ease-out !default;
+$ultra-fast-transition-time:      60ms  !default;
+$navbar-padding-a:               10px 15px;
+$padding-zero:                   0px !default;
+$sidebar-width:               calc(100% - 250px) !default;
+$topbar-back:          topbar-back !default;
+$bottombar-back:       bottombar-back !default;
+$topbar-x:             topbar-x !default;
+$bottombar-x:          bottombar-x !default;
+$margin-bottom:                0 0 10px 0 !default;
+$margin-base-vertical:         15px !default;
+
+
+// Shadows
+$shadow-umbra-opacity: 0.2 !default;
+$shadow-penumbra-opacity: 0.14 !default;
+$shadow-ambient-opacity: 0.12 !default;
+
+// Declare the following for reuse with both mixins and the bootstrap variables
+$shadow-focus: 0 0 8px rgba($black, .18), 0 8px 16px rgba($black, .36);
+
+$shadow-2dp: 0 2px 2px 0 rgba($black, $shadow-penumbra-opacity),
+  0 3px 1px -2px rgba($black, $shadow-umbra-opacity),
+  0 1px 5px 0 rgba($black, $shadow-ambient-opacity);
+
+$shadow-3dp: 0 3px 4px 0 rgba($black, $shadow-penumbra-opacity),
+  0 3px 3px -2px rgba($black, $shadow-umbra-opacity),
+  0 1px 8px 0 rgba($black, $shadow-ambient-opacity);
+
+$shadow-4dp: 0 4px 5px 0 rgba($black, $shadow-penumbra-opacity),
+  0 1px 10px 0 rgba($black, $shadow-ambient-opacity),
+  0 2px 4px -1px rgba($black, $shadow-umbra-opacity);
+
+$shadow-6dp: 0 6px 10px 0 rgba($black, $shadow-penumbra-opacity),
+  0 1px 18px 0 rgba($black, $shadow-ambient-opacity),
+  0 3px 5px -1px rgba($black, $shadow-umbra-opacity);
+
+$shadow-8dp: 0 8px 10px 1px rgba($black, $shadow-penumbra-opacity),
+  0 3px 14px 2px rgba($black, $shadow-ambient-opacity),
+  0 5px 5px -3px rgba($black, $shadow-umbra-opacity);
+
+$shadow-16dp: 0 16px 24px 2px rgba($black, $shadow-penumbra-opacity),
+  0 6px 30px 5px rgba($black, $shadow-ambient-opacity),
+  0 8px 10px -5px rgba($black, $shadow-umbra-opacity);
+
+$shadow-24dp: 0 9px 46px 8px rgba($black, $shadow-penumbra-opacity),
+  0 11px 15px -7px rgba($black, $shadow-ambient-opacity),
+  0 24px 38px 3px rgba($black, $shadow-umbra-opacity);

@@ -1,0 +1,218 @@
+<div class="row">
+  <div class="col-12">
+    <div class="content-header">New Study</div>
+  </div>
+  <div class="col-12">
+    <!--
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title" id="basic-layout-form">Project Info</h4>
+            <p class="mb-0">This is the most basic and default form having form sections. To add form section use <code>.form-section</code> class with any heading tags. This form has the buttons on the bottom left corner which is the default position.</p>
+          </div>
+          <div class="card-body">
+            <div class="px-3">
+              <form class="form">
+                <div class="form-body">
+                  <h4 class="form-section"><i class="ft-user"></i> Personal Info</h4>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="projectinput1">First Name</label>
+                        <input type="text" id="projectinput1" class="form-control"  name="fname">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="projectinput2">Last Name</label>
+                        <input type="text" id="projectinput2" class="form-control"  name="lname">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="projectinput3">E-mail</label>
+                        <input type="text" id="projectinput3" class="form-control"  name="email">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="projectinput4">Contact Number</label>
+                        <input type="text" id="projectinput4" class="form-control"  name="phone">
+                      </div>
+                    </div>
+                  </div>
+  
+                  <h4 class="form-section"><i class="ft-file-text"></i> Requirements</h4>
+  
+                  <div class="form-group">
+                    <label for="companyName">Company</label>
+                    <input type="text" id="companyName" class="form-control"  name="company">
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="projectinput5">Interested in</label>
+                        <select id="projectinput5" name="interested" class="form-control">
+                          <option value="none" selected="" disabled="">Interested in</option>
+                          <option value="design">design</option>
+                          <option value="development">development</option>
+                          <option value="illustration">illustration</option>
+                          <option value="branding">branding</option>
+                          <option value="video">video</option>
+                        </select>
+                      </div>
+                    </div>
+  
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="projectinput6">Budget</label>
+                        <select id="projectinput6" name="budget" class="form-control">
+                          <option value="0" selected="" disabled="">Budget</option>
+                          <option value="less than 5000$">less than 5000$</option>
+                          <option value="5000$ - 10000$">5000$ - 10000$</option>
+                          <option value="10000$ - 20000$">10000$ - 20000$</option>
+                          <option value="more than 20000$">more than 20000$</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label>Select File</label>
+                    <input type="file" class="form-control-file" id="projectinput8">
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="projectinput8">About Project</label>
+                    <textarea id="projectinput8" rows="5" class="form-control" name="comment" ></textarea>
+                  </div>
+                </div>
+  
+                <div class="form-actions">
+                  <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                    <i class="ft-x"></i> Cancel
+                  </button>
+                  <button type="button" class="btn btn-raised btn-raised btn-primary">
+                    <i class="fa fa-check-square-o"></i> Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      -->
+    <div class="card">
+      <!--<div class="card-header">
+        <h4 class="card-title" id="basic-layout-form">Project Info</h4>
+        <p class="mb-0">This is the most basic and default form having form sections. To add form section use <code>.form-section</code>
+          class with any heading tags. This form has the buttons on the bottom left corner which is the default
+          position.</p>
+      </div> -->
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              <h4 class="form-section"><i class="icon-info"></i> Tracking Info</h4>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="title">Study Title</label>
+                    <input type="text" id="title" class="form-control" name="title">
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="first_enrollment">Date of First Enrollment</label>
+                    <input type="date" id="first_enrollment" class="form-control" name="first_enrollment">
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="target_sample_size">Target Sample Size</label>
+                    <input type="number" id="target_sample_size" class="form-control" name="target_sample_size">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-body">
+              <h4 class="form-section"><i class="icon-pencil"></i> Descriptive Info</h4>
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="summary">Brief Summary</label>
+                    <textarea type="text" id="summary" class="form-control" name="summary" rows=3></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="conditions">Health Condition(s) or Problem(s) Studied</label>
+                    <input type="text" id="heath_condition" class="form-control" name="heath_condition">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="conditions">Study Arms</label>
+
+                  </div>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th width="5%">#</th>
+                        <th width="20%">Intervention Name</th>
+                        <th width="10%">Type</th>
+                        <th width="10%">Classification</th>
+                        <th>Descriptions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Descriptions</td>
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="title">Intervention Name</label>
+                    <input [(ngModel)]="arm.intervention_name" type="text" id="title" class="form-control" name="title">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="title">Type</label>
+                    <input [(ngModel)]="arm.type" type="text" id="title" class="form-control" name="title">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label for="title">Classification</label>
+                    <input [(ngModel)]="arm.classification" type="text" id="title" class="form-control" name="title">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="description">Descriptions</label>
+                    <textarea [(ngModel)]="arm.descriptions" type="text" id="description" class="form-control" name="description" rows=2></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

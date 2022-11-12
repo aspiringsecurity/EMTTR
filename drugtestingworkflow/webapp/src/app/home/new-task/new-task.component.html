@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-12">
+    <div class="content-header">New Drug</div>
+  </div>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              <h4 class="form-section"><i class="icon-info"></i> Drug Info</h4>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input [(ngModel)]="task.title" type="text" id="title" class="form-control" name="title">
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="target_sample_size">Deposit</label>
+                    <input [(ngModel)]="task.deposit" type="number" id="target_sample_size" class="form-control" name="target_sample_size">
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="accession_number">Accession Number</label>
+                    <input [(ngModel)]="task.accession_number"  type="text" id="accession_number" class="form-control" name="accession_number">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea [(ngModel)]="task.description" id="description" class="form-control" name="description" rows=3></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-body">
+              <h4 class="form-section"><i class="icon-pencil"></i> Drug Structure</h4>
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="smiles">SMILES</label>
+                    <input [(ngModel)]="task.smiles" type="text" id="smiles" class="form-control" name="smiles">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" (click)="clear()" class="btn btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> Clear
+              </button>
+              <button (click)="save()" type="button" class="btn btn-raised btn-primary">
+                <i class="ft-check"></i> Add
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,203 @@
+<i class="fa fa-refresh fa-spin fa-2x" *ngIf="loading"></i>
+<!--Invoice template starts-->
+<div class="row" *ngIf="!loading">
+  <div class="col-md-12">
+    <h4>{{ drug.title }}</h4>
+  </div>
+</div>
+<section class="invoice-template" *ngIf="!loading">
+  <div class="card">
+    <div class="card-body p-3">
+      <div id="invoice-template" class="card-block">
+        <!-- Invoice Company Details -->
+        <div id="invoice-company-details" class="row">
+
+          <div class="col-6 text-left">
+            <p class="text-muted">Owner</p>
+            <ul class="px-0 list-unstyled">
+              <li class="text-bold-800 font-small-2">{{ drug.owner }} <b *ngIf="address==drug.owner">(My Task)</b></li>
+            </ul>
+            <p class="text-muted">Compound</p>
+            <ul class="px-0 list-unstyled">
+              <li class="text-bold-800 font-small-2">{{ drug.smiles }}</li>
+            </ul>
+            <p class="text-muted">Description</p>
+            <ul class="px-0 list-unstyled">
+              <li class="text-bold-800 font-small-2">{{ drug.description }}</li>
+            </ul>
+          </div>
+          <div class="col-6 text-right">
+            <h2>
+              <div *ngIf="drug.status=='0' || drug.status=='1' || drug.status=='2'; else elseBlock">
+                <span *ngIf="drug.status=='0'">
+                  Pending
+                </span>
+                <span *ngIf="drug.status=='1'">
+                  Screening
+                </span>
+                <span *ngIf="drug.status=='2'">
+                  Screened
+                </span>
+              </div>
+              <ng-template #elseBlock>Unknow</ng-template>
+            </h2>
+            <p class="pb-3">STATUS</p>
+            <p>
+
+              <button [disabled]="drug.owner!=address" *ngIf="drug.status=='0'" (click)="approveTask(drug.id)" class="btn btn-primary btn-sm btn-raised">
+                <span>
+                  Approve
+                </span>
+              </button>
+              <button [disabled]="drug.owner!=address" *ngIf="drug.status=='1'" (click)="award(drug.id)" class="btn btn-primary btn-sm btn-raised">
+                <span>
+                  Award
+                </span>
+              </button>
+
+
+            </p>
+            <ul class="px-0 list-unstyled" *ngIf="drug.status!='2'">
+              <li>Deposit</li>
+              <li class="lead text-bold-800">{{drug.deposit}} HCOIN</li>
+            </ul>
+          </div>
+        </div>
+        <!--/ Invoice Company Details -->
+        <!-- Invoice Customer Details -->
+        <!--<div id="invoice-customer-details" class="row pt-2">
+          <div class="col-sm-12 text-left">
+            <p class="text-muted">Description</p>
+          </div>
+          <div class="col-6 text-left">
+            <ul class="px-0 list-unstyled">
+              <li class="text-bold-800">Mr. Bret Lezama</li>
+              <li>4879 Westfall Avenue,</li>
+              <li>Albuquerque,</li>
+              <li>New Mexico-87102.</li>
+            </ul>
+          </div>
+          <div class="col-6 text-right">
+            <p><span class="text-muted">Invoice Date :</span> 06/05/2016</p>
+            <p><span class="text-muted">Terms :</span> Due on Receipt</p>
+            <p><span class="text-muted">Due Date :</span> 10/05/2016</p>
+          </div>
+        </div> -->
+        <!--/ Invoice Customer Details -->
+        <!-- Invoice Items Details -->
+        <div id="invoice-items-details" class="pt-2">
+          <div class="row">
+            <div class="col-sm-12 text-left">
+              <p class="text-muted">Screening</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="table-responsive col-sm-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th width="5%">#</th>
+                    <th width="30%">From</th>
+                    <th width="15%" class="text-right">Efficacy</th>
+                    <th width="15%" class="text-right">Status</th>
+                    <th width="15%" class="text-right">Result</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let result of results;let i=index">
+                    <th scope="row">{{ i+1}}</th>
+                    <td>
+                      <p class="text-muted font-small-2">{{ result.address }}</p>
+                    </td>
+                    <td class="text-right">{{result.efficacy}}</td>
+                    <td class="text-right">
+                      <span class="font-small-2" *ngIf="result.status=='0'">
+                        Not Validate
+                      </span>
+                      <span class="font-small-2" *ngIf="result.status=='1'">
+                        Validated
+                      </span>
+                    </td>
+                    <td class="text-right">
+                      <b *ngIf="drug.status=='2' && (result.id==winnerId) " class="font-small-2">
+                        AWARDED
+                      </b>
+                    </td>
+                    <td class="text-right">
+                      <button *ngIf="result.status=='0'" [disabled]="address!=drug.owner" (click)="approveResult(result.id)"
+                        type="button" class="btn btn-sm btn-primary btn-raised">Validate</button>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row" *ngIf="drug.status=='1'">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="px-3">
+                    <form class="form">
+                      <div class="form-body">
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="form-group">
+                              <label for="efficacy">Efficacy</label>
+                              <input #result type="number" value=10 id="efficacy" class="form-control" name="efficacy">
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="form-group">
+                              <label for="Solubility">Solubility</label>
+                              <input disabled type="number" id="Solubility" class="form-control" name="Solubility">
+                            </div>
+                          </div>
+
+                          <div class="col-3">
+                            <div class="form-group">
+                              <button (click)="sendResult(result)" type="button" class="btn btn-primary mt-4 btn-raised my-1"><i
+                                  class="fa fa-plus"></i>Add</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Invoice Footer -->
+        <div id="invoice-items-details" class="pt-2">
+          <div class="row">
+            <div class="col-sm-12 text-left">
+              <p class="text-muted">Clinical Trials</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="table-responsive col-sm-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--Invoice template ends-->
