@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Moonbeam",
+    "chainId": 2500,
+    "rpc": "http://localhost:8500/0",
+    "gateway": "0xD9C3b5474f1ec7578E3549BAd3ce266bAa5c2D3c",
+    "gasReceiver": "0x5737A424F8e9A0dbA8701A4cDaB8E425F9031b33",
+    "constAddressDeployer": "0x571c4499374C1DB06Dc96355Dc35d5b139e9f8Dc",
+    "tokenName": "DEV",
+    "tokenSymbol": "DEV",
+    "contractCallWithToken": "0x51D564A6E13954Ce625deB27f0138E1Ab41a2ac3"
+  },
+  {
+    "name": "Avalanche",
+    "chainId": 2501,
+    "rpc": "http://localhost:8500/1",
+    "gateway": "0x411fB36E488f22bBE872C345e652e45ff0EB319f",
+    "gasReceiver": "0xc17a3E5357146d7b9CC3fB025356f25dd450554F",
+    "constAddressDeployer": "0x571c4499374C1DB06Dc96355Dc35d5b139e9f8Dc",
+    "tokenName": "Avax",
+    "tokenSymbol": "AVAX",
+    "contractCallWithToken": "0x51D564A6E13954Ce625deB27f0138E1Ab41a2ac3"
+  },
+  {
+    "name": "Fantom",
+    "chainId": 2502,
+    "rpc": "http://localhost:8500/2",
+    "gateway": "0x5Cf511753D84Ff93fa305cbEECDD0a701C88b9b6",
+    "gasReceiver": "0xb6dd9131bb4952DC9B2558dbD1391646185Af819",
+    "constAddressDeployer": "0x571c4499374C1DB06Dc96355Dc35d5b139e9f8Dc",
+    "tokenName": "Fantom",
+    "tokenSymbol": "FTM",
+    "contractCallWithToken": "0x51D564A6E13954Ce625deB27f0138E1Ab41a2ac3"
+  },
+  {
+    "name": "Ethereum",
+    "chainId": 2503,
+    "rpc": "http://localhost:8500/3",
+    "gateway": "0x043f57C16f6322E42F6D1deB46E0F53e6FaA3379",
+    "gasReceiver": "0x8Fd1a92a56e49C1b9FAda0015b9Ac51E4a52D181",
+    "constAddressDeployer": "0x571c4499374C1DB06Dc96355Dc35d5b139e9f8Dc",
+    "tokenName": "Ether",
+    "tokenSymbol": "ETH",
+    "contractCallWithToken": "0x51D564A6E13954Ce625deB27f0138E1Ab41a2ac3"
+  },
+  {
+    "name": "Polygon",
+    "chainId": 2504,
+    "rpc": "http://localhost:8500/4",
+    "gateway": "0x186038359000c32da660ecA49C3d494001A30Ffe",
+    "gasReceiver": "0xe90560ba227BA579eb4D883abe73E85a9123a615",
+    "constAddressDeployer": "0x571c4499374C1DB06Dc96355Dc35d5b139e9f8Dc",
+    "tokenName": "Matic",
+    "tokenSymbol": "MATIC",
+    "contractCallWithToken": "0x51D564A6E13954Ce625deB27f0138E1Ab41a2ac3"
+  }
+]
