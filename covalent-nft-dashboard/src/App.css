@@ -1,0 +1,81 @@
+.primary-bg-color{
+    background-color: #9de6e8;
+}
+
+.secondary-color {
+    color: #068b78;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.main-layout {
+    padding: 0 55px;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chain-icon {
+    position: absolute;
+    width: 40px;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.spinner {
+    display: block;
+    margin: 5rem auto;
+}
+
+.nonfts-message {
+    font-size: 2rem;
+}
+
+.card-image {
+    height: 225px;
+    object-fit: contain;
+}
+
+.table-p {
+    white-space: nowrap; 
+    width: 300px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.table-url {
+    white-space: nowrap; 
+    width: 450px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ant-card-body {
+    padding: 0 24px 24px 24px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 7rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .main-layout {
+        padding: 0 20px;
+    }
+}
