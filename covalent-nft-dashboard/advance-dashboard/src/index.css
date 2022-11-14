@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-active {
+    font-weight: bold;
+    text-decoration: underline;
+}
