@@ -1,8 +1,7 @@
-# Nft Showcases
-A dapp where you can see all NFTs from wallet address in different networks.
+# Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address in different networks.
 
 ## Features
-- Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain
+- Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon, and Binance Smart Chain
 - Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted
 
 ## Technologies
@@ -16,7 +15,8 @@ A dapp where you can see all NFTs from wallet address in different networks.
 - Run `npm i` to install the dependencies
 - Create a file called 'config.js' on the src folder and add the following code
 ```
-export const NFTPORT_APIKEY= "< Your NFT PORT API key >";
+
 export const COVALENT_APIKEY= "< Your Covalent API key >";
+export const NFTPORT_APIKEY= "< Your NFT PORT API key >";
 ```
 - Run `npm start` to start the web app
