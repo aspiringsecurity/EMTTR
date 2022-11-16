@@ -10,7 +10,7 @@ Enabling the bottom of pyramid through empowering pharma companies and the medic
 
 ■Enabling healthcare community by empowering pharma companies & the medicaleco-system to do medicine trial testing securely, transparently using BNB blockchain
 
-Blockchain Communication: Axelar for communication between Polygon blockchain andFantom destination chain, MultiChain. Covalent endpoint for aggregated view.
+Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
 
 Features:
 
@@ -127,4 +127,11 @@ patient ident= s2/2007-5-13
 ...............................
 
 6) Log files for these scripts can be found in logs directory
+
+
+# Blockchain Eco-system
+
+1. Covalent End Point: Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address in different networks. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard
+
+
 
