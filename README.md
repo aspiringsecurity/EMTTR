@@ -133,5 +133,15 @@ patient ident= s2/2007-5-13
 
 1. Covalent End Point: Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address in different networks. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard
 
+2. Axelar, Polygon, Fantom: Axelar for communication between Polygon blockchain and Fantom destination chain. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/axelar-messaging . Polygon audit smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-Polygon
+
+3. Binance: Audit Binance smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-BSC
+
+4. MultiChain: https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/multichain-webapp
+
+5. Tron DAO
+
+6. Chainlink
+
 
 
