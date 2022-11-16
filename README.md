@@ -137,7 +137,7 @@ patient ident= s2/2007-5-13
 
 3. Binance: Audit Binance smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-BSC
 
-4. MultiChain: https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/multichain-webapp
+4. MultiChain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit the link at https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/multichain-webapp
 
 5. Tron DAO
 
