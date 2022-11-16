@@ -139,7 +139,7 @@ patient ident= s2/2007-5-13
 
 4. MultiChain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit the link at https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/multichain-webapp
 
-5. Tron DAO
+5. Tron DAO: DAOTooling using Tron DAO. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/tron-contracts
 
 6. Chainlink
 
