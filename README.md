@@ -131,11 +131,11 @@ patient ident= s2/2007-5-13
 
 # Blockchain Eco-system
 
-1. Covalent End Point: Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address in different networks. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard
+1. Covalent End Point: Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), pharmaceutical companies in different networks. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard
 
-2. Axelar, Polygon, Fantom: Axelar for communication between Polygon blockchain and Fantom destination chain. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/axelar-messaging . Polygon audit smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-Polygon
+2. Axelar, Polygon, Fantom: Axelar for communication between Polygon blockchain (pharmaceutical companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Healthcare or Ministry of Commerce). Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/axelar-messaging . Polygon audit smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-Polygon
 
-3. Binance: Audit Binance smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-BSC
+3. Binance: Binance audit smart contracts for government organizations to regulate the tenders and proposals compliance between pharmaceutical companies and CROs (contract research organizations) at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-BSC
 
 4. MultiChain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit the link at https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/multichain-webapp
 
