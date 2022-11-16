@@ -1,9 +1,7 @@
 MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization
 ===========================================================================================================
 
-MultiChain Webapp integration with Ethercalc is a simple web interface for [MultiChain](http://www.multichain.com/) blockchains, written in PHP.
-
-https://github.com/MultiChain/multichain-web-demo
+MultiChain Webapp integration with Ethercalc is a simple web interface for [MultiChain](http://www.multichain.com/) blockchains, written in PHP. We are extending multichain web app to integrate with Ethercalc to enable tabulation, charting, graphing, computation and organization.
 
     Copyright(C) Coin Sciences Ltd.
     License: GNU Affero General Public License, see the file LICENSE.txt.
