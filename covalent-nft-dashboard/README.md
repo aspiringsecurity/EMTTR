@@ -1,4 +1,5 @@
-# Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address in different networks.
+# Covalent-NFT-Dashboard 
+  This dashboard enables us to analyze, observe all NFTs from wallet address in different networks.
 
 ## Features
 - Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon, and Binance Smart Chain
