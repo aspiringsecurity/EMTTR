@@ -1,0 +1,30 @@
+{
+  "name": "ocean-storm",
+  "version": "1.0.0",
+  "description": "Ocean Storm by InsureBlox - Chainlink Hackathon",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "cd frontend && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.1",
+    "hardhat": "^2.7.0",
+    "solidity-coverage": "^0.7.17"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.2.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.8",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "react-json-to-table": "^0.1.7"
+  }
+}

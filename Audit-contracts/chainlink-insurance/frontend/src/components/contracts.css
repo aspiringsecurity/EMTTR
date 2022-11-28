@@ -1,0 +1,60 @@
+.tableWrapper {
+  background: rgb(255, 255, 255);
+  border-radius: 1rem 1rem;
+  border: 1px solid rgb(228, 232, 239);
+  overflow: hidden;
+}
+
+.tableWrapper2 {
+  border-radius: initial;
+  margin-bottom: initial;
+  overflow: initial;
+  width: auto;
+  border: 0px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+table {
+  /* table-layout: fixed;
+  overflow-x: scroll; */
+  display: inline-table;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  border-spacing: 0px;
+  width: 100%;
+  background: rgb(247, 249, 252);
+}
+
+tr {
+  background: rgb(247, 249, 252);
+}
+
+td,
+th {
+  padding: 1rem 1rem 1rem 1.5rem;
+}
+
+td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+th {
+  white-space: nowrap;
+  width: 3rem;
+  text-align: left;
+  font-weight: 600;
+  background: rgb(255, 255, 255);
+}
+
+thead {
+  color: rgba(91, 105, 131, 0.792);
+}
+
+tbody > tr:nth-child(2n) {
+  background: rgb(255, 255, 255);
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "coverId": {
+      "type": "BigNumber",
+      "hex": "0x178d"
+    },
+    "address": "0x2b6a90a1c61e05f415736fb71ce06d527ca770d9051468734d0450446d76473a",
+    "sumAssured": {
+      "type": "BigNumber",
+      "hex": "0x15"
+    },
+    "currency": "ETH",
+    "purchaseDate": "2021-10-31T14:33:25.000Z",
+    "expiry": "2022-10-31T14:33:25.000Z",
+    "claimId": 104,
+    "vote": -1,
+    "status": 6
+  },
+  {
+    "coverId": {
+      "type": "BigNumber",
+      "hex": "0x0cec"
+    },
+    "address": "0x3d5BC3c8d13dcB8bF317092d84783c2697AE9258",
+    "sumAssured": {
+      "type": "BigNumber",
+      "hex": "0x2710"
+    },
+    "currency": "DAI",
+    "purchaseDate": "2021-02-14T16:54:14.000Z",
+    "expiry": "2022-02-14T16:54:14.000Z",
+    "claimId": 103,
+    "vote": 1,
+    "status": 14
+  },
+  {
+    "coverId": {
+      "type": "BigNumber",
+      "hex": "0x14d3"
+    },
+    "address": "0x3d5BC3c8d13dcB8bF317092d84783c2697AE9258",
+    "sumAssured": {
+      "type": "BigNumber",
+      "hex": "0x01f4"
+    },
+    "currency": "ETH",
+    "purchaseDate": "2021-08-09T15:40:12.000Z",
+    "expiry": "2021-11-07T15:40:12.000Z",
+    "claimId": 102,
+    "vote": -1,
+    "status": 11
+  },
+  {
+    "coverId": {
+      "type": "BigNumber",
+      "hex": "0x165a"
+    },
+    "address": "0x3d5BC3c8d13dcB8bF317092d84783c2697AE9258",
+    "sumAssured": {
+      "type": "BigNumber",
+      "hex": "0x09"
+    },
+    "currency": "ETH",
+    "purchaseDate": "2021-09-16T14:16:17.000Z",
+    "expiry": "2021-12-15T14:16:17.000Z",
+    "claimId": 101,
+    "vote": 1,
+    "status": 14
+  },
+  {
+    "coverId": {
+      "type": "BigNumber",
+      "hex": "0x16ab"
+    },
+    "address": "0x3d5BC3c8d13dcB8bF317092d84783c2697AE9258",
+    "sumAssured": {
+      "type": "BigNumber",
+      "hex": "0xc350"
+    },
+    "currency": "DAI",
+    "purchaseDate": "2021-09-28T23:55:02.000Z",
+    "expiry": "2021-12-27T23:55:02.000Z",
+    "claimId": 100,
+    "vote": 1,
+    "status": 14
+  },
+  {
+    "coverId": {
+      "type": "BigNumber",
+      "hex": "0x1652"
+    },
+    "address": "0x3d5BC3c8d13dcB8bF317092d84783c2697AE9258",
+    "sumAssured": {
+      "type": "BigNumber",
+      "hex": "0x28"
+    },
+    "currency": "ETH",
+    "purchaseDate": "2021-09-15T15:48:10.000Z",
+    "expiry": "2022-03-14T15:48:10.000Z",
+    "claimId": 99,
+    "vote": 1,
+    "status": 14
+  }
+]
