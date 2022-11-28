@@ -141,7 +141,7 @@ patient ident= s2/2007-5-13
 
 5. Tron DAO: DAOTooling using Tron DAO. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/tron-contracts
 
-6. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments
+6. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. 
 
 
 
