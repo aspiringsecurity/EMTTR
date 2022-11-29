@@ -1,6 +1,4 @@
-# Ocean Storm by InsureBlox
-
-Ocean Storm is a parametric insurance solution ☂&nbsp;&nbsp;for ships 🚢 &nbsp;&nbsp;going through rough seas 🌊 &nbsp;&nbsp;based on Blockchain 🚀&nbsp;&nbsp;i.e. hazzle-free, automatic pay-outs in case of adverse weather events.
+Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
 
 ### Get started
 
