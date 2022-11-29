@@ -143,6 +143,12 @@ patient ident= s2/2007-5-13
 
 6. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
 
+We are utilizing Chainlink VRF as follows:
+
+Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
+
+Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/chainlink-insurance
+
 
 
 
