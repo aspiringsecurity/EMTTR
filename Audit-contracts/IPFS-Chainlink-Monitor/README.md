@@ -1,43 +1,5 @@
-> NOTE: With Rinkeby and Kovan being deprecated, the new default is goerli. 
+Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
 
-# chainlink-mix
-
-> NOTE: This has been recently updated for better compatibility with local blockchains. Check out the scripts to learn more.
-
-<br/>
-<p align="center">
-<a href="https://chain.link" target="_blank">
-<img src="./img/chainlink-brownie.png" width="225" alt="Chainlink Brownie logo">
-</a>
-</p>
-<br/>
-
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/smartcontractkit/chainlink-mix.svg)](http://isitmaintained.com/project/smartcontractkit/chainlink-mix "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/smartcontractkit/chainlink-mix.svg)](http://isitmaintained.com/project/smartcontractkit/chainlink-mix "Percentage of issues still open")
-
-This is a repo to work with and use Chainlink smart contracts in a python environment. If you're brand new to Chainlink, check out the beginner walk-through in remix to [learn the basics.](https://docs.chain.link/docs/beginners-tutorial)
-
-You can also check out the more advanced Chainlink tutorials there as well.
-
-- [chainlink-mix](#chainlink-mix)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Testnet Development](#testnet-development)
-  - [Local Development](#local-development)
-  - [Running Scripts and Deployment](#running-scripts-and-deployment)
-    - [Chainlink Price Feeds](#chainlink-price-feeds)
-    - [Chainlink VRF](#chainlink-vrf)
-    - [Chainlink API Call](#chainlink-api-call)
-    - [Chainlink Keeper Deployment](#chainlink-keeper-deployment)
-    - [Local Development](#local-development-1)
-  - [Testing](#testing)
-    - [To test development / local](#to-test-development--local)
-    - [To test mainnet-fork](#to-test-mainnet-fork)
-    - [To test a testnet](#to-test-a-testnet)
-  - [Adding additional Chains](#adding-additional-chains)
-  - [Linting](#linting)
-  - [Resources](#resources)
-  - [License](#license)
 
 ## Prerequisites
 
