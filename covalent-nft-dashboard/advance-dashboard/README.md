@@ -1,8 +1,10 @@
 
-# Web3Dashboard 
-Web3Dashboard is a Defi and DAO platform that enables users to keep track of all the details of their DeFi investments, transactions, and assets across all multiple chains and also displays DAO data using a data visualization chart.
+# EthMed Covalent Dashboard 
 
-# Getting Started with Web3Dashboard
+We are developing a Contract Research DAO platform using Covalent that enables healthcare providers, contract researchers and aggregators and pharma organizations to keep track of all the details of their medicine assets, trial budgets, DeFi investments, transactions, and assets across all multiple chains and also displays DAO data using a data visualization chart. We are building our solution on top of an existing web3 dashboard system and are planning to integrate it with an analytics, tabulation and collaboration tool namely EtherCalc. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/advance-dashboard
+
+# Getting Started with EthMed Covalent Dashboard 
+
 ### Web Requirements
 
 ## To check your assets you will need the following
