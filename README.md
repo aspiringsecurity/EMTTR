@@ -153,13 +153,18 @@ Parametric Insurance Solution for medicine discovery with special procedures. We
 
 7. Covalent Dashboard: We are developing a Contract Research DAO platform using Covalent that enables healthcare providers, contract researchers and aggregators and pharma organizations to keep track of all the details of their medicine assets, trial budgets, DeFi investments, transactions, and assets across all multiple chains and also displays DAO data using a data visualization chart. We are building our solution on top of an existing web3 dashboard system and are planning to integrate it with an analytics, tabulation and collaboration tool namely EtherCalc. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/advance-dashboard
 
-8. Evmos Smart Contracts: Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/evmos-smart-contract
+8. OpenZepellin Governance + Evmos Smart Contracts: Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/evmos-smart-contract
+   Governor Bravo Model Implementation and Integration: Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/governance
 
-9. Niftykit low code tools: Secure data storage, transparent data movement and data authenticity using Niftykit low code tools.
+9. Niftykit low code tools: Secure data storage, transparent data movement and data authenticity using Niftykit low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/niftykitxls
 
-10. Optimism: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace
+10. Optimism: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
-11. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs.
+11. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. Please visit:
+
+a. OpenSea Community Tooling: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-community-tooling
+
+b. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
 
 
 
