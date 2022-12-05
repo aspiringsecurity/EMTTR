@@ -155,6 +155,11 @@ Parametric Insurance Solution for medicine discovery with special procedures. We
 
 8. Evmos Smart Contracts: Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/evmos-smart-contract
 
+9. Niftykit low code tools: Secure data storage, transparent data movement and data authenticity using Niftykit low code tools.
+
+10. Optimism: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace
+
+11. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs.
 
 
 
