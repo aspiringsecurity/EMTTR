@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Panacea Wallet</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">ZK - Box <sup>2</sup></div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-wallet"></i>
+          <span>Panacea Wallet</span></a>
+      </li>
+
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item active">
+        <a class="nav-link" href="zk-box.html">
+          <i class="fas fa-user"></i>
+          <span>ZK - Box</span>
+        </a>
+
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-sign"></i>
+          <span>LogOut</span>
+        </a>
+
+      </li>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+        
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+      
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Accounts <i class="fas fa-id-badge fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <!-- <span class="badge badge-danger badge-counter">3</span> -->
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Accounts
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div>
+                      <button class="badge badge-success badge-counter">0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1</button>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div>
+                      <button class="badge badge-success badge-counter">0xffcf8fdee72ac11b5c542428b35eef5769c409f0</button>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div>
+                      <button class="badge badge-success badge-counter">0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1</button>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Accounts</a>
+              </div>
+            </li>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Networks <i class="fas fa-podcast fa-fw"></i>
+                <!-- Counter - Messages -->
+                <!-- <span class="badge badge-danger badge-counter">7</span> -->
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Network and Blockchain
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="data:image/png;base64,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" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">MATIC NETWORK</div>
+                    <div class="small text-gray-500">http://testnet2.matic.network</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="data:image/png;base64,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" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Etherem Testnet</div>
+                    <div class="small text-gray-500">127.0.0.1:8545</div>
+                  </div>
+                </a>
+
+              </div>
+            </li>
+
+            <!-- <div class="topbar-divider d-none d-sm-block"></div> -->
+
+            <!-- Nav Item - User Information -->
+            
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">ZK - BOX  -  Identity</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+         
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Name</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Riya Singh</div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                  <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Age</div>
+                          <div class="h5 mb-0 font-weight-bold text-gray-800" id="age">21</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Country</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">INDIA</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-4 col-lg-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+              
+                <!-- Card Body -->
+                <div class="card-body">
+
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Enter Password" aria-label="Search" aria-describedby="basic-addon2">
+                    <br>
+
+                    <a href="#" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                          <i class="fas fa-handshake"></i>
+                        </span>
+                        <span class="text">Generate Proof</span>
+                      </a>
+        
+                </div>
+                <div id="qrcode" style="display: none;margin: 90px"><img id="imag"></div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Saved Proofs</h6>
+
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="container">
+                        <div class="card mb-4 py-3 border-left-success">
+                          <div class="card-body">
+                            From: 0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1<br>
+                            To: <br>0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1
+                            Status: Success
+                          </div>
+                        </div>
+                        <div class="card mb-4 py-3 border-left-success">
+                          <div class="card-body">
+                            From: 0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1<br>
+                            To: <br>0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1
+                            Status: Success
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Panacea 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+  <script src="./assets/js/sendTx.js"></script>
+  <script src="./assets/js/sendTxContract.js"></script>
+  <script src="./assets/js/sendTxContractCall.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+.
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    function doCall(url, callback){
+      var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+           console.log(xhttp.responseText);
+            callback(xhttp.responseText);
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+    }
+    let bala;
+      doCall("http://127.0.0.1:8080/bal", (bal) => {
+        bala = bal;
+        //document.getElementById('balance').innerHTML = bal;
+      })
+      doCall("http://127.0.0.1:8080/acct", (act) => {
+        //document.getElementById('acct').innerHTML = act;
+      })
+      doCall("http://127.0.0.1:8080/net", (net) => {
+        if(bala != '"0"'){
+         // document.getElementById('net').innerHTML = "ETHEREUM NETWORK";
+        }else{
+          //document.getElementById('net').innerHTML = "MATIC NETWORK";
+        }
+      })
+
+      function qr(){
+        document.getElementById('qrcode').style.display = "block";
+        let image = document.getElementById('imag');
+        var resultValue = "http://api.qrserver.com/v1/create-qr-code/?data=0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1";
+        image.setAttribute("src", resultValue);
+        return false;
+      }
+
+      function sendTxFromWallet(address, amount){
+
+      }
+  
+  </script>
+</body>
+
+</html>

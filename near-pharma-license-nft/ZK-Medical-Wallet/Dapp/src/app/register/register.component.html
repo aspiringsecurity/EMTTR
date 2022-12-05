@@ -1,0 +1,46 @@
+<div class="main2">
+  <div style="height: 30px"></div>
+  <img style="width: 60px; height: 80px;" src="../../assets/Group 44.png">
+  <div style="height: 20px"></div>
+
+  <div class="signupbox">
+    <div style="height: 30px"></div>
+    <h4 style="font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #212121;">
+      Register
+    </h4>
+    <div style="height: 30px"></div>
+
+    <p style="font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;color: rgba(0, 0, 0, 0.5);">Set a voting password to begin the process</p>
+
+    <!-- <div style="height: 20px"></div> -->
+    <div style="font-size: 12px;">
+      <mat-form-field appearance="outline" style="width: 60%; height: 60; margin-bottom: -1.25em;">
+        <mat-label>Voting Password</mat-label>
+        <input matInput #input [(ngModel)]="voting_passwd">
+      </mat-form-field>
+    </div>
+
+    <div style="height: 30px;"></div>
+
+    <button mat-stroked-button style="background-color: #487BE3; width: 60%; color: white; height: 30px;"
+      (click)="enterPasswd()" [disabled]="showSpinner">
+      <span *ngIf="showSpinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+        style="margin-top: -4px"></span>
+      <p *ngIf="!showSpinner" style="margin-top: 4px">Register</p>
+    </button>
+
+  </div>
+
+</div>

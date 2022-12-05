@@ -1,0 +1,98 @@
+<!-- <br>
+<div class="main">
+  <mat-nav-list>
+    <a mat-list-item *ngFor="let link of links" class="link"
+      [routerLink]="link.url"> <b>{{link.label}}</b>
+    </a>
+  </mat-nav-list>
+</div> -->
+
+<div class="main2">
+  <div style="height: 30px"></div>
+  <img style="width: 60px; height: 80px;" src="../../assets/Group 44.png">
+  <div style="height: 20px"></div>
+
+  <h3 style="font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;text-align: center;
+  letter-spacing: -0.28px;
+  color: #212121;">
+    Digital Voting Simplified.
+  </h3>
+  <p style="font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);">
+    We bring the traditional voting right on to your computer.
+  </p>
+  <br />
+  <div class="signupbox">
+    <div style="height: 30px"></div>
+    <h4 style="font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #212121;">
+      Get started
+    </h4>
+    <div style="height: 20px"></div>
+    <div style="font-size: 12px;">
+      <mat-form-field appearance="outline" style="width: 60%; height: 60; margin-bottom: -1.25em;">
+        <mat-label>Username</mat-label>
+        <input matInput #input [(ngModel)]="uname">
+      </mat-form-field>
+    </div>
+    <div style="height: 5px"></div>
+    <div style="font-size: 12px;">
+      <mat-form-field appearance="outline" style="width: 60%; height: 60; margin-bottom: -1.25em;">
+        <mat-label>Unique Identification Number</mat-label>
+        <input matInput #input [(ngModel)]="uid">
+      </mat-form-field>
+    </div>
+    <div style="height: 5px"></div>
+    <div style="font-size: 12px;">
+      <mat-form-field appearance="outline" style="width: 40%; height: 60;">
+        <mat-label>Password</mat-label>
+        <input matInput #input disabled [(ngModel)]="passwd">
+      </mat-form-field>
+      <button mat-stroked-button style="width: 20%; color: #487BE3; border-color: #487BE3;"
+        (click)= "genPass()"
+      >
+        Generate
+      </button>
+    </div>
+
+    <p *ngIf="gen" style="font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;letter-spacing: 0.1px; color: #487BE3;">Generating your password...</p>
+
+    <div style="height: 5px"></div>
+
+    <button mat-raised-button style="background-color: #487BE3; width: 60%; color: white"
+      (click)="register()"
+    >Register Now</button>
+    <div style="height: 15px"></div>
+
+    <p style="font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;color: rgba(0, 0, 0, 0.5);">Already have an account? <a [routerLink]="['/login2']" style="color: #487BE3">Login</a>
+    </p>
+
+
+  </div>
+
+
+</div>

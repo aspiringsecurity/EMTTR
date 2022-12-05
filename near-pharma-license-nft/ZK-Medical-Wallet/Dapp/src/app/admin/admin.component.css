@@ -1,0 +1,21 @@
+add-button {
+    align-self: center;
+    margin-left: 40%;
+}
+
+.add-button, .submit-button, .election-button, .refresh-button, .verify-button{
+    background: rgba(30, 30, 30, 0.9);
+    font-family:Impact;
+  }
+
+th {
+    font-size: 11pt;
+    /* text-align: center; */
+    background-color: rgb(190,190,190);
+}
+
+td {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* text-align: center   */
+    
+}

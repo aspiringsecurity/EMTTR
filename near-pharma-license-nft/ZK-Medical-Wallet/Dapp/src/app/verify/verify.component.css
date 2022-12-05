@@ -1,0 +1,102 @@
+table {
+    width: 100%;
+  }
+  .address-field {
+    width: 400px;
+  }
+  
+  .mat-button.mat-accent{
+      color: black;
+      background-color: cornflowerblue;
+  }
+  
+  .span {
+    margin: auto;
+    font-size: 125%;
+  }
+  
+  .adddress {
+    margin: auto;
+    text-align: center;
+    font-size: 150%;
+    /* font-weight: bold; */
+  }
+  
+  .mat-button {
+    background-color:rgb(34, 31, 243);
+    color: white;
+  }
+  
+  p {
+    font-size: 125%;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  tr.example-detail-row {
+    height: 0;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: #999;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .example-element-diagram {
+    min-width: 80px;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: lighter;
+    margin: 8px 0;
+    height: 104px;
+  }
+  
+  .example-element-symbol {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: normal;
+  }
+  
+  .example-element-description {
+    padding: 16px;
+  }
+  
+  .loan-meta-data {
+    margin: 56px;
+    font-size: 16px;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif
+  }
+  
+  .example-element-description-attribution {
+    opacity: 0.5;
+  }
+
+  th {
+    font-size: 11pt;
+    /* text-align: center; */
+    background-color: rgb(190,190,190);
+  }
+
+  td {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .add-button, .submit-button, .election-button, .refresh-button, .verify-button{
+    background: rgba(30, 30, 30, 0.9);
+    font-family:Impact;
+  }

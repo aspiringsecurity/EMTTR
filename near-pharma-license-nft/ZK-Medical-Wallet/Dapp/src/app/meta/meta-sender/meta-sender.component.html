@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-header>Balance</mat-card-header>
+  <mat-card-content>
+    <mat-form-field id="address-selector" class="address-field">
+      <mat-select name="account" (selectionChange)="refreshBalance()" [(value)]="model.account" placeholder="Address">
+        <mat-option *ngFor="let account of accounts" [value]="account">{{account}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p>You have <span id="balance">{{model.balance}}</span> META</p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>Send MetaCoin</mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <input type="text" matInput id="amount" placeholder="Amount" (change)="setAmount($event)">
+    </mat-form-field>
+    <mat-form-field class="address-field">
+      <input type="text" matInput id="receiver" placeholder="Receiver Address" (change)="setReceiver($event)">
+    </mat-form-field>
+    <button mat-button id="send" (click)="sendCoin()">Send MetaCoin</button>
+  </mat-card-content>
+</mat-card>
+
+

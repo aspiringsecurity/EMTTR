@@ -1,0 +1,51 @@
+<mat-card class="card ">
+  <mat-card-header class="header"><span>Voter Registration</span> <span style="margin-left:auto"><button class="home_button" mat-raised-button (click)="home()">Home</button></span></mat-card-header>
+  <mat-card-content class="form">
+  <br>
+  <form  class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Full Name" #fn>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Adhaar Number" #an>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Phone number" #pn>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Date of Birth" (dateChange)="set_date($event)">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+  <br />
+   <!-- <mat-form-field class="example-full-width">
+      <input matInput placeholder="Email ID" #gm>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Address" #ad>
+    </mat-form-field>
+    <br /> -->
+    <mat-form-field class="example-full-width">
+    <mat-select name="constituency" placeholder="Constituency" #constituency>
+      <mat-option *ngFor="let constituency of constituencies" [value]="constituency.name">{{constituency.name}}</mat-option>
+    </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" #pass type="password">
+    </mat-form-field>
+    <br />
+    <button class="add-button" mat-raised-button color="primary" (click)="add(fn.value,an.value,pn.value,dob,pass.value, constituency.value);">
+      <b>Submit</b>
+    </button>
+  </form>
+
+
+  </mat-card-content>
+</mat-card>
+
+

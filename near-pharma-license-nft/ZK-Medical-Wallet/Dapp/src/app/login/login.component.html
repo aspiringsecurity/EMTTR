@@ -1,0 +1,25 @@
+
+<mat-card class="card">
+  <mat-card-header class="header"> <span>OTP Verification</span> <span style="margin-left:auto"><button class="home_button" mat-raised-button (click)="home()">Home</button></span></mat-card-header>
+  <br>
+  <br>
+  <mat-card-content class="form">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Adhaar Number" #an>
+      </mat-form-field>
+      <br />
+      <button class="add-button" mat-raised-button color="primary" (click)="send_otp(an.value);">
+        <b>Receive OTP</b>
+      </button>
+      <br />
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="6-digit OTP" #otp>
+      </mat-form-field>
+      <br />
+        <button class="add-button" mat-raised-button color="primary" (click)="verify_otp(otp.value); otp.value=''">
+          <b>Submit</b>
+        </button>
+    </form>
+  </mat-card-content>
+</mat-card>

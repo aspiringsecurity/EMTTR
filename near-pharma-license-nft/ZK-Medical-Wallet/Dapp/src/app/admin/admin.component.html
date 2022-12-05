@@ -1,0 +1,54 @@
+<mat-card class="card">
+<mat-card-header class="header"> <span>Admin Portal</span> <span style="margin-left:auto"><button class="home_button" mat-raised-button (click)="home()">Home</button></span></mat-card-header>
+<br />
+  <mat-card-content>
+  <button class="refresh-button" mat-raised-button color="primary" (click)="refreshElections()">
+          <b>Refresh</b>
+  </button>
+
+  <br />
+  <br />
+  <table mat-table [dataSource] = "elections" class="mat-elevation-z8">
+      <ng-container matColumnDef="Label">
+        <th mat-header-cell *matHeaderCellDef> <b>Election</b> </th>
+        <td mat-cell *matCellDef="let election" > {{election.label}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Start Time">
+        <th mat-header-cell *matHeaderCellDef> <b>Start Time</b> </th>
+        <td mat-cell *matCellDef="let election"> {{election.start_time}} </td>
+      </ng-container>
+      <ng-container matColumnDef="End Time">
+        <th mat-header-cell *matHeaderCellDef> <b>End Time</b> </th>
+        <td mat-cell *matCellDef="let election"> {{election.end_time}} </td>
+      </ng-container>   
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> <b> Action </b> </th>
+        <td mat-cell *matCellDef="let election">
+      <span> 
+        <button class="election-button" mat-raised-button color="primary" routerLink="/election/1">
+          <b>View</b>
+        </button>
+      </span>
+      <!--
+      <span *ngIf="election.status==0"> 
+        <button class="election-button" mat-raised-button color="primary" (click)="updateElection(1)">
+          <b>Start Election</b>
+        </button>
+      </span>
+      <span *ngIf="election.status==1"> 
+        <button class="election-button" mat-raised-button color="primary" (click)="updateElection(2)">
+          <b>End Election</b>
+        </button>
+      </span>
+      <span *ngIf="election.status==2"> 
+      <button class="election-button" mat-raised-button color="primary" (click)="calculateVotes()">
+          <b>Calculate Votes</b>
+          </button>
+      </span>
+      -->
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>

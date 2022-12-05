@@ -1,0 +1,5 @@
+def main(private field a, field b, field c, field d) -> (field):
+  
+    field res = (a-b)*(a-c)*(a-d)
+    res == 0
+    return 1

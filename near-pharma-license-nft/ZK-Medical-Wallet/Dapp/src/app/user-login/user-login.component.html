@@ -1,0 +1,27 @@
+<mat-card class="card">
+<mat-card-header class="header">User Login </mat-card-header>
+<br />
+  <mat-card-content class="form">
+  <div>
+  <!-- <input #heroName /> -->
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Adhaar Number" #an>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" #pass type="password">
+    </mat-form-field>
+    <br />
+      <button class="add-button" mat-raised-button color="primary" (click)="verify_user(an.value, pass.value);">
+        <b>Submit</b>
+      </button>
+  </form>
+<!-- (click) passes input value to add() and then clears the input -->
+
+</div>
+  </mat-card-content>
+</mat-card> 
+
+
+

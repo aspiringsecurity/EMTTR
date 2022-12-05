@@ -1,0 +1,52 @@
+<mat-card class="card">
+  <mat-card-header class="header"><span>Voting Page</span> <span style="margin-left:auto"><button class="home_button" mat-raised-button (click)="home()">Home</button></span></mat-card-header>
+  
+  <br />
+  <br />
+  <mat-card-content class="form">
+
+    <p *ngIf="user.verification_status"> <span class="lhs_text"> Voter ID : </span>  {{user.voter_id}} 
+    </p> 
+    <br />  
+    <br /> 
+    <div *ngIf="model.has_voted">
+    <p class="basic_text"> You have already voted. Only one vote is allowed per voter. </p>
+  </div>
+    <div *ngIf=(model.show_voting_info)>
+
+      <mat-select style="margin-left: 10pt;" name="candidates" (selectionChange)="setSelectedCandidate($event)" placeholder="Select Candidate">
+          <mat-option *ngFor="let candidate of model.candidates" [value]="candidate.party">
+                    {{candidate.candidate_name}}  |  {{candidate.party}}  |  {{candidate.age}}
+                </mat-option>
+      </mat-select>
+
+    <br />
+    <br />
+    <p class="lhs_text"> Set Security Token (Remember it. This token will be used later to verify your vote) </p>
+    <br />
+    <form  class="example-form">
+        <mat-form-field class="example-full-width" style="margin-left: 10pt;">
+          <input matInput placeholder="Set Security Token" type="password" #secto (change)="setSecurityToken($event)">
+        </mat-form-field>
+        <br />
+        <br />
+        <button class="add-button" mat-raised-button color="primary" (click)="vote();">
+          <b>Vote</b>
+        </button>
+      </form>
+    </div>
+  <div *ngIf="model.vote_hash">
+    <p class="basic_text"> <span class="lhs_text"> Your Vote Hash : </span> {{model.vote_hash}} </p>
+  </div>
+  <br />
+  <br />
+
+  <div>
+   <button class="add-button" mat-raised-button color="primary" (click)="dashboard();">
+          <b>Back to Dashboard</b>
+   </button> 
+  </div>
+  <br />
+  <br />
+  </mat-card-content>
+</mat-card> 

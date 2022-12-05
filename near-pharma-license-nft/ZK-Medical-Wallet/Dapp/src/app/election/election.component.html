@@ -1,0 +1,77 @@
+<mat-card class="card">
+  <mat-card-header class="header">
+    <span>Election Details</span> 
+    <span style="margin-left:auto">
+      <button class="home_button mx-2" mat-raised-button routerLink="/admin">Back</button>  
+      <button class="home_button" mat-raised-button routerLink="/home">Home</button>
+    </span>
+  </mat-card-header>
+  
+  <div>
+    <p class=" m-2 p-3 form">
+      <span class="px-3 py-2 border border-dark status"  *ngFor="let phase of phases" [class.complete]="phase.status<=election.status" [class.incomplete]="!(phase.status<=election.status)">
+        {{phase.name}}
+      </span> 
+    </p>
+  </div>
+  <br />
+  <br />
+  <mat-card-content>
+    
+    <div class="px-5">
+    <button class="refresh-button" mat-raised-button color="primary" (click)="refreshElections()">
+            <b>Refresh</b>
+    </button>
+    <br />  
+    <br />
+      
+      <!--<p> <span class="lhs_text">Name :</span> <span class="basic_text"> {{election.label}}</span></p>
+      <p> <span class="lhs_text"> Start Time :</span> <span class="basic_text"> {{election.start_time}}</span> </p>
+      <p> <span class="lhs_text"> End Time :</span> <span class="basic_text"> {{election.end_time}}</span> </p>
+      <p> <span class="lhs_text"> State :</span> <span class="basic_text"> Maharashtra</span> </p>
+       -->
+      <div class="container"> 
+      <div class="row"> <div class="col-sm-4 lhs_text"> Name :</div> <div class="col-sm-4 basic_text"><span class="basic_text"> {{election.label}}</span></div><div class="col-sm-4"> </div><div class="col-sm-4"> </div> </div><br />
+      <div class="row"> <div class="col-sm-4 lhs_text"> Start Time :</div> <div class="col-sm-4 basic_text"> {{election.start_time}}</div><div class="col-sm-4"> </div><div class="col-sm-4"> </div> </div><br />
+      <div class="row"> <div class="col-sm-4 lhs_text"> End Time :</div> <div class="col-sm-4 basic_text"> {{election.end_time}}</div><div class="col-sm-4"> </div><div class="col-sm-4"> </div> </div><br />
+      <div class="row"> <div class="col-sm-4 lhs_text"> State :</div> <div class="col-sm-4 basic_text"> Maharashtra</div><div class="col-sm-4"> </div><div class="col-sm-4"> </div> </div><br />
+      <div class="row"> <div class="col-sm-4 lhs_text"> Enable Voter Transperancy :</div> <div class="col-sm-4 basic_text"><mat-slide-toggle color="warn" checked></mat-slide-toggle></div><div class="col-sm-4"> </div><div class="col-sm-4"> </div> </div><br />
+      <div class="row"> <div class="col-sm-4">
+       <p style="margin-left: 13px;">
+  
+        <span *ngIf="election.status==0"> 
+        <button class="election-button" mat-raised-button  (click)="updateElection(1)">
+          <b>Start Election</b>
+        </button>
+      </span>
+      <span *ngIf="election.status==1"> 
+        <button class="election-button" mat-raised-button  (click)="updateElection(2)">
+          <b>End Election</b>
+        </button>
+      </span>
+      <span *ngIf="election.status==2"> 
+      <button class="election-button" mat-raised-button  (click)="calculateVotes()">
+          <b>Calculate Votes</b>
+          </button>
+      </span>
+      <span *ngIf="election.status==3"> 
+        <button class="election-button" mat-raised-button  routerLink="/resultsverify">
+          <b>View Results</b>
+        </button>
+      </span>
+      </p>
+       
+       
+       </div> <div class="col-sm-4 basic_text"></div><div class="col-sm-4"> </div><div class="col-sm-4"> </div> </div>
+      </div>
+
+      
+    
+    </div>
+
+
+  <br />
+  <br />
+  </mat-card-content>
+</mat-card> 
+

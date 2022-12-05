@@ -1,0 +1,107 @@
+<div class="main2">
+  <div style="height: 10px"></div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <img style="width: 80px; height: 30px; float: left;" src="../../assets/Group 50.png">
+      </div>
+      <div class="col-10">
+        <div style="background: rgba(0, 178, 138, 0.08); border-radius: 32px; margin: auto; height: 22px; width: 253px">
+          <p style="font-family: 'Inter';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 16px;text-align: center;
+          letter-spacing: 0.1px;color: #00B28A;
+          margin-top: 15px;
+          ">Indian General Election 2020 is live</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="height: 20px"></div>
+
+
+  <div class="signupbox">
+
+    <div *ngIf="!success">
+    <div style="height: 20px"></div>
+    <h4 style="font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #212121;">
+      Begin Voting
+    </h4>
+    <div style="height: 30px"></div>
+    <button *ngIf="verified"mat-raised-button style="background-color: #487BE3; width: 60%; color: white"
+     (click)="vA()"
+    >Verify Age</button>
+    <div style="height: 20px"></div>
+
+    <div style="font-size: 12px">
+    <mat-form-field appearance="outline" style="width: 60%; height: 60; margin-bottom: -1.25em;">
+      <mat-label>Select Candidate</mat-label>
+      <mat-select [(ngModel)]="voted_cdt">
+        <mat-option *ngFor="let cdt of candidates" [value]="cdt.val">
+          {{cdt.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+    <div style="height: 20px"></div>
+    <div style="font-size: 12px;">
+      <mat-form-field appearance="outline" style="width: 60%; height: 60; margin-bottom: -1.25em;">
+        <mat-label>Voting Password</mat-label>
+        <input matInput #input [(ngModel)]="voting_passwd">
+      </mat-form-field>
+    </div>
+   
+    <div style="height: 30px;"></div>
+
+    <button mat-raised-button style="background-color: #487BE3; width: 60%; color: white"
+     (click)="vote()"
+    >Cast Vote</button>
+     
+    </div>
+
+    <div *ngIf="success">
+      <div style="height: 20px"></div>
+      <img src="../../assets/tick.png">
+      <div style="height: 20px"></div>
+      <h4 style="font-family: 'Inter';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: -1px;
+      color: #212121;">
+        Successfully Cast
+      </h4>
+  
+      <div style="height: 30px;"></div>
+  
+      <p style="font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;color: rgba(0, 0, 0, 0.5);
+      width: 70%;
+      margin-left: 15%;
+      ">We appreciate your time for participating in the Indian General Election 2020.</p>
+  
+    </div>
+    <div style="height: 5px"></div>
+
+  </div>
+
+
+  </div>

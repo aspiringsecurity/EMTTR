@@ -1,0 +1,80 @@
+<mat-card class="card">
+  <!--<mat-card-header class="header"> Hello {{verifier.name}}!</mat-card-header> 
+  
+  <br />-->
+  <mat-card-header class="header"> <span>KYC Verification Portal</span> <span style="margin-left:auto"><button class="home_button" mat-raised-button (click)="home()">Home</button></span> </mat-card-header>
+  <br>
+  <mat-card-header class="small_header"> <span>Unverified Voters:</span> </mat-card-header>
+  <br />
+  <span ><button class="refresh-button" mat-raised-button color="primary" (click)="getVoterList()">
+       <b>Refresh</b> </button></span>
+  <br />
+  <br>
+  <mat-card-content>
+    <table mat-table [dataSource] = "unverifiedVoters" class="mat-elevation-z8">
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef> <b>Voter Name</b> </th>
+        <td mat-cell *matCellDef="let element" > {{element.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="UUID">
+        <th mat-header-cell *matHeaderCellDef> <b>UUID</b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.uuid}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Date of Birth">
+        <th mat-header-cell *matHeaderCellDef> <b>Date of Birth</b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.dob_string}} </td>
+      </ng-container>
+      <!--<ng-container matColumnDef="Address">
+        <th mat-header-cell *matHeaderCellDef> <b>Address</b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+      </ng-container>-->
+      <ng-container matColumnDef="Constituency">
+        <th mat-header-cell *matHeaderCellDef> <b>Constituency</b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.constituency}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Status">
+        <th mat-header-cell *matHeaderCellDef> <b>KYC Status</b> </th>
+        <td mat-cell *matCellDef="let element">
+          <button *ngIf="!element.verification_status" class="verify-button" mat-raised-button color="primary" (click)="verify(element)">
+            <b>Verify</b>
+          </button>
+          <span *ngIf = "element.verification_status">Verified!</span>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <!--<div *ngFor="let voter of unverifiedVoters">
+      <span class="small_header"> {{voter.name}} </span>
+      <br />
+      <br />
+      
+        <thead>
+          <th>UUID</th>
+          <th>Date of Birth</th>
+          <th>Address</th>
+          <th>Constituency</th>
+        </thead>
+      </table>
+      <span> <b>UUID:</b> {{voter.uuid}} </span>
+      <br>
+      <span> <b>Date of Birth:</b> {{voter.dob}} </span>
+      <br>
+      <span> <b>Address:</b> {{voter.address}} </span>
+      <br>
+      <span> <b>Constituency:</b> {{voter.constituency}} </span> 
+      <br />
+      <br />
+      <span>
+      <button class="add-button" mat-raised-button color="primary" (click)="verify()">
+        Verify
+      </button>
+      </span>
+      <br />
+      <br />  
+      <br />
+      <br />
+    </div>-->
+  </mat-card-content>
+</mat-card> 

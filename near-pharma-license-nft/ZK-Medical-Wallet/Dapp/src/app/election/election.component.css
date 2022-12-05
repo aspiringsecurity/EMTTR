@@ -1,0 +1,20 @@
+.complete {
+    background-color: #28A745;
+    color:white
+}
+
+.incomplete {
+    background-color: white;
+    color:#777
+}
+
+.status {
+    border-radius: 0px;
+
+}
+
+.add-button, .submit-button, .election-button, .refresh-button, .verify-button{
+    background: rgba(30, 30, 30, 0.9);
+    font-family:Impact;
+    color:white
+  }

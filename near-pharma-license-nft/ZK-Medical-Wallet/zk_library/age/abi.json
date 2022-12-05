@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "name": "age",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "age_bar",
+      "public": true,
+      "type": "field"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "field"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+<mat-card class="card">
+  <!-- Need to change header & voter turnout using actual data -->
+  <mat-card-header class="header"><span>{{election_label}} Result</span> <span style="margin-left:auto"><button class="home_button" mat-raised-button (click)="home()">Home</button></span></mat-card-header>
+  
+
+
+
+  
+  <mat-card-content>
+  <br />
+  <p class="basic-text"> Total Voter Turnout : {{this.model.voterCount}}</p> 
+  <br />
+  <button class="refresh-button" mat-raised-button color="primary" id="requestViewAccess"
+                    (click)="getResult()">Refresh</button>
+  <br />
+  <br />
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+      <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+        <th mat-header-cell *matHeaderCellDef> <b>{{column}}</b> </th>
+        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+      </ng-container>
+
+      <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+      <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+          <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+          
+           <div>
+            <div *ngFor="let party of parties">
+              
+                <span class="loan-meta-data"> Party Name : {{party}} </span>
+                <!--<span class="loan-meta-data"> Number of Votes : {{element['Number of Votes'][party]}} </span>
+                <br /><br /><br />-->
+              <span class="loan-meta-data"> Vote Hashes : </span>  
+              <p *ngFor="let vote_hash of element['vote_hashes'][party]">
+                <span class="loan-meta-data"> {{vote_hash}} </span>
+              </p>
+              
+              <br />
+              <mat-divider></mat-divider>
+              <br /><br />
+            </div>
+          </div>
+         </div>
+        </td>
+      </ng-container>  
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="example-element-row"
+        [class.example-expanded-row]="expandedElement === element"
+        (click)="expandedElement = expandedElement === element ? null : element">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+    </table>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 form">
+        
+
+          <table mat-table [dataSource] = "result_party" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> <b>Party</b> </th>
+        <td mat-cell *matCellDef="let party" > {{party.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="votes">
+        <th mat-header-cell *matHeaderCellDef> <b>Number of Votes</b> </th>
+        <td mat-cell *matCellDef="let party"> {{party.votes}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+      </div>
+      <div class="col-sm-6 form">
+        <div style="display: block">
+          <canvas baseChart
+            [data]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [chartType]="doughnutChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </mat-card-content>
+</mat-card>
+<br>
+<mat-card class="card">
+<mat-card-header class="header"> Calculate Vote Hash </mat-card-header>
+<br />
+  <mat-card-content>
+    <form>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter Adhaar Number" #ad>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter Password" type="password" #pw>
+      </mat-form-field>
+      <br />
+    <button class="refresh-button" mat-raised-button color="primary" (click)="getVoteHash(ad.value,pw.value); pw.value=''">
+      Submit
+    </button>
+  </form>
+  <br/>
+  <div *ngIf="model.vote_hash !=''">
+    <p>Vote Hash : {{model.vote_hash}} </p>
+  </div>
+  </mat-card-content>
+</mat-card> 

@@ -1,0 +1,5 @@
+// age verification example
+def main(private field age, field age_bar) -> (field):
+  field y = if age >= age_bar then 1 else 0 fi
+  y == 1 
+  return 1
