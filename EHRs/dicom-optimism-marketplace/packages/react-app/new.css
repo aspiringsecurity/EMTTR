@@ -1,0 +1,19 @@
+/* media quieries ready for app.css once I figure out how to get it to work */
+
+:root {
+   fullHeaderGridLayout: .5fr 1fr / 1fr 1fr;
+   buttonHeaderGridRow: 1 / 3;
+   buttonHeaderGridColumn:  1 / 2;
+   accountHeaderGridRow: 1 / 3;
+   accountHeaderGridColumn: 2 / 3;
+ }
+ 
+ @media (max-width: 400px) {
+   :root {
+     fullHeaderGridLayout: 1fr 1fr / 1fr;
+     buttonHeaderGridRow: 2 / 3;
+     buttonHeaderGridColumn:  1 / 2;
+     accountHeaderGridRow: 1 / 2;
+     accountHeaderGridColumn: 1 / 2;
+   }
+ }

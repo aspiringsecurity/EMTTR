@@ -1,0 +1,13 @@
+:root {
+   --network-font-size: 1.25rem;
+}
+
+@media (max-width: 450px) {
+   :root {
+      --network-font-size: 1rem;
+   }
+}
+
+.headerNetworkDisplay {
+   font-size: var(--network-font-size);
+}

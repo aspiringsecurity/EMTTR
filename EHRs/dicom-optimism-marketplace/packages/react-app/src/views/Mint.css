@@ -1,0 +1,171 @@
+:root {
+   --logo-width: 60%;
+   --placeholder-singleNFT-width: 40%;
+   --singleNFT-width: 40%;
+   --mobile-padding-bottom: 0;
+}
+
+@media (max-width: 750px) {
+   :root {
+      --logo-width: 90%;
+      --placeholder-singleNFT-width: 70%;
+      --singleNFT-width: 70%;
+      --mobile-padding-bottom: 120px;
+   }
+}
+
+.mint {
+   background-color: transparent;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
+
+.mintPageExplanation {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: #f7f8f9;
+   /*   -webkit-text-stroke: 1px #203466; */
+}
+
+.logoWidth {
+   width: var(--logo-width);
+}
+
+.mintPageExplanationHead {
+   font-size: 2rem
+}
+
+.mintPageExplanationSubhead {
+   font-size: 1.5rem
+}
+
+.mintPageExplanationBody {
+   background-color: #203466;
+   border: 1px solid transparent;
+   border-radius: 20px;
+   padding: 0px 5px;
+   font-size: 1.5rem;
+   margin-bottom: 5px;
+
+}
+
+.beforeMintRender {
+   width: 100%;
+   height: auto;
+}
+
+.mintFormStyling {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   width: 100%;
+}
+
+.mintRenderWrapper {
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+   margin: 2% 4% 2% 4%;
+   min-height: 40vh;
+}
+
+.mintRenderOneNFT {
+   display: grid;
+   grid-template-rows: .1fr 1fr;
+   grid-template-columns: 1fr;
+   height: 100%;
+   justify-items: center;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+   padding-bottom: var(--mobile-padding-bottom);
+}
+
+.oneMintedNFTRenderTitle {
+   display: grid;
+   grid-row: 1 / 2;
+   grid-column: 1 / 2;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   font-size: 3rem;
+   color: #f7f8f9;
+   -webkit-text-stroke: 2.5px #203466;
+/*    background-color: #425688;
+   border: 2px solid #203466;
+   padding: 0px 3px; */
+}
+
+.oneMintedNFTRender {
+   display: grid;
+   grid-row: 2 / 3;
+   grid-column: 1 / 2;
+   width: var(--singleNFT-width);
+   margin-bottom: 10px
+}
+
+.mintRenderTwoNFTs {
+   display: grid;
+   grid-template-rows: .1fr 1fr;
+   grid-template-columns: 1fr 1fr;
+   height: 100%;
+   justify-items: center;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+   font-size: 2rem;
+}
+
+.twoMintedNFTRenderTitle1 {
+   display: grid;
+   grid-row: 1 / 2;
+   grid-column: 1 / 2;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   font-size: 3rem;
+   color: #f7f8f9;
+   -webkit-text-stroke: 2.5px #203466;
+}
+
+.twoMintedNFTRenderTitle2 {
+   display: grid;
+   grid-row: 1 / 2;
+   grid-column: 2 / 3;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   font-size: 3rem;
+   color: #f7f8f9;
+   -webkit-text-stroke: 2.5px #203466;
+   
+}
+
+.twoMintedNFTRender1 {
+   display: grid;
+   grid-row: 2 / 3;
+   grid-column: 1 / 2;
+   width: 80%;
+}
+
+.twoMintedNFTRender2 {
+   display: grid;
+   grid-row: 2 / 3;
+   grid-column: 2 / 3;
+   width: 80%;
+}
+
+.placeholderPreMintNFTRender {
+   display: grid;
+   grid-row: 2 / 3;
+   grid-column: 1 / 2;
+   width: var(--placeholder-singleNFT-width);
+   margin-bottom: 10px;
+
+}
+
+

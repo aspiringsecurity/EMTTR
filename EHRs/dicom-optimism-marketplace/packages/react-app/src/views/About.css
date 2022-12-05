@@ -1,0 +1,38 @@
+.aboutPageWrapper {
+   background-color: transparent;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   min-height: 800; 
+}
+
+.aboutPage {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   color: #f7f8f9;
+}
+
+.sections {
+   width: 100%;
+   margin-left: 8%;
+   margin-right: 8%;
+   padding-left: 2%;
+   padding-right: 2%;
+   text-align: start;
+   margin-bottom: 2%;
+   background-color: hsla(223, 52%, 26%, .9)
+}
+
+.aboutPageHeaders {
+   font-size: 2.5rem;
+   font-weight: bold;
+
+}
+
+.aboutPageBody {
+   font-size: 1.7rem;
+   color: #f7f8f9;
+}

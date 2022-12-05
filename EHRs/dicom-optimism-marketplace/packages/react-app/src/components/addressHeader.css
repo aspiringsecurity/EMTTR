@@ -1,0 +1,19 @@
+:root {
+   --wallet-font-size: 1.5rem;
+   --hexcode-font-size: 1.5rem;
+}
+
+@media (max-width: 450px) {
+   :root {
+      --wallet-font-size: 1rem;
+      --hexcode-font-size: 1rem;
+   }
+}
+
+.headerWalletText {
+   font-size: var(--wallet-font-size);
+}
+
+.hexcodeText {
+   font-size: var(--hexcode-font-size);
+}
