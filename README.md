@@ -8,9 +8,33 @@ Enabling the bottom of pyramid through empowering pharma companies and the medic
 
 ■Improving Data Transparency in Drug Testing Using Ethereum Blockchain
 
-■Enabling healthcare community by empowering pharma companies & the medicaleco-system to do medicine trial testing securely, transparently using BNB blockchain
+■Enabling healthcare community by empowering pharma companies & the medicaleco-system to do medicine trial testing securely, transparently using blockchain
 
 Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
+
+
+# BlockChain Eco-system
+
+1. Niftykit low code framework tools: Secure data storage, transparent data movement and data authenticity using Niftykit low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/niftykitxls
+
+2. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
+
+3. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. Please visit:
+
+a. OpenSea Community Tooling: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-community-tooling
+
+b. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
+
+4. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
+
+We are utilizing Chainlink VRF as follows:
+
+Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
+
+Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/chainlink-insurance
+
+5. IPFS; Ethereum and Embark; Status 
+
 
 Features:
 
@@ -129,7 +153,7 @@ patient ident= s2/2007-5-13
 6) Log files for these scripts can be found in logs directory
 
 
-# Blockchain Eco-system
+# Blockchain Eco-system II
 
 1. Covalent End Point: Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), pharmaceutical companies in different networks. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard
 
@@ -143,28 +167,12 @@ EthMed Covalent Dashboard: We are developing a Contract Research DAO platform us
 
 5. Tron DAO: DAOTooling using Tron DAO. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/tron-contracts
 
-6. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
+6. Covalent Dashboard: We are developing a Contract Research DAO platform using Covalent that enables healthcare providers, contract researchers and aggregators and pharma organizations to keep track of all the details of their medicine assets, trial budgets, DeFi investments, transactions, and assets across all multiple chains and also displays DAO data using a data visualization chart. We are building our solution on top of an existing web3 dashboard system and are planning to integrate it with an analytics, tabulation and collaboration tool namely EtherCalc. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/advance-dashboard
 
-We are utilizing Chainlink VRF as follows:
-
-Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
-
-Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/chainlink-insurance
-
-7. Covalent Dashboard: We are developing a Contract Research DAO platform using Covalent that enables healthcare providers, contract researchers and aggregators and pharma organizations to keep track of all the details of their medicine assets, trial budgets, DeFi investments, transactions, and assets across all multiple chains and also displays DAO data using a data visualization chart. We are building our solution on top of an existing web3 dashboard system and are planning to integrate it with an analytics, tabulation and collaboration tool namely EtherCalc. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/advance-dashboard
-
-8. OpenZepellin Governance + Evmos Smart Contracts: Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/evmos-smart-contract
+7. OpenZepellin Governance + Evmos Smart Contracts: Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/evmos-smart-contract
    Governor Bravo Model Implementation and Integration: Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/governance
 
-9. Niftykit low code tools: Secure data storage, transparent data movement and data authenticity using Niftykit low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/niftykitxls
 
-10. Optimism: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
-
-11. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. Please visit:
-
-a. OpenSea Community Tooling: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-community-tooling
-
-b. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
 
 
 
