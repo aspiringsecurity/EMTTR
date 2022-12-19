@@ -10,7 +10,18 @@ Enabling the bottom of pyramid through empowering pharma companies and the medic
 
 ■Enabling healthcare community by empowering pharma companies & the medicaleco-system to do medicine trial testing securely, transparently using blockchain
 
-Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
+
+Features:
+
+Just in Time Service: Availability of pharma companies medicine records across differentstakeholder through secure blockchain network.
+
+• Record Management: Quality documentation reduces the issues regarding testing proceduresand standardization.• Research: Enabling the healthcare community by empowering pharma companies & themedical eco-system to do medicine trial testing securely, transparently.
+
+• Data Security: Efficiently sharing of data (including personal data), privacy concerns andpatient enrollment strategies.
+
+• Transparency: Improving Data Transparency in Drug Testing Using Blockchain.
+
+A greater and more seamless flow of information within a digital drug discovery infrastructure,created by electronic medicine trial and test records as a service (EMTTRs), encompasses andleverages digital progress and can transform the way medicines are developed, tested anddistributed to improve the global health economy and achievement of Sustainable DevelopmentGoals in Healthcare.
 
 
 # BlockChain Eco-system
@@ -36,17 +47,7 @@ Parametric Insurance Solution for medicine discovery with special procedures. We
 5. IPFS; Ethereum and Embark; Status 
 
 
-Features:
-
-Just in Time Service: Availability of pharma companies medicine records across differentstakeholder through secure blockchain network.
-
-• Record Management: Quality documentation reduces the issues regarding testing proceduresand standardization.• Research: Enabling the healthcare community by empowering pharma companies & themedical eco-system to do medicine trial testing securely, transparently.
-
-• Data Security: Efficiently sharing of data (including personal data), privacy concerns andpatient enrollment strategies.
-
-• Transparency: Improving Data Transparency in Drug Testing Using Blockchain.
-
-A greater and more seamless flow of information within a digital drug discovery infrastructure,created by electronic medicine trial and test records as a service (EMTTRs), encompasses andleverages digital progress and can transform the way medicines are developed, tested anddistributed to improve the global health economy and achievement of Sustainable DevelopmentGoals in Healthcare.
+Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
 
 Moralis deployment URL: https://3gtivnurtulj.usemoralis.com:2053/server (to be deployed)
 
@@ -153,7 +154,7 @@ patient ident= s2/2007-5-13
 6) Log files for these scripts can be found in logs directory
 
 
-# Blockchain Eco-system II
+# Supporting Eco-system
 
 1. Covalent End Point: Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), pharmaceutical companies in different networks. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard
 
