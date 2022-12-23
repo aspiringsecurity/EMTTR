@@ -42,9 +42,11 @@ Parametric Insurance Solution for medicine discovery with special procedures. We
 
 3. Polygon, Fantom (TradeFi meets Defi) and Axelar: Axelar for communication between Polygon blockchain (pharmaceutical companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Healthcare or Ministry of Commerce). Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/axelar-messaging . Polygon audit smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-Polygon
 
-4. Niftykit low code framework tools: Secure data storage, transparent data movement and data authenticity using Niftykit low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/niftykitxls
+4. XDC blockchain network: Borrowing XDC funds using collaterals for drug design research and development. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/xdc-borrow-funds
 
-5. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. Please visit:
+5. Niftykit low code framework tools: Secure data storage, transparent data movement and data authenticity using Niftykit low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/niftykitxls
+
+6. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. Please visit:
 
 a. OpenSea Community Tooling: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-community-tooling
 
