@@ -1,0 +1,122 @@
+.header{
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    gap: 2rem;
+}
+
+.logo{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.form-control{
+    border: 1px solid var(--color-light);
+    border-radius: 1rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+.form-control form{
+    width: 90%;
+}
+
+.form-control input::placeholder{
+    color: white;
+}
+
+.form-control input{
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Cutive Mono', monospace;
+}
+
+.form-control span{
+    cursor: pointer;
+}
+
+.address{
+    display: flex;
+    align-items: center;
+}
+
+.address button{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70%;
+    border: 1px solid var(--color-light);
+    padding: 1rem;
+    background: transparent;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-family: 'Cutive Mono', monospace;
+    cursor: pointer;
+}
+
+.mode-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms all ease;
+}
+
+.mode-toggle span{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 500ms all ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .header{
+        padding: 1rem 1.5rem;
+        grid-template-columns: 20% 70% 10%;
+        gap: 1rem;
+    }
+
+    .logo{
+        font-size: 1.5rem;
+    }
+    .form-control input{
+        font-size: .8rem;
+        padding: .5rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        padding: 1rem 2.5rem;
+        grid-template-columns: 10% 85% 5%;
+        /* gap: .8rem; */
+    }
+    
+    .link{
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-control{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .mode-toggle span{
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,73 @@
+.address-info{
+    width: 70%;
+    padding: 2rem;
+    margin: 2rem auto;
+    background: transparent;
+    box-shadow: 0 0 3rem var(--bg-blur);
+}
+
+.address-info section{
+    margin-bottom: 3rem;
+}
+
+.address-info section h3{
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.address-info .address{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--color-light);
+}
+
+.address-info .address h4{
+    font-size: 1.4rem;
+}
+.address-info .address a {
+    display: block;
+    padding-top: 1rem;
+}
+.address-info .address a span{
+    font-size: 1rem;
+}
+
+.no-token-data{
+    text-align: center;
+    margin: 1rem auto;
+    color: var(--color-light);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1200px){
+    .address-info{
+        width: 80%;
+        padding: 1.6rem;
+    }
+
+    .address-info .address h4{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .address-info{
+        width: 90%;
+        padding: 1.3rem;
+    }
+    
+    .address-info .address h4{
+        font-size: .6rem;
+    }
+
+    .address-info section h3{
+        font-size: 1.2rem;
+    }
+
+    .no-token-data{
+        font-size: .7rem;
+    }
+}

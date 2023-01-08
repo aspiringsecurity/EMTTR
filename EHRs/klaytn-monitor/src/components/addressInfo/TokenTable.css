@@ -1,0 +1,62 @@
+table{
+    margin-top: 2rem;
+    width: 100%;
+    border: none;
+}
+
+table tr{
+    border-color: var(--color-light);
+}
+
+table thead, table tbody{
+    width: 100%;
+}
+
+table thead tr th{
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem 0;
+}
+
+table tbody tr td{
+    cursor: pointer;
+    text-align: center;
+    width: max-content;
+    padding: 1rem 0;
+}
+
+.token-symbol{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.token-symbol img{
+    width: 2rem;
+}
+
+table tbody tr:hover{
+    background-color: var(--bg-blur);
+}
+
+
+@media screen and (max-width: 768px){
+    table thead tr th{
+        font-size: 1rem;
+    }
+
+    .token-symbol{
+        gap: .7rem;
+        font-size: 1rem;
+    }
+
+    table tbody tr td{
+        font-size: .8rem;
+    }
+
+    .token-symbol img{
+        width: 1rem;
+    }
+}

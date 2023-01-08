@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#544600" />
+    <meta name="description" content="Klaytn Watch web application where users can view account balance and track account data"/>
+    <link rel="apple-touch-icon" href="./logo192.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <title>Klaytn Watch</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="portaled"></div>
+    <div id="root"></div>
+
+    <script>
+      if("serviceWorker" in navigator){
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./serviceworker.js')
+            .then((reg) => console.log("success", reg.scope))
+            .catch((err) => console.log("Failure: ", err))
+        })
+      }
+    </script>
+  </body>
+</html>

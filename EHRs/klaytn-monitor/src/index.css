@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-bg: #030F26;
+  --color-bg-variant: #0C1D40;
+  --color-dark: #0D1826;
+  --color-light: #9298A6;
+  --color-white: #fff;
+
+  --color-warning: #ffd504;
+  --color-warning-variant: #BFA211;
+  --color-danger: #CF423C;
+  --color-primary: #0f75ce;
+  --color-success: #1ed552;
+  
+  --bg-blur: rgba(47, 47, 47, 0.1);
+}
+
+.light-mode{
+  --color-bg: #ffffff;
+  --color-bg-variant: #b3b3b3;
+  --color-dark: #edf0f5;
+  --color-light: #626367;
+  --color-white: #000;
+  --bg-blur: rgba(255, 255, 255, 0.3);
+  --color-warning: #9e8402;
+  --color-success: #0d792b;
+}
+
+.light-mode .container{
+  backdrop-filter: blur(15rem);
+}
+
+.light-mode .form-control, 
+.light-mode .form-control input::placeholder,
+.light-mode .form-control input{
+  color: black;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.danger{
+  color: var(--color-danger);
+}
+
+.success{
+  color: var(--color-success);
+}
+
+.warning{
+  color: var(--color-warning);
+}
+
+.primary{
+  color: var(--color-primary);
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.app{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.bg-effect{
+  width: 100%;
+  height: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--color-bg);
+}
+
+.bg-effect .circle1{
+  position: absolute;
+  top: -15px;
+  right: 10%;
+  background-color: var(--color-danger);
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+}
+.bg-effect .circle2{
+  position: absolute;
+  top: 0;
+  left: -5px;
+  background-color: var(--color-primary);
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+}
+.bg-effect .circle3{
+  position: absolute;
+  bottom: -10px;
+  left: 30%;
+  background-color: var(--color-warning);
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+}
+
+.container{
+  position: relative;
+  z-index: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  backdrop-filter: blur(15rem);
+  background: var(--bg-blur);
+  color: var(--color-white);
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .bg-effect{
+    height: 100vh;
+  }
+
+  .bg-effect .circle1{
+    top: -9px;
+    right: 10px;
+    width: 40vh;
+    height: 40vh;
+  }
+
+  .bg-effect .circle2{
+    top: 0;
+    left: -5px;
+    width: 30vh;
+    height: 30vh;
+  }
+
+  .bg-effect .circle3{
+    bottom: -5px;
+    left: 30px;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    font-size: .6rem;
+  }
+
+  :root{
+    --bg-blur: rgba(47, 47, 47, 0.3);
+    --color-light: #c7c7ce;
+  }
+
+  .light-mode{
+    --bg-blur: rgba(255, 255, 255, 0.5);
+  }
+
+  .container{
+    backdrop-filter: blur(5rem);
+  }
+
+  .light-mode .container{
+    backdrop-filter: blur(5rem);
+  }
+}

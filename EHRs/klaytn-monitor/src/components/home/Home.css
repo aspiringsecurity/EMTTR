@@ -1,0 +1,67 @@
+.home {
+    margin: 1rem auto;
+    width: 80%;
+    height: max-content;
+    padding: 2rem;
+}
+
+.home .img-logo{
+    width: 100%;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+.home .img-logo img{
+    width: 20%;
+}
+
+.home > div{
+    padding: 1rem;
+}
+
+.about-klaytn .img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home > div h3{
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+.home > div p{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px){
+    .home {
+        width: 90%;
+        padding: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .home {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .home > div h3{
+        font-size: 1.5rem;
+    }
+
+    .home > div p{
+        font-size: 1rem;
+    }
+
+    .about-klaytn .img{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about-klaytn .img img{
+        width: 100%;
+    }
+}

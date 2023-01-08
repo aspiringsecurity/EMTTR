@@ -1,0 +1,44 @@
+.nft-info{
+    margin-left: 1rem;
+}
+
+.nft-info .name-addy{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.nft-info .name-addy h3{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nft-info .name-addy p{
+    color: var(--color-light);
+}
+
+.nft-info .name-addy a span{
+    font-size: 1rem;
+    color: var(--color-light);
+}
+
+.nft-info .more-info{
+    padding: 1rem 0 1rem 2rem;
+}
+
+.nft-info .more-info h5{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+    .nft-info .name-addy h3{
+        font-size: 1rem;
+    }
+
+    .nft-info .more-info h5{
+        font-size: 1rem;
+    }
+}
