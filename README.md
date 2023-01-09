@@ -51,13 +51,11 @@ Parametric Insurance Solution for medicine discovery with special procedures. We
 
 4. XDC blockchain network: Borrowing XDC funds using collaterals for drug design research and development. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/xdc-borrow-funds
 
-5. Niftykit low code framework tools: Secure data storage, transparent data movement and data authenticity using Niftykit low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/niftykitxls
+5. Klaytn dashboard low code framework tools: Secure data storage, transparent data movement and data authenticity using Klaytn dashboard and low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytn-monitor and https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytnxls
 
-6. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. Please visit:
+6. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. 
 
-a. OpenSea Community Tooling: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-community-tooling
-
-b. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
+a. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
 
 
 Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
