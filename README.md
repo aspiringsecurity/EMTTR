@@ -35,6 +35,8 @@ A greater and more seamless flow of information within a digital drug discovery 
 1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
 Klaytn MED:  Low code framework tool for Medication Log  
 
+Secure data storage, transparent data movement and data authenticity using Klaytn dashboard and low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytn-monitor and https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytnxls
+
 1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network
 Aleo TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework 
 
