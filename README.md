@@ -32,6 +32,13 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
 
+1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
+Klaytn MED:  Low code framework tool for Medication Log  
+
+1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network
+Aleo TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework 
+
+
 We are utilizing Chainlink VRF as follows:
 
 Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
