@@ -2,7 +2,7 @@ EMTTR: Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in
 
 Website: https://sites.google.com/view/emttrservice/
 
-Enabling the bottom of pyramid through empowering pharma companies and the medicaleco-system to do medicine trial testing and clinical trials via blockchain enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud. EMTTRs as a service aims at providing
+Enabling the bottom of pyramid through empowering pharma companies and the medicaleco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud. EMTTRs as a service aims at providing
 
 ■Secure data storage, transparent data movement and data authenticity.
 
@@ -38,7 +38,13 @@ Klaytn MED:  Low code framework tool for Medication Log.
 Secure data storage, transparent data movement and data authenticity using Klaytn dashboard and low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytn-monitor and https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytnxls
 
 1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network
-Aleo TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework 
+Aleo TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework.
+
+Please visit: 
+
+a. Aleo Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/aleo-testxls
+
+b. Aleo's Quotation, Bidding, voting and token management for contract work undertaken by CROs: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/aleo-bid-quotation-vote-workflow
 
 
 We are utilizing Chainlink VRF as follows:
