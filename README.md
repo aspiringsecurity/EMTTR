@@ -2,13 +2,13 @@ EMTTR: Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in
 
 Website: https://sites.google.com/view/emttrservice/
 
-Enabling the bottom of pyramid through empowering pharma companies and the medicaleco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud. EMTTRs as a service aims at providing
+Enabling the bottom of pyramid through empowering pharma companies and the medicaleco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud and Filecoin eco-system tools. EMTTRs as a service aims at providing
 
-■Secure data storage, transparent data movement and data authenticity.
+■ Secure data storage, transparent data movement and data authenticity using Filecoin and IPFS eco-system tools.
 
-■Improving Data Transparency in Drug Testing Using Ethereum Blockchain
+■ Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Filecoin perpetual storage.
 
-■Enabling healthcare community by empowering pharma companies & the medicaleco-system to do medicine trial testing securely, transparently using blockchain
+■ Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using smart contracts compiled on EVM and FVM.
 
 
 Features:
