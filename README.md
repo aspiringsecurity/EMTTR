@@ -30,6 +30,8 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 1b. IPFS; Ethereum and Embark; Status 
 
+FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (shorturl.at/efvA4), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
+
 1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
 
 1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
