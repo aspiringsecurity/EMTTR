@@ -32,6 +32,8 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
 
+We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
+
 1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
 
 1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
