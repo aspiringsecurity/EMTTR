@@ -1,0 +1,15 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+.idea/
+
+#Hardhat files
+cache
+artifacts
+.aws-sam/
+geth_helpers/
+.openzeppelin/
+samconfig.toml
+__pycache__/
