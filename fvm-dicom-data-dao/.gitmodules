@@ -1,0 +1,15 @@
+[submodule "lib/forge-std"]
+	path = lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "lib/openzeppelin-contracts"]
+	path = lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "lib/filecoin-solidity"]
+	path = lib/filecoin-solidity
+	url = https://github.com/ZenGround0/filecoin-solidity.git
+[submodule "lib/solidity-cborutils"]
+	path = lib/solidity-cborutils
+	url = https://github.com/ZenGround0/solidity-cborutils.git
+[submodule "lib/buffer"]
+	path = lib/buffer
+	url = https://github.com/ensdomains/buffer
