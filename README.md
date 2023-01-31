@@ -2,7 +2,9 @@ EMTTR: Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in
 
 Website: https://sites.google.com/view/emttrservice/
 
-Pitch Video: https://www.youtube.com/watch?v=aIq3JiTlNVA
+Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
+
+(Achievement Link: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 )
 
 Enabling the bottom of pyramid through empowering pharma companies and the medicaleco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud and Filecoin eco-system tools. EMTTRs as a service aims at providing
 
