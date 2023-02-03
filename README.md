@@ -6,7 +6,7 @@ Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=
 
 (Achievement Link: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 )
 
-Enabling the bottom of pyramid through empowering pharma companies and the medicaleco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud and Filecoin eco-system tools. EMTTRs as a service aims at providing
+Enabling the bottom of pyramid through empowering pharma companies and the medical eco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud and Filecoin eco-system tools. EMTTRs as a service aims at providing
 
 ■ Secure data storage, transparent data movement and data authenticity using Filecoin and IPFS eco-system tools.
 
