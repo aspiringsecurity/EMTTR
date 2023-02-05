@@ -1,0 +1,346 @@
+.AlertContainer {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  width: 500px !important;
+  border-radius: 5px;
+}
+
+.error {
+  background-color: rgba(235, 60, 60, 0.864);
+}
+
+.success {
+  background-color: rgba(60, 235, 60, 0.864);
+}
+
+.Button0, .App .Management .GreeterButton {
+  color: #f8f9fa;
+  background-color: #4e529a;
+  text-align: center;
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+.Button0:hover, .App .Management .GreeterButton:hover {
+  cursor: pointer;
+}
+
+.Input0 {
+  margin: 5px;
+  background-color: rgba(48, 42, 156, 0.3);
+  color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #4e529a;
+  width: 400px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.Container0 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SpinnerContainer {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 500px !important;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(23, 26, 73);
+  height: 150px;
+}
+.SpinnerContainer .Message {
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  width: 400px;
+}
+.SpinnerContainer .Spinner {
+  display: inline-block;
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 50px;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+}
+.SpinnerContainer .Spinner div {
+  box-sizing: border-box;
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #171a49;
+  border-radius: 50%;
+  -webkit-animation: Spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: Spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #171a49 transparent transparent transparent;
+}
+.SpinnerContainer .Spinner div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+.SpinnerContainer .Spinner div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+.SpinnerContainer .Spinner div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+@-webkit-keyframes Spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Button1 {
+  color: #4e529a;
+  border: 1px solid #171a49;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+}
+.Button1:hover {
+  background-color: #171a49;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+}
+
+.GreenButton {
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto 0;
+  padding: 5px;
+  border: 1px solid rgba(60, 235, 60, 0.864);
+  color: rgba(60, 235, 60, 0.864);
+}
+
+.App {
+  margin: 0 auto;
+  font-family: "Fira Sans", sans-serif;
+  color: #f8f9fa;
+  font-size: 20px;
+}
+.App .Navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  padding-bottom: 20px;
+}
+.App .Navbar .Signer {
+  margin: auto 0;
+}
+.App .Navbar img {
+  height: 50px;
+}
+.App .Navbar .LogoText {
+  font-size: 30px;
+  margin: 7.5px;
+}
+.App .Navbar .Container0:hover {
+  cursor: pointer;
+}
+.App .Home {
+  background-color: #171a49;
+  padding: 30px;
+  border-radius: 10px;
+  width: 800px;
+  margin: 0 auto;
+}
+.App .Home .Entry {
+  width: 500px;
+  margin: 10px auto;
+}
+.App .Home .Entry .Button0, .App .Home .Entry .Management .GreeterButton, .App .Management .Home .Entry .GreeterButton {
+  margin: 0 auto;
+}
+.App .Home h1 {
+  font-size: 30px;
+}
+.App .Deployment, .App .Management {
+  background-color: #171a49;
+  padding: 30px;
+  border-radius: 10px;
+  width: 800px;
+  margin: 0 auto;
+}
+.App .Deployment .InputContainer, .App .Management .InputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+}
+.App .Management .Container0 {
+  justify-content: space-between;
+}
+.App .Management .GreeterButton {
+  width: 150px;
+  background-color: white;
+  color: #4e529a;
+  border: 1px solid rgba(48, 42, 156, 0.3);
+  margin: auto 0;
+}
+.App .Management .GreeterButton:hover {
+  background-color: rgba(48, 42, 156, 0.3);
+  color: white;
+  border-color: white;
+}
+.App .Management .InputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.App .Management .InputContainer .Input0 {
+  width: 600px;
+}
+.App .Management .InputContainer .Button0, .App .Management .InputContainer .GreeterButton {
+  width: 100px;
+}
+.App .Management .PluginInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.App .Management .PluginInfoContainer .PluginInfo {
+  border: 1px solid white;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+}
+.App .Management .PluginInfoContainer .PluginInfo:hover {
+  background-color: white;
+  color: #4e529a;
+  cursor: pointer;
+}
+.App .Management .PluginInfoContainer .PluginInfo h4 {
+  margin: 0 auto;
+}
+.App .Management .PluginInfoContainer .PluginInfo .ComingSoon {
+  color: rgba(236, 55, 55, 0.7);
+  margin: 0 auto;
+}
+.App .Management .PluginInfoContainer .PluginInfo .Live {
+  color: rgba(56, 234, 56, 0.7);
+  margin: 0 auto;
+}
+.App .Management .AA_Info .Field {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  color: rgba(211, 211, 211, 0.762);
+}
+.App .Management .ActivePlugins .Plugin {
+  background-color: white;
+  color: #4e529a;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+}
+.App .Management .ActivePlugins .Plugin .FieldsContainer {
+  display: flex;
+  flex-direction: column;
+  color: c;
+}
+.App .Management .ActivePlugins .Plugin .FieldsContainer .Field {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.App .GreeterContainer, .App .Management .LimitPluginCreationContainer {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.App .GreeterContainer .Greeter, .App .Management .LimitPluginCreationContainer .Greeter, .App .Management .LimitPluginCreationContainer .LimitPluginCreation {
+  background-color: #f8f9fa;
+  color: #4e529a;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  border-radius: 10px;
+}
+.App .GreeterContainer .Greeter .CloseButton, .App .Management .LimitPluginCreationContainer .Greeter .CloseButton, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .CloseButton {
+  border-radius: 10px;
+  border: 1px solid #4e529a;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto 0;
+  padding: 5px;
+}
+.App .GreeterContainer .Greeter .CloseButton:hover, .App .Management .LimitPluginCreationContainer .Greeter .CloseButton:hover, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .CloseButton:hover {
+  background-color: #4e529a;
+  color: #f8f9fa;
+  cursor: pointer;
+}
+.App .GreeterContainer .Greeter .FieldsContainer, .App .Management .LimitPluginCreationContainer .Greeter .FieldsContainer, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .FieldsContainer {
+  padding: 10px;
+}
+.App .GreeterContainer .Greeter .FieldsContainer .Field, .App .Management .LimitPluginCreationContainer .Greeter .FieldsContainer .Field, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .FieldsContainer .Field {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.App .GreeterContainer .Greeter .FieldsContainer .Field div, .App .Management .LimitPluginCreationContainer .Greeter .FieldsContainer .Field div, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .FieldsContainer .Field div,
+.App .GreeterContainer .Greeter .FieldsContainer .Field input,
+.App .Management .LimitPluginCreationContainer .Greeter .FieldsContainer .Field input,
+.App .Management .LimitPluginCreationContainer .LimitPluginCreation .FieldsContainer .Field input {
+  margin: auto 0;
+}
+.App .GreeterContainer .Greeter .FieldsContainer .Field .CurrentMessage, .App .Management .LimitPluginCreationContainer .Greeter .FieldsContainer .Field .CurrentMessage, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .FieldsContainer .Field .CurrentMessage {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+}
+.App .GreeterContainer .Greeter .FieldsContainer .Field .Button1, .App .Management .LimitPluginCreationContainer .Greeter .FieldsContainer .Field .Button1, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .FieldsContainer .Field .Button1 {
+  margin: auto 0;
+  margin-left: 20px;
+  width: 100px;
+}
+.App .GreeterContainer .Greeter .FieldsContainer .Field .Name, .App .Management .LimitPluginCreationContainer .Greeter .FieldsContainer .Field .Name, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .FieldsContainer .Field .Name {
+  text-align: left;
+  margin: auto 0;
+  font-weight: bolder;
+}
+.App .GreeterContainer .Greeter .FieldsContainer .Field .Input0, .App .Management .LimitPluginCreationContainer .Greeter .FieldsContainer .Field .Input0, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .FieldsContainer .Field .Input0 {
+  color: #4e529a;
+}
+.App .GreeterContainer .Greeter .Button0, .App .Management .LimitPluginCreationContainer .Greeter .Button0, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .Button0, .App .GreeterContainer .Greeter .Management .GreeterButton, .App .Management .GreeterContainer .Greeter .GreeterButton, .App .Management .LimitPluginCreationContainer .Greeter .GreeterButton, .App .Management .LimitPluginCreationContainer .LimitPluginCreation .GreeterButton {
+  margin: 10px auto;
+}/*# sourceMappingURL=App.css.map */
