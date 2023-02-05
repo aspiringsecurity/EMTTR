@@ -40,14 +40,21 @@ Please visit DataDAO for DICOM image and patient metadata in FVM Medicine soluti
 
 We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
 
-1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
+1c. Layer 2: zkync: We are utilizing zkysync layer 2 tooling for account abstraction, encryption tooling: please visit 
 
-1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
+- https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/zksync-account-abstraction-emttr
+- https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/hardhat-zksync
+
+Boba network: Hybrid-Compute for Medical Research University on the Boba Network. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/med-scaling-using-hybrid-compute-boba
+
+1d. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
+
+1e. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
 Klaytn MED:  Low code framework tool for Medication Log. 
 
 Secure data storage, transparent data movement and data authenticity using Klaytn dashboard and low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytn-monitor and https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytnxls
 
-1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network.
+1f. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network.
 
 Aleo TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework.
 
