@@ -40,14 +40,29 @@ Please visit DataDAO for DICOM image and patient metadata in FVM Medicine soluti
 
 We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
 
-1c. Layer 2: zkync: We are utilizing zkysync layer 2 tooling for account abstraction, encryption tooling: please visit 
+1c. Layer 2 for Security, voting and DAO management, contract payment management
+
+- zkync: We are utilizing zkysync layer 2 tooling for account abstraction, encryption tooling: please visit 
 
 - https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/zksync-account-abstraction-emttr
 - https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/hardhat-zksync
 
-AltLayer: CRO contract payment Management and Amount Distribution on Altlayer. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/altlayer-contract-amount-distribution
 
-Boba network: Hybrid-Compute for Medical Research University on the Boba Network. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/med-scaling-using-hybrid-compute-boba
+- AltLayer: CRO contract payment Management and Amount Distribution on Altlayer. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/altlayer-contract-amount-distribution
+
+
+- Metis: Decentralized NFT-based voting system for RFPs on Metis network. Workflow:
+
+-DAOs or Organisations create a RFP on the app.
+-Users can join a RFP by minting an NFT of that RFP
+- Users that have a certain RFP's NFT are eligible to create proposals and vote on them.
+- Voting is gasless and the vote is stored on IPFS
+
+Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/metis-voting-nfts-daos
+
+
+- Boba network: Hybrid-Compute for Medical Research University on the Boba Network. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/med-scaling-using-hybrid-compute-boba
+
 
 1d. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
 
