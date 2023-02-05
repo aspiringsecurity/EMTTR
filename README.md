@@ -45,6 +45,8 @@ We are generating NFTs for NFC tags of practice license of TPAs and pharma profe
 - https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/zksync-account-abstraction-emttr
 - https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/hardhat-zksync
 
+AltLayer: CRO contract payment Management and Amount Distribution on Altlayer. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/altlayer-contract-amount-distribution
+
 Boba network: Hybrid-Compute for Medical Research University on the Boba Network. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/med-scaling-using-hybrid-compute-boba
 
 1d. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
