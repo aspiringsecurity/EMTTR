@@ -1,0 +1,139 @@
+.AlertContainer {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  width: 400px !important;
+  border-radius: 5px;
+}
+
+.error {
+  background-color: rgba(235, 60, 60, 0.864);
+}
+
+.success {
+  background-color: rgba(60, 235, 60, 0.864);
+}
+
+.Button0 {
+  color: #f8f9fa;
+  background-color: #4e529a;
+  text-align: center;
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+.Button0:hover {
+  cursor: pointer;
+}
+
+.Input0 {
+  margin: 5px;
+  background-color: rgba(48, 42, 156, 0.3);
+  color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #4e529a;
+  width: 400px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.Container0 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SpinnerContainer {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 400px !important;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(23, 26, 73);
+  height: 150px;
+}
+.SpinnerContainer .Message {
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  width: 300px;
+}
+.SpinnerContainer .Spinner {
+  display: inline-block;
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 50px;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+}
+.SpinnerContainer .Spinner div {
+  box-sizing: border-box;
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #171a49;
+  border-radius: 50%;
+  -webkit-animation: Spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: Spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #171a49 transparent transparent transparent;
+}
+.SpinnerContainer .Spinner div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+.SpinnerContainer .Spinner div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+.SpinnerContainer .Spinner div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+@-webkit-keyframes Spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Button1 {
+  color: #4e529a;
+  border: 1px solid #171a49;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+}
+.Button1:hover {
+  background-color: #171a49;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+}
+
+body {
+  background-color: #11142b;
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

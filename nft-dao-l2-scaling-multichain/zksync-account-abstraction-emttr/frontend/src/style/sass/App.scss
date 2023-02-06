@@ -1,0 +1,225 @@
+@use "config";
+
+.App {
+    margin: 0 auto;
+
+    font-family: "Fira Sans", sans-serif;
+
+    color: config.$text-color;
+
+    font-size: 20px;
+
+    .Navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10%;
+        padding-bottom: 20px;
+        .Signer {
+            margin: auto 0;
+        }
+        img {
+            height: 50px;
+        }
+        .LogoText {
+            font-size: 30px;
+            margin: 7.5px;
+        }
+        .Container0:hover {
+            cursor: pointer;
+        }
+    }
+    .Home {
+        background-color: config.$color0;
+        padding: 30px;
+        border-radius: 10px;
+        width: 800px;
+        margin: 0 auto;
+        .Entry {
+            width: 500px;
+            margin: 10px auto;
+            .Button0 {
+                margin: 0 auto;
+            }
+        }
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .Deployment {
+        background-color: config.$color0;
+        padding: 30px;
+        border-radius: 10px;
+        width: 800px;
+        margin: 0 auto;
+        .InputContainer {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: config.$defaultElementWidht;
+        }
+    }
+
+    .Management {
+        @extend .Deployment;
+
+        .Container0 {
+            justify-content: space-between;
+        }
+
+        .LimitPluginCreationContainer {
+            @extend .GreeterContainer;
+            .LimitPluginCreation {
+                @extend .Greeter;
+            }
+        }
+
+        .GreeterButton {
+            @extend .Button0;
+            width: 150px;
+            background-color: white;
+            color: config.$color1;
+            border: 1px solid config.$color2;
+            margin: auto 0;
+            &:hover {
+                background-color: config.$color2;
+                color: white;
+                border-color: white;
+            }
+        }
+        .InputContainer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            .Input0 {
+                width: 600px;
+            }
+            .Button0 {
+                width: 100px;
+            }
+        }
+        .PluginInfoContainer {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            .PluginInfo {
+                border: 1px solid white;
+                width: 150px;
+                text-align: center;
+                border-radius: 5px;
+                padding: 20px;
+                &:hover {
+                    background-color: white;
+                    color: config.$color1;
+                    cursor: pointer;
+                }
+                h4 {
+                    margin: 0 auto;
+                }
+                .ComingSoon {
+                    color: rgba(236, 55, 55, 0.7);
+                    margin: 0 auto;
+                }
+                .Live {
+                    color: rgba(56, 234, 56, 0.7);
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .AA_Info {
+            .Field {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px auto;
+                color: rgba(211, 211, 211, 0.762);
+            }
+        }
+
+        .ActivePlugins {
+            .Plugin {
+                background-color: white;
+                color: config.$color1;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 20px;
+                .FieldsContainer {
+                    display: flex;
+                    flex-direction: column;
+                    color: c;
+                    .Field {
+                        margin: 5px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+    .GreeterContainer {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        .Greeter {
+            background-color: config.$text-color;
+            color: config.$color1;
+            width: 700px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 50px;
+            border-radius: 10px;
+            .CloseButton {
+                border-radius: 10px;
+                border: 1px solid config.$color1;
+                font-weight: bold;
+                font-size: 20px;
+                margin: auto 0;
+                padding: 5px;
+                &:hover {
+                    background-color: config.$color1;
+                    color: config.$text-color;
+                    cursor: pointer;
+                }
+            }
+            .FieldsContainer {
+                padding: 10px;
+                .Field {
+                    height: 80px;
+                    div,
+                    input {
+                        margin: auto 0;
+                    }
+                    .CurrentMessage {
+                        display: flex;
+                        flex-direction: row;
+                        margin: auto 0;
+                    }
+                    .Button1 {
+                        margin: auto 0;
+                        margin-left: 20px;
+                        width: 100px;
+                    }
+                    .Name {
+                        text-align: left;
+                        margin: auto 0;
+                        font-weight: bolder;
+                    }
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .Input0 {
+                        color: config.$color1;
+                    }
+                }
+            }
+            .Button0 {
+                margin: 10px auto;
+            }
+        }
+    }
+}

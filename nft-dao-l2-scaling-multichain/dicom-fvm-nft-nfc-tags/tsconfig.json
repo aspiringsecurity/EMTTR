@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@Layouts": ["pages/layouts"],
+      "@Components": ["pages/components"],
+      "@Common": ["pages/components"],
+      "@Utils/*": ["pages/utils/*"],
+      "@Assets/*": ["pages/assets/*"],
+      "@Models": ["pages/models.todo/*"],
+      "@Analysers": ["pages/analysers"],
+      "@Api/*": ["pages/api/*"],
+      "@Hardhat/*": ["pages/api/hardhat/*"],
+      "@Contracts/*": ["pages/api/hardhat/artifacts/contracts/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/rpc.js"],
+  "exclude": ["node_modules"]
+}
