@@ -9,7 +9,7 @@ Optimism NFT marketplace for enabling sharing of government R&D assets and servi
 
 > Install
 ```
-cd nfctag-uav-optimism-marketplace
+cd dicom-optimism-marketplace
 yarn install
 ```
 
