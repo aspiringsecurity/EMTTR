@@ -3,7 +3,7 @@
 Optimism NFT marketplace for enabling sharing of government R&D assets and service/repair of medical device assets. We are extending and building the nft marketplace using lost and found NFT marketplace example tempalte build on Optimism.
 
 ---
-## 🏄‍♂️ Getting Started - IDE Setup + Environment Variables
+##  IDE Setup + Environment Variables
 
 > Clone the repo
 
@@ -21,7 +21,7 @@ and one at the root level of packages/hardhat
 \
 Open up your text editor (this guide assumes VSCode) to better navigate through your files:
 ```
-cd lostandfound-optimism-marketplace
+cd dicom-optimism-marketplace
 code . 
 ```
 Navigate to + expand the the packages directory, and then right click on the react-app folder and create a new file. Name this file ".env"
@@ -49,7 +49,7 @@ verification functionality we will be implementing without having to expose them
 ## Setting Up the Front End
 
 ```
-cd nfctag-uav-optimism-marketplace
+cd dicom-optimism-marketplace
 yarn start
 ```
 
@@ -106,7 +106,7 @@ Your contract is almost ready to be deployed. More steps:
 - On line 12 args, replace the contractURI with the contract URI you saved earlier! (I acknowledge this is repetivive, but I beleive these two inputs are serving slightly different purposes. Or I'm wrong and this is a redundant unncessary step. But if you don't know what you're doing, do this just to be safe)
 - We will now deploy the contract. In your terminal, run:
 ```
-cd lostandfound-optimism-marketplace
+cd dicom-optimism-marketplace
 yarn deploy
 ```
 - Contract deployed to ropsten! Copy the address your contract was deployed to and save it for the next step.
@@ -124,7 +124,7 @@ Here are the final steps to link your now published NFT contract into your front
 - Save files (I hope you've been saving your files everytime I've been giving you step by step directions lol).
 - That's it, you can now run the following code to restart your front end and it will open up the site with your own NFT contract installed:
 ```
-cd lostandfound-optimism-marketplace
+cd dicom-optimism-marketplace
 yarn start
 ```
 You'll notice that know images load on the marketplace page. That is because you have to mint some NFTs first before they populate. Head on over to the mint page to mint your pieces (max 2 per wallet with this contract), and then check them out in the marketplace.
@@ -133,7 +133,7 @@ DONE !!!!
 
 * Last optional step if you want to deploy a rough website that your friends can mess around with. Run:
 ```
-cd optimism-marketpalce
+cd dicom-optimism-marketpalce
 yarn build
 yarn surge
 ```
