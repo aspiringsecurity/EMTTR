@@ -195,7 +195,7 @@ EthMed Covalent Dashboard: We are developing a Contract Research DAO platform us
 
 3. Covalent Dashboard: We are developing a Contract Research DAO platform using Covalent that enables healthcare providers, contract researchers and aggregators and pharma organizations to keep track of all the details of their medicine assets, trial budgets, DeFi investments, transactions, and assets across all multiple chains and also displays DAO data using a data visualization chart. We are building our solution on top of an existing web3 dashboard system and are planning to integrate it with an analytics, tabulation and collaboration tool namely EtherCalc. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/advance-dashboard
 
-4. Experiments with Optimism and Layer 2 protocols for Security, voting and DAO management, contract payment management
+4. Experiments on scaling with other Layer 2 protocols for Security, voting and DAO management, contract payment management. Developing L2 solutions with focus on interoperability with Optimism blockchain:
 
 - zkync: We are utilizing zkysync layer 2 tooling for account abstraction, encryption tooling: please visit 
 
