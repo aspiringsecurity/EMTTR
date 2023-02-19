@@ -1,6 +1,6 @@
 # Optimism NFT Marketplace
 
-Optimism NFT marketplace for enabling sharing of government R&D assets and service/repair of medical device assets. We are extending and building the nft marketplace using lost and found NFT marketplace example tempalte build on Optimism.
+Optimism NFT marketplace for enabling sharing of government assets and service/repair of vehicle assets. We are extending and building the nft marketplace using lost and found NFT marketplace example tempalte build on Optimism.
 
 ---
 ## 🏄‍♂️ Getting Started - IDE Setup + Environment Variables
@@ -9,7 +9,7 @@ Optimism NFT marketplace for enabling sharing of government R&D assets and servi
 
 > Install
 ```
-cd dicom-optimism-marketplace
+cd vehicle-spare-parts-nft-optimism-marketplace
 yarn install
 ```
 
@@ -21,7 +21,7 @@ and one at the root level of packages/hardhat
 \
 Open up your text editor (this guide assumes VSCode) to better navigate through your files:
 ```
-cd lostandfound-optimism-marketplace
+cd vehicle-spare-parts-nft-optimism-marketplace
 code . 
 ```
 Navigate to + expand the the packages directory, and then right click on the react-app folder and create a new file. Name this file ".env"
@@ -124,7 +124,7 @@ Here are the final steps to link your now published NFT contract into your front
 - Save files (I hope you've been saving your files everytime I've been giving you step by step directions lol).
 - That's it, you can now run the following code to restart your front end and it will open up the site with your own NFT contract installed:
 ```
-cd lostandfound-optimism-marketplace
+cd vehicle-spare-parts-nft-optimism-marketplace
 yarn start
 ```
 You'll notice that know images load on the marketplace page. That is because you have to mint some NFTs first before they populate. Head on over to the mint page to mint your pieces (max 2 per wallet with this contract), and then check them out in the marketplace.
@@ -133,7 +133,7 @@ DONE !!!!
 
 * Last optional step if you want to deploy a rough website that your friends can mess around with. Run:
 ```
-cd lostandfound-optimism-marketpalce
+cd vehicle-spare-parts-nft-optimism-marketplace
 yarn build
 yarn surge
 ```
