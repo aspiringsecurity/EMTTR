@@ -6,9 +6,6 @@ Optimism NFT marketplace for enabling sharing of government R&D assets and servi
 ## 🏄‍♂️ Getting Started - IDE Setup + Environment Variables
 
 > Clone the repo
-```
-gh repo clone 0xTranqui/lostandfound-optimism-marketplace
-```
 
 > Install
 ```
