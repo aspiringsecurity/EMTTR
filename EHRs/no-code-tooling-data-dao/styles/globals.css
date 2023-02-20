@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Playfair Display', Mabry Pro, sans-serif;
+  }
+}
+
+:root {
+  --primary: #11379F,
+  --secondary: #489BF1,
+  --tertiary: #2EEE92,
+  --quaternary: #0D0E18,
+}
+
+table {
+  border-collapse: collapse;
+
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+
+  display: inline-block;
+
+}
+
+td,
+th {
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 0;
+
+}
+
+.adjust-button {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 1px;
+}
+
+var {
+  width: 40px;
+  display: inline-block;
+}
+
+
+/* Form */
+.user-box {
+  position: relative;
+}
+
+.user-box input,
+.user-box textarea {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.user-box input:focus~label,
+.user-box input:valid~label {
+  top: -5px;
+  left: 10px;
+  color: #220079;
+  font-size: 12px;
+}
+
+.user-box textarea:focus~label,
+.user-box textarea:valid~label {
+  top: -5px;
+  left: 10px;
+  color: #220079;
+  font-size: 12px;
+}
