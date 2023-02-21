@@ -32,6 +32,8 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 1a. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
+Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: We are extending Tenderly to trace optimism transactions in DICOM NFT marketplace. We area also integrating with an open source spreadsheet maintained by us for analytics, visualization, tabulation, organization of the issues: please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/optimism-transaction-trace. 
+
 1b. IPFS and Filecoin eco-system tools with Ethereum and Embark, Status 
 
 FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
