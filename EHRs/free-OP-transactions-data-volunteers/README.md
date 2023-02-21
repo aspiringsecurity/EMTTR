@@ -1,12 +1,13 @@
-# Giving Your Users Free Transactions with Optimism and OpenGSN
+# Giving free Optimism transactions to medical volunteers sharing anonymized report data 
 
 [![Discord](https://img.shields.io/discord/667044843901681675.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discord-gateway.optimism.io)
 [![Twitter Follow](https://img.shields.io/twitter/follow/optimismFND.svg?label=optimismFND&style=social)](https://twitter.com/optimismFND)
 
+We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library.
+
 
 [Optimism transactions are cheap](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 However, depending on your business model, your users may not have ETH to pay for them at all. 
-In this tutorial you learn how to use [OpenGSN](https://opengsn.org/) to pay for your users' transactions.
 
 In general, doing this requires these tasks:
 
@@ -16,7 +17,7 @@ In general, doing this requires these tasks:
 
 [Click here for the OpenGSN documentation](https://docs.opengsn.org/).
 
-The tutorial below is not usable until OpenGSN installs their system on the Optimism Goerli test network.
+Pre-requisite: OpenGSN installs on the Optimism Goerli test network.
 
 <!-- 
 To see this system in action:
