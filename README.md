@@ -4,7 +4,7 @@ Website: https://sites.google.com/view/emttrservice/
 
 Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
 
-(Achievement Link: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 )
+(Achievement Link: Optimism Runner-Up https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 )
 
 
 # Summary 
