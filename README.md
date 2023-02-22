@@ -6,24 +6,27 @@ Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=
 
 (Achievement Link: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 )
 
-Enabling the bottom of pyramid through empowering pharma companies and the medical eco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud and Filecoin eco-system tools. EMTTRs as a service aims at providing
 
-■ Secure data storage, transparent data movement and data authenticity using Filecoin and IPFS eco-system tools.
+# Summary 
 
-■ Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Filecoin perpetual storage.
+Enabling the bottom of pyramid through empowering pharma companies and the medical eco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud, Optimism, Ethereum and Filecoin eco-system tools. EMTTRs as a service aims at providing
+
+■ Secure data storage, transparent data movement and data authenticity using Optimism, Ethereum, Filecoin and IPFS eco-system tools.
+
+■ Improving Data Transparency in Drug Testing Using Optimism, Ethereum Blockchain and Filecoin perpetual storage.
 
 ■ Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using smart contracts compiled on EVM and FVM.
 
 
-Features:
+# Features
 
-Just in Time Service: Availability of pharma companies medicine records across differentstakeholder through secure blockchain network.
+Just in Time Service: Availability of pharma companies medicine records across differentstakeholder through secure Ethereum, Optimism and Filecoin eco-system tools.
 
-• Record Management: Quality documentation reduces the issues regarding testing proceduresand standardization.• Research: Enabling the healthcare community by empowering pharma companies & themedical eco-system to do medicine trial testing securely, transparently.
+• Record Management: Quality documentation reduces the issues regarding testing proceduresand standardization.• Research: Enabling the healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently.
 
 • Data Security: Efficiently sharing of data (including personal data), privacy concerns andpatient enrollment strategies.
 
-• Transparency: Improving Data Transparency in Drug Testing Using Blockchain.
+• Transparency: Improving Data Transparency in Drug Testing Using Ethereum, Optimism Blockchain, Filecoin and IPFS eco-system tools.
 
 A greater and more seamless flow of information within a digital drug discovery infrastructure,created by electronic medicine trial and test records as a service (EMTTRs), encompasses andleverages digital progress and can transform the way medicines are developed, tested anddistributed to improve the global health economy and achievement of Sustainable DevelopmentGoals in Healthcare.
 
@@ -36,14 +39,14 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: We are extending Tenderly to trace optimism transactions in DICOM NFT marketplace. We area also integrating with an open source spreadsheet maintained by us for analytics, visualization, tabulation, organization of the issues: please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/optimism-transaction-trace. 
 
-Giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library.
+Giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers
 
 Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
-OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling
+OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers/OP-xls
 
 
-# IPFS and Filecoin eco-system tools with Ethereum and Embark, Status 
+# IPFS and Filecoin eco-system tools with Ethereum and Embark, Status, FVM 
 
 1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
 
