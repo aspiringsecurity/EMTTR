@@ -30,7 +30,7 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 # BlockChain Eco-system
 
-#Optimism
+# Optimism
 
 1a. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
