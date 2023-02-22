@@ -36,6 +36,9 @@ Tracing Optimism transactions to improve user retention and detect, analyze issu
 
 Giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library.
 
+Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
+
+
 1b. IPFS and Filecoin eco-system tools with Ethereum and Embark, Status 
 
 FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
@@ -53,13 +56,7 @@ Secure data storage, transparent data movement and data authenticity using Klayt
 
 1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network.
 
-Aleo TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework.
-
-Please visit: 
-
-a. Aleo Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/aleo-testxls
-
-b. Aleo's Quotation, Bidding, voting and token management for contract work undertaken by CROs: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/aleo-bid-quotation-vote-workflow
+Aleo's Quotation, Bidding, voting and token management for contract work undertaken by CROs: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/aleo-bid-quotation-vote-workflow
 
 
 We are utilizing Chainlink VRF as follows:
