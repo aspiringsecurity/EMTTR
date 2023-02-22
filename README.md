@@ -30,6 +30,8 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 # BlockChain Eco-system
 
+#Optimism
+
 1a. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
 Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: We are extending Tenderly to trace optimism transactions in DICOM NFT marketplace. We area also integrating with an open source spreadsheet maintained by us for analytics, visualization, tabulation, organization of the issues: please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/optimism-transaction-trace. 
@@ -38,26 +40,19 @@ Giving free Optimism transactions to medical volunteers sharing anonymized repor
 
 Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
+OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling
 
-1b. IPFS and Filecoin eco-system tools with Ethereum and Embark, Status 
 
-FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
+# IPFS and Filecoin eco-system tools with Ethereum and Embark, Status 
+
+1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
 
 Please visit DataDAO for DICOM image and patient metadata in FVM Medicine solution: https://github.com/aspiringsecurity/EMTTR/tree/main/fvm-dicom-data-dao
 
 We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
 
+
 1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
-
-1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
-Klaytn MED:  Low code framework tool for Medication Log. 
-
-Secure data storage, transparent data movement and data authenticity using Klaytn dashboard and low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytn-monitor and https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytnxls
-
-1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network.
-
-Aleo's Quotation, Bidding, voting and token management for contract work undertaken by CROs: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/aleo-bid-quotation-vote-workflow
-
 
 We are utilizing Chainlink VRF as follows:
 
@@ -65,17 +60,23 @@ Research Contract Bill Generation: We are utilizing Chainlink Mix to work with C
 
 Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/chainlink-insurance
 
+
+1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
+
+Secure data storage, transparent data movement and data authenticity using Klaytn dashboard. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytn-monitor 
+
+
+1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network.
+
+Aleo's Quotation, Bidding, voting and token management for contract work undertaken by CROs: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/aleo-bid-quotation-vote-workflow
+
 2. MultiChain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit the link at https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/multichain-webapp
 
 3. Polygon, Fantom (TradeFi meets Defi) and Axelar: Axelar for communication between Polygon blockchain (pharmaceutical companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Healthcare or Ministry of Commerce). Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/axelar-messaging . Polygon audit smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-Polygon
 
 4. XDC blockchain network: Borrowing XDC funds using collaterals for drug design research and development. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/xdc-borrow-funds
 
-5. Klaytn dashboard low code framework tools: Secure data storage, transparent data movement and data authenticity using Klaytn dashboard and low code tools. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytn-monitor and https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytnxls
-
-6. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. 
-
-a. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
+5. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
 
 
 Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
