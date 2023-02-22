@@ -4,11 +4,11 @@ Website: https://sites.google.com/view/emttrservice/
 
 Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
 
-(Achievement Link: Optimism Prize winner and Runner-Up at the Finale: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 )
+(Achievement Link: Optimism Prize: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 )
 
 Notable Achievement: Filecoin prize winner at Chainlink Fall hackathon 2022
 
-Other notable achievements: EVM Ideathon Runner-Up 2022 (Government and Public Goods in Healthcare); Runner-up at HealthChainhack, Boston ($6000 credits recipient); Young Scientist Award in Healthcare at India International Science Festival; Get in the Ring startup winner from India. 
+Other key achievements: EVM Ideathon Runner-Up 2022 (Government and Public Goods in Healthcare); Runner-up at HealthChainhack, Boston ($6000 credits recipient); Young Scientist Award in Healthcare at India International Science Festival; Get in the Ring startup winner from India. 
 
 
 # Summary 
