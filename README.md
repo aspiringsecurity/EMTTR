@@ -46,7 +46,7 @@ Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework w
 OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers/OP-xls
 
 
-# IPFS and Filecoin eco-system tools with Ethereum and Embark, Status, FVM 
+# IPFS and Filecoin eco-system, Ethereum, Embark, Status
 
 1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
 
