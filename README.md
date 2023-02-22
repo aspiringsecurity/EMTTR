@@ -204,11 +204,11 @@ EthMed Covalent Dashboard: We are developing a Contract Research DAO platform us
 
 - zkync: We are utilizing zkysync layer 2 tooling for account abstraction, encryption tooling: please visit 
 
-- https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/zksync-account-abstraction-emttr
-- https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/hardhat-zksync
+- https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/zksync-account-abstraction-emttr
+- https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/hardhat-zksync
 
 
-- AltLayer: CRO contract payment Management and Amount Distribution on Altlayer. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/altlayer-contract-amount-distribution
+- AltLayer: CRO contract payment Management and Amount Distribution on Altlayer. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/altlayer-contract-amount-distribution
 
 
 - Metis: Decentralized NFT-based voting system for RFPs on Metis network. Workflow:
@@ -218,10 +218,10 @@ EthMed Covalent Dashboard: We are developing a Contract Research DAO platform us
 - Users that have a certain RFP's NFT are eligible to create proposals and vote on them.
 - Voting is gasless and the vote is stored on IPFS
 
-Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/multichain-webapp/metis-voting-nfts-daos
+Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/metis-voting-nfts-daos
 
 
-- Boba network: Hybrid-Compute for Medical Research University on the Boba Network. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/med-scaling-using-hybrid-compute-boba
+- Boba network: Hybrid-Compute for Medical Research University on the Boba Network. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/med-scaling-using-hybrid-compute-boba
 
 
 
