@@ -1,0 +1,13 @@
+node_modules
+
+#Hardhat files
+cache
+artifacts
+
+
+# Foundry files
+out
+
+#We don't want the mnemonic file
+mnem.delme
+
