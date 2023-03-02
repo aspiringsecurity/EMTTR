@@ -1,0 +1,31 @@
+@import '../../style/functions.scss';
+@import '../../style/mixins.scss';
+
+.footer {
+  width: 100%;
+  border-top: toRem(1) solid var(--footer-border);
+  padding: toRem(60);
+  @include flex(column, flex-start, center, toRem(30));
+  position: sticky;
+  top: 100%;
+  .footer-row-1 {
+    width: 100%;
+    @include flex(row, center, space-between, '');
+    .footer-logo {
+      width: toRem(90);
+      height: auto;
+    }
+    .infrastructure-section {
+      @include flex(column, center, center, toRem(30));
+      .infrastructure-label {
+        @include typography(GilroyMedium, toRem(24), toRem(30), var(--black));
+      }
+      .infrastructure {
+        @include flex(row, center, center, toRem(30));
+      }
+    }
+  }
+  .copyright-text {
+    @include typography(GilroyRegular, toRem(14), toRem(18), var(--light-text));
+  }
+}

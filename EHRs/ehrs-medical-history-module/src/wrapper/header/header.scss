@@ -1,0 +1,116 @@
+@import '../../style/mixins.scss';
+@import '../../style/functions.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  z-index: 99;
+  max-width: inherit;
+  padding: toRem(22) toRem(60);
+  backdrop-filter: blur(toRem(32));
+  @include flex(row, center, space-between, '');
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.02);
+  .logo-area {
+    @include flex(row, center, '', toRem(36));
+    .links {
+      @include flex(row, center, '', toRem(30));
+      .link {
+        text-decoration: none;
+        text-transform: capitalize;
+        @include typography(GilroyMedium, toRem(18), 130%, var(--light-text));
+        &.active {
+          color: var(--black);
+        }
+      }
+    }
+  }
+  .connect-button-dropdown {
+    position: relative;
+    .wallet-dropdown-button {
+      background: var(--white);
+      padding: toRem(2);
+      border-radius: toRem(32);
+      .wallet-details {
+        padding: toRem(6) toRem(8);
+        background: var(--wallet-details-background);
+        border: none;
+        border-radius: inherit;
+        cursor: pointer;
+        @include flex(row, center, center, toRem(8));
+        .label {
+          @include typography(
+            GilroyMedium,
+            toRem(16),
+            toRem(20),
+            var(--wallet-address-color)
+          );
+          max-width: toRem(240);
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          cursor: inherit;
+        }
+      }
+    }
+    .wallet-dropdown {
+      position: absolute;
+      right: 0;
+      width: toRem(360);
+      background: var(--wallet-button-dropdown);
+      backdrop-filter: brightness(6%);
+      border-radius: toRem(20);
+      box-shadow: 0px 8px 32px var(--box-shadow-color);
+      .wallet-info {
+        width: 100%;
+        border-radius: toRem(20) toRem(20) 0 0;
+        padding: toRem(24) toRem(18) toRem(18);
+        @include flex(column, center, center, toRem(14));
+        .wallet-name-balance {
+          @include flex(column, center, center, '');
+          width: 100%;
+          .wallet-name {
+            @include typography(
+              GilroySemiBold,
+              toRem(18),
+              toRem(24),
+              var(--wallet-address-color)
+            );
+            max-width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+          .wallet-balance {
+            @include typography(
+              GilroyMedium,
+              toRem(14),
+              toRem(18),
+              var(--black)
+            );
+          }
+        }
+        .wallet-actions {
+          @include flex(row, center, center, toRem(8));
+          width: 100%;
+          .action {
+            background: var(--white);
+            border-radius: toRem(8);
+            cursor: pointer;
+            width: 50%;
+            height: toRem(54);
+            @include flex(column, center, center, toRem(2));
+            .action-label {
+              @include typography(
+                GilroyMedium,
+                toRem(12),
+                toRem(18),
+                var(--black)
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}

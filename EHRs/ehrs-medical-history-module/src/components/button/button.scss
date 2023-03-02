@@ -1,0 +1,18 @@
+@import '../../style/mixins.scss';
+@import '../../style/functions.scss';
+
+.button {
+  border-radius: toRem(100);
+  background: var(--primary);
+  padding: toRem(8) toRem(16);
+  @include typography(GilroySemiBold, toRem(16), toRem(24), var(--white));
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 8px 8px var(--box-shadow-color);
+  &.alternate {
+    background: var(--full-white);
+    border-radius: toRem(8);
+    border: toRem(1) solid var(--primary);
+    color: var(--primary);
+  }
+}

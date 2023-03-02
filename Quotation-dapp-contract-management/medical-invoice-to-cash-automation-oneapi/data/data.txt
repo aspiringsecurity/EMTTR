@@ -1,0 +1,5 @@
+Please follow the below mentioned steps for downloading the dataset:
+Steps:
+1. Hit the URL: https://www.kaggle.com/datasets/PromptCloudHQ/flipkart-products
+2. Open the downloaded folder & unzip the folder 
+3. Move the 'flipkart_com-ecommerce_sample.csv' file to data folder in the repo i.e. '<path of the cloned repo>/data'

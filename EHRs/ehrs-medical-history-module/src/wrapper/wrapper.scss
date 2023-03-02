@@ -1,0 +1,33 @@
+@import '../style/functions.scss';
+@import '../style/mixins.scss';
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 2560px;
+  margin: auto;
+  .fake-header-div {
+    width: 100%;
+    height: toRem(120);
+  }
+  .page-content {
+    padding: toRem(60);
+  }
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: toRem(30);
+    @include flex(column, center, center, toRem(30));
+    .desc {
+      @include typography(GilroyMedium, toRem(16), toRem(24), var(--black));
+    }
+  }
+}

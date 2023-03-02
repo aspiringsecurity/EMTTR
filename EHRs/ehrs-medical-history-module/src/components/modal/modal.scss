@@ -1,0 +1,25 @@
+@import '../../style/functions.scss';
+
+.modal-container {
+  position: fixed;
+  right: 0;
+  left: 0;
+  height: 100%;
+  bottom: -150vh;
+  background-color: var(--modal-backdrop);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: all 0.3s ease-out;
+  .modal-content-style {
+    border-radius: toRem(10);
+    background: var(--default-card-header-background);
+    min-width: toRem(300);
+    max-width: 100%;
+  }
+  &.show {
+    bottom: 0;
+  }
+}

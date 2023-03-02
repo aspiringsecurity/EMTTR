@@ -1,0 +1,22 @@
+# conf.yaml
+version: 1.0
+
+model:
+    name: CNN
+    framework: tensorflow
+    inputs: ["input_x","dropout_keep_prob"]
+evaluation:                                          # optional. required if user doesn't provide eval_func in neural_compressor.Quantization.
+  accuracy:                                          # optional. required if user doesn't provide eval_func in neural_compressor.Quantization.
+    metric:
+      topk: 1
+  performance:                        # optional. used to benchmark performance of passing model.
+    configs:
+      cores_per_instance: 4
+      num_of_instance: 1
+quantization:                                        # optional. tuning constraints on model-wise for advance user to reduce tuning space.
+  calibration:
+    sampling_size: 200
+
+tuning:
+  accuracy_criterion:
+    relative:  0.01                                  # optional. default value is relative, other value is absolute. this example allows relative accuracy loss: 1%.

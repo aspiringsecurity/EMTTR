@@ -1,0 +1,92 @@
+@import '../../style/mixins.scss';
+@import '../../style/functions.scss';
+
+.landing {
+  height: 100%;
+  width: 100%;
+  @include flex(column, center, center, toRem(90));
+  .main-section {
+    @include flex(row, center, center, toRem(60));
+    width: 100%;
+    &-col-1 {
+      max-width: toRem(600);
+      @include flex(column, flex-start, center, toRem(30));
+      .main-section-col-1-title {
+        @include typography(GilroyBold, toRem(68), 130%, var(--black));
+      }
+      .main-section-col-1-desc {
+        @include typography(
+          GilroyRegular,
+          toRem(16),
+          toRem(24),
+          var(--light-text)
+        );
+      }
+    }
+    &-col-2 {
+      max-width: toRem(600);
+      width: 100%;
+      height: auto;
+    }
+  }
+  .how-it-works-container {
+    @include flex(column, center, center, toRem(30));
+    &-title {
+      @include typography(GilroySemiBold, toRem(48), 130%, var(--black));
+    }
+    .how-it-works-section {
+      @include flex(row, center, center, toRem(60));
+      &-col-1 {
+        max-width: toRem(400);
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: toRem(20);
+      }
+      &-col-2 {
+        max-width: toRem(400);
+        .how-it-works-col-2-title {
+          @include typography(GilroySemiBold, toRem(32), 130%, var(--black));
+        }
+        .how-it-works-col-2-desc {
+          @include typography(
+            GilroyRegular,
+            toRem(16),
+            toRem(24),
+            var(--light-text)
+          );
+        }
+      }
+    }
+  }
+  .characteristics-section {
+    @include flex(column, center, center, toRem(30));
+    width: 100%;
+    padding: toRem(32) 0;
+    .characteristics-list {
+      @include flex(row, baseline, center, toRem(60));
+      .characteristic {
+        max-width: toRem(200);
+        @include flex(column, center, center, toRem(15));
+        &-image {
+          max-width: toRem(100);
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+        &-title {
+          @include typography(GilroySemiBold, toRem(32), 130%, var(--black));
+        }
+        &-desc {
+          @include typography(
+            GilroyRegular,
+            toRem(16),
+            toRem(24),
+            var(--light-text)
+          );
+          text-align: center;
+        }
+      }
+    }
+  }
+}

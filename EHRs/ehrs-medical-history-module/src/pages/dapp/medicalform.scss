@@ -1,0 +1,46 @@
+@import '../../style/mixins.scss';
+@import '../../style/functions.scss';
+
+.medical-form-container {
+  width: 100%;
+  height: 100%;
+  @include flex(column, flex-start, center, toRem(30));
+  .form-title {
+    @include typography(GilroySemiBold, toRem(32), 130%, var(--black));
+  }
+  .medical-form-section {
+    @include flex(column, flex-start, center, toRem(20));
+    width: 100%;
+    &-title {
+      @include typography(GilroyRegular, toRem(24), 130%, var(--black));
+      padding-bottom: toRem(10);
+      border-bottom: toRem(1) solid var(--footer-border);
+      width: 100%;
+    }
+    &-fields {
+      width: 80%;
+      @include flex(row, center, flex-start, toRem(20));
+      flex-wrap: wrap;
+      .input-container {
+        @include flex(column, flex-start, center, toRem(10));
+        max-width: toRem(200);
+        &-label {
+          @include typography(GilroyMedium, toRem(18), toRem(24), var(--black));
+        }
+        &-input {
+          padding: toRem(8) toRem(16);
+          width: 100%;
+          @include typography(
+            GilroyRegular,
+            toRem(16),
+            toRem(24),
+            var(--light-text)
+          );
+          border-radius: toRem(8);
+          border: toRem(1) solid var(--footer-border);
+          outline: none;
+        }
+      }
+    }
+  }
+}
