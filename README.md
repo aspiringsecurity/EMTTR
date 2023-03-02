@@ -59,13 +59,13 @@ Please visit DataDAO for DICOM image and patient metadata in FVM Medicine soluti
 We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
 
 
-1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts
+1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
 
 We are utilizing Chainlink VRF as follows:
 
 Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
 
-Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/chainlink-insurance
+Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
 
 
 1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
@@ -75,11 +75,11 @@ Secure data storage, transparent data movement and data authenticity using Klayt
 
 1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network.
 
-Aleo's Quotation, Bidding, voting and token management for contract work undertaken by CROs: https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/aleo-bid-quotation-vote-workflow
+Aleo's Quotation, Bidding, voting and token management for contract work undertaken by CROs: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/aleo-bid-quotation-vote-workflow
 
 2. MultiChain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit the link at https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/multichain-webapp
 
-3. Polygon, Fantom (TradeFi meets Defi) and Axelar: Axelar for communication between Polygon blockchain (pharmaceutical companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Healthcare or Ministry of Commerce). Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/axelar-messaging . Polygon audit smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Audit-contracts/Audit-Polygon
+3. Polygon, Fantom (TradeFi meets Defi) and Axelar: Axelar for communication between Polygon blockchain (pharmaceutical companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Healthcare or Ministry of Commerce). Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/messaging . Polygon audit smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Audit-Polygon
 
 4. XDC blockchain network: Borrowing XDC funds using collaterals for drug design research and development. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/xdc-borrow-funds
 
