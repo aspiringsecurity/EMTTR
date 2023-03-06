@@ -58,6 +58,8 @@ Please visit DataDAO for DICOM image and patient metadata in FVM Medicine soluti
 
 We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
 
+Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/ehrs-medical-history-module
+
 
 1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
 
