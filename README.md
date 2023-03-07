@@ -50,7 +50,7 @@ Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework w
 OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers/OP-xls
 
 Attestation Hub Contract for Medical Reports: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
-We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract.
+We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports
 
 
 # IPFS and Filecoin eco-system, Ethereum, Embark, Status
