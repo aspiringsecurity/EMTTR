@@ -121,7 +121,7 @@ logs/read-from-blockchain.log - output from running src/read-from-blockchain.sh
 Getting started
 ===============
 
-This code has been tested on OSX 10.11.5 and Ubuntu 14.04. Code is written using Bash and Javascript - you will need to install nodejs:
+Code is written using Bash and Javascript - you will need to install nodejs:
 
 https://nodejs.org
 
