@@ -40,7 +40,7 @@ Just in Time Service: Availability of pharma companies medicine records across d
 
 A greater and more seamless flow of information within a digital drug discovery infrastructure,created by electronic medicine trial and test records as a service (EMTTRs), encompasses andleverages digital progress and can transform the way medicines are developed, tested anddistributed to improve the global health economy and achievement of Sustainable DevelopmentGoals in Healthcare.
 
-![Community Benefits](https://github.com/aspiringsecurity/EMTTR/blob/main/community%20benefits.png)
+![Eco-system Benefits](https://github.com/aspiringsecurity/EMTTR/blob/main/EHRs/benefits.png)
 
 # BlockChain Eco-system
 
