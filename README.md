@@ -46,7 +46,9 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 # Optimism
 
-Optimism user interaction: Our users will interact with Optimism in the following ways:
+## Optimism user interaction 
+
+Our users will interact with Optimism in the following ways:
 
 1. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace.
 
@@ -65,7 +67,7 @@ b. Contract Management. OP’s pharma and research practice license NFT registra
 6. Attestation Hub Contract for Medical Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports. We look forward to enabling patients to use OP for all their medi-claim transaction needs and collaborating with Third Party administrators.
 
 
-Optimism Module Links and references:
+# Optimism Modules and References
 
 1a. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
