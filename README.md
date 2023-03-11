@@ -4,8 +4,7 @@ Website: https://sites.google.com/view/emttrservice/
 
 Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
 
-(Achievement Link: Optimism Prize: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 );
-OP Prize Winnings for EMTTR project: https://optimistic.etherscan.io/tx/0x94822e1a9953a5a3c67b51c4f2c2a300cca19103cf85e8761651ad0c54fe3421
+(Achievement Link: Optimism Prize: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 ; https://optimistic.etherscan.io/tx/0x94822e1a9953a5a3c67b51c4f2c2a300cca19103cf85e8761651ad0c54fe3421 )
 
 Notable Achievement: Filecoin prize winner at Chainlink Fall hackathon 2022
 
