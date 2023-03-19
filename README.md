@@ -1,5 +1,7 @@
 # About
 
+Developer Tools to enable medical trial testing, clinical trials via EMTTRs (Electronic Medicine Trial and Test Records as a Service) and EHR and Radiology services using Optimism, Ethereum, Embark, Filecoin and IPFS eco-system tools.
+
 EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in Drug Testing). 
 
 Website: https://sites.google.com/view/emttrservice/
@@ -17,8 +19,6 @@ Documentation and Pitch Deck, Supporting demos: https://drive.google.com/drive/u
 Screencasts: 
 1. EMTTR Demo Video for anonymization and encryption of medical data and dapp on decentralized medical counseling (dapp, security): https://www.youtube.com/watch?v=rJRRlaVQSMY
 2. EMTTR Demo Video for bulk query, retrieve of medical data & dapp using OP, Eth, Emabrk, IPFS (dapp, portal): https://www.youtube.com/watch?v=BUiVvhuUdrE
-
-Web3 Eco-system: Developer Tools to enable medical trial testing, clinical trials via EMTTRs (Electronic Medicine Trial and Test Records as a Service) and EHR and Radiology services using Optimism, Ethereum, Embark, Filecoin and IPFS eco-system tools.
 
 # Summary 
 
