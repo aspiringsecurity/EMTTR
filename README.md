@@ -1,6 +1,6 @@
 # About
 
-EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in Drug Testing). Developer Tools to enable medical trial testing, clinical trials via EMTTRs (Electronic Medicine Trial and Test Records as a Service) and EHR and Radiology services.
+EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in Drug Testing). Developer Tools to enable medical trial testing, clinical trials via EMTTRs (Electronic Medicine Trial and Test Records as a Service) and EHR and Radiology services using Optimism, Ethereum, Embark, Filecoin and IPFS eco-system tools.
 
 Website: https://sites.google.com/view/emttrservice/
 
@@ -21,7 +21,7 @@ Screencasts:
 
 # Summary 
 
-Enabling the bottom of pyramid through empowering pharma companies and the medical eco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud, Optimism, Ethereum and Filecoin eco-system tools. EMTTRs as a service aims at providing
+Enabling the bottom of pyramid through empowering pharma companies and the medical eco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud, Optimism, Ethereum, Embark, Filecoin and IPFS eco-system tools. EMTTRs as a service aims at providing
 
 ■ Secure data storage, transparent data movement and data authenticity using Optimism, Ethereum, Filecoin and IPFS eco-system tools.
 
