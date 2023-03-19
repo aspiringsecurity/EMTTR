@@ -1,6 +1,6 @@
 # About
 
-EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in Drug Testing)
+EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in Drug Testing). Developer Tools to enable medical trial testing, clinical trials via EMTTRs (Electronic Medicine Trial and Test Records as a Service) and EHR and Radiology services.
 
 Website: https://sites.google.com/view/emttrservice/
 
