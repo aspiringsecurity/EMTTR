@@ -1,4 +1,6 @@
-EMTTR: Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in Drug Testing)
+# About
+
+EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in Drug Testing)
 
 Website: https://sites.google.com/view/emttrservice/
 
@@ -26,6 +28,8 @@ Enabling the bottom of pyramid through empowering pharma companies and the medic
 ■ Improving Data Transparency in Drug Testing Using Optimism, Ethereum Blockchain and Filecoin perpetual storage.
 
 ■ Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using smart contracts compiled on EVM and FVM.
+
+■ Developer Tools to enable medical trial testing, clinical trials via EMTTRs (Electronic Medicine Trial and Test Records as a Service) and EHR and Radiology services.
 
 
 # Features
