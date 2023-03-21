@@ -72,7 +72,7 @@ b. Contract Management. OP’s pharma and research practice license NFT registra
 6. Attestation Hub Contract for Medical Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports. We look forward to enabling patients to use OP for all their medi-claim transaction needs and collaborating with Third Party administrators.
 
 
-## Optimism Modules and References
+## Optimism Modules for Developer Tooling and Utilities, References
 
 1a. Optimism NFT marketplace developer tooling for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
