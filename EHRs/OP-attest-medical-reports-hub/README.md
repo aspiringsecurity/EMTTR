@@ -1,7 +1,9 @@
 # Attestation Hub Contract for Medical Reports
 
 The Attestation Hub smart contract contains a public `attestations` mapping that doctors, radioloigists or medical professionals can write to and read from. 
-We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract.
+We are extending the AttestationStation smart contract [1] to develop the Attestation Hub smart contract for medical reports.
+
+[1] AttestationStation Tutorial and OP Eco-system Repository at github: https://github.com/ethereum-optimism/optimism-tutorial/tree/main/ecosystem/attestation-station
 
 ## Prerequisites
 
