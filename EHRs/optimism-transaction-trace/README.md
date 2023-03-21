@@ -1,7 +1,10 @@
 #  Trace Optimism Transactions in DICOM NFT marketplace using Tenderly
 
 Optimism transactions sometimes fail.
-We are extending [Tenderly](https://tenderly.co/) to Trace Optimism Transactions in DICOM NFT marketplace to see what happened, what is the cause of the failure.
+We are extending [Tenderly](https://tenderly.co/) [1] and OP Medicine modules to Trace Optimism Transactions in DICOM NFT marketplace to see what happened, what is the cause of the failure.
+
+[1] Reference Github repository for using Tenderly towards detecting failure in OP transactions: https://github.com/ethereum-optimism/optimism-tutorial/tree/main/ecosystem/tenderly
+
 
 ## Configuration
 
