@@ -76,13 +76,13 @@ b. Contract Management. OP’s pharma and research practice license NFT registra
 
 1a. Optimism NFT marketplace developer tooling for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
-Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: We are extending Tenderly to trace optimism transactions in DICOM NFT marketplace. We area also integrating with an open source spreadsheet maintained by us for analytics, visualization, tabulation, organization of the issues: please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/optimism-transaction-trace. 
-
-Giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers
-
 Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
 OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers/OP-xls
+
+Giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers
+
+Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: We are extending Tenderly to trace optimism transactions in DICOM NFT marketplace. We area also integrating with an open source spreadsheet maintained by us for analytics, visualization, tabulation, organization of the issues: please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/optimism-transaction-trace. 
 
 Attestation Hub Contract for Medical Reports: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
 We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports
