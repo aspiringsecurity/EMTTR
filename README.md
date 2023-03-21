@@ -1,6 +1,8 @@
 # About
 
-EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline (Improving Data Transparency in Drug Testing). 
+EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools.
+
+
 
 Website: https://sites.google.com/view/emttrservice/
 
@@ -18,7 +20,7 @@ Screencasts:
 1. EMTTR Demo Video for anonymization and encryption of medical data and dapp on decentralized medical counseling (dapp, security): https://www.youtube.com/watch?v=rJRRlaVQSMY
 2. EMTTR Demo Video for bulk query, retrieve of medical data & dapp using OP, Eth, Emabrk, IPFS (dapp, portal): https://www.youtube.com/watch?v=BUiVvhuUdrE
 
-Web3 Eco-system: Developer Tools to enable medical trial testing, clinical trials via EMTTRs (Electronic Medicine Trial and Test Records as a Service) and Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools.
+Web3 Dev Tooling: Web3 low code modules using wiki like spreadsheet with ionic framework, open source Web3 automation utilities for DICOM data management, visualization, tabulation, organization, graphing and collaboration, anonymization of data using PyDICOM library.
 
 # Summary 
 
