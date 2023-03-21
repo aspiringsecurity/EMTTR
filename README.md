@@ -74,7 +74,7 @@ b. Contract Management. OP’s pharma and research practice license NFT registra
 
 ## Optimism Modules and References
 
-1a. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
+1a. Optimism NFT marketplace developer tooling for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
 Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: We are extending Tenderly to trace optimism transactions in DICOM NFT marketplace. We area also integrating with an open source spreadsheet maintained by us for analytics, visualization, tabulation, organization of the issues: please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/optimism-transaction-trace. 
 
