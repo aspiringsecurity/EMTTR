@@ -1,6 +1,8 @@
 # Optimism NFT Marketplace
 
-Optimism NFT marketplace for enabling sharing of government R&D assets and service/repair of medical device assets. We are extending and building the nft marketplace using lost and found NFT marketplace example tempalte build on Optimism.
+Optimism NFT marketplace devtooling for enabling sharing of government R&D assets and service/repair of medical device assets. We are extending and building the nft marketplace using lost and found NFT marketplace [1] example tempalte build on Optimism.
+
+[1] Lost and Found NFT marketplace: https://github.com/0xTranqui/lostandfound-optimism-marketplace
 
 ---
 ##  IDE Setup + Environment Variables
