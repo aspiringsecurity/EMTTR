@@ -3,7 +3,11 @@
 [![Discord](https://img.shields.io/discord/667044843901681675.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discord-gateway.optimism.io)
 [![Twitter Follow](https://img.shields.io/twitter/follow/optimismFND.svg?label=optimismFND&style=social)](https://twitter.com/optimismFND)
 
-We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library.
+We are extending OpenGSN [1] and Optimism module [2] to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library.
+
+[1] OpenGSN: https://github.com/opengsn
+[2] Optimism and OpenGSN module reference github repository: https://github.com/ethereum-optimism/optimism-tutorial/tree/main/ecosystem/opengsn
+
 
 
 [Optimism transactions are cheap](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
