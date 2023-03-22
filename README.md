@@ -72,7 +72,7 @@ Our users will interact with Optimism in the following ways:
 
 ## Optimism Modules for Developer Tooling and Utilities, References
 
-1. Optimism NFT marketplace developer tooling for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
+1. Optimism NFT marketplace for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
 2. Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
