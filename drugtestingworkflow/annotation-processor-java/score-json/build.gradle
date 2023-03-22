@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(":annotation_processor")
+    implementation("com.squareup:javapoet:$javapoetVersion")
+    implementation("foundation.icon:javaee-api:$javaeeVersion")
+    implementation("foundation.icon:javaee-scorex:$scorexVersion")
+    implementation("com.github.sink772:minimal-json:0.9.6")
+}

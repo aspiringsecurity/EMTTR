@@ -1,0 +1,139 @@
+.typo-caption {
+  font-weight: 500;
+  font-size: 1.0rem;
+  line-height: 1.1rem;
+}
+
+@screen m {
+
+  .typo-caption {
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+  }
+}
+
+.typo-button-l {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+@screen m {
+
+  .typo-button-l {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+}
+
+.typo-button-s {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+
+@screen m {
+
+  .typo-button-s {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.typo-paragraph {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+@screen m {
+
+  .typo-paragraph {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}
+
+.typo-text-semibold {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+@screen m {
+
+  .typo-text-semibold {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.typo-text-medium {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+@screen m {
+
+  .typo-text-medium {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.typo-text-regular {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+@screen m {
+
+  .typo-text-regular {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.typo-title-l {
+  font-weight: 700;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+}
+
+@screen m {
+
+  .typo-title-l {
+    font-size: 2.5rem;
+    line-height: 3.0rem;
+  }
+}
+
+.typo-title-m {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+@screen m {
+
+  .typo-title-m {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+.typo-title-s {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+@screen m {
+
+  .typo-title-s {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}

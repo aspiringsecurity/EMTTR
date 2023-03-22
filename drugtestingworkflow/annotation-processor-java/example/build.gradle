@@ -1,0 +1,91 @@
+apply plugin: 'foundation.icon.javaee'
+
+version = '0.1.0'
+
+dependencies {
+    compileOnly("foundation.icon:javaee-api:$javaeeVersion")
+    implementation("foundation.icon:javaee-scorex:$scorexVersion")
+
+    annotationProcessor project(':score-json')
+    compileOnly project(':score-json')
+    implementation("com.github.sink772:minimal-json:0.9.6")
+
+    annotationProcessor project(':score-data')
+    implementation project(':score-data')
+
+    annotationProcessor project(':score-client')
+    compileOnly project(':score-client')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
+
+    testCompileOnly("foundation.icon:javaee-unittest:$javaeeUnittestVersion")
+    testAnnotationProcessor project(':score-client')
+    testImplementation project(':score-client')
+    testImplementation("com.github.javafaker:javafaker:1.0.2")
+}
+
+optimizedJar {
+    mainClassName = 'foundation.icon.score.example.HelloWorldImpl'
+    archivesBaseName = 'hello-world'
+
+    from {
+        configurations.runtimeClasspath.collect {it.isDirectory() ? it : zipTree(it) }
+    } {
+        exclude "score/*"
+    }
+    enableDebug = false
+}
+
+deployJar {
+    endpoints {
+        berlin {
+            uri = 'https://berlin.net.solidwallet.io/api/v3'
+            nid = 7
+        }
+        local {
+            uri = 'http://localhost:9082/api/v3'
+            nid = 3
+        }
+    }
+    keystore = rootProject.hasProperty('keystoreName') ? "$keystoreName" : ''
+    password = rootProject.hasProperty('keystorePass') ? "$keystorePass" : ''
+    parameters {
+        arg('_name', 'Alice')
+    }
+}
+
+test {
+    useJUnitPlatform {
+        if (!integrationTest) {
+            excludeTags("integration")
+        }
+    }
+
+    options {
+        testLogging.showStandardStreams = true
+
+        systemProperty 'url', project.tasks.deployToLocal.uri.get()
+        systemProperty 'nid', project.tasks.deployToLocal.nid.get()
+        systemProperty 'keyStore', project.extensions.deployJar.keystore.get()
+        systemProperty 'keyPassword', project.extensions.deployJar.password.get()
+//        systemProperty 'address', "cx1f2b29017545ee5e743c53ad50ea67b4fea3a64a"
+//        systemProperty 'isUpdate', "true"
+        dependsOn optimizedJar
+        systemProperty 'scoreFilePath', project.tasks.optimizedJar.outputJarName
+        project.extensions.deployJar.arguments.each {
+            arg -> systemProperty 'params.'+arg.name, arg.value
+        }
+
+        systemProperty 'icxTransferSender.url', project.tasks.deployToLocal.uri.get()
+        systemProperty 'icxTransferSender.nid', project.tasks.deployToLocal.nid.get()
+        systemProperty 'icxTransferSender.keyStore', project.extensions.deployJar.keystore.get()
+        systemProperty 'icxTransferSender.keyPassword', project.extensions.deployJar.password.get()
+//        systemProperty 'icxTransferSender.address', "cx9153ec3f2e980a110a7689820f49131be0ffda64"
+//        systemProperty 'icxTransferSender.isUpdate', "true"
+        systemProperty 'icxTransferSender.scoreFilePath', project.tasks.optimizedJar.outputJarName
+        project.extensions.deployJar.arguments.each {
+            arg -> systemProperty 'icxTransferSender.params.'+arg.name, arg.value
+        }
+    }
+}

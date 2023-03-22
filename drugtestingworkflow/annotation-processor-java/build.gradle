@@ -1,0 +1,115 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'foundation.icon:gradle-javaee-plugin:0.8.2'
+    }
+}
+
+subprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    ext {
+        javapoetVersion = getProperty("javapoet.version")
+        javaeeVersion = getProperty("javaee.version")
+        scorexVersion = getProperty("scorex.version")
+        javaeeUnittestVersion = getProperty("javaee-unittest.version")
+        iconsdkVersion = getProperty("iconsdk.version")
+        jacksonVersion = getProperty("jackson.version")
+        okhttpVersion = getProperty("okhttp.version")
+        integrationTest = Boolean.parseBoolean(getProperty("integrationTest").toString())
+    }
+}
+
+configure([
+        project(':annotation_processor'),
+        project(':score-json'),
+        project(':score-data'),
+        project(':score-client'),
+]) {
+    apply plugin: 'maven-publish'
+    apply plugin: 'signing'
+
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier 'sources'
+        from sourceSets.main.allSource
+    }
+
+    task javadocJar(type: Jar, dependsOn: javadoc) {
+        classifier 'javadoc'
+        from javadoc.destinationDir
+    }
+
+    group = getProperty("group")
+    version = getProperty(project.name+".version") + (rootProject.hasProperty('release') ? '' : '-SNAPSHOT')
+
+    def projectName = 'javaee-'+ project.name.replaceAll("_","-")
+    def repoUrl = 'https://github.com/icon-project/javaee-annotation-processor'
+    def pomConfig = {
+        licenses {
+            license {
+                name "The Apache Software License, Version 2.0"
+                url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution "repo"
+            }
+        }
+        developers {
+            developer {
+                id "iconfoundation"
+                name "icon.foundation"
+                email "foo@icon.foundation"
+            }
+        }
+        scm {
+            url repoUrl
+        }
+    }
+
+    publishing {
+        repositories {
+            maven {
+                name = 'mavenCentral'
+                def releasesUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+                def snapshotsUrl = "https://oss.sonatype.org/content/repositories/snapshots"
+                url = version.endsWith('SNAPSHOT') ? snapshotsUrl : releasesUrl
+                credentials {
+                    username = rootProject.hasProperty('mavenCentralUsername') ? "$mavenCentralUsername" : ''
+                    password = rootProject.hasProperty('mavenCentralPassword') ? "$mavenCentralPassword" : ''
+                }
+            }
+        }
+        publications {
+            mavenJava(MavenPublication) {
+                groupId = group
+                artifactId = projectName
+                from components.java
+                artifact sourcesJar
+                artifact javadocJar
+                pom.withXml {
+                    def root = asNode()
+                    root.appendNode('name', projectName)
+                    root.appendNode('description', 'An Annotation Processor for Java SCORE')
+                    root.appendNode('url', repoUrl)
+                    root.children().last() + pomConfig
+                }
+            }
+        }
+    }
+
+    signing {
+        required rootProject.hasProperty('release')
+        sign publishing.publications.mavenJava
+    }
+}

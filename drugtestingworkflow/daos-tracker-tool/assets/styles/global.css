@@ -1,0 +1,48 @@
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  word-spacing: 1px;
+}
+
+body {
+  font-size: 1.6rem;
+  @apply text-white font-inter bg-grey-400;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  hyphens: auto;
+}
+
+
+*:focus {
+  outline: 0 !important;
+}
+
+*::selection {
+  @apply text-primary bg-primary bg-opacity-25;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+li {
+  list-style-position: outside;
+  list-style-type: disc;
+}

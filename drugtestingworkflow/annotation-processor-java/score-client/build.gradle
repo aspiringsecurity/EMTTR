@@ -1,0 +1,22 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(":annotation_processor")
+    implementation("com.squareup:javapoet:$javapoetVersion")
+    implementation("foundation.icon:javaee-api:$javaeeVersion")
+    implementation("foundation.icon:icon-sdk:$iconsdkVersion")
+    implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+    implementation("com.squareup.okhttp3:okhttp:$okhttpVersion")
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.7.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
+}
+
+test {
+    useJUnitPlatform {
+        if (!integrationTest) {
+            excludeTags("integration")
+        }
+    }
+}

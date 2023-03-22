@@ -1,0 +1,8 @@
+rootProject.name = 'javaee-annotation-processor'
+include (
+        'annotation_processor',
+        'score-json',
+        'score-data',
+        'score-client',
+        'example',
+)

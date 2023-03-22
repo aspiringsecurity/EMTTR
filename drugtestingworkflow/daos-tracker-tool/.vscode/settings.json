@@ -1,0 +1,23 @@
+{
+  "eslint.options": {
+    "extensions": [
+      ".html",
+      ".js",
+      ".jsx",
+      ".vue"
+    ]
+  },
+  "eslint.packageManager": "npm",
+  "eslint.validate": [
+    "html",
+    "vue",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.codeAction.disableRuleComment": {}
+}
