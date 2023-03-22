@@ -59,13 +59,9 @@ Our users will interact with Optimism in the following ways:
 
 1. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace.
 
-2a. Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace.
+2. Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace.
 
-b. Optimistic DAOs with UMA’s oSnap module: We wish to create an optimistic DAO using Safe, Snapshot and UMA’s oSnap module. With oSnap, our medical DAO members will be in control with human readable rules, Snapshot enforcement and no need to 100% rely on multi-sig solutions.
-
-3a. OP MED: Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling.
-
-b. Contract Management. OP’s pharma and research practice license NFT registration module is to enable users to register their pharma practioner licenses as well as their clinic registration details in a decentralized manner. An individual can be identified by his/her SSN and his pharma organization or shop by Pharma Registry Number both of which for now are integers between 0 and 65535 (16 bit integers). Every SSN or individual is associated with an address of an individual OP account. account. We are developing our own NFT smart contract from the ground up following OP eco-system modules. We are also logging the identities of the pharma practice license owners (pharma organizations), their ids using exchange of unique identifiers powered by OP.
+3. OP MED: Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling.
 
 4. Giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library.
 
@@ -76,17 +72,17 @@ b. Contract Management. OP’s pharma and research practice license NFT registra
 
 ## Optimism Modules for Developer Tooling and Utilities, References
 
-1a. Optimism NFT marketplace developer tooling for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
+1. Optimism NFT marketplace developer tooling for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
-Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
+2. Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
-OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers/OP-xls
+3. OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers/OP-xls
 
-Giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers
+4. Giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers
 
-Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: We are extending Tenderly to trace optimism transactions in DICOM NFT marketplace. We area also integrating with an open source spreadsheet maintained by us for analytics, visualization, tabulation, organization of the issues: please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/optimism-transaction-trace. 
+5. Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: We are extending Tenderly to trace optimism transactions in DICOM NFT marketplace. We area also integrating with an open source spreadsheet maintained by us for analytics, visualization, tabulation, organization of the issues: please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/optimism-transaction-trace. 
 
-Attestation Hub Contract for Medical Reports: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
+6. Attestation Hub Contract for Medical Reports: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
 We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports
 
 
