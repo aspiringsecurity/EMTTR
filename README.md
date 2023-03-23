@@ -57,7 +57,9 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 Our users will interact with Optimism in the following ways:
 
-1. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace.
+1. Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Sharing a smart contract for creating NFT in Optimism by one of our collaborators in Optimism Bedrock Goerli testnet: https://goerli-optimism.etherscan.io/address/0x1d807750029b3b345052b155123908968298bb9e
+
+EthGlobal Community: https://twitter.com/ETHGlobal/status/1637180703413530632
 
 2. Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace.
 
@@ -75,8 +77,6 @@ Our users will interact with Optimism in the following ways:
 1. Optimism NFT marketplace for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
 Sharing a smart contract for creating NFT in Optimism by one of our collaborators in Optimism Bedrock Goerli testnet: https://goerli-optimism.etherscan.io/address/0x1d807750029b3b345052b155123908968298bb9e 
-
-EthGlobal Community: https://twitter.com/ETHGlobal/status/1637180703413530632
 
 2. Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
