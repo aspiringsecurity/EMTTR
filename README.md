@@ -76,6 +76,8 @@ Our users will interact with Optimism in the following ways:
 
 Sharing a smart contract for creating NFT in Optimism by one of our collaborators in Optimism Bedrock Goerli testnet: https://goerli-optimism.etherscan.io/address/0x1d807750029b3b345052b155123908968298bb9e 
 
+EthGlobal Community: https://twitter.com/ETHGlobal/status/1637180703413530632
+
 2. Optimism TestXLS: Patient’s visit and Diagnosis Tooling with ionic framework within OP NFT marketplace. Please visit: OP Testxls: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
 3. OP MED:  Low code framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers/OP-xls
