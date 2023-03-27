@@ -1,6 +1,6 @@
 # SushiSwap Analytics
 
-SushiSwap Analytics is a progressive web application for the SushiSwap Protocol. Visualization, Tabulation, Anaytics and Organization tool for user interaction with DEX exchange like Sushiswap using OSS spreadsheet module for OP Medicine with a wiki interface. Wish to extend the user analytics tooling with Dune Analytics, build collaboration with DEX exchanges like Uniswap, Base (Coinbase) etc.
+SushiSwap Analytics is a progressive web application for the SushiSwap Protocol. Visualization, Tabulation, Anaytics and Organization tool for user interaction with DEX exchange like Sushiswap using OSS spreadsheet module for OP Medicine with a wiki interface. Wish to extend the user analytics tooling with Dune Analytics, build collaboration with other DEX exchanges.
 
 Use-Case
 
