@@ -11,7 +11,7 @@ Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=
 
 # Grants and Notable Achievements 
 
-Optimism Retroactive Public Goods Fund 2 Recipient (https://optimism.mirror.xyz/Upn_LtV2-3SviXgX_PE_LyA7YI00jQyoM1yf55ltvvI?rpgf=2)
+Grant Recipient for Nomination at Optimism Retroactive Public Goods Fund 2(https://optimism.mirror.xyz/Upn_LtV2-3SviXgX_PE_LyA7YI00jQyoM1yf55ltvvI?rpgf=2)
 
 Optimism Prize Achievement: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 ; https://optimistic.etherscan.io/tx/0x94822e1a9953a5a3c67b51c4f2c2a300cca19103cf85e8761651ad0c54fe3421 
 
