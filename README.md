@@ -105,6 +105,10 @@ We are generating NFTs for NFC tags of practice license of TPAs and pharma profe
 
 Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/ehrs-medical-history-module
 
+FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel oneapi, medical billing and invoicing: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/medical-invoice-to-cash-automation-oneapi
+
+IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
+
 
 1c. Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
 
