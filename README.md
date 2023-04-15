@@ -23,7 +23,7 @@ Documentation and Pitch Deck, Supporting demos: https://drive.google.com/drive/u
 
 Screencasts: 
 1. EMTTR Demo Video for anonymization and encryption of medical data and dapp on decentralized medical counseling (dapp, security): https://www.youtube.com/watch?v=rJRRlaVQSMY
-2. EMTTR Demo Video for bulk query, retrieve of medical data & dapp using OP, Eth, Emabrk, IPFS (dapp, portal): https://www.youtube.com/watch?v=BUiVvhuUdrE
+2. EMTTR Demo Video for bulk query, retrieve of medical data & dapp using OP, Eth, Embark, IPFS (dapp, portal): https://www.youtube.com/watch?v=BUiVvhuUdrE
 
 Web3 Dev Tooling: Web3 low code modules using wiki like spreadsheet with ionic framework, open source Web3 automation utilities for DICOM data management, visualization, tabulation, organization, graphing and collaboration, anonymization of data using PyDICOM library.
 
