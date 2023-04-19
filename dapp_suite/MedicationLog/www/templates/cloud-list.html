@@ -1,0 +1,24 @@
+<ion-view view-title="List Files on web">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-ios-minus-outline"
+            ng-click="data.showDelete = !data.showDelete;"></button>
+    </ion-nav-buttons>
+    
+    
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <ion-list show-delete="data.showDelete">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="file in files" type="item-text-wrap" ng-click="showActionsheet(file)">
+                
+                <h2>{{file}}</h2>
+                
+                
+                <ion-delete-button class="ion-minus-circled" ng-click="remove(file)">
+                </ion-delete-button>
+                <ion-option-button class="button-calm" ng-click="view(file)">
+                    Edit
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

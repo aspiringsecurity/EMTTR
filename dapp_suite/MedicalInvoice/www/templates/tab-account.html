@@ -1,0 +1,8 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+<ion-toggle  ng-model="settings.dropbox" toggle-class="toggle-balanced" ng-change="updateLoginLogout()">Sync Dropbox</ion-toggle>
+<ion-toggle  ng-model="settings.web" toggle-class="toggle-balanced" ng-change="cloudUpdateLoginLogout()"><!--Sync and backup as PDF on computer and access it from any browser--> Medical Invoice Web Widget</ion-toggle>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-popover-view>
+    <ion-content>
+        <div class="list">
+            
+            <a class="item item-icon-left" ng-click="undo()"><i class="icon ion-ios-undo"></i>Undo</a>
+            <a class="item item-icon-left" ng-click="redo()"><i class="icon ion-ios-redo"></i>Redo</a>
+            <a class="item item-icon-left" ng-click="clear()"><i class="icon ion-ios-trash"></i>Clear sheet</a>
+            <a class="item item-icon-left" ng-click="openColorSchemeOptions($event)"><i class="icon ion-paintbucket"></i>
+                
+                 
+                Color Scheme
+            </a>
+            <a class="item item-icon-left" ng-click="openColorOptions($event)"><i class="icon ion-android-color-palette"></i>
+                
+                <div class="color-demo" style="background:{{selectedColor}}"></div>
+                Color
+            </a>
+            
+            
+            <a class="item item-icon-left" ng-click="openFontOptions($event)"><i class="icon ion-information"></i>
+                <div ng-if="selectedFont == '10'" class="font-demo" style="font-size:small;">A</div>
+                <div ng-if="selectedFont == '12'" class="font-demo" style="font-size:medium;">A</div>
+                <div ng-if="selectedFont == '14'" class="font-demo" style="font-size:large;">A</div>
+                <div ng-if="selectedFont == '16'" class="font-demo" style="font-size:x-large;">A</div>
+                <div ng-if="selectedFont == 'e'" class="font-demo"><strong>B</strong></div>
+                <div ng-if="selectedFont == 'f'" class="font-demo" style="font-style: italic;">I</div>
+                <div ng-if="selectedFont == 'g'" class="font-demo" style="font-style: italic;"><strong>B</strong></div>
+                Font</a>
+            
+        </div>
+    </ion-content>
+</ion-popover-view>

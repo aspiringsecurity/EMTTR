@@ -1,0 +1,18 @@
+<ion-view view-title="Move files to device">
+    <ion-nav-buttons side="right">
+         <button class="button button-outline button-positive" ng-click="saveLocal()">Move to device</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            
+            <ion-item class="item item-checkbox" ng-repeat="file in files" type="item-text-wrap">
+                
+                <label class="checkbox"><input type="checkbox" ng-model="file.checked"> </label> {{ file.text }}
+            </ion-item>
+                    
+        </ion-list>
+        
+      
+    </ion-content>
+</ion-view>

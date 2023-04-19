@@ -1,0 +1,24 @@
+<ion-view view-title="List Files on device">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon icon ion-ios-minus-outline"
+            ng-click="data.showDelete = !data.showDelete;"></button>
+    </ion-nav-buttons>
+    
+    
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <ion-list show-delete="data.showDelete">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="file in files track by file.name" type="item-text-wrap"  ng-click="showActionsheet(file.name)">
+                
+                    <h2>{{file.name}}</h2>
+                    <span class="positive">{{ file.timestamp }}
+                    
+                    <ion-delete-button class="ion-minus-circled" ng-click="delete(file.name)">
+                    </ion-delete-button>
+                    <ion-option-button class="button-calm" ng-click="view(file.name)">
+                        Edit
+                    </ion-option-button>
+                    </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

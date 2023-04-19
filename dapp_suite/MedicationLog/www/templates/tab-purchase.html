@@ -1,0 +1,27 @@
+<ion-view view-title="Inapp Purchases">
+<ion-nav-buttons side="right">
+        <button class="button button-outline button-positive" ng-click="restore()">
+            Restore
+        </button>
+</ion-nav-buttons>
+    
+  <ion-content>
+      <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+      <ion-list>
+          
+          <ion-item class="item-remove-animate item-avatar" ng-repeat="item in items" type="item-text-wrap"  ng-click="showActionsheet(item)">
+              
+              <h2>{{item.desc}}</h2>
+              <span ng-if="item.units <= 10 && item.name == 'email-print-save'" class="assertive" ng-show="{{item.show}}">{{ item.units }} units left</span>
+              <span ng-if="item.units > 10 && item.name == 'email-print-save'" class="positive" ng-show="{{item.show}}">{{ item.units }} units left</span>
+              <span ng-if="item.name != 'email-print-save'" class="positive" ng-show="{{item.show}}">{{ item.units }} units left</span>
+              
+              
+              <ion-option-button class="button-positive" ng-click="purchase(item.name)">
+                  Buy
+              </ion-option-button>
+              
+          </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

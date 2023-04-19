@@ -1,0 +1,26 @@
+<ion-popover-view>
+    <ion-content>
+        
+    <div class="list">
+    
+    
+    <ion-radio ng-repeat="font in fonts"
+        ng-value="font.name"
+        ng-model="choice.font"
+        ng-change="selectedFontSize(font.size)"
+        name="font-change">
+        {{ font.name }}
+        <div ng-if="font.size == '10'" class="font-demo" style="font-size:small;">A</div>
+        <div ng-if="font.size == '12'" class="font-demo" style="font-size:medium;">A</div>
+        <div ng-if="font.size == '14'" class="font-demo" style="font-size:large;">A</div>
+        <div ng-if="font.size == '16'" class="font-demo" style="font-size:x-large;">A</div>
+        <div ng-if="font.size == 'e'" class="font-demo"><strong>B</strong></div>
+        <div ng-if="font.size == 'f'" class="font-demo" style="font-style: italic;">I</div>
+        <div ng-if="font.size == 'g'" class="font-demo" style="font-style: italic;"><strong>B</strong></div>
+
+    </ion-radio>
+    
+    </div>
+
+    </ion-content>
+</ion-popover-view>

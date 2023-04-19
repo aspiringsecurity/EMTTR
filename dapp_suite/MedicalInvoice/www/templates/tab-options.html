@@ -1,0 +1,32 @@
+<ion-view view-title="Menu">
+  <ion-content>
+    <ion-list>
+        <a class="item item-icon-left" ng-click="view('default')"><i class="icon ion-document"></i>New Medical Invoice</a>
+        <a class="item item-icon-left" ng-click="save()"><i class="icon ion-folder"></i>Save</a>
+        <a class="item item-icon-left" ng-click="saveAs()"><i class="icon ion-folder"></i>Save As</a>
+        <a class="item item-icon-left" ng-click="email()"><i class="icon ion-email"></i>Send Email</a>
+        <a class="item item-icon-left" ng-click="emailWorkbook()"><i class="icon ion-ios-email-outline"></i>Email Workbook</a>
+        <a class="item item-icon-left" ng-click="print()"><i class="icon ion-printer"></i>Print</a>
+        <a class="item item-icon-left" ng-click="sendCSV()"><i class="icon ion-document"></i>Export as CSV</a>
+        <a class="item item-icon-left" ng-click="sendPDF()"><i class="icon ion-document"></i>Export as PDF</a>
+        <a class="item item-icon-left" ng-click="sharePDF()"><i class="icon ion-document"></i>Message as PDF</a>
+
+        <div class="item item-divider"><i class="icon ion-social-dropbox-outline"></i>&nbsp;&nbsp;Dropbox</div>
+        <a class="item item-icon-left" href="#/tab/options/saveToDropbox"><i class="icon ion-social-dropbox"></i>Save files to Dropbox</a>
+        <a class="item item-icon-left" href="#/tab/options/listDropbox"><i class="icon ion-social-dropbox"></i>List files in Dropbox</a>
+        
+        <div class="item item-divider"><i class="icon ion-ios-cloud-outline"></i>&nbsp;&nbsp;<!--Sync and backup as PDF on computer-->Medical Invoice Web Widget</div>
+        <a class="item item-icon-left" ng-click="updateToWeb()"><i class="icon ion-ios-cloud"></i>Save</a>
+        <a class="item item-icon-left" ng-click="saveAsCloud()"><i class="icon ion-ios-cloud"></i>Save As</a>
+        <a class="item item-icon-left" href="#/tab/options/listfilesWeb"><i class="icon ion-ios-cloud"></i>List files</a>
+        <a class="item item-icon-left" href="#/tab/options/saveFromWeb"><i class="icon ion-ios-cloud"></i>Save files from web to device</a>
+        
+        <div class="item item-divider"><i class="icon ion-ios-settings-strong"></i>&nbsp;&nbsp;Support</div>
+        <a class="item item-icon-left" ng-click="writeToUs()"><i class="icon ion-edit"></i>Write to us</a>
+        <a class="item item-icon-left" ng-click="referToAFriend()"><i class="icon ion-share"></i>Refer to a friend</a>
+        <a class="item item-icon-left" ng-click="visitUs()"><i class="icon ion-ios-browsers"></i>Visit Us</a>
+        
+
+    </ion-list>
+  </ion-content>
+</ion-view>

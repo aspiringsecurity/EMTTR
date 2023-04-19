@@ -1,0 +1,23 @@
+<ion-popover-view>
+    <ion-content>
+       
+
+        <div class="list">
+            
+            <ion-radio ng-repeat="scheme in schemes"
+                ng-value="scheme.name"
+                ng-model="choice.scheme"
+                ng-change="selectedSchemeButton(scheme)"
+                name="scheme-change">
+                {{ scheme.name }}
+                
+            </ion-radio>
+          
+        </div>
+
+
+
+
+
+    </ion-content>
+</ion-popover-view>

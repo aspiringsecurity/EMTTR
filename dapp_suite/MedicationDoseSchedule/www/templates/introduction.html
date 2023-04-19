@@ -1,0 +1,75 @@
+<ion-view view-title="How to">
+    <ion-nav-buttons side="left">
+        <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-show="!slideIndex">
+            Skip Intro
+        </button>
+        <button class="button button-positive button-clear no-animation"
+            ng-click="previous()" ng-show="slideIndex > 0">
+            Previous
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-positive button-clear no-animation"
+            ng-click="next()" ng-show="slideIndex != 4">
+            Next
+        </button>
+        <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-show="slideIndex == 4">
+            Start App
+        </button>
+    </ion-nav-buttons>
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+        <ion-slide>
+            <h4>Click on the cell to input data</h4>
+            <div class="logo">
+                <img class="img-screen" src="intro/s1.png">
+            </div>
+           
+            <p>
+            For any questions email us at <b>marketing@tickervalue.com</b>
+            </p>
+        </ion-slide>
+        <ion-slide>
+            <h4>Swipe left to edit the file</h4>
+            <div class="logo">
+                <img class="img-screen" src="intro/s2.png">
+                    </div>
+            
+            <p>
+            For any questions email us at <b>marketing@tickervalue.com</b>
+            </p>
+        </ion-slide>
+        <ion-slide>
+            <h4>Pull down to refresh the list of files</h4>
+            <div class="logo">
+                <img class="img-screen" src="intro/s3.png">
+                    </div>
+            
+            <p>
+            For any questions email us at <b>marketing@tickervalue.com</b>
+            </p>
+        </ion-slide>
+        <ion-slide>
+            <h4>Click on the "-" (minus) button to activate delete</h4>
+            <div class="logo">
+                <img class="img-screen" src="intro/s4.png">
+                    </div>
+            
+            <p>
+            For any questions email us at <b>marketing@tickervalue.com</b>
+            </p>
+        </ion-slide>
+        <ion-slide>
+            <h4><!--Sync and backup as PDF on computer and access it from any browser--> Medication Log Web Widget</h4>
+            
+            <div class="logo">
+                <img class="img-screen" src="intro/s5.png">
+                    </div>
+            
+            <p>
+            For any questions email us at <b>marketing@tickervalue.com</b>
+            </p>
+        </ion-slide>
+    </ion-slide-box>
+</ion-view>

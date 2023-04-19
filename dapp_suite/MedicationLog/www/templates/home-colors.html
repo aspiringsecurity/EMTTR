@@ -1,0 +1,35 @@
+<ion-popover-view>
+    <ion-content>
+         
+            
+<!--            <ion-radio ng-repeat="color in colors" ng-model="colorChoice" ng-value="color.name" ng-change="selectedColorButton(color.name, color.hex)" >-->
+<!--                {{ color.name }}-->
+<!--                <div class="color-demo" style="background:{{color.hex}}"></div>-->
+<!--            </ion-radio>-->
+
+<!--        <label class="item item-radio" ng-repeat="color in colors" ng-model="colorChoice" ng-value="color.name" ng-change="selectedColorButton(color.name, color.hex)">-->
+<!--            <input type="radio" name="group">-->
+<!--                <div class="item-content"> {{ color.name }}</div>-->
+<!--                <i class="radio-icon ion-checkmark"></i>-->
+<!--                <div class="color-demo" style="background:{{color.hex}}"></div>-->
+<!--        </label>-->
+
+        <div class="list">
+            
+            <ion-radio ng-repeat="color in colors"
+                ng-value="color.name"
+                ng-model="choice.color"
+                ng-change="selectedColorButton(color.name, color.hex)"
+                name="color-change">
+                {{ color.name }}
+                <div class="color-demo" style="background:{{color.hex}}"></div>
+            </ion-radio>
+          
+        </div>
+
+
+
+
+
+    </ion-content>
+</ion-popover-view>
