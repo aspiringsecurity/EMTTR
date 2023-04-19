@@ -1,0 +1,63 @@
+"""
+    Pre-signed 0x V4 NFT Orders Subgraph Schema v0.0.4
+"""
+
+type Fee @entity {
+    id: ID!
+    recipient: Bytes!
+    amount: BigInt!
+    feeData: Bytes!
+}
+
+type Property @entity {
+    id: ID!
+    propertyValidator: Bytes!
+    propertyData: Bytes!
+}
+
+type Erc721Order @entity {
+    id: ID!
+    direction: Int!
+    maker: Bytes!
+    taker: Bytes!
+    expiry: BigInt!
+    nonce: BigInt!
+    erc20Token: Bytes!
+    erc20TokenAmount: BigInt!
+    fees: [Fee!]!
+    erc721Token: Bytes!
+    erc721TokenId: BigInt!
+    erc721TokenProperties: [Property!]!
+    logIndex: BigInt!
+    timestamp: BigInt!
+    blockNumber: BigInt!
+
+}
+
+type Erc1155Order @entity {
+    id: ID!
+    direction: Int!
+    maker: Bytes!
+    taker: Bytes!
+    expiry: BigInt!
+    nonce: BigInt!
+    erc20Token: Bytes!
+    erc20TokenAmount: BigInt!
+    fees: [Fee!]!
+    erc1155Token: Bytes!
+    erc1155TokenId: BigInt!
+    erc1155TokenProperties: [Property!]!
+    erc1155TokenAmount: BigInt!
+}
+
+type Erc721Cancellation @entity {
+    id: ID!
+    maker: Bytes!
+    nonce: BigInt!
+}
+
+type Erc1155Cancellation @entity {
+    id: ID!
+    maker: Bytes!
+    nonce: BigInt!
+}
