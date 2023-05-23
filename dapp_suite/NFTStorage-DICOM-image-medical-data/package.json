@@ -1,0 +1,105 @@
+{
+  "name": "nftup",
+  "version": "1.0.2",
+  "private": true,
+  "description": "NFT.Storage uploader",
+  "main": "public/electron.js",
+  "homepage": ".",
+  "build": {
+    "appId": "storage.nft.nftup",
+    "productName": "NFT UP",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "target": {
+        "target": "default",
+        "arch": [
+          "x64",
+          "arm64",
+          "universal"
+        ]
+      }
+    },
+    "dmg": {
+      "background": "build/background.png",
+      "contents": [
+        {
+          "x": 110,
+          "y": 190
+        },
+        {
+          "x": 430,
+          "y": 190,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ],
+      "sign": false
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "afterSign": "scripts/notarize.js"
+  },
+  "scripts": {
+    "start": "concurrently \"BROWSER=none npm run start:ui\" \"wait-on http://localhost:3000 && npm run start:electron\"",
+    "start:ui": "react-scripts start",
+    "start:electron": "electron .",
+    "build": "npm run build:ui && npm run build:electron",
+    "build:ui": "react-scripts build",
+    "build:electron": "electron-builder",
+    "test": "react-scripts test"
+  },
+  "repository": "https://github.com/nftstorage/nftup",
+  "author": "Alan Shaw",
+  "license": "Apache-2.0 OR MIT",
+  "dependencies": {
+    "bytes": "^3.1.2",
+    "electron-is-dev": "^2.0.0",
+    "electron-store": "^8.0.1",
+    "files-from-path": "^0.2.5",
+    "format-number": "^3.0.0",
+    "nft.storage": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "concurrently": "^7.0.0",
+    "dotenv": "^16.0.0",
+    "electron": "^17.2.0",
+    "electron-builder": "^23.6.0",
+    "electron-notarize": "^1.2.1",
+    "react-scripts": "5.0.0",
+    "standard": "^16.0.4",
+    "wait-on": "^6.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
