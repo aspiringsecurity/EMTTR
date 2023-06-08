@@ -134,8 +134,6 @@ Aleo's Quotation, Bidding, voting and token management for contract work underta
 
 4. XDC blockchain network: Borrowing XDC funds using collaterals for drug design research and development. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/xdc-borrow-funds
 
-5. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
-
 
 Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
 
