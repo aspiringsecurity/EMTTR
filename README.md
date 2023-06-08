@@ -119,20 +119,13 @@ Research Contract Bill Generation: We are utilizing Chainlink Mix to work with C
 Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
 
 
-1d. Klaytn Monitor:  DeFi dashboard for CROs to undertake research in drug design.
-
-Secure data storage, transparent data movement and data authenticity using Klaytn dashboard. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/klaytn-monitor 
-
-
-1e. Aleo network: Quotation, Bidding, voting and token management for contract work undertaken by CROs from pharmaceutical companies on Aleo Network.
-
-Aleo's Quotation, Bidding, voting and token management for contract work undertaken by CROs: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/aleo-bid-quotation-vote-workflow
-
 2. MultiChain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit the link at https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/multichain-webapp
 
 3. Polygon, Fantom (TradeFi meets Defi) and Axelar: Axelar for communication between Polygon blockchain (pharmaceutical companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Healthcare or Ministry of Commerce). Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/messaging . Polygon audit smart contracts at https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Audit-Polygon
 
 4. XDC blockchain network: Borrowing XDC funds using collaterals for drug design research and development. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/xdc-borrow-funds
+
+5. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
 
 
 Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
