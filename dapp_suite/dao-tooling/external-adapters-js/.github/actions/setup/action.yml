@@ -1,0 +1,165 @@
+name: Setup
+description: Runs basic commands to bootstrap yarn and install dependencies
+inputs:
+  check-cache:
+    description: Passes the --check-cache flag to yarn install for verification jobs
+    required: false
+    default: 'false'
+  skip-setup:
+    description: Skips the "yarn setup" step when not required
+    required: false
+    default: 'false'
+  skip-cache:
+    description: Skips cache restores and saves if set to true
+    required: false
+    default: 'false'
+  build-all:
+    description: Whether EA changes should be ignored, and all packages built regardless
+    required: false
+    default: 'false'
+  fetch-branch:
+    description: The branch that will be fetched from origin for comparison purposes
+    required: false
+    default: 'main'
+  base-branch:
+    description: The base branch to use for comparison with the head to calculate changed packages
+    required: false
+    default: 'origin/main'
+
+runs:
+  using: 'composite'
+  steps:
+    # This is a useful step that will help other actions later on
+    - name: Configure git
+      shell: bash
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+    # First, we want to install yarn since our base image doesn't have it installed
+    - uses: actions/setup-node@v3
+      with:
+        # This doesn't use cache: 'yarn' as the base image doesn't have it, and we're caching node_modules
+        node-version: 16
+    - name: Install yarn
+      run: npm i -g yarn
+      shell: bash
+
+    # Next, we want to get the dependencies, either from the cache, or fresh
+    # You'll see some internet comments saying it's bad practice to cache node_modules,
+    # but it should be fine in this case since we're actually looking for identical envs
+    - name: Restore yarn cache
+      id: restore-yarn-cache
+      if: inputs.skip-cache != 'true'
+      uses: actions/cache/restore@v3
+      with:
+        # Restrict it to the run and attempt for debugging purposes, but in theory
+        # these should be fine to persist between runs as well
+        key: yarn_cache-${{ hashFiles('./yarn.lock') }}-${{ github.run_id }}-${{ github.run_attempt }}
+        path: |
+          ./.yarn/unplugged/**
+          ./.yarn/install-state/**
+    # If there was no cached yarn packages, install them from scratch
+    - name: yarn install
+      if: steps.restore-yarn-cache.outputs.cache-hit != 'true'
+      run: |
+        if [ "${{ inputs.check-cache }}" = "true" ]; then
+          yarn install --immutable --check-cache
+        else 
+          yarn install --immutable
+        fi
+      shell: bash
+    - name: Cache yarn cache
+      if: steps.restore-yarn-cache.outputs.cache-hit != 'true' && inputs.skip-cache != 'true'
+      uses: actions/cache/save@v3
+      with:
+        key: yarn_cache-${{ hashFiles('./yarn.lock') }}-${{ github.run_id }}-${{ github.run_attempt }}
+        path: |
+          ./.yarn/unplugged/**
+          ./.yarn/install-state/**
+
+    # Build TS files unless it's been specified otherwise
+    - name: Restore TS built files if present
+      id: restore-ts-build
+      uses: actions/cache/restore@v3
+      if: |
+        inputs.skip-setup != 'true'
+        && inputs.skip-cache != 'true'
+      with:
+        key: tsbuild-${{ github.sha }}
+        # Add the masterlist to always cache the result, even if there are no adapters to build.
+        # That way we can skip the following steps in other jobs where there were no adapters built but this action is called still.
+        path: |
+          ./packages/**/tsconfig.tsbuildinfo
+          ./packages/**/dist/
+          ./MASTERLIST.md
+    - name: Fetch base branch for comparison in later steps
+      shell: bash
+      if: |
+        inputs.skip-setup != 'true'
+        && steps.restore-ts-build.outputs.cache-hit != 'true'
+      run: |
+        git fetch origin ${{ inputs.fetch-branch }}:${{ inputs.fetch-branch }} --depth 1 --update-head-ok || true
+    - name: Calculate changed EAs
+      shell: bash
+      if: |
+        inputs.skip-setup != 'true'
+        && steps.restore-ts-build.outputs.cache-hit != 'true'
+      env:
+        UPSTREAM_BRANCH: ${{ inputs.base-branch }}
+        BUILD_ALL: ${{ inputs.build-all }}
+      # We have to add the core/factories package manually always because the readme generation imports it
+      run: |
+        # If the BUILD_ALL env var is set or there are changes to the scripts (because of the readme generation scripts)
+        # we need to build every possible adapter and their dependencies
+        if [[ $BUILD_ALL = true ]] || git diff $UPSTREAM_BRANCH -- packages/scripts | grep -q . ; then
+          cp packages/tsconfig.json packages/tsconfig.tmp.json
+          exit 0
+        else
+          yarn workspaces list --json -R --since=$UPSTREAM_BRANCH \
+          | jq -csr '.' \
+          | jq '{ 
+                  files: [],
+                  include: [],
+                  references: [
+                    {
+                      path: "core/factories"
+                    },
+                    {
+                      path:  .[]
+                          | .location
+                          | select(
+                                    startswith("packages/sources")
+                                    or startswith("packages/composites")
+                                    or startswith("packages/targets")
+                            )
+                          | match("packages/(.*)").captures[0].string
+                    }
+                  ]
+                }' \
+          > packages/tsconfig.tmp.json
+        fi
+
+        echo "CHANGED_ADAPTERS=$(jq -c '.references' packages/tsconfig.tmp.json)" >> $GITHUB_ENV
+    - name: Build files
+      if: |
+        inputs.skip-setup != 'true'
+        && steps.restore-ts-build.outputs.cache-hit != 'true'
+        && env.CHANGED_ADAPTERS != '[]'
+      run: |
+        yarn tsc -b packages/tsconfig.tmp.json
+      shell: bash
+    - name: Clean tmp files
+      shell: bash
+      run: |
+        rm -f packages/tsconfig.tmp.json
+    - name: Cache built files
+      if: |
+        inputs.skip-setup != 'true'
+        && inputs.skip-cache != 'true'
+      uses: actions/cache/save@v3
+      with:
+        key: tsbuild-${{ github.sha }}
+        path: |
+          ./packages/**/tsconfig.tsbuildinfo
+          ./packages/**/dist/
+          ./MASTERLIST.md
