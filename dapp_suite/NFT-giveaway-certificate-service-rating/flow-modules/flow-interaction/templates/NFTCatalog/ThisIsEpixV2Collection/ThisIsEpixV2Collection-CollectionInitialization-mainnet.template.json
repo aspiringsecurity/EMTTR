@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "c82be7449df623e7ba3a8af08d87a862b3e9998bef35d28f00c439c229711f96",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support ThisIsEpixV2Collection NFTs"
+        }
+      }
+    },
+    "cadence": "import EpixV2 from 0xEpixV2\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: ThisIsEpixV2Collection\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&EpixV2.Collection>(from: /storage/EpixV2Collection) == nil {\n      let collection <- EpixV2.createEmptyCollection()\n      signer.save(<-collection, to: /storage/EpixV2Collection)\n    }\n    if (signer.getCapability<&EpixV2.Collection{EpixV2.EpixCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/EpixV2Collection).borrow() == nil) {\n      signer.unlink(/public/EpixV2Collection)\n      signer.link<&EpixV2.Collection{EpixV2.EpixCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/EpixV2Collection, target: /storage/EpixV2Collection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xEpixV2": {
+        "EpixV2": {
+          "mainnet": {
+            "address": "0xcc838e3f0213008f",
+            "contract": "EpixV2",
+            "fq_address": "A.0xcc838e3f0213008f.EpixV2",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 47493383
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47493384
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47493388
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

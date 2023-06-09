@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "88b22fafda22b717b43059d830792d3d03f397652ceb790aca34b016392ffee8",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support TheCharlieCollection NFTs"
+        }
+      }
+    },
+    "cadence": "import CharlieNFT from 0xCharlieNFT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: TheCharlieCollection\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&CharlieNFT.Collection>(from: /storage/CharlieNFTCollection) == nil {\n      let collection <- CharlieNFT.createEmptyCollection()\n      signer.save(<-collection, to: /storage/CharlieNFTCollection)\n    }\n    if (signer.getCapability<&CharlieNFT.Collection{CharlieNFT.CharlieNFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/CharlieNFTCollection).borrow() == nil) {\n      signer.unlink(/public/CharlieNFTCollection)\n      signer.link<&CharlieNFT.Collection{CharlieNFT.CharlieNFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/CharlieNFTCollection, target: /storage/CharlieNFTCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xCharlieNFT": {
+        "CharlieNFT": {
+          "testnet": {
+            "address": "0x0c7f58ca4b64219d",
+            "contract": "CharlieNFT",
+            "fq_address": "A.0x0c7f58ca4b64219d.CharlieNFT",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 95813715
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95813719
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95813724
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "874c9192d2c548a612101e81acdf8946db391728aa8054addc6ae26c3921d64c",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support Eternal NFTs"
+        }
+      }
+    },
+    "cadence": "import Eternal from 0xEternal\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: Eternal\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&Eternal.Collection>(from: /storage/EternalMomentCollection) == nil {\n      let collection <- Eternal.createEmptyCollection()\n      signer.save(<-collection, to: /storage/EternalMomentCollection)\n    }\n    if (signer.getCapability<&Eternal.Collection{Eternal.MomentCollectionPublic,NonFungibleToken.Receiver,NonFungibleToken.CollectionPublic,MetadataViews.ResolverCollection}>(/public/EternalMomentCollection).borrow() == nil) {\n      signer.unlink(/public/EternalMomentCollection)\n      signer.link<&Eternal.Collection{Eternal.MomentCollectionPublic,NonFungibleToken.Receiver,NonFungibleToken.CollectionPublic,MetadataViews.ResolverCollection}>(/public/EternalMomentCollection, target: /storage/EternalMomentCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xEternal": {
+        "Eternal": {
+          "mainnet": {
+            "address": "0xc38aea683c0c4d38",
+            "contract": "Eternal",
+            "fq_address": "A.0xc38aea683c0c4d38.Eternal",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 47492551
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47492555
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47492560
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

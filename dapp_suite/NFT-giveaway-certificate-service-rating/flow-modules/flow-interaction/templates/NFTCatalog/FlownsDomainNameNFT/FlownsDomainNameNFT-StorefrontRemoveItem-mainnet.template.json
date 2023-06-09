@@ -1,0 +1,43 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "642ea6991e4004091f30c25850ab41039f3f22191f9eb028728d1016ef4492a7",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction facilitates the removal of a FlownsDomainNameNFT NFT listing with the StorefrontV2 contract"
+        }
+      }
+    },
+    "cadence": "import NFTStorefrontV2 from 0xNFTStorefrontV2\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction facilitates the removal of a listing with the StorefrontV2 contract\n// \n// Collection Identifier: FlownsDomainNameNFT\n//\n// Version: 0.1.1\n\ntransaction(listingResourceID: UInt64) {\n    /// `listingResourceID` - ID of the Storefront listing resource\n    \n    let storefront: &NFTStorefrontV2.Storefront{NFTStorefrontV2.StorefrontManager}\n\n    prepare(acct: AuthAccount) {\n        self.storefront = acct.borrow<&NFTStorefrontV2.Storefront{NFTStorefrontV2.StorefrontManager}>(from: NFTStorefrontV2.StorefrontStoragePath)\n            ?? panic(\"Missing or mis-typed NFTStorefrontV2.Storefront\")\n    }\n\n    execute {\n        self.storefront.removeListing(listingResourceID: listingResourceID)\n    }\n}\n\n",
+    "dependencies": {
+      "0xNFTStorefrontV2": {
+        "NFTStorefrontV2": {
+          "mainnet": {
+            "address": "0x4eb8a10cb9f87357",
+            "contract": "NFTStorefrontV2",
+            "fq_address": "A.0x4eb8a10cb9f87357.NFTStorefrontV2",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47513222
+          }
+        }
+      }
+    },
+    "arguments": {
+      "listingResourceID": {
+        "index": 0,
+        "type": "UInt64",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "ID of the Storefront listing resource"
+            }
+          }
+        }
+      }
+    }
+  }
+}

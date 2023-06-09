@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "05d3c3e5784e80988bb916081f3c5c88df23c37573d04e945449dd2d51150b97",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support TheKeeprCollection NFTs"
+        }
+      }
+    },
+    "cadence": "import KeeprItems from 0xKeeprItems\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: TheKeeprCollection\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&KeeprItems.Collection>(from: /storage/KeeprItemsCollectionV10) == nil {\n      let collection <- KeeprItems.createEmptyCollection()\n      signer.save(<-collection, to: /storage/KeeprItemsCollectionV10)\n    }\n    if (signer.getCapability<&KeeprItems.Collection{KeeprItems.KeeprItemsCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/KeeprItemsCollectionV10).borrow() == nil) {\n      signer.unlink(/public/KeeprItemsCollectionV10)\n      signer.link<&KeeprItems.Collection{KeeprItems.KeeprItemsCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/KeeprItemsCollectionV10, target: /storage/KeeprItemsCollectionV10)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xKeeprItems": {
+        "KeeprItems": {
+          "mainnet": {
+            "address": "0x5eb12ad3d5a99945",
+            "contract": "KeeprItems",
+            "fq_address": "A.0x5eb12ad3d5a99945.KeeprItems",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 47509567
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47509571
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47509574
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

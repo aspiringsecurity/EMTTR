@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "f82735cf20e7a6336f022e849aa5ed577c97d7cb9905969db0302d018ad6dab2",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support Fuchibola NFTs"
+        }
+      }
+    },
+    "cadence": "import Fuchibola_NFT from 0xFuchibola_NFT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: Fuchibola\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&Fuchibola_NFT.Collection>(from: /storage/Fuchibola_NFTCollection) == nil {\n      let collection <- Fuchibola_NFT.createEmptyCollection()\n      signer.save(<-collection, to: /storage/Fuchibola_NFTCollection)\n    }\n    if (signer.getCapability<&Fuchibola_NFT.Collection{Fuchibola_NFT.Fuchibola_NFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/Fuchibola_NFTCollection).borrow() == nil) {\n      signer.unlink(/public/Fuchibola_NFTCollection)\n      signer.link<&Fuchibola_NFT.Collection{Fuchibola_NFT.Fuchibola_NFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/Fuchibola_NFTCollection, target: /storage/Fuchibola_NFTCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xFuchibola_NFT": {
+        "Fuchibola_NFT": {
+          "mainnet": {
+            "address": "0xf3ee684cd0259fed",
+            "contract": "Fuchibola_NFT",
+            "fq_address": "A.0xf3ee684cd0259fed.Fuchibola_NFT",
+            "pin": "9524cc8b5eb8bb8f7d8cf4ee3c65374cafa55921d31d6f72ce08d1c4da8aad57",
+            "pin_block_height": 47497362
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47497365
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47497369
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

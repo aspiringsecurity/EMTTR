@@ -1,0 +1,68 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "544acba77bdc712251cd81befa5cb97414928c7ace95eb6a5aeb4fac133b861f",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "Update Networking Address"
+        }
+      },
+      "description": {
+        "i18n": {
+          "en-US": "Updates the networking address for a node held in a Staking Collection"
+        }
+      }
+    },
+    "cadence": "import FlowStakingCollection from 0xSTAKINGCOLLECTIONADDRESS\n/// Changes the networking address for the specified node\ntransaction(nodeID: String, newAddress: String) {\n    \n    let stakingCollectionRef: &FlowStakingCollection.StakingCollection\n    prepare(account: AuthAccount) {\n        self.stakingCollectionRef = account.borrow<&FlowStakingCollection.StakingCollection>(from: FlowStakingCollection.StakingCollectionStoragePath)\n            ?? panic(\"Could not borrow ref to StakingCollection\")\n    }\n    execute {\n        self.stakingCollectionRef.updateNetworkingAddress(nodeID: nodeID, newAddress: newAddress)\n    }\n}\n",
+    "dependencies": {
+      "0xSTAKINGCOLLECTIONADDRESS": {
+        "FlowStakingCollection": {
+          "testnet": {
+            "address": "0x95e019a17d0e23d7",
+            "fq_address": "A.0x95e019a17d0e23d7.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 74763522
+          },
+          "mainnet": {
+            "address": "0x8d0e87b65159ae63",
+            "fq_address": "A.0x8d0e87b65159ae63.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 34158081
+          }
+        }
+      }
+    },
+    "arguments": {
+      "nodeID": {
+        "index": 0,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The Node ID"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "newAddress": {
+        "index": 1,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The new Networking Address for this node"
+            }
+          }
+        },
+        "balance": ""
+      }
+    }
+  }
+}

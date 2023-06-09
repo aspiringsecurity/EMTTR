@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "22eb8729533402ed9df17d992a287884689eaa1657d117cd03223ae9c093dc30",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support TMNFTV2 NFTs"
+        }
+      }
+    },
+    "cadence": "import TMNFTV2 from 0xTMNFTV2\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: TMNFTV2\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&TMNFTV2.Collection>(from: /storage/TMNFTV2Collection) == nil {\n      let collection <- TMNFTV2.createEmptyCollection()\n      signer.save(<-collection, to: /storage/TMNFTV2Collection)\n    }\n    if (signer.getCapability<&TMNFTV2.Collection{TMNFTV2.TMNFTV2CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/TMNFTV2Collection).borrow() == nil) {\n      signer.unlink(/public/TMNFTV2Collection)\n      signer.link<&TMNFTV2.Collection{TMNFTV2.TMNFTV2CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/TMNFTV2Collection, target: /storage/TMNFTV2Collection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xTMNFTV2": {
+        "TMNFTV2": {
+          "testnet": {
+            "address": "0x87dc938d9246d780",
+            "contract": "TMNFTV2",
+            "fq_address": "A.0x87dc938d9246d780.TMNFTV2",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 95813874
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95813878
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95813882
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

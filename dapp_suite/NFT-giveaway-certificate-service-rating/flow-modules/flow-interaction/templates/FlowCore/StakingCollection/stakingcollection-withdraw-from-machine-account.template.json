@@ -1,0 +1,68 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "9f5ee4feb3ffe7a6a20a72d8d2e7878d4d548216c947c95e7ce067fe471217f0",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "Withdraw FLOW from Machine Account"
+        }
+      },
+      "description": {
+        "i18n": {
+          "en-US": "Withdraws FLOW from a machine account"
+        }
+      }
+    },
+    "cadence": "import FlowStakingCollection from 0xSTAKINGCOLLECTIONADDRESS\n/// Request to withdraw tokens from the machine account\n/// The tokens are automatically deposited to the unlocked account vault\ntransaction(nodeID: String, amount: UFix64) {\n    \n    let stakingCollectionRef: &FlowStakingCollection.StakingCollection\n    prepare(account: AuthAccount) {\n        self.stakingCollectionRef = account.borrow<&FlowStakingCollection.StakingCollection>(from: FlowStakingCollection.StakingCollectionStoragePath)\n            ?? panic(\"Could not borrow ref to StakingCollection\")\n    }\n    execute {\n        self.stakingCollectionRef.withdrawFromMachineAccount(nodeID: nodeID, amount: amount)\n    }\n}\n",
+    "dependencies": {
+      "0xSTAKINGCOLLECTIONADDRESS": {
+        "FlowStakingCollection": {
+          "testnet": {
+            "address": "0x95e019a17d0e23d7",
+            "fq_address": "A.0x95e019a17d0e23d7.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 74763650
+          },
+          "mainnet": {
+            "address": "0x8d0e87b65159ae63",
+            "fq_address": "A.0x8d0e87b65159ae63.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 34158165
+          }
+        }
+      }
+    },
+    "arguments": {
+      "nodeID": {
+        "index": 0,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The Node ID"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "amount": {
+        "index": 1,
+        "type": "UFix64",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The amount to withdraw"
+            }
+          }
+        },
+        "balance": ""
+      }
+    }
+  }
+}

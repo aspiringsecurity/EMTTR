@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "93c4e85b69a89f9fe41ae8efe7c0ed763f9e827bfe0bbf03969b1d60f7c6ea18",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support GaiaElementNFT NFTs"
+        }
+      }
+    },
+    "cadence": "import GaiaElementNFT from 0xGaiaElementNFT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: GaiaElementNFT\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&GaiaElementNFT.Collection>(from: /storage/GaiaElementNFTCollection002) == nil {\n      let collection <- GaiaElementNFT.createEmptyCollection()\n      signer.save(<-collection, to: /storage/GaiaElementNFTCollection002)\n    }\n    if (signer.getCapability<&GaiaElementNFT.Collection{GaiaElementNFT.CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/GaiaElementNFTCollection002).borrow() == nil) {\n      signer.unlink(/public/GaiaElementNFTCollection002)\n      signer.link<&GaiaElementNFT.Collection{GaiaElementNFT.CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/GaiaElementNFTCollection002, target: /storage/GaiaElementNFTCollection002)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xGaiaElementNFT": {
+        "GaiaElementNFT": {
+          "mainnet": {
+            "address": "0xebfaf4d2d7920a18",
+            "contract": "GaiaElementNFT",
+            "fq_address": "A.0xebfaf4d2d7920a18.GaiaElementNFT",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 47508463
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47508466
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47508471
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

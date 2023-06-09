@@ -1,0 +1,128 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "6d1ea6bf8bda73132afd038e0c9aabca8abeb84ac11259cbefa36b9337f2d19e",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "Register Node"
+        }
+      },
+      "description": {
+        "i18n": {
+          "en-US": "Register a node held in a Staking Collection"
+        }
+      }
+    },
+    "cadence": "import Crypto\nimport FlowStakingCollection from 0xSTAKINGCOLLECTIONADDRESS\n/// Registers a delegator in the staking collection resource\n/// for the specified node information and the amount of tokens to commit\ntransaction(id: String,\n            role: UInt8,\n            networkingAddress: String,\n            networkingKey: String,\n            stakingKey: String,\n            amount: UFix64,\n            publicKeys: [Crypto.KeyListEntry]?) {\n    \n    let stakingCollectionRef: &FlowStakingCollection.StakingCollection\n    prepare(account: AuthAccount) {\n        self.stakingCollectionRef = account.borrow<&FlowStakingCollection.StakingCollection>(from: FlowStakingCollection.StakingCollectionStoragePath)\n            ?? panic(\"Could not borrow ref to StakingCollection\")\n        if let machineAccount = self.stakingCollectionRef.registerNode(\n            id: id,\n            role: role,\n            networkingAddress: networkingAddress,\n            networkingKey: networkingKey,\n            stakingKey: stakingKey,\n            amount: amount,\n            payer: account) \n        {\n            if publicKeys == nil || publicKeys!.length == 0 {\n                panic(\"Cannot provide zero keys for the machine account\")\n            }\n            for key in publicKeys! {\n                machineAccount.keys.add(publicKey: key.publicKey, hashAlgorithm: key.hashAlgorithm, weight: key.weight)\n            }\n        }\n    }\n}\n",
+    "dependencies": {
+      "0xSTAKINGCOLLECTIONADDRESS": {
+        "FlowStakingCollection": {
+          "testnet": {
+            "address": "0x95e019a17d0e23d7",
+            "fq_address": "A.0x95e019a17d0e23d7.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 74559839
+          },
+          "mainnet": {
+            "address": "0x8d0e87b65159ae63",
+            "fq_address": "A.0x8d0e87b65159ae63.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 34026928
+          }
+        }
+      }
+    },
+    "arguments": {
+      "id": {
+        "index": 0,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The node ID"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "role": {
+        "index": 1,
+        "type": "UInt8",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The node role to register"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "networkingAddress": {
+        "index": 2,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The networking address"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "networkingKey": {
+        "index": 3,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The networking key"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "stakingKey": {
+        "index": 4,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The staking key"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "amount": {
+        "index": 5,
+        "type": "UFix64",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The amount of FLOW tokens to stake"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "publicKeys": {
+        "index": 6,
+        "type": "[Crypto.KeyListEntry]?",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "Public Keys for the Machine Account (comma separated). Only required when registering Consensus or Collection nodes"
+            }
+          }
+        },
+        "balance": ""
+      }
+    }
+  }
+}

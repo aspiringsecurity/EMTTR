@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "45f8630468ee1122bf2eeeb2639d09f9c38b04b2041b27a76fd6b78327c09c59",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support StartupyWGrze NFTs"
+        }
+      }
+    },
+    "cadence": "import StartupyWGrze from 0xStartupyWGrze\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: StartupyWGrze\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&StartupyWGrze.Collection>(from: /storage/collecticoStartupyWGrzeCollection) == nil {\n      let collection <- StartupyWGrze.createEmptyCollection()\n      signer.save(<-collection, to: /storage/collecticoStartupyWGrzeCollection)\n    }\n    if (signer.getCapability<&StartupyWGrze.Collection{StartupyWGrze.CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/collecticoStartupyWGrzeCollection).borrow() == nil) {\n      signer.unlink(/public/collecticoStartupyWGrzeCollection)\n      signer.link<&StartupyWGrze.Collection{StartupyWGrze.CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/collecticoStartupyWGrzeCollection, target: /storage/collecticoStartupyWGrzeCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xStartupyWGrze": {
+        "StartupyWGrze": {
+          "mainnet": {
+            "address": "0xd26750aab3b6e413",
+            "contract": "StartupyWGrze",
+            "fq_address": "A.0xd26750aab3b6e413.StartupyWGrze",
+            "pin": "1c1a5bfbd73b43de459ac489a35c3e919aae8a8e5f1f421a4ae025971b275804",
+            "pin_block_height": 47489024
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47489027
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47489031
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "20e7770489721ea87bd62ae5b706bacbd419b6047b1c5066557f19e971262304",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support TouchstoneManekiPlanets NFTs"
+        }
+      }
+    },
+    "cadence": "import TouchstoneManekiPlanets from 0xTouchstoneManekiPlanets\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: TouchstoneManekiPlanets\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&TouchstoneManekiPlanets.Collection>(from: /storage/TouchstoneManekiPlanetsCollection_0xcf3c77ef638573e8) == nil {\n      let collection <- TouchstoneManekiPlanets.createEmptyCollection()\n      signer.save(<-collection, to: /storage/TouchstoneManekiPlanetsCollection_0xcf3c77ef638573e8)\n    }\n    if (signer.getCapability<&TouchstoneManekiPlanets.Collection{NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/TouchstoneManekiPlanetsCollection_0xcf3c77ef638573e8).borrow() == nil) {\n      signer.unlink(/public/TouchstoneManekiPlanetsCollection_0xcf3c77ef638573e8)\n      signer.link<&TouchstoneManekiPlanets.Collection{NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/TouchstoneManekiPlanetsCollection_0xcf3c77ef638573e8, target: /storage/TouchstoneManekiPlanetsCollection_0xcf3c77ef638573e8)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xTouchstoneManekiPlanets": {
+        "TouchstoneManekiPlanets": {
+          "mainnet": {
+            "address": "0xcf3c77ef638573e8",
+            "contract": "TouchstoneManekiPlanets",
+            "fq_address": "A.0xcf3c77ef638573e8.TouchstoneManekiPlanets",
+            "pin": "9e4c93fa6453b3a2b0f56a1e71ff3740398f59d4207815b15527748994ecd0f9",
+            "pin_block_height": 47505177
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47505180
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47505185
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

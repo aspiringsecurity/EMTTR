@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "05ca10b82751f6676ea193cc5059c87489a5acf0c4a0245b1f71ebca61ec19f3",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support ThePublishedNFTCollection NFTs"
+        }
+      }
+    },
+    "cadence": "import PublishedNFT from 0xPublishedNFT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: ThePublishedNFTCollection\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&PublishedNFT.Collection>(from: /storage/publishedNFTCollection) == nil {\n      let collection <- PublishedNFT.createEmptyCollection()\n      signer.save(<-collection, to: /storage/publishedNFTCollection)\n    }\n    if (signer.getCapability<&PublishedNFT.Collection{PublishedNFT.PublishedNFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/publishedNFTCollection).borrow() == nil) {\n      signer.unlink(/public/publishedNFTCollection)\n      signer.link<&PublishedNFT.Collection{PublishedNFT.PublishedNFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/publishedNFTCollection, target: /storage/publishedNFTCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xPublishedNFT": {
+        "PublishedNFT": {
+          "mainnet": {
+            "address": "0x52cbea4e6f616b8e",
+            "contract": "PublishedNFT",
+            "fq_address": "A.0x52cbea4e6f616b8e.PublishedNFT",
+            "pin": "9524cc8b5eb8bb8f7d8cf4ee3c65374cafa55921d31d6f72ce08d1c4da8aad57",
+            "pin_block_height": 47501930
+          },
+          "testnet": {
+            "address": "0x00af2ab363fa49e4",
+            "contract": "PublishedNFT",
+            "fq_address": "A.0x00af2ab363fa49e4.PublishedNFT",
+            "pin": "9524cc8b5eb8bb8f7d8cf4ee3c65374cafa55921d31d6f72ce08d1c4da8aad57",
+            "pin_block_height": 95799811
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47501941
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95799819
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47501950
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95799828
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

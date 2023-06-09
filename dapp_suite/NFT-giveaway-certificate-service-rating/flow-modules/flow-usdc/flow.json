@@ -1,0 +1,130 @@
+{
+  "emulators": {
+    "default": {
+      "port": 3569,
+      "serviceAccount": "emulator-account"
+    }
+  },
+  "deployments": {
+    "emulator": {
+      "emulator-owner": ["FiatTokenInterface", "OnChainMultiSig"],
+      "emulator-allowance": [],
+      "emulator-blocklister": [],
+      "emulator-minter": [],
+      "emulator-minterController1": [],
+      "emulator-minterController2": [],
+      "emulator-non-allowance" : [],
+      "emulator-non-blocklister":[],
+      "emulator-non-minter": [],
+      "emulator-non-multisig-account": [],
+      "emulator-non-pauser": [],
+      "emulator-non-vaulted-account": [],
+      "emulator-pauser": [],
+      "emulator-vaulted-account": [],
+      "emulator-w-1000": [],
+      "emulator-w-500-1": [],
+      "emulator-w-500-2": [],
+      "emulator-w-250-1": [],
+      "emulator-w-250-2": []
+    }
+  },
+  "contracts": {
+    "FungibleToken": {
+      "source": "./contracts/FungibleToken.cdc",
+      "aliases": {
+        "emulator": "0xee82856bf20e2aa6",
+        "testnet": "0x9a0766d93b6608b7",
+        "mainnet": "0xf233dcee88fe0abe"
+      }
+    },
+    "FiatTokenInterface": "./contracts/FiatTokenInterface.cdc",
+    "OnChainMultiSig": "./contracts/OnChainMultiSig.cdc"
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key" : "758abfd76ad82071cbeeb309f251eeefbe9bb8442557de745769a6ff0a912636"
+    },
+    "emulator-owner": {
+      "address": "01cf0e2f2f715450",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-allowance" : {
+	  "address": "179b6b1cb6755e31",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-blocklister" : {
+	  "address": "f3fcd2c1a78f5eee",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-minter" : {
+	  "address": "e03daebed8ca0615",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-minterController1" : {
+	  "address": "045a1763c93006ca",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-minterController2" : {
+	  "address": "120e725050340cab",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-non-allowance" : {
+	  "address": "f669cb8d41ce0c74",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-non-blocklister" : {
+	  "address": "192440c99cb17282",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-non-minter" : {
+	  "address": "fd43f9148d4b725d",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-non-multisig-account" : {
+	  "address": "eb179c27144f783c",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-non-pauser" : {
+	  "address": "f7025fa05b578e3",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-non-vaulted-account" : {
+	  "address": "e2f72218abeec2b9",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-pauser" : {
+	  "address": "6909bc5ba14c266",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-vaulted-account" : {
+    "address": "10c4fef62310c807",
+      "key" : "c7b5941fa9dc429f752057ef1f5b4d393470256f20ad0853d4343dde84a70946"
+    },
+    "emulator-w-1000" : {
+    "address": "f4a3472b32eac8d8",
+      "key" : "3548f83a45e04050033112b81722f29c6d853fd00eb79a08101025900ca4c543"
+    },
+    "emulator-w-250-1" : {
+    "address": "1beecc6fef95b62e",
+      "key" : "8da7a03dbcdd9d84d4e5e9875744accf7810d41fc60dd2522e5fa3f1441eff1d"
+    },
+    "emulator-w-250-2" : {
+    "address": "ff8975b2fe6fb6f1",
+      "key" : "2e20dc54149cd114e265ef09b6dd09e222ce1979257b359fb6db53b64f260c6e"
+    },
+    "emulator-w-500-1" : {
+    "address": "e9dd1081676bbc90",
+      "key" : "9c687961e7a1abe1e445830e7ec118ffd1e2a0449cf705f5476b3f100e94dc29"
+    },
+    "emulator-w-500-2" : {
+    "address": "dbaa95c7691bc4f",
+      "key" : "bf242a7c12e299d90e4621d99501d1e27ccdc4d511cdf1f0fbba37a47e83bd24"
+    }
+  }
+}

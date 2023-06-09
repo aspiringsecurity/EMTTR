@@ -1,0 +1,115 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "dfb30fb76518ae901dc18993d8a00a8329a5d4b36dfd4bd357245457aa47eea8",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "Setup Staking Collection"
+        }
+      },
+      "description": {
+        "i18n": {
+          "en-US": "Sets up a Staking Collection for an account"
+        }
+      }
+    },
+    "cadence": "import FungibleToken from 0xFUNGIBLETOKENADDRESS\nimport FlowToken from 0xFLOWTOKENADDRESS\nimport FlowIDTableStaking from 0xIDENTITYTABLEADDRESS\nimport LockedTokens from 0xLOCKEDTOKENADDRESS\nimport FlowStakingCollection from 0xSTAKINGCOLLECTIONADDRESS\n/// This transaction sets up an account to use a staking collection\n/// It will work regardless of whether they have a regular account, a two-account locked tokens setup,\n/// or staking objects stored in the unlocked account\ntransaction {\n    prepare(signer: AuthAccount) {\n        // If there isn't already a staking collection\n        if signer.borrow<&FlowStakingCollection.StakingCollection>(from: FlowStakingCollection.StakingCollectionStoragePath) == nil {\n            // Create private capabilities for the token holder and unlocked vault\n            let lockedHolder = signer.link<&LockedTokens.TokenHolder>(/private/flowTokenHolder, target: LockedTokens.TokenHolderStoragePath)!\n            let flowToken = signer.link<&FlowToken.Vault>(/private/flowTokenVault, target: /storage/flowTokenVault)!\n            \n            // Create a new Staking Collection and put it in storage\n            if lockedHolder.check() {\n                signer.save(<-FlowStakingCollection.createStakingCollection(unlockedVault: flowToken, tokenHolder: lockedHolder), to: FlowStakingCollection.StakingCollectionStoragePath)\n            } else {\n                signer.save(<-FlowStakingCollection.createStakingCollection(unlockedVault: flowToken, tokenHolder: nil), to: FlowStakingCollection.StakingCollectionStoragePath)\n            }\n            // Create a public link to the staking collection\n            signer.link<&FlowStakingCollection.StakingCollection{FlowStakingCollection.StakingCollectionPublic}>(\n                FlowStakingCollection.StakingCollectionPublicPath,\n                target: FlowStakingCollection.StakingCollectionStoragePath\n            )\n        }\n        // borrow a reference to the staking collection\n        let collectionRef = signer.borrow<&FlowStakingCollection.StakingCollection>(from: FlowStakingCollection.StakingCollectionStoragePath)\n            ?? panic(\"Could not borrow staking collection reference\")\n        // If there is a node staker object in the account, put it in the staking collection\n        if signer.borrow<&FlowIDTableStaking.NodeStaker>(from: FlowIDTableStaking.NodeStakerStoragePath) != nil {\n            let node <- signer.load<@FlowIDTableStaking.NodeStaker>(from: FlowIDTableStaking.NodeStakerStoragePath)!\n            collectionRef.addNodeObject(<-node, machineAccountInfo: nil)\n        }\n        // If there is a delegator object in the account, put it in the staking collection\n        if signer.borrow<&FlowIDTableStaking.NodeDelegator>(from: FlowIDTableStaking.DelegatorStoragePath) != nil {\n            let delegator <- signer.load<@FlowIDTableStaking.NodeDelegator>(from: FlowIDTableStaking.DelegatorStoragePath)!\n            collectionRef.addDelegatorObject(<-delegator)\n        }\n    }\n}\n",
+    "dependencies": {
+      "0xFUNGIBLETOKENADDRESS": {
+        "FungibleToken": {
+          "mainnet": {
+            "address": "0xf233dcee88fe0abe",
+            "fq_address": "A.0xf233dcee88fe0abe.FungibleToken",
+            "contract": "FungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 34157509
+          },
+          "testnet": {
+            "address": "0x9a0766d93b6608b7",
+            "fq_address": "A.0x9a0766d93b6608b7.FungibleToken",
+            "contract": "FungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 74762620
+          }
+        }
+      },
+      "0xFLOWTOKENADDRESS": {
+        "FlowToken": {
+          "mainnet": {
+            "address": "0x1654653399040a61",
+            "fq_address": "A.0x1654653399040a61.FlowToken",
+            "contract": "FlowToken",
+            "pin": "0326c320322c4e8dde768ba2975c384184fb7e41765c2c87e79a2040bfc71be8",
+            "pin_block_height": 34157509
+          },
+          "testnet": {
+            "address": "0x7e60df042a9c0868",
+            "fq_address": "A.0x7e60df042a9c0868.FlowToken",
+            "contract": "FlowToken",
+            "pin": "0326c320322c4e8dde768ba2975c384184fb7e41765c2c87e79a2040bfc71be8",
+            "pin_block_height": 74762620
+          }
+        }
+      },
+      "0xIDENTITYTABLEADDRESS": {
+        "FlowIDTableStaking": {
+          "testnet": {
+            "address": "0x9eca2b38b18b5dfe",
+            "fq_address": "A.0x9eca2b38b18b5dfe.FlowIDTableStaking",
+            "contract": "FlowIDTableStaking",
+            "pin": "d00a96b60721e1606bb257a08b3c1d3fa16be292ed87d3e51941c875f673da0f",
+            "pin_block_height": 74762620
+          },
+          "mainnet": {
+            "address": "0x8624b52f9ddcd04a",
+            "fq_address": "A.0x8624b52f9ddcd04a.FlowIDTableStaking",
+            "contract": "FlowIDTableStaking",
+            "pin": "d00a96b60721e1606bb257a08b3c1d3fa16be292ed87d3e51941c875f673da0f",
+            "pin_block_height": 34157509
+          }
+        }
+      },
+      "0xLOCKEDTOKENADDRESS": {
+        "LockedTokens": {
+          "testnet": {
+            "address": "0x95e019a17d0e23d7",
+            "fq_address": "A.0x95e019a17d0e23d7.LockedTokens",
+            "contract": "LockedTokens",
+            "pin": "7c7ff03a10696b7639f235e42b57becdfbdbcee1bb6f99d01f922d4554fe51f0",
+            "pin_block_height": 74762620
+          },
+          "mainnet": {
+            "address": "0x8d0e87b65159ae63",
+            "fq_address": "A.0x8d0e87b65159ae63.LockedTokens",
+            "contract": "LockedTokens",
+            "pin": "7c7ff03a10696b7639f235e42b57becdfbdbcee1bb6f99d01f922d4554fe51f0",
+            "pin_block_height": 34157509
+          }
+        }
+      },
+      "0xSTAKINGCOLLECTIONADDRESS": {
+        "FlowStakingCollection": {
+          "testnet": {
+            "address": "0x95e019a17d0e23d7",
+            "fq_address": "A.0x95e019a17d0e23d7.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 74762620
+          },
+          "mainnet": {
+            "address": "0x8d0e87b65159ae63",
+            "fq_address": "A.0x8d0e87b65159ae63.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 34157509
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "00d2d230282e78ef38c85eb6ca5423158d6ab5905bf5bd541825588caf9dcd32",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "Request Unstaking"
+        }
+      },
+      "description": {
+        "i18n": {
+          "en-US": "Requests unstaking for a stake held in a Staking Collection"
+        }
+      }
+    },
+    "cadence": "import FlowStakingCollection from 0xSTAKINGCOLLECTIONADDRESS\n/// Requests to unstake ALL tokens for the specified node or delegator in the staking collection\ntransaction(nodeID: String) {\n    \n    let stakingCollectionRef: &FlowStakingCollection.StakingCollection\n    prepare(account: AuthAccount) {\n        self.stakingCollectionRef = account.borrow<&FlowStakingCollection.StakingCollection>(from: FlowStakingCollection.StakingCollectionStoragePath)\n            ?? panic(\"Could not borrow ref to StakingCollection\")\n    }\n    execute {\n        self.stakingCollectionRef.unstakeAll(nodeID: nodeID)\n    }\n}\n",
+    "dependencies": {
+      "0xSTAKINGCOLLECTIONADDRESS": {
+        "FlowStakingCollection": {
+          "testnet": {
+            "address": "0x95e019a17d0e23d7",
+            "fq_address": "A.0x95e019a17d0e23d7.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 74763406
+          },
+          "mainnet": {
+            "address": "0x8d0e87b65159ae63",
+            "fq_address": "A.0x8d0e87b65159ae63.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 34158006
+          }
+        }
+      }
+    },
+    "arguments": {
+      "nodeID": {
+        "index": 0,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The Node ID"
+            }
+          }
+        },
+        "balance": ""
+      }
+    }
+  }
+}

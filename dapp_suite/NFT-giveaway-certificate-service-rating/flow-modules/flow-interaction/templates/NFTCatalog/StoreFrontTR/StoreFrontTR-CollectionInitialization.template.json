@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "eaba502382a810ae9e6b7303ab7ff1ffa3ea3dacc5ca8b3d9546d78c18ef5a60",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support StoreFrontTR NFTs"
+        }
+      }
+    },
+    "cadence": "import StoreFront from 0xStoreFront\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: StoreFrontTR\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&StoreFront.Collection>(from: /storage/StoreFrontCollection) == nil {\n      let collection <- StoreFront.createEmptyCollection()\n      signer.save(<-collection, to: /storage/StoreFrontCollection)\n    }\n    if (signer.getCapability<&StoreFront.Collection{StoreFront.CollectionPublic,StoreFront.IRevealNFT,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/StoreFrontCollection).borrow() == nil) {\n      signer.unlink(/public/StoreFrontCollection)\n      signer.link<&StoreFront.Collection{StoreFront.CollectionPublic,StoreFront.IRevealNFT,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/StoreFrontCollection, target: /storage/StoreFrontCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xStoreFront": {
+        "StoreFront": {
+          "mainnet": {
+            "address": "0x766b859539a6679b",
+            "contract": "StoreFront",
+            "fq_address": "A.0x766b859539a6679b.StoreFront",
+            "pin": "751fcffa1f40d4edff5f6cff49d14e6b67bbd33cad3d2dd61fdc04ce97db4a4a",
+            "pin_block_height": 47496955
+          },
+          "testnet": {
+            "address": "0x34d2a0f0a4f8c6e8",
+            "contract": "StoreFront",
+            "fq_address": "A.0x34d2a0f0a4f8c6e8.StoreFront",
+            "pin": "751fcffa1f40d4edff5f6cff49d14e6b67bbd33cad3d2dd61fdc04ce97db4a4a",
+            "pin_block_height": 95793896
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47496969
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95793903
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47496977
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95793913
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

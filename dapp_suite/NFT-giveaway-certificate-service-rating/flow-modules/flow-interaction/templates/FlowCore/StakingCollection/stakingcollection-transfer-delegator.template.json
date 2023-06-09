@@ -1,0 +1,80 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "753a69b813b6bc62ba5e83d929e402f97ad75e925133a993354a6708c134eea5",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "Transfer Delegation"
+        }
+      },
+      "description": {
+        "i18n": {
+          "en-US": "Transfers a delegation from one Staking Collection to another"
+        }
+      }
+    },
+    "cadence": "import FlowStakingCollection from 0xSTAKINGCOLLECTIONADDRESS\n// Transfers a NodeDelegator object from an authorizers accoount\n// and adds the NodeDelegator to another accounts Staking Collection\n// identified by the to Address.\ntransaction(nodeID: String, delegatorID: UInt32, to: Address) {\n    let fromStakingCollectionRef: &FlowStakingCollection.StakingCollection\n    let toStakingCollectionCap: &FlowStakingCollection.StakingCollection{FlowStakingCollection.StakingCollectionPublic}\n    prepare(account: AuthAccount) {\n        // The account to transfer the NodeDelegator object to must have a valid Staking Collection in order to receive the NodeDelegator.\n        if (!FlowStakingCollection.doesAccountHaveStakingCollection(address: to)) {\n            panic(\"Destination account must have a Staking Collection set up.\")\n        }\n        // Get a reference to the authorizers StakingCollection\n        self.fromStakingCollectionRef = account.borrow<&FlowStakingCollection.StakingCollection>(from: FlowStakingCollection.StakingCollectionStoragePath)\n            ?? panic(\"Could not borrow ref to StakingCollection\")\n        // Get the PublicAccount of the account to transfer the NodeDelegator to. \n        let toAccount = getAccount(to)\n        // Borrow a capability to the public methods available on the receivers StakingCollection.\n        self.toStakingCollectionCap = toAccount.getCapability<&FlowStakingCollection.StakingCollection{FlowStakingCollection.StakingCollectionPublic}>(FlowStakingCollection.StakingCollectionPublicPath).borrow()\n            ?? panic(\"Could not borrow ref to StakingCollection\")\n    }\n    execute {\n        // Remove the NodeDelegator from the authorizers StakingCollection.\n        let nodeDelegator <- self.fromStakingCollectionRef.removeDelegator(nodeID: nodeID, delegatorID: delegatorID)\n        // Deposit the NodeDelegator to the receivers StakingCollection.\n        self.toStakingCollectionCap.addDelegatorObject(<- nodeDelegator!)\n    }\n}",
+    "dependencies": {
+      "0xSTAKINGCOLLECTIONADDRESS": {
+        "FlowStakingCollection": {
+          "testnet": {
+            "address": "0x95e019a17d0e23d7",
+            "fq_address": "A.0x95e019a17d0e23d7.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 74763025
+          },
+          "mainnet": {
+            "address": "0x8d0e87b65159ae63",
+            "fq_address": "A.0x8d0e87b65159ae63.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 34157768
+          }
+        }
+      }
+    },
+    "arguments": {
+      "nodeID": {
+        "index": 0,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The Node ID"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "delegatorID": {
+        "index": 1,
+        "type": "UInt32",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The Delegator ID"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "to": {
+        "index": 2,
+        "type": "Address",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The account to transfer to"
+            }
+          }
+        },
+        "balance": ""
+      }
+    }
+  }
+}

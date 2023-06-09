@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "29676248d93ef6de6d43d2f4c26438e047b928c531b0a07e68026ab484708148",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support CryptoPiggoV2NFTCollection NFTs"
+        }
+      }
+    },
+    "cadence": "import CryptoPiggoV2 from 0xCryptoPiggoV2\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: CryptoPiggoV2NFTCollection\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&CryptoPiggoV2.Collection>(from: /storage/CryptoPiggoV2Collection) == nil {\n      let collection <- CryptoPiggoV2.createEmptyCollection()\n      signer.save(<-collection, to: /storage/CryptoPiggoV2Collection)\n    }\n    if (signer.getCapability<&CryptoPiggoV2.Collection{NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/CryptoPiggoV2Collection).borrow() == nil) {\n      signer.unlink(/public/CryptoPiggoV2Collection)\n      signer.link<&CryptoPiggoV2.Collection{NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/CryptoPiggoV2Collection, target: /storage/CryptoPiggoV2Collection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xCryptoPiggoV2": {
+        "CryptoPiggoV2": {
+          "mainnet": {
+            "address": "0xd3df824bf81910a4",
+            "contract": "CryptoPiggoV2",
+            "fq_address": "A.0xd3df824bf81910a4.CryptoPiggoV2",
+            "pin": "9524cc8b5eb8bb8f7d8cf4ee3c65374cafa55921d31d6f72ce08d1c4da8aad57",
+            "pin_block_height": 47504878
+          },
+          "testnet": {
+            "address": "0x57e1b27618c5bb69",
+            "contract": "CryptoPiggoV2",
+            "fq_address": "A.0x57e1b27618c5bb69.CryptoPiggoV2",
+            "pin": "9524cc8b5eb8bb8f7d8cf4ee3c65374cafa55921d31d6f72ce08d1c4da8aad57",
+            "pin_block_height": 95803312
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47504890
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95803319
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47504898
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95803329
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

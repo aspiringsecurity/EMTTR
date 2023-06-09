@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "151d409bf93b9a6fcaaaee23c241c6796eecf8499dfafde80276e1498cb38ff2",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support PuddleV1 NFTs"
+        }
+      }
+    },
+    "cadence": "import PuddleV1 from 0xPuddleV1\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: PuddleV1\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&PuddleV1.Collection>(from: /storage/PuddleV1Collection) == nil {\n      let collection <- PuddleV1.createEmptyCollection()\n      signer.save(<-collection, to: /storage/PuddleV1Collection)\n    }\n    if (signer.getCapability<&PuddleV1.Collection{PuddleV1.PuddleV1CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/PuddleV1Collection).borrow() == nil) {\n      signer.unlink(/public/PuddleV1Collection)\n      signer.link<&PuddleV1.Collection{PuddleV1.PuddleV1CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/PuddleV1Collection, target: /storage/PuddleV1Collection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xPuddleV1": {
+        "PuddleV1": {
+          "mainnet": {
+            "address": "0x9496a99be6bceb8c",
+            "contract": "PuddleV1",
+            "fq_address": "A.0x9496a99be6bceb8c.PuddleV1",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 47505088
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47505090
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47505094
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "cfd0c25234b8993aa947b0407d04b977f65daeb7ea02e2d7064ef16c39f50f47",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support FLOAT NFTs"
+        }
+      }
+    },
+    "cadence": "import FLOAT from 0xFLOAT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: FLOAT\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&FLOAT.Collection>(from: /storage/FLOATCollectionStoragePath) == nil {\n      let collection <- FLOAT.createEmptyCollection()\n      signer.save(<-collection, to: /storage/FLOATCollectionStoragePath)\n    }\n    if (signer.getCapability<&FLOAT.Collection{FLOAT.CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/FLOATCollectionPublicPath).borrow() == nil) {\n      signer.unlink(/public/FLOATCollectionPublicPath)\n      signer.link<&FLOAT.Collection{FLOAT.CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/FLOATCollectionPublicPath, target: /storage/FLOATCollectionStoragePath)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xFLOAT": {
+        "FLOAT": {
+          "mainnet": {
+            "address": "0x2d4c3caffbeab845",
+            "contract": "FLOAT",
+            "fq_address": "A.0x2d4c3caffbeab845.FLOAT",
+            "pin": "3dbc7704912d6332a8a5e935df3581b95d9be6585bc522b37e1496043beb427b",
+            "pin_block_height": 47505792
+          },
+          "testnet": {
+            "address": "0x0afe396ebc8eee65",
+            "contract": "FLOAT",
+            "fq_address": "A.0x0afe396ebc8eee65.FLOAT",
+            "pin": "3dbc7704912d6332a8a5e935df3581b95d9be6585bc522b37e1496043beb427b",
+            "pin_block_height": 95804421
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47505811
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95804428
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47505820
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95804438
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

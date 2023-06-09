@@ -1,0 +1,64 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "21a06594d9b250c9bf35ac8c6cb059015cc205d0fc97f40518cfc079bbdc3570",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support SeussiblesNFTCollectionbyTibles NFTs"
+        }
+      }
+    },
+    "cadence": "import DrSeuss from 0xDrSeuss\nimport TiblesNFT from 0xTiblesNFT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: SeussiblesNFTCollectionbyTibles\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&DrSeuss.Collection>(from: /storage/TiblesDrSeussCollection) == nil {\n      let collection <- DrSeuss.createEmptyCollection()\n      signer.save(<-collection, to: /storage/TiblesDrSeussCollection)\n    }\n    if (signer.getCapability<&DrSeuss.Collection{TiblesNFT.CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/TiblesDrSeussCollection).borrow() == nil) {\n      signer.unlink(/public/TiblesDrSeussCollection)\n      signer.link<&DrSeuss.Collection{TiblesNFT.CollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/TiblesDrSeussCollection, target: /storage/TiblesDrSeussCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xTiblesNFT": {
+        "TiblesNFT": {
+          "testnet": {
+            "address": "0xe93c412c964bdf40",
+            "contract": "TiblesNFT",
+            "fq_address": "A.0xe93c412c964bdf40.TiblesNFT",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95800974
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95800978
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95800983
+          }
+        }
+      },
+      "0xDrSeuss": {
+        "DrSeuss": {
+          "testnet": {
+            "address": "0xff68241f0f4fd521",
+            "contract": "DrSeuss",
+            "fq_address": "A.0xff68241f0f4fd521.DrSeuss",
+            "pin": "751fcffa1f40d4edff5f6cff49d14e6b67bbd33cad3d2dd61fdc04ce97db4a4a",
+            "pin_block_height": 95800994
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

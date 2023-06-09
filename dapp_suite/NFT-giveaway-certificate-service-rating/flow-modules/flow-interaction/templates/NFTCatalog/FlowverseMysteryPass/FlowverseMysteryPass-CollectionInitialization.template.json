@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "11f09221a5c8404f4c9b6a4db75baee3e1d67d4033432e96fb2445791eaba3d7",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support FlowverseMysteryPass NFTs"
+        }
+      }
+    },
+    "cadence": "import FlowversePass from 0xFlowversePass\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: FlowverseMysteryPass\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&FlowversePass.Collection>(from: /storage/FlowversePassCollection) == nil {\n      let collection <- FlowversePass.createEmptyCollection()\n      signer.save(<-collection, to: /storage/FlowversePassCollection)\n    }\n    if (signer.getCapability<&FlowversePass.Collection{NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,FlowversePass.CollectionPublic,MetadataViews.ResolverCollection}>(/public/FlowversePassCollection).borrow() == nil) {\n      signer.unlink(/public/FlowversePassCollection)\n      signer.link<&FlowversePass.Collection{NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,FlowversePass.CollectionPublic,MetadataViews.ResolverCollection}>(/public/FlowversePassCollection, target: /storage/FlowversePassCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xFlowversePass": {
+        "FlowversePass": {
+          "mainnet": {
+            "address": "0x9212a87501a8a6a2",
+            "contract": "FlowversePass",
+            "fq_address": "A.0x9212a87501a8a6a2.FlowversePass",
+            "pin": "9524cc8b5eb8bb8f7d8cf4ee3c65374cafa55921d31d6f72ce08d1c4da8aad57",
+            "pin_block_height": 47499840
+          },
+          "testnet": {
+            "address": "0xc7c122b5b811de8e",
+            "contract": "FlowversePass",
+            "fq_address": "A.0xc7c122b5b811de8e.FlowversePass",
+            "pin": "9524cc8b5eb8bb8f7d8cf4ee3c65374cafa55921d31d6f72ce08d1c4da8aad57",
+            "pin_block_height": 95797320
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47499850
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95797326
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47499856
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95797336
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

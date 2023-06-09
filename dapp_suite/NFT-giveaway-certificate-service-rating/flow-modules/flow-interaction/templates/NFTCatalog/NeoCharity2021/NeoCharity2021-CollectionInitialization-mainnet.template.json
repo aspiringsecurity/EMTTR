@@ -1,0 +1,53 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "baa7edea27a8b35e70556638cf0eea9c6093bf3fddbfb5f431eaeb6c4c4e6c85",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support NeoCharity2021 NFTs"
+        }
+      }
+    },
+    "cadence": "import CharityNFT from 0xCharityNFT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: NeoCharity2021\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&CharityNFT.Collection>(from: /storage/findCharityCollection) == nil {\n      let collection <- CharityNFT.createEmptyCollection()\n      signer.save(<-collection, to: /storage/findCharityCollection)\n    }\n    if (signer.getCapability<&CharityNFT.Collection{NonFungibleToken.Receiver,NonFungibleToken.CollectionPublic,CharityNFT.CollectionPublic,MetadataViews.ResolverCollection}>(/public/findCharityCollection).borrow() == nil) {\n      signer.unlink(/public/findCharityCollection)\n      signer.link<&CharityNFT.Collection{NonFungibleToken.Receiver,NonFungibleToken.CollectionPublic,CharityNFT.CollectionPublic,MetadataViews.ResolverCollection}>(/public/findCharityCollection, target: /storage/findCharityCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xCharityNFT": {
+        "CharityNFT": {
+          "mainnet": {
+            "address": "0x097bafa4e0b48eef",
+            "contract": "CharityNFT",
+            "fq_address": "A.0x097bafa4e0b48eef.CharityNFT",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 47502584
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47502587
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47502591
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

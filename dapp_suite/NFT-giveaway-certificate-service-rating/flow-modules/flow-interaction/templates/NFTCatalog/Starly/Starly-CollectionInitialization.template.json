@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "e7013553cf7f695ccc0febc73b4027458a00e4628a46f824e7df61bbc4294414",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support Starly NFTs"
+        }
+      }
+    },
+    "cadence": "import StarlyCard from 0xStarlyCard\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: Starly\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&StarlyCard.Collection>(from: /storage/starlyCardCollection) == nil {\n      let collection <- StarlyCard.createEmptyCollection()\n      signer.save(<-collection, to: /storage/starlyCardCollection)\n    }\n    if (signer.getCapability<&StarlyCard.Collection{StarlyCard.StarlyCardCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/starlyCardCollection).borrow() == nil) {\n      signer.unlink(/public/starlyCardCollection)\n      signer.link<&StarlyCard.Collection{StarlyCard.StarlyCardCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/starlyCardCollection, target: /storage/starlyCardCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xStarlyCard": {
+        "StarlyCard": {
+          "mainnet": {
+            "address": "0x5b82f21c0edf76e3",
+            "contract": "StarlyCard",
+            "fq_address": "A.0x5b82f21c0edf76e3.StarlyCard",
+            "pin": "455a9a9d9530fe73aeba8c3f857fce0ad33438592943e4b391a6b92418cce5e8",
+            "pin_block_height": 47489155
+          },
+          "testnet": {
+            "address": "0x697d72a988a77070",
+            "contract": "StarlyCard",
+            "fq_address": "A.0x697d72a988a77070.StarlyCard",
+            "pin": "455a9a9d9530fe73aeba8c3f857fce0ad33438592943e4b391a6b92418cce5e8",
+            "pin_block_height": 95784675
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47489172
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95784682
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47489180
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95784692
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

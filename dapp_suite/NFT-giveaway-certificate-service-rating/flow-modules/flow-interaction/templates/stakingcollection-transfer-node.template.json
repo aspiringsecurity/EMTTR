@@ -1,0 +1,68 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "b8299dbdf3c38ea0a99063c4b2bbe4ea950c488f7e66795d032b312a3a9c4dcc",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "Transfer Node"
+        }
+      },
+      "description": {
+        "i18n": {
+          "en-US": "Transfers a Node from one Staking Collection to another"
+        }
+      }
+    },
+    "cadence": "import FlowStakingCollection from 0xSTAKINGCOLLECTIONADDRESS\n// Transfers a NodeStaker object from an authorizers accoount\n// and adds the NodeStaker to another accounts Staking Collection\n// identified by the to Address.\ntransaction(nodeID: String, to: Address) {\n    let fromStakingCollectionRef: &FlowStakingCollection.StakingCollection\n    let toStakingCollectionCap: &FlowStakingCollection.StakingCollection{FlowStakingCollection.StakingCollectionPublic}\n    prepare(account: AuthAccount) {\n        // The account to transfer the NodeStaker object to must have a valid Staking Collection in order to receive the NodeStaker.\n        if (!FlowStakingCollection.doesAccountHaveStakingCollection(address: to)) {\n            panic(\"Destination account must have a Staking Collection set up.\")\n        }\n        // Get a reference to the authorizers StakingCollection\n        self.fromStakingCollectionRef = account.borrow<&FlowStakingCollection.StakingCollection>(from: FlowStakingCollection.StakingCollectionStoragePath)\n            ?? panic(\"Could not borrow ref to StakingCollection\")\n        // Get the PublicAccount of the account to transfer the NodeStaker to. \n        let toAccount = getAccount(to)\n        // Borrow a capability to the public methods available on the receivers StakingCollection.\n        self.toStakingCollectionCap = toAccount.getCapability<&FlowStakingCollection.StakingCollection{FlowStakingCollection.StakingCollectionPublic}>(FlowStakingCollection.StakingCollectionPublicPath).borrow()\n            ?? panic(\"Could not borrow ref to StakingCollection\")\n        let machineAccountInfo = self.fromStakingCollectionRef.getMachineAccounts()[nodeID]\n            ?? panic(\"Could not get machine account info for the specified node ID\")\n        // Remove the NodeStaker from the authorizers StakingCollection.\n        let nodeStaker <- self.fromStakingCollectionRef.removeNode(nodeID: nodeID)\n        // Deposit the NodeStaker to the receivers StakingCollection.\n        self.toStakingCollectionCap.addNodeObject(<- nodeStaker!, machineAccountInfo: machineAccountInfo)\n    }\n}",
+    "dependencies": {
+      "0xSTAKINGCOLLECTIONADDRESS": {
+        "FlowStakingCollection": {
+          "testnet": {
+            "address": "0x95e019a17d0e23d7",
+            "fq_address": "A.0x95e019a17d0e23d7.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 74762847
+          },
+          "mainnet": {
+            "address": "0x8d0e87b65159ae63",
+            "fq_address": "A.0x8d0e87b65159ae63.FlowStakingCollection",
+            "contract": "FlowStakingCollection",
+            "pin": "335e428a95ad99ec21eeb8899b40a4c351884191a32596207a79a2b22548442d",
+            "pin_block_height": 34157658
+          }
+        }
+      }
+    },
+    "arguments": {
+      "nodeID": {
+        "index": 0,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The Node ID"
+            }
+          }
+        },
+        "balance": ""
+      },
+      "to": {
+        "index": 1,
+        "type": "Address",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The account to transfer to"
+            }
+          }
+        },
+        "balance": ""
+      }
+    }
+  }
+}

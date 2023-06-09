@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "062e2cc6c0127b55222ec1cd496f1a97ca1056c04907e3d3889a95ddbe558e97",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support Backpack NFTs"
+        }
+      }
+    },
+    "cadence": "import Backpack from 0xBackpack\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: Backpack\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&Backpack.Collection>(from: /storage/BackpackCollection) == nil {\n      let collection <- Backpack.createEmptyCollection()\n      signer.save(<-collection, to: /storage/BackpackCollection)\n    }\n    if (signer.getCapability<&Backpack.Collection{NonFungibleToken.CollectionPublic,Backpack.BackpackCollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/BackpackCollection).borrow() == nil) {\n      signer.unlink(/public/BackpackCollection)\n      signer.link<&Backpack.Collection{NonFungibleToken.CollectionPublic,Backpack.BackpackCollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/BackpackCollection, target: /storage/BackpackCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xBackpack": {
+        "Backpack": {
+          "mainnet": {
+            "address": "0x807c3d470888cc48",
+            "contract": "Backpack",
+            "fq_address": "A.0x807c3d470888cc48.Backpack",
+            "pin": "3c7796c792dc130c2e565c8246de8a8d5add43e7f340efe20c52568c43602b36",
+            "pin_block_height": 47501583
+          },
+          "testnet": {
+            "address": "0xe666c53e1758dec6",
+            "contract": "Backpack",
+            "fq_address": "A.0xe666c53e1758dec6.Backpack",
+            "pin": "3c7796c792dc130c2e565c8246de8a8d5add43e7f340efe20c52568c43602b36",
+            "pin_block_height": 95799415
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47501602
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95799422
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47501609
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95799431
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

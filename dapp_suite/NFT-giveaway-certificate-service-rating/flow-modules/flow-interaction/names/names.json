@@ -1,0 +1,20 @@
+{
+  "transfer-flow": "290b6b6222b2a77b16db896a80ddf29ebd1fa3038c9e6625a933fa213fce51fa",
+  
+  "flow-stakingcollection-close-stake": "38d0cca4b74c4e88213df636b4cfc2eb6e86fd8b2b84579d3b9bffab3e0b1fcb",
+  "flow-stakingcollection-create-machine-account": "83d205597ed6a447c8687a4b4144872c65f0b53fb31b65d51a3c1c904a6ff417",
+  "flow-stakingcollection-register-delegator": "b8a3ed26c222ed67016a28021d8fee5603b948533cbc992b3c90f71a61b2b312",
+  "flow-stakingcollection-register-node": "6d1ea6bf8bda73132afd038e0c9aabca8abeb84ac11259cbefa36b9337f2d19e",
+  "flow-stakingcollection-request-unstaking": "7ccd27aff8b42d4d61586f79eb5e11d55d01afdef384c9a7246bb1e1d385beb0",
+  "flow-stakingcollection-setup-staking-collection": "dfb30fb76518ae901dc18993d8a00a8329a5d4b36dfd4bd357245457aa47eea8",
+  "flow-stakingcollection-stake-new-tokens": "7b581646d265ec6ed4a0d29c809ae6f0adafe56794d6a9eb162513187c43befc",
+  "flow-stakingcollection-stake-rewarded-tokens": "b9f4fe796cb86959c549e7b2412c51607622d7d9ba891425ed6c4640e730178a",
+  "flow-stakingcollection-stake-unstaked-tokens": "7bc3056ba5d39d130f45411c2c05bb549db8ce727c11a1cb821136a621be27fb",
+  "flow-stakingcollection-transfer-delegation": "753a69b813b6bc62ba5e83d929e402f97ad75e925133a993354a6708c134eea5",
+  "flow-stakingcollection-transfer-node": "b8299dbdf3c38ea0a99063c4b2bbe4ea950c488f7e66795d032b312a3a9c4dcc",
+  "flow-stakingcollection-unstake-all": "00d2d230282e78ef38c85eb6ca5423158d6ab5905bf5bd541825588caf9dcd32",
+  "flow-stakingcollection-update-networking-address": "544acba77bdc712251cd81befa5cb97414928c7ace95eb6a5aeb4fac133b861f",
+  "flow-stakingcollection-withdraw-from-machine-account": "9f5ee4feb3ffe7a6a20a72d8d2e7878d4d548216c947c95e7ce067fe471217f0",
+  "flow-stakingcollection-withdraw-rewarded-tokens": "6b2739fc0b8114047180badbee699fe6a5d4fb3b74753c35c4f170c30572db1b",
+  "flow-stakingcollection-withdraw-unstaked-tokens": "ac864a47c36182a1ef29fda5680a45ef5c750543409abc4310b1ef962e1cf128"
+}

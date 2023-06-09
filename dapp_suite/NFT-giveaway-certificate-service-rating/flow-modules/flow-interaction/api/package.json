@@ -1,0 +1,51 @@
+{
+  "name": "flow-templates-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "tsnd src/index.ts --dev",
+    "testnet": "tsnd src/index.ts --dev",
+    "start:worker": "node dist/index.js --worker",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "format": "prettier \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format:check": "npm run format -- -c",
+    "format:write": "npm run format -- --write",
+    "migrate:make": "knex migrate:make -x ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@onflow/cadence-parser": "0.26.0",
+    "@onflow/fcl": "1.1.1-templates.8",
+    "@onflow/rlp": "^1.0.2",
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.9",
+    "@types/knex": "0.16.1",
+    "@types/yargs": "^16.0.1",
+    "better-sqlite3": "^7.5.0",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "cron": "^2.1.0",
+    "dotenv": "^8.2.0",
+    "dotenv-expand": "^5.1.0",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^6.14.2",
+    "glob": "^8.0.3",
+    "knex": "2.3.0",
+    "mixpanel": "^0.17.0",
+    "node-fetch": "2.6.1",
+    "objection": "3.0.1",
+    "pg": "^8.7.3",
+    "sha3": "^2.1.4",
+    "ts-node": "10.6.0",
+    "typescript": "4.7.4",
+    "yargs": "17.5.1"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.11",
+    "ts-node-dev": "2.0.0-0"
+  }
+}

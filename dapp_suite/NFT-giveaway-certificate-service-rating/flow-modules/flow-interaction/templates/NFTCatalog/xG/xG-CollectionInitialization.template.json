@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "7f6011babb67ee198ba4aac53e180a5cadfa1c8371fa7edd8e6bfff54fd61891",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support xG NFTs"
+        }
+      }
+    },
+    "cadence": "import XGStudio from 0xXGStudio\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: xG\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&XGStudio.Collection>(from: /storage/XGStudioCollection) == nil {\n      let collection <- XGStudio.createEmptyCollection()\n      signer.save(<-collection, to: /storage/XGStudioCollection)\n    }\n    if (signer.getCapability<&XGStudio.Collection{XGStudio.XGStudioCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/XGStudioCollection).borrow() == nil) {\n      signer.unlink(/public/XGStudioCollection)\n      signer.link<&XGStudio.Collection{XGStudio.XGStudioCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/XGStudioCollection, target: /storage/XGStudioCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xXGStudio": {
+        "XGStudio": {
+          "mainnet": {
+            "address": "0xc357c8d061353f5f",
+            "contract": "XGStudio",
+            "fq_address": "A.0xc357c8d061353f5f.XGStudio",
+            "pin": "3c7796c792dc130c2e565c8246de8a8d5add43e7f340efe20c52568c43602b36",
+            "pin_block_height": 47508914
+          },
+          "testnet": {
+            "address": "0xd9575c84a88eada0",
+            "contract": "XGStudio",
+            "fq_address": "A.0xd9575c84a88eada0.XGStudio",
+            "pin": "3c7796c792dc130c2e565c8246de8a8d5add43e7f340efe20c52568c43602b36",
+            "pin_block_height": 95808120
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47508927
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95808127
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47508935
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95808136
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

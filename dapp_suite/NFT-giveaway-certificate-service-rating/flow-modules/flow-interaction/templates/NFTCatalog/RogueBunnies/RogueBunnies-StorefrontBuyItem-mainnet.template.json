@@ -1,0 +1,120 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "6710c30afb72b1fc97a2b04ca0aec8891f07563cb8324926d058178795d74758",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction facilitates the purchase of a listed RogueBunnies NFT with the StorefrontV2 contract"
+        }
+      }
+    },
+    "cadence": "import RogueBunnies_NFT from 0xRogueBunnies_NFT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\nimport FlowToken from 0xFlowToken\nimport FungibleToken from 0xFungibleToken\nimport NFTStorefrontV2 from 0xNFTStorefrontV2\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction facilitates the purchase of a listed NFT with the StorefrontV2 contract \n// \n// Collection Identifier: RogueBunnies\n// Vault Identifier: flow\n//\n// Version: 0.1.1\n\ntransaction(listingResourceID: UInt64, storefrontAddress: Address, commissionRecipient: Address?) {\n    /// `listingResourceID` - ID of the Storefront listing resource\n    /// `storefrontAddress` - The address that owns the storefront listing\n    /// `commissionRecipient` - Optional recipient for transaction commission if comission exists.\n    let paymentVault: @FungibleToken.Vault\n    let nftCollection: &RogueBunnies_NFT.Collection{RogueBunnies_NFT.RogueBunnies_NFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}\n    let storefront: &NFTStorefrontV2.Storefront{NFTStorefrontV2.StorefrontPublic}\n    let listing: &NFTStorefrontV2.Listing{NFTStorefrontV2.ListingPublic}\n    var commissionRecipientCap: Capability<&{FungibleToken.Receiver}>?\n\n    prepare(acct: AuthAccount) {\n        self.commissionRecipientCap = nil\n\n        // Set up NFT to make sure this account has NFT setup correctly\n        if acct.borrow<&RogueBunnies_NFT.Collection>(from: /storage/RogueBunnies_NFTCollection) == nil {\n            let collection <- RogueBunnies_NFT.createEmptyCollection()\n            acct.save(<-collection, to: /storage/RogueBunnies_NFTCollection)\n            }\n        if (acct.getCapability<&RogueBunnies_NFT.Collection{RogueBunnies_NFT.RogueBunnies_NFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/RogueBunnies_NFTCollection).borrow() == nil) {\n            acct.unlink(/public/RogueBunnies_NFTCollection)\n            acct.link<&RogueBunnies_NFT.Collection{RogueBunnies_NFT.RogueBunnies_NFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/RogueBunnies_NFTCollection, target: /storage/RogueBunnies_NFTCollection)\n        }\n\n        if (acct.getCapability<&RogueBunnies_NFT.Collection{RogueBunnies_NFT.RogueBunnies_NFTCollectionPublic,NonFungibleToken.Provider,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/private/RogueBunnies_NFT).borrow() == nil) {\n            acct.unlink(/private/RogueBunnies_NFT)\n            acct.link<&RogueBunnies_NFT.Collection{RogueBunnies_NFT.RogueBunnies_NFTCollectionPublic,NonFungibleToken.Provider,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/private/RogueBunnies_NFT, target: /storage/RogueBunnies_NFTCollection)\n        }\n        \n        // Access the storefront public resource of the seller to purchase the listing.\n        self.storefront = getAccount(storefrontAddress)\n            .getCapability<&NFTStorefrontV2.Storefront{NFTStorefrontV2.StorefrontPublic}>(\n                NFTStorefrontV2.StorefrontPublicPath\n            )!\n            .borrow()\n            ?? panic(\"Could not borrow Storefront from provided address\")\n\n        // Borrow the listing\n        self.listing = self.storefront.borrowListing(listingResourceID: listingResourceID)\n                    ?? panic(\"No Offer with that ID in Storefront\")\n        let price = self.listing.getDetails().salePrice\n\n        // Access the vault of the buyer to pay the sale price of the listing.\n        let mainFTVault = acct.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)\n            ?? panic(\"Cannot borrow Fungible Token vault from acct storage\")\n        self.paymentVault <- mainFTVault.withdraw(amount: price)\n\n        // Access the buyer's NFT collection to store the purchased NFT.\n        self.nftCollection = acct.borrow<&RogueBunnies_NFT.Collection{RogueBunnies_NFT.RogueBunnies_NFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(\n            from: /storage/RogueBunnies_NFTCollection\n        ) ?? panic(\"Cannot borrow NFT collection receiver from account\")\n\n        // Fetch the commission amt.\n        let commissionAmount = self.listing.getDetails().commissionAmount\n\n        if commissionRecipient != nil && commissionAmount != 0.0 {\n            // Access the capability to receive the commission.\n            let _commissionRecipientCap = getAccount(commissionRecipient!).getCapability<&{FungibleToken.Receiver}>(/public/flow)\n            assert(_commissionRecipientCap.check(), message: \"Commission Recipient doesn't have flowtoken receiving capability\")\n            self.commissionRecipientCap = _commissionRecipientCap\n        } else if commissionAmount == 0.0 {\n            self.commissionRecipientCap = nil\n        } else {\n            panic(\"Commission recipient can not be empty when commission amount is non zero\")\n        }\n    }\n\n    execute {\n        // Purchase the NFT\n        let item <- self.listing.purchase(\n            payment: <-self.paymentVault,\n            commissionRecipient: self.commissionRecipientCap\n        )\n        // Deposit the NFT in the buyer's collection.\n        self.nftCollection.deposit(token: <-item)\n    }\n}\n",
+    "dependencies": {
+      "0xRogueBunnies_NFT": {
+        "RogueBunnies_NFT": {
+          "mainnet": {
+            "address": "0x396646f110afb2e6",
+            "contract": "RogueBunnies_NFT",
+            "fq_address": "A.0x396646f110afb2e6.RogueBunnies_NFT",
+            "pin": "9524cc8b5eb8bb8f7d8cf4ee3c65374cafa55921d31d6f72ce08d1c4da8aad57",
+            "pin_block_height": 47509148
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47509152
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47509154
+          }
+        }
+      },
+      "0xFlowToken": {
+        "FlowToken": {
+          "mainnet": {
+            "address": "0x1654653399040a61",
+            "contract": "FlowToken",
+            "fq_address": "A.0x1654653399040a61.FlowToken",
+            "pin": "0326c320322c4e8dde768ba2975c384184fb7e41765c2c87e79a2040bfc71be8",
+            "pin_block_height": 47509156
+          }
+        }
+      },
+      "0xFungibleToken": {
+        "FungibleToken": {
+          "mainnet": {
+            "address": "0xf233dcee88fe0abe",
+            "contract": "FungibleToken",
+            "fq_address": "A.0xf233dcee88fe0abe.FungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47509156
+          }
+        }
+      },
+      "0xNFTStorefrontV2": {
+        "NFTStorefrontV2": {
+          "mainnet": {
+            "address": "0x4eb8a10cb9f87357",
+            "contract": "NFTStorefrontV2",
+            "fq_address": "A.0x4eb8a10cb9f87357.NFTStorefrontV2",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47509161
+          }
+        }
+      }
+    },
+    "arguments": {
+      "listingResourceID": {
+        "index": 0,
+        "type": "UInt64",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "ID of the Storefront listing resource"
+            }
+          }
+        }
+      },
+      "storefrontAddress": {
+        "index": 1,
+        "type": "Address",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "The address that owns the storefront listing"
+            }
+          }
+        }
+      },
+      "commissionRecipient": {
+        "index": 2,
+        "type": "Address?",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "Optional recipient for transaction commission if comission exists"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "6b5b5f783a3afe5dec1a621fabd4c76656a8dc4a5f4f765b1bb04297674d11c0",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support Mindtrix NFTs"
+        }
+      }
+    },
+    "cadence": "import Mindtrix from 0xMindtrix\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: Mindtrix\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&Mindtrix.Collection>(from: /storage/MindtrixNFTCollection) == nil {\n      let collection <- Mindtrix.createEmptyCollection()\n      signer.save(<-collection, to: /storage/MindtrixNFTCollection)\n    }\n    if (signer.getCapability<&Mindtrix.Collection{Mindtrix.MindtrixCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/MindtrixNFTCollection).borrow() == nil) {\n      signer.unlink(/public/MindtrixNFTCollection)\n      signer.link<&Mindtrix.Collection{Mindtrix.MindtrixCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/MindtrixNFTCollection, target: /storage/MindtrixNFTCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xMindtrix": {
+        "Mindtrix": {
+          "mainnet": {
+            "address": "0x74266bc086680e5e",
+            "contract": "Mindtrix",
+            "fq_address": "A.0x74266bc086680e5e.Mindtrix",
+            "pin": "ff354108762eba4ffce22fe6a264fe6840d4b0c45f52157d9d1c98540f4b8469",
+            "pin_block_height": 47509776
+          },
+          "testnet": {
+            "address": "0xd162b02676d63c36",
+            "contract": "Mindtrix",
+            "fq_address": "A.0xd162b02676d63c36.Mindtrix",
+            "pin": "ff354108762eba4ffce22fe6a264fe6840d4b0c45f52157d9d1c98540f4b8469",
+            "pin_block_height": 95809165
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47509811
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95809173
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47509819
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95809182
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "c8cb7cc7a1c2a329de65d83455016bc3a9b53f9668c74ef555032804bac0b25b",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "Create Lilico EmeraldID"
+        }
+      },
+      "description": {
+        "i18n": {
+          "en-US": "Create a Lilico EmeraldID by mapping your Discord ID to your Lilico wallet address"
+        }
+      }
+    },
+    "cadence": "import EmeraldIdentityLilico from 0xEMERALDIDENTITYLILICO\n\ntransaction(discordID: String) {\n    prepare(admin: AuthAccount, user: AuthAccount) {\n        let administrator = admin.borrow<&EmeraldIdentityLilico.Administrator>(from: EmeraldIdentityLilico.AdministratorStoragePath)\n                                    ?? panic(\"Could not borrow the administrator\")\n        administrator.createEmeraldID(account: user.address, discordID: discordID)\n    }\n\n    execute {\n        log(\"Created EmeraldID\")\n    }\n}",
+    "dependencies": {
+      "0xEMERALDIDENTITYLILICO": {
+        "EmeraldIdentityLilico": {
+          "mainnet": {
+            "address": "0x39e42c67cc851cfb",
+            "contract": "EmeraldIdentityLilico",
+            "fq_address": "A.0x39e42c67cc851cfb.EmeraldIdentityLilico",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 42017084
+          }
+        }
+      }
+    },
+    "arguments": {
+      "discordID": {
+        "index": 0,
+        "type": "String",
+        "messages": {
+          "title": {
+            "i18n": {
+              "en-US": "Your Discord ID"
+            }
+          }
+        }
+      }
+    }
+  }
+}

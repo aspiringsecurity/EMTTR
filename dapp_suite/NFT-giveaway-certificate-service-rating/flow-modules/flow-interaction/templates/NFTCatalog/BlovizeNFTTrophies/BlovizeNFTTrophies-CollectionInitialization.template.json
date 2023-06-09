@@ -1,0 +1,74 @@
+{
+  "f_type": "InteractionTemplate",
+  "f_version": "1.0.0",
+  "id": "65f83db335d61ac60ac306d5db70624b05ab5ccabc526bad14f8cb1f80d9b0ed",
+  "data": {
+    "type": "transaction",
+    "interface": "",
+    "messages": {
+      "title": {
+        "i18n": {
+          "en-US": "This transaction initializes a user's account to support BlovizeNFTTrophies NFTs"
+        }
+      }
+    },
+    "cadence": "import BlovizeNFT from 0xBlovizeNFT\nimport NonFungibleToken from 0xNonFungibleToken\nimport MetadataViews from 0xMetadataViews\n// This transaction was auto-generated with the NFT Catalog (https://github.com/dapperlabs/nft-catalog)\n//\n// This transaction initializes a user's collection to support a specific NFT\n// \n// Collection Identifier: BlovizeNFTTrophies\n//\n// Version: 0.1.1\n\ntransaction {\n\n  prepare(signer: AuthAccount) {\n    if signer.borrow<&BlovizeNFT.Collection>(from: /storage/blovizeNFTCollection) == nil {\n      let collection <- BlovizeNFT.createEmptyCollection()\n      signer.save(<-collection, to: /storage/blovizeNFTCollection)\n    }\n    if (signer.getCapability<&BlovizeNFT.Collection{BlovizeNFT.BlovizeNFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/blovizeNFTCollection).borrow() == nil) {\n      signer.unlink(/public/blovizeNFTCollection)\n      signer.link<&BlovizeNFT.Collection{BlovizeNFT.BlovizeNFTCollectionPublic,NonFungibleToken.CollectionPublic,NonFungibleToken.Receiver,MetadataViews.ResolverCollection}>(/public/blovizeNFTCollection, target: /storage/blovizeNFTCollection)\n    }\n  }\n\n}\n",
+    "dependencies": {
+      "0xBlovizeNFT": {
+        "BlovizeNFT": {
+          "mainnet": {
+            "address": "0xee4567ab7f63abf2",
+            "contract": "BlovizeNFT",
+            "fq_address": "A.0xee4567ab7f63abf2.BlovizeNFT",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 47506077
+          },
+          "testnet": {
+            "address": "0xc8f7112fa2f1af97",
+            "contract": "BlovizeNFT",
+            "fq_address": "A.0xc8f7112fa2f1af97.BlovizeNFT",
+            "pin": "7723617b4999f66ce1942ee3847d899b74dca4b43ff6f7ce75f32c7d8b5b43a6",
+            "pin_block_height": 95804756
+          }
+        }
+      },
+      "0xNonFungibleToken": {
+        "NonFungibleToken": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x1d7e57aa55817448.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 47506089
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "NonFungibleToken",
+            "fq_address": "A.0x631e88ae7f1d7c20.NonFungibleToken",
+            "pin": "83c9e3d61d3b5ebf24356a9f17b5b57b12d6d56547abc73e05f820a0ae7d9cf5",
+            "pin_block_height": 95804763
+          }
+        }
+      },
+      "0xMetadataViews": {
+        "MetadataViews": {
+          "mainnet": {
+            "address": "0x1d7e57aa55817448",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x1d7e57aa55817448.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 47506096
+          },
+          "testnet": {
+            "address": "0x631e88ae7f1d7c20",
+            "contract": "MetadataViews",
+            "fq_address": "A.0x631e88ae7f1d7c20.MetadataViews",
+            "pin": "ba061d95016d5506e9f5d1afda15d82eb066aa8b0552e8b26dc7950fa5714d51",
+            "pin_block_height": 95804772
+          }
+        }
+      }
+    },
+    "arguments": {}
+  }
+}

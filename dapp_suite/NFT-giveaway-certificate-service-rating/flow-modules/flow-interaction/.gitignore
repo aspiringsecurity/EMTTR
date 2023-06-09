@@ -1,0 +1,34 @@
+# dependencies
+node_modules
+
+# testing
+/cypress/videos
+/cypress/screenshots
+
+# production
+/web/out
+/api/dist
+
+# misc
+.DS_Store
+
+# .env files
+.env
+.env.testnet
+.env.mainnet
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# env
+.vscode
+.exrc
+.eslintcache
+.idea/
+
+# emulator datastore
+flowdb
+*-credentials-*
+.env.testnet.local

@@ -1,0 +1,16 @@
+{
+    "name": "flow-templates",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "cd api && node dist/index.js",
+        "postinstall": "npx lerna exec npm install",
+        "heroku-postbuild": "npx lerna exec npm run build",
+        "build": "npx lerna exec npm run build"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "lerna": "^5.2.0"
+    }
+}
