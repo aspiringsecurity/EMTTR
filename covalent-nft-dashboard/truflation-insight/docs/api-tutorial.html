@@ -1,0 +1,39 @@
+<h3>API Tutorial</h3>
+
+The API involves sending a blockchain request to
+a <a href="https://remix.ethereum.org/#url=https://raw.githubusercontent.com/truflation/sample-frontend/main/ApiClient.sol">smart
+contract</a> containing the following elements:
+
+<p>
+<ul>
+<li><b>service:</b> is the name of the service provider
+
+<li><b>data:</b> is the data provided to the provider with a request for
+information.  Data consists of a json formatted object, and the values
+for the object are dependent on the service provider.
+
+</ul>
+The remaining three parameters will select the response of the service
+and convert it into a form which is usable for a smart contract.
+
+<ul>
+<li><b>keypath:</b> uses keypath selector to select one or more
+  elements from the json provided by the service
+
+<li><b>abi:</b> can take the following values
+<ul>
+<li>json - return response as json string
+<li>cbor - return response as chor string
+<li>ipfs or ipfs/json - return response via IPFS address
+<li>ipfs/cbor - return response as IPFS address in cbor format
+</ul>
+
+abi can also be in the form of an EVM type in which case the byte
+returned is formalled using EVM type such as int256, uint256, or
+string
+
+<li><b>multiplier:</b> - multiplys the value by a constant before
+doing the format conversion.
+</ul>
+
+

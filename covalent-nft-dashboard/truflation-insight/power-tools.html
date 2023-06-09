@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Truflation api tester</title>
+  <link rel="shortcut icon" href="./favicon.ico"/>
+  <script type="text/javascript"
+	  src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js"></script>
+  <script src='https://unpkg.com/cbor-web'></script>
+  <script src="./config.js"></script>
+  <script src="./abi.js"></script>
+  <script src="./index.js"></script>
+  <script type="text/javascript">
+    async function runApi() {
+      let apiAddress = document.getElementById('api:address')
+      let apiService = document.getElementById('api:service')
+      let apiKeypath = document.getElementById('api:keypath')
+      let apiAbi = document.getElementById('api:abi')
+      let apiMultiplier = document.getElementById('api:multiplier')
+      let apiData = document.getElementById('api:data')
+      console.log(apiAddress)
+
+      doApiRequest({
+        "address": apiAddress ? apiAddress.value : "",
+        "service": apiService ? apiService.value : "",
+        "keypath": apiKeypath ? apiKeypath.value : "",
+        "abi": apiAbi ? apiAbi.value : "",
+        "multiplier": apiMultiplier ? apiMultiplier.value : "",
+        "data": apiData ? apiData.value : "",
+      }, {
+        "output": document.getElementById('api:output'),
+        "status": document.getElementById('api:status')
+      })
+    }
+    async function getEchoValues() {
+      document.getElementById('api:service').value = "echo"
+      document.getElementById('api:keypath').value = "foo"
+      document.getElementById('api:abi').value = "json"
+      document.getElementById('api:data').value = '{"foo": 1024}'
+      document.getElementById('api:multiplier').value = ''
+    }
+    async function getEchoWeiValues() {
+      document.getElementById('api:service').value = "echo"
+      document.getElementById('api:keypath').value = "foo"
+      document.getElementById('api:abi').value = "uint256"
+      document.getElementById('api:data').value = '{"foo": 1024.25}'
+      document.getElementById('api:multiplier').value =
+        '1000000000000000000'
+    }
+    async function getStubValues() {
+      document.getElementById('api:service').value = "stub1"
+      document.getElementById('api:keypath').value = "martianale"
+      document.getElementById('api:abi').value = "json"
+      document.getElementById('api:data').value =
+        '{"range": [0, 100], "indexes": ["martianale"]}'
+      document.getElementById('api:multiplier').value = ''
+    }
+    async function getInflationCurrentValues() {
+      const deriv =
+            document.getElementById('api:show-categories').checked
+      const location =
+            document.getElementById('api:truflation-location').value
+      document.getElementById('api:service').value = 'truflation/current'
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = deriv ? 'ipfs' : 'json'
+      let object = {}
+      if (deriv) {
+        object['show-derivation'] = "true"
+      }
+      if (location !== 'us') {
+        object['location'] = location
+      }
+      document.getElementById('api:data').value = JSON.stringify(object)
+      document.getElementById('api:multiplier').value = ''
+    }
+    async function getInflationAtDateValues() {
+      const deriv =
+            document.getElementById('api:show-categories').checked
+      document.getElementById('api:service').value = 'truflation/at-date'
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = deriv ? 'ipfs' : 'json'
+      let object = {"date": "2021-10-05"}
+      if (deriv) {
+        object['show-derivation'] = "true"
+      }
+      if (location !== 'us') {
+        object['location'] = location
+      }
+      document.getElementById('api:data').value = JSON.stringify(object)
+      document.getElementById('api:multiplier').value = ''
+    }
+    async function getInflationRangeValues() {
+      const deriv =
+            document.getElementById('api:show-categories').checked
+      const location =
+            document.getElementById('api:truflation-location').value
+      document.getElementById('api:service').value = "truflation/range"
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = "ipfs"
+      let object = {"interval": "day","start-date": "2021-01-01",
+                    "end-date": "2021-01-02"}
+      if (deriv) {
+        object['show-derivation'] = "true"
+      }
+      if (location !== 'us') {
+        object['location'] = location
+      }
+      document.getElementById('api:data').value = JSON.stringify(object)
+      document.getElementById('api:multiplier').value = ''
+    }
+
+    async function getDefiLlamaExample1() {
+      document.getElementById('api:service').value = "defillama/stablecoins/stablecoins"
+      document.getElementById('api:keypath').value = 'gecko_id=harmony.totalCirculatingUSD.peggedUSD'
+      document.getElementById('api:abi').value = "uint256"
+      document.getElementById('api:data').value = ''
+      document.getElementById('api:multiplier').value = '1000000000000000000'
+    }
+
+    async function getDefiLlamaExample2() {
+      document.getElementById('api:service').value = "defillama/stablecoins/stablecoincharts/all"
+      document.getElementById('api:data').value = '{"id": "1"}'
+      document.getElementById('api:keypath').value = 'date=1652313600.totalCirculating.peggedUSD'
+      document.getElementById('api:abi').value = 'uint256'
+      document.getElementById('api:multiplier').value = '1000000000000000000'
+    }
+
+    async function getDefiLlamaExample3() {
+      document.getElementById('api:service').value = "defillama/tvl/chains"
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = "ipfs"
+      document.getElementById('api:data').value = ''
+      document.getElementById('api:multiplier').value = ''
+    }
+
+
+    async function getNuonStatic() {
+      document.getElementById('api:service').value = "nuon/static-index"
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = "json"
+      document.getElementById('api:data').value = '{"date": "2022-07-05"}'
+      document.getElementById('api:multiplier').value = ''
+    }
+
+    async function getNuonDynamic() {
+      document.getElementById('api:service').value = "nuon/dynamic-index"
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = "json"
+      document.getElementById('api:data').value =' {"date": "2022-07-05"}'
+      document.getElementById('api:multiplier').value = ''
+    }
+
+    async function getNuonStaticInWei() {
+      document.getElementById('api:service').value = "nuon/static-index"
+      document.getElementById('api:keypath').value = 'nuonIndex'
+      document.getElementById('api:abi').value = "uint256"
+      document.getElementById('api:data').value = '{"date": "2022-07-05"}'
+      document.getElementById('api:multiplier').value = '1000000000000000000'
+    }
+
+    async function getNuonDynamicInWei() {
+      document.getElementById('api:service').value = "nuon/dynamic-index"
+      document.getElementById('api:keypath').value = 'nuonIndex'
+      document.getElementById('api:abi').value = "uint256"
+      document.getElementById('api:data').value =' {"date": "2022-07-05"}'
+      document.getElementById('api:multiplier').value = '1000000000000000000'
+    }
+
+    async function getNftList() {
+      document.getElementById('api:service').value = "nft-index"
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = "ipfs"
+      document.getElementById('api:data').value = '{"service": "list"}'
+      document.getElementById('api:multiplier').value = ''
+    }
+
+    async function getNftContracts() {
+      const index =
+            document.getElementById('api:nft-index').value
+      document.getElementById('api:service').value = "nft-index"
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = "ipfs"
+      document.getElementById('api:data').value = `{"service": "contracts",
+"index": "${index}"}`
+      document.getElementById('api:multiplier').value = ''
+    }
+    async function getNftIndex() {
+      const index =
+            document.getElementById('api:nft-index').value
+      document.getElementById('api:service').value = "nft-index"
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = "json"
+      document.getElementById('api:data').value = `{"index": "${index}"}`
+      document.getElementById('api:multiplier').value = ''
+    }
+    async function getNftIndexAtDate() {
+      const index =
+            document.getElementById('api:nft-index').value
+      document.getElementById('api:service').value = "nft-index"
+      document.getElementById('api:keypath').value = ''
+      document.getElementById('api:abi').value = "json"
+      document.getElementById('api:data').value = `{"index": "${index}", "date": "2021-10-10"}`
+      document.getElementById('api:multiplier').value = ''
+    }
+  </script>
+</head>
+<body>
+  <h1>API Tester</h1>
+  <a href="https://discord.com/channels/967280164071407666/968071680360587264"
+     target="_blank">Truflation
+    developer chat</a><br/>
+  <a href="https://github.com/truflation/sample-frontend/"
+     target="_blank">
+    Source code</a>
+    <a href="./docs/api-tutorial.html">Tutorial for
+    API</a>
+  <a href="https://github.com/truflation/quickstart/blob/main/network.md">Network endpoints</a>
+  <p />
+  (Service available on goerli, rinkeby, binance mainnet, binance
+    testnet, and polygon mumbai)<br />
+  <button class="enableEthereumButton">Connect wallet</button><br />
+  <span id=testnetwarning></span><br />
+  Account: <span class="showAccount"></span><br />
+  Chain: <span class="showChain"></span><br><br />
+  API client address:
+  <input type="text" size="50" id="api:address"
+	 value=""
+	 />
+  (<a href="https://remix.ethereum.org/#url=https://raw.githubusercontent.com/truflation/sample-frontend/main/contract/ApiClient.sol">Show
+  API Contract</a>)
+  <br />
+  <section id="api-tester">
+    <label for"api:truflation-location">Location</label>
+    <select name="truflation-location" id="api:truflation-location">
+      <option value="us">United States</option>
+      <option value="uk">United Kingdom</option>
+    </select>
+    <input type="checkbox" id="api:show-categories">
+    <label for="api:show-categories">Show inflation categories</label>
+    <br/ >
+    <button type="button" onClick="getInflationCurrentValues()">
+      Get Current Inflation Values
+    </button>
+    <button type="button" onClick="getInflationAtDateValues()">
+      Get Inflation at date Values
+    </button>
+    <button type="button" onClick="getInflationRangeValues()">
+      Get Inflation range Values
+    </button>
+    <br />
+      <br/ >
+    <button type="button" onClick="getNftList()">
+      Get list of NFTs available
+    </button>
+    <button type="button" onClick="getNftContracts()">
+      Get contracts for NFT index
+    </button>
+    <br />
+    <button type="button" onClick="getNftIndex()">
+      Get NFT Index
+    </button>
+    <button type="button" onClick="getNftIndexAtDate()">
+      Get NFT Index at Date
+    </button>
+        <select name="nft-index" id="api:nft-index">
+    <option value="nft/top11">nft/top11</option>
+    <option value="metaverse/land">metaverse/land</option>
+    <option value="metaverse/assets">metaverse/assets</option>
+    <option value="nft/bayc">nft/bayc</option>
+    <option value="nft/ethlizards">nft/ethlizards</option>
+    <option value="utility/irl">utility/irl</option>
+    <option value="utility/dao">utility/dao</option>
+    <option value="utility/membership/discovered">utility/membership/discovered</option>
+    <option value="utility/membership/selected">utility/membership/selected</option>
+    <option value="artwork/handdrawn">artwork/handdrawn</option>
+    <option value="artwork/virtual">artwork/virtual</option>
+    <option value="music/generative">music/generative</option>
+    <option value="music/collections/genesis">music/collections/genesis</option>
+    <option value="music/collections/season1">music/collections/season1</option>
+    <option value="music/collections/season2">music/collections/season2</option>
+    </select>
+        <br />
+	<br />
+<a href="docs/api-defillama.html">Defillama recipes</a>
+	<br />
+<button type="button" onClick="getDefiLlamaExample1()">
+      Example 1; Get circulating value on a blockchain
+</button><br />
+<button type="button" onClick="getDefiLlamaExample2()">
+      Example 2: Get circulating value for USDT on 2022 May 12
+</button><br />
+<button type="button" onClick="getDefiLlamaExample3()">
+      Example 3: Get all chains on defillama using ipfs
+</button>
+	<br />
+	<br />
+<button type="button" onClick="getNuonStatic()">
+      Nuon static index (json)
+    </button>
+<button type="button" onClick="getNuonDynamic()">
+      Nuon dynamic index (json)
+</button>
+<br/>
+<button type="button" onClick="getNuonStaticInWei()">
+      Nuon static index (wei)
+    </button>
+<button type="button" onClick="getNuonDynamicInWei()">
+      Nuon dynamic index (wei)
+    </button>
+
+	<br/>
+	<br/>
+    <button type="button" onClick="getEchoValues()">
+      Echo Values
+    </button>
+    <button type="button" onClick="getEchoWeiValues()">
+      Echo Value in wei
+    </button>
+    <button type="button" onClick="getStubValues()">
+      Get Stub Values
+    </button>
+    <br />
+    <br />
+    <a href="docs/api-tutorial.html">Tutorial for API</a>
+    <br />
+    <br />
+    Service: <input type="text" size="50" id="api:service" /><br />
+    Keypath: <input type="text" size="50" id="api:keypath" /><br />
+    Abi: <input type="text" size="50" id="api:abi" /><br />
+    Multiplier: <input type="text" size="50" id="api:multiplier" /><br />
+    Data:<br> <textarea id="api:data" cols=60 rows=12></textarea><br />
+    <button type="button" onClick="runApi();">Run
+      Api</button><br />
+    <span id="api:output"></span><br />
+    <span id="api:status"></span>
+  </section>
+
+  <a href="power-tools.html">Power tools</a> 
+</body>
+</html>

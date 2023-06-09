@@ -1,0 +1,140 @@
+<h3>General description</h3>
+The web3 defilama bridge allows a developer to incorporate defilama
+data into a smart contract.  In order to use the bridge, first go to
+the defilama site to find the data which the user wishes to
+incorporate.  Once one finds the defilama web2 request, one can
+convert this to a web3 request as follows.
+
+Start with the API doc for defilama located
+at <a href="https://defillama.com/docs/api">https://defillama.com/docs/api</a>
+
+The service name is the category of the api followed by the endpoint
+name, and can start with
+
+<ul>
+<li>defilama/tvl
+<li>defilama/coins
+<li>defilama/stablecoins
+<li>defilama/yields
+</ul>
+
+The request data should include the parameters associated with the
+service.
+
+Once you have the response, you can use keypath, api, and multiplier
+to convert the result to a format available in eth, and the values of
+these parameters is described in <a href="api-tutorial.html">API
+tutorial</a>.
+
+<h3>Example 1 - Get the current circulating value on the harmony blockchain</h3>
+
+The end point for this data is /stablecoinchains in category
+stablecoins.  So the service and data are:
+
+<pre>
+service; defilama/stablecoins/stablecoinchains
+data: (blank)
+</pre>
+
+We can use the swagger ui to get the result of the web2 call. Calling
+<a href=https://stablecoins.llama.fi/stablecoinchains>https://stablecoins.llama.fi/stablecoinchains</a>
+
+we get the result
+<pre>
+[
+ {
+    "gecko_id": "harmony",
+    "totalCirculatingUSD": {
+      "peggedUSD": 8854899.484894985
+    },
+    "tokenSymbol": "ONE",
+    "name": "Harmony"
+  }
+]
+</pre>
+
+We want to first select the object for which the gecko_id is harmony
+and then get the peggedUSD value
+
+to select the resulting value we set keypath to
+
+<pre>
+  keypath: gecko_id=harmony.totalCirculatingUSD.peggedUSD
+  </pre>
+
+To make this available for a smart contract, we will need to multiply
+this value by a multiplier and set the result to uint256.  This means
+that the following fields should be
+
+<pre>
+abi: uint256
+multiplier: 1000000000000000000
+</pre>
+
+<h3>Example 2 - Get the total circulating value for USDT on Thu May 12 2022</h3>
+
+Look at the defilama api web page we can find the ID for USDT by
+calling <a href="https://stablecoins.llama.fi/stablecoins?includePrices=true">https://stablecoins.llama.fi/stablecoins?includePrices=true</a>
+
+From this call we see that the id for USDT is 1.  The call to get the
+prices of USDT is <a href=https://stablecoins.llama.fi/stablecoincharts/all?stablecoin=1>
+https://stablecoins.llama.fi/stablecoincharts/all?stablecoin=1
+</a>
+
+<pre>
+[
+  {
+    "date": "1609459200",
+    "totalCirculating": {
+      "peggedUSD": 20934027063.04073
+    },
+    "totalUnreleased": {
+      "peggedUSD": 0
+    },
+    "totalCirculatingUSD": {
+      "peggedUSD": 20935116985.493526
+    },
+    "totalMintedUSD": {
+      "peggedUSD": 0
+    },
+    "totalBridgedToUSD": {
+      "peggedUSD": 0
+    }
+}
+]
+</pre>
+
+we want to get prices for May 12 2022 which is unix date 1652313600
+
+we can select the keypath using
+
+<pre>
+  keypath: date=1652313600.totalCirculating.peggedUSD
+</pre>
+
+Setting the multiplier and abi we get
+
+<pre>
+abi: uint256
+multiplier: 1000000000000000000
+</pre>
+
+<h3>Example 3 - Get list of chains via IPFS</h3>
+
+The previous examples take one number, but it may be useful to get a
+large amount of data.  This can be done using the ipfs inference
+
+For example to get a list of all chains available on defilama, one
+uses the web2 interface under category TVL by calling <a href="https://api.llama.fi/chains">https://api.llama.fi/chains</a>
+
+To retrieve the list of chains for which tvl information is available,
+the calls are
+
+<pre>
+service: defilama/tvl/chains
+keypath: (blank)
+abi: ipfs
+data: (blank)
+multiplier: (blank)
+
+</pre>
