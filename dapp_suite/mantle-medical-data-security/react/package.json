@@ -1,0 +1,43 @@
+{
+  "name": "mantle-demo-react",
+  "version": "0.1.0",
+  "description": "Mantle demo (React)",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "Applied Blockchain",
+  "license": "UNLICENSED",
+  "eslintConfig": {
+    "extends": "@appliedblockchain/eslint-config"
+  },
+  "devDependencies": {
+    "@appliedblockchain/eslint-config": "^2.4.0",
+    "eslint": "^5.6.0"
+  },
+  "dependencies": {
+    "@appliedblockchain/mantle-core": "^1.14.0",
+    "@material-ui/core": "^3.6.1",
+    "@material-ui/icons": "^3.0.1",
+    "axios": "^0.18.0",
+    "formik": "^1.4.0",
+    "lodash": "^4.17.11",
+    "notistack": "^0.4.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "web3": "1.0.0-beta.37",
+    "yup": "^0.26.6"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

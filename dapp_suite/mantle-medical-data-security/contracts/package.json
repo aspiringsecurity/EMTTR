@@ -1,0 +1,25 @@
+{
+  "name": "mantle-demo-contracts",
+  "version": "0.1.0",
+  "description": "Mantle demo (Contracts)",
+  "scripts": {
+    "compile": "truffle compile",
+    "parity": "docker run -p 8545:8545 appliedblockchain/parity-solo",
+    "deploy": "node ./bin/deploy"
+  },
+  "eslintConfig": {
+    "extends": "@appliedblockchain/eslint-config"
+  },
+  "author": "Applied Blockchain",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@appliedblockchain/eslint-config": "^2.5.0",
+    "eslint": "^5.10.0",
+    "truffle": "^4.1.14"
+  },
+  "dependencies": {
+    "@appliedblockchain/mantle-core": "^1.14.0",
+    "config": "^3.0.0",
+    "web3": "^1.0.0-beta.37"
+  }
+}

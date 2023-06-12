@@ -1,0 +1,45 @@
+{
+  "name": "mantle-demo-api",
+  "version": "0.1.0",
+  "description": "Mantle demo (API)",
+  "main": "run.js",
+  "engines": {
+    "node": ">=9.0.0"
+  },
+  "scripts": {
+    "start": "NODE_PATH=. nodemon ./run",
+    "test": "NODE_PATH=. jest",
+    "lint": "eslint . --ignore-path .gitignore",
+    "contract-compile": "npm run --prefix ../contracts compile",
+    "contract-deploy": "npm run --prefix ../contracts deploy",
+    "parity": "docker run -p 8545:8545 appliedblockchain/parity-solo"
+  },
+  "eslintConfig": {
+    "extends": "@appliedblockchain/eslint-config"
+  },
+  "author": "Applied Blockchain",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@appliedblockchain/eslint-config": "^2.2.0",
+    "eslint": "^4.19.1",
+    "jest": "^23.1.0",
+    "nodemon": "^1.18.6",
+    "supertest": "^3.1.0"
+  },
+  "dependencies": {
+    "@appliedblockchain/koa-docs": "^2.1.0",
+    "@appliedblockchain/koa-healthcheck": "^1.2.0",
+    "@appliedblockchain/mantle-api": "^1.1.0",
+    "@appliedblockchain/mantle-core": "^1.14.0",
+    "@koa/cors": "^2.2.1",
+    "abi-decoder": "^1.2.0",
+    "bunyan": "^1.8.12",
+    "config": "^1.30.0",
+    "koa": "^2.5.1",
+    "koa-compress": "^3.0.0",
+    "koa-joi-router": "^5.1.0",
+    "koa-respond": "^1.0.1",
+    "lodash": "^4.17.11",
+    "web3": "1.0.0-beta.36"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "mantle-demo",
+  "version": "0.1.0",
+  "description": "Mantle demo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appliedblockchain/mantle-demo.git"
+  },
+  "scripts": {
+    "start:api": "cd api && npm start",
+    "start:react": "cd react && npm start",
+    "start": "concurrently -p '[{name}]' -n 'API,REACT' -c 'bgCyan.bold,bgMagenta.bold' 'npm:start:api' 'npm:start:react'"
+  },
+  "author": "Applied Blockchain",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/appliedblockchain/mantle-demo/issues"
+  },
+  "homepage": "https://github.com/appliedblockchain/mantle-demo#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
