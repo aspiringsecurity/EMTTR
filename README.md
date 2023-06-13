@@ -120,6 +120,20 @@ Research Contract Bill Generation: We are utilizing Chainlink Mix to work with C
 
 Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
 
+NFT and Certificate for Good research services in drug discovery: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating
+
+Drug Discovery Service Providers (CRO) and Pharma Service Organizations Payouts: Chainlink Parametric Insurance dapp at 
+https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout
+
+
+Truflation Market Insight modules for Chainlink services and Covalent End-points/Dashboard: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/truflation-insight 
+
+Flow Modules : https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating/flow-modules
+
+Space and Time: Dynamic NFT generator for DICOM images using SxT and Chainlink at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/EMTTR-SxT-dNFT
+
+
+
 
 2. MultiChain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit the link at https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/multichain-webapp
 
