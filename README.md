@@ -130,6 +130,13 @@ Parametric Insurance Solution for medicine discovery with special procedures. We
 5. OpenSea Community Tooling: Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using OpenSea Community tooling and APIs. OpenSea APIs: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/opensea-api-nft-sales
 
 
+# Mantle
+
+Data Security in EMTTR using Mantle: We are ensuring data security in EMTTR using Mantle's asymmetric and symmetric encryption/decryption capabilities, mnemonic/account generation and management. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/mantle-medical-data-security
+
+Audit portal in EMTTR using Mantle: We are extending the audit portal using Mantle for EMTTR. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/audit-portal-mantle
+
+
 Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
 
 Moralis deployment URL: https://3gtivnurtulj.usemoralis.com:2053/server (to be deployed)
