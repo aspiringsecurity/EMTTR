@@ -132,6 +132,7 @@ Flow Modules : https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NF
 
 Space and Time: Dynamic NFT generator for DICOM images using SxT and Chainlink at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/EMTTR-SxT-dNFT
 
+Verse DEX tokens: Creating custom EMTTR token at Verse for DICOM images. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout/Token-verse-dex
 
 
 
