@@ -1,3 +1,11 @@
+# Mantle Content Bounty Submission
+
+## Making Healthcare Affordable and Accessible with Mantle Blockchain
+
+Pdf format: [EMTTR/dapp_suite/mantle-medical-data-security/Making Healthcare Affordable and Accessible with Mantle.pdf at main · aspiringsecurity/EMTTR · GitHub](https://github.com/aspiringsecurity/EMTTR/blob/main/dapp_suite/mantle-medical-data-security/Making%20Healthcare%20Affordable%20and%20Accessible%20with%20Mantle.pdf)
+
+Docx format: https://github.com/aspiringsecurity/EMTTR/blob/main/dapp_suite/mantle-medical-data-security/Making%20Healthcare%20Affordable%20and%20Accessible%20with%20Mantle.pdf
+
 # Data Security in EMTTR using Mantle
 
  We are ensuring data security in EMTTR using Mantle's asymmetric and symmetric encryption/decryption capabilities, mnemonic/account generation and management.
