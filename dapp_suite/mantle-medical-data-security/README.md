@@ -2,9 +2,9 @@
 
 ## Making Healthcare Affordable and Accessible with Mantle Blockchain
 
-Pdf format: [EMTTR/dapp_suite/mantle-medical-data-security/Making Healthcare Affordable and Accessible with Mantle.pdf at main · aspiringsecurity/EMTTR · GitHub](https://github.com/aspiringsecurity/EMTTR/blob/main/dapp_suite/mantle-medical-data-security/Making%20Healthcare%20Affordable%20and%20Accessible%20with%20Mantle.pdf)
+Pdf format: https://github.com/aspiringsecurity/EMTTR/blob/main/dapp_suite/mantle-medical-data-security/Making%20Healthcare%20Affordable%20and%20Accessible%20with%20Mantle.pdf
 
-Docx format: https://github.com/aspiringsecurity/EMTTR/blob/main/dapp_suite/mantle-medical-data-security/Making%20Healthcare%20Affordable%20and%20Accessible%20with%20Mantle.pdf
+Docx format: https://github.com/aspiringsecurity/EMTTR/blob/main/dapp_suite/mantle-medical-data-security/Making%20Healthcare%20Affordable%20and%20Accessible%20with%20Mantle.docx
 
 # Data Security in EMTTR using Mantle
 
