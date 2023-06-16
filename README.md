@@ -147,6 +147,10 @@ Verse DEX tokens: Creating custom EMTTR token at Verse for DICOM images. Please 
 
 # Mantle
 
+Making healthcare affordable and accessible with Mantle: https://github.com/aspiringsecurity/EMTTR/blob/main/dapp_suite/mantle-medical-data-security/Making%20Healthcare%20Affordable%20and%20Accessible%20with%20Mantle.pdf
+
+Docx format: https://github.com/aspiringsecurity/EMTTR/blob/main/dapp_suite/mantle-medical-data-security/Making%20Healthcare%20Affordable%20and%20Accessible%20with%20Mantle.docx
+
 Data Security in EMTTR using Mantle: We are ensuring data security in EMTTR using Mantle's asymmetric and symmetric encryption/decryption capabilities, mnemonic/account generation and management. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/mantle-medical-data-security
 
 Audit portal in EMTTR using Mantle: We are extending the audit portal using Mantle for EMTTR. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/audit-portal-mantle
