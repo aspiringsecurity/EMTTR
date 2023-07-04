@@ -2,9 +2,9 @@
 
 EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools.
 
+Website: https://emttr-deploy.vercel.app/
 
-
-Website: https://sites.google.com/view/emttrservice/
+Information Website for Civic Bodies: https://sites.google.com/view/emttrservice/
 
 Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
 
