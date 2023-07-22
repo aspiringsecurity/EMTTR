@@ -8,6 +8,8 @@ Information Website for Civic Bodies: https://sites.google.com/view/emttrservice
 
 Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
 
+Optimism Deployment: https://op-medicine-deploy.vercel.app/
+
 
 # Grants and Notable Achievements 
 
