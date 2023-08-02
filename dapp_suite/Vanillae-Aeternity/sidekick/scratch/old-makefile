@@ -1,0 +1,50 @@
+# fulldist is the kitchen sink:
+# - builds (& typechecks) the library
+# - makes a distribution tarball
+# - builds (& typechecks) the examples
+# - builds the documentation
+# - puts it all in a nice tree
+all: build_fulldist
+
+build_sidekick:
+	tsc
+
+clean:
+	rm -r dist_js                   || return 0
+	rm -r sidekick_mindist          || return 0
+	rm -r docs                      || return 0
+	rm -r examples/examples_dist_js || return 0
+	rm -r sidekick_fulldist         || return 0
+
+build_mindist: build_sidekick
+	mkdir -p sidekick_mindist
+	cp    README.md   sidekick_mindist
+	cp    LICENSE.txt sidekick_mindist
+	cp -r src         sidekick_mindist
+	cp -r dist        sidekick_mindist
+
+build_docs:
+	npx typedoc --out                docs \
+	            --entryPointStrategy expand \
+	            --name               Sidekick \
+	            src
+
+
+serve_docs:
+	cd docs && python3 -m http.server 8002
+
+build_examples: build_mindist
+	rm examples/sidekick_mindist || return 0
+	cd examples && ln -s ../sidekick_mindist sidekick_mindist
+	cd examples && tsc
+
+serve_examples:
+	cd examples && python3 -m http.server 8001
+
+build_everything: build_sidekick build_mindist build_examples build_docs
+
+build_fulldist: build_everything
+	mkdir sidekick_fulldist
+	cp -r sidekick_mindist sidekick_fulldist
+	cp -r docs             sidekick_fulldist
+	cp -r examples         sidekick_fulldist

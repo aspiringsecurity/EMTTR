@@ -1,0 +1,15 @@
+.eunit
+deps
+*.o
+*.beam
+*.plt
+*.swp
+erl_crash.dump
+ebin/*.beam
+doc/*.html
+doc/*.css
+doc/edoc-info
+doc/erlang.png
+rel/example_project
+.concrete/DEV_MODE
+.rebar

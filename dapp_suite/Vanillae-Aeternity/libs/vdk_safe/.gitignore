@@ -1,0 +1,10 @@
+dist
+jex_mindist
+jex_include
+*.beam
+*.swp
+*.swo
+test/testgen/b58_cases_2.eterms
+test/testgen/b58_cases_3.eterms
+__pycache__
+docs/

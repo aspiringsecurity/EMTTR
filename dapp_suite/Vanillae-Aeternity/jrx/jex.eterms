@@ -1,0 +1,5 @@
+{type, library}.
+{realm, local}.
+{name, jrx}.
+{version, "0.1.0"}.
+{deps, ["local-tweetnacl-1.0.3"]}.

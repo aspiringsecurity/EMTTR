@@ -1,0 +1,7 @@
+*.swp
+*.swo
+jex_mindist
+dist
+src/jex_include
+erl_crash.dump
+docs

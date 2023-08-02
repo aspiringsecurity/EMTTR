@@ -1,0 +1,5 @@
+{type, library}.
+{realm, local}.
+{name, vdk_faert}.
+{version, "0.1.0"}.
+{deps, ["local-vdk_safe-0.1.0"]}.

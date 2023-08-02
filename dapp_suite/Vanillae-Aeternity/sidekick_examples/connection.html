@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sidekick Example: Connecting to Wallet</title>
+</head>
+<body>
+
+<!-- link tree -->
+<ul><li>
+    <a href="/">Examples</a>
+    <ul><li>
+        <b>Connecting to wallet</b>
+    </li></ul>
+</li></ul>
+
+<h1>Sidekick Example: Connecting to wallet</h1>
+
+<h1>Page variables</h1>
+
+<ol>
+<li>Wallet Address: <code class="pv-address"></code></li>
+<li>SpendTx Base64: <code class="pv-spendtx-base64"></code></li>
+</ol>
+
+<!-- step 1 detect -->
+
+<h1>1. Detect wallet</h1>
+    <button id="detect">Detect</button>
+    <h4 id="detected" style="color: red;">not detected</h4>
+    <pre id="detect-info"></pre>
+
+<h1>2. Connect to wallet</h1>
+    <button id="connect">Connect</button>
+    <h4 id="connected" style="color: red;">not connected</h4>
+    <pre id="connect-info"></pre>
+
+<h1>3. Get the wallet address</h1>
+    <button id="address">Address</button>
+    <h4 id="addressed" style="color: red;">not addressed</h4>
+    <pre id="address-info"></pre>
+
+<h1>4. Sign a transaction</h1>
+    <h2>4.1 Transaction info (information needed from you)</h2>
+        <ol>
+        <li>Source address (step 3): <code class="pv-address"></code></li>
+        <li>Target address: <input type="text" id="tx-info-target" value="ak_wM8yFU8eSETXU7VSN48HMDmevGoCMiuveQZgkPuRn1nTiRqyv"></input></li>
+        <li>Amount (aettos): <input type="text" id="tx-info-amount" value="10"></input></li>
+        <li>Network: (FIXME: radio buttons)</li>
+        </ol>
+    <h2>4.2 Form transaction (using parasite)</h2>
+        <p>This uses a shim JavaScript library called parasite to form the transaction
+        data for the wallet to sign.  In a commercial application, this should be done
+        by your backend</p>
+        <button id='mk-spendtx'>Make SpendTx</button>
+        <h5>SpendTx JS object</h5>
+            <pre id="spendtx-json"></pre>
+        <h5>SpendTx Base64</h5>
+            <pre class="pv-spendtx-base64"></pre>
+    <h2>4.3 Sign the transaction (sidekick)</h2>
+        <ol>
+        <li><pre class="pv-spendtx-base64"></pre></li>
+        </ol>
+        <button id="sign-spendtx">Sign Transaction</button>
+        <h5>Result:</h5>
+            <pre id="sign-spendtx-result"></pre>
+    <h2>4.4 Propagate the transaction (parasite)</h2>
+    <h2>4.5 Verify the transaction was propagated (parasite)</h2>
+
+
+<h1>5. Sign a message</h1>
+    <textarea id="message-text" rows="5" cols="80">MESSSSSSSSSSAGGGGGGGGGGGGGGGGGGGGGGGGGGGE</textarea>
+    <br>
+    <button id="sign-message">Sign Message</button>
+
+<!-- script -->
+<script type="module" src="dist/connection.js"></script>
+</body>
+</html>

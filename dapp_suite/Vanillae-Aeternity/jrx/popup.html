@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./ext/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+    -->
+    <style type="text/css">
+        body {
+            background:  #d6efff;
+            width: 400px;
+            font-family: monospace, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+<table width="100%" style="background: #dad1ff; border: 2px solid #6c5d96; border-radius: 5px;">
+    <tr>
+        <td><img src="./icons/jrx-icon-48.png" style="width: 32px; height: 32px;"></td>
+        <td style="font-size: 32px; text-align: center; font-weight: bold">
+            JÆCK RUSSELL
+        </td>
+    </tr>
+</table>
+
+<div style="margin-top: 5px; width: 95%; background: #d9ffd6; border: 1px solid #6c5d96; border-radius: 5px;">
+    <table >
+        <tr>
+            <td><img src="./ext/icons/keypair.svg" style="width: 32px; height: 32px;"></td>
+            <td style="justify-content: center; font-size: 28px; text-align: center; font-weight: bold">
+                KEYPAIRS
+            </td>
+        </tr>
+    </table>
+    <ul id="keypairs">
+    </ul>
+</div>
+
+<pre id="scratch">
+</pre>
+
+
+<!-- including nacl here -->
+<script src="dist/jex_include/local-nacl-1.0.3/nacl.js"></script>
+<script type="module" src="dist/popup.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{type, library}.
+{realm, local}.
+{name, parasite}.
+{version, "0.2.0"}.
+{deps, []}.

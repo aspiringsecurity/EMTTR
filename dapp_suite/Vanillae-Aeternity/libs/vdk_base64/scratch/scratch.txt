@@ -1,0 +1,159 @@
+
+const OTAG_SIGNED_TX          = 11n;
+const OTAG_SPEND_TX           = 12n;
+const OTAG_CONTRACT_CREATE_TX = 42n;
+const OTAG_CONTRACT_CALL_TX   = 43n;
+
+type otag = 11n | 12n | 42n | 43n;
+
+const IDTAG_ACCOUNT  = 1n;
+const IDTAG_NAME     = 2n;
+const IDTAG_CONTRACT = 5n;
+
+type idtag = 1n | 2n | 5n;
+
+
+type id =
+    {tag  : idtag,
+     hash : Uint8Array};
+
+type SignedTx =
+    {signatures  : Array<Uint8Array>,
+     transaction : Uint8Array};
+
+type SpendTx =
+    {sender    : id,
+     recipient : id,
+     amount    : bigint,
+     fee       : bigint,
+     ttl       : bigint,
+     nonce     : bigint,
+     payload   : Uint8Array};
+
+type ContractCreateTx =
+    {owner      : id,
+     nonce      : bigint,
+     code       : Uint8Array,
+     ct_version : bigint,
+     fee        : bigint,
+     ttl        : bigint,
+     deposit    : bigint,
+     amount     : bigint,
+     gas        : bigint,
+     gas_price  : bigint,
+     call_data  : Uint8Array};
+
+type ContractCallTx =
+    {caller      : id,
+     nonce       : bigint,
+     contract    : id,
+     abi_version : bigint,
+     fee         : bigint,
+     ttl         : bigint,
+     amount      : bigint,
+     gas         : bigint,
+     gas_price   : bigint,
+     call_data   : Uint8Array};
+
+type tx = SignedTx | SpendTx | ContractCreateTx | ContractCallTx;
+
+type decoded_tx =
+    {tag     : otag,
+     version : Uint8Array,
+     tx      : tx};
+
+/**
+ * Decode a `tx_Base64` string
+ */
+function
+decode_tx(tx_str : string): decoded_tx {
+    let base64_stuff   : string                  = tx_str.slice(3);                                                // tx_[...] -> [...]
+    let stuff          : Uint8Array              = b64.decode(base64_stuff);                                        // <<Bin/binary, DoubleSha:4>>
+    let rlp_stuff      : Uint8Array              = stuff.slice(0, stuff.length - 4);                                 // <<Bin/binary>>
+    let decoded_datas : Array<rlp.decoded_data> = rlp.decode(rlp_stuff).decoded_data as Array<rlp.decoded_data>;   // decoded_data : list(rlp.decoded_data() :: binary() | list(decoded_data()))
+    // tag, vsn
+    let tag_bytes     : Uint8Array              = decoded_datas[0] as Uint8Array; // [tag, vsn, fields] -> tag
+    let tag           : bigint                  = bytes_to_bigint(tag_bytes);     // <<Tag:(byte_size(TagBytes))>> = TagBytes
+    let vsn           : Uint8Array              = decoded_datas[1] as Uint8Array;
+    // tx fields
+    let tx_fields     : Array<rlp.decoded_data> = decoded_datas.slice(2);
+    let tx            : tx                      = decode_fields(tag, tx_fields);
+    return {tag: tag as otag, version: vsn, tx: tx};
+}
+
+/**
+ * Decode a transaction given the raw fields
+ *
+ * @internal
+ */
+function
+decode_fields(tag: bigint, fields: Array<rlp.decoded_data>): tx {
+    switch (tag) {
+        case 11n: return decode_fields_SignedTx(fields);
+        case 12n: return decode_fields_SpendTx(fields);
+        case 42n: return decode_fields_ContractCreateTx(fields);
+        case 43n: return decode_fields_ContractCallTx(fields);
+        default : throw new Error("invalid object tag: " + tag);
+    }
+    console.log('fields: ', fields);
+    throw new Error("nyi");
+}
+
+
+/**
+ * Decode a SignedTx
+ *
+ * @internal
+ */
+function
+decode_fields_SignedTx(fields: Array<rlp.decoded_data>): SignedTx {
+    throw new Error('nyi');
+}
+
+
+/**
+ * Decode a SpendTx
+ *
+ * @internal
+ */
+function
+decode_fields_SpendTx(fields: Array<rlp.decoded_data>): SpendTx {
+    // [<sender>    :: id(),
+    //  <recipient> :: id(),
+    //  <amount>    :: int(),
+    //  <fee>       :: int(),
+    //  <ttl>       :: int(),
+    //  <nonce>     :: int(),
+    //  <payload>   :: binary()]
+    let sender    : id         = decode_id(fields[0] as Uint8Array);
+    let recipient : id         = decode_id(fields[1] as Uint8Array);
+    let amount    : bigint     = bytes_to_bigint(fields[2] as Uint8Array);
+    let fee       : bigint     = bytes_to_bigint(fields[3] as Uint8Array);
+    let ttl       : bigint     = bytes_to_bigint(fields[4] as Uint8Array);
+    let nonce     : bigint     = bytes_to_bigint(fields[5] as Uint8Array);
+    let payload   : Uint8Array = fields[6] as Uint8Array;
+    return {sender    : sender,
+            recipient : recipient,
+            amount    : amount,
+            fee       : fee,
+            ttl       : ttl,
+            nonce     : nonce,
+            payload   : payload};
+
+}
+
+function
+decode_fields_ContractCreateTx(fields: Array<rlp.decoded_data>): ContractCreateTx {
+    throw new Error('nyi');
+}
+
+function
+decode_fields_ContractCallTx(fields: Array<rlp.decoded_data>): ContractCallTx {
+    throw new Error('nyi');
+}
+
+function
+decode_id(id: Uint8Array): id {
+    let idtag : idtag = BigInt(id[0]) as idtag;
+    return {tag: idtag, hash: id.slice(1)};
+}

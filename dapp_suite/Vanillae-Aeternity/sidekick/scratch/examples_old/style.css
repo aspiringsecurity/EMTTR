@@ -1,0 +1,34 @@
+body
+{
+    background-color: #ffd;
+    color: #222;
+}
+
+.disabled
+{
+    background-color: #444;
+    color: #000;
+}
+
+.current
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+.done
+{
+    background-color: #9f9;
+    color: #222;
+}
+
+#step2-recip
+{
+    width: 450px;
+}
+
+#step2-amt
+{
+    width: 50px;
+}

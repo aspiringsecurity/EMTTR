@@ -1,0 +1,12 @@
+{"manifest_version" : 2,
+ "name"             : "Jack Russell",
+ "version"          : "0.1.0",
+ "description"      : "Browser wallet extension for Aeternity",
+ "icons"            : {"48" : "icons/jrx-icon-48.png",
+                       "96" : "icons/jrx-icon-96.png"},
+ "content_scripts"  : [{"matches" : ["*://*/*"],
+                        "js"      : ["dist/content.js"]}],
+ "browser_action"   : {"default_icon"  : "icons/jrx-icon-32.png",
+                       "default_title" : "Jaeck Russell",
+                       "default_popup" : "popup.html"},
+ "permissions"      : ["storage"]}

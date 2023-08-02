@@ -1,0 +1,200 @@
+/*
+ * Maerket Sales Offer
+ *
+ * Author:      Craig Everett <ceverett@tsuriai.jp>
+ * Copyright:   Tsuriai Corporation (2022)
+ * License:     GPLv3
+ * Version:     0.1
+ *
+ * Sale offers at Maerket (maerket.psychobitch.party) are clones of this contract.
+ * (The name might be a little weird, but who looks at domain names anymore anyway?)
+ * When a sale offer is created on the site, the seller signs a contract call to
+ * 
+ *
+ * Calls to clones of this contract can come from five sources:
+ *  1. The base contract (that cloned it in the first place)
+ *      - init(maerket : MaerketBase, // Get born
+ *             id      : int,
+ *             price   : int)
+ *      - do_a_backflip()             // Get the opposite of born
+ *  2. Sellers who posted clones of this contract
+ *      - adjust(price : int)         // update price
+ *      - accept()                    // Sale is DONE
+ *      - refuse()                    // Cancel a negotation
+ *      - revoke()                    // Invalidate and disable this offer
+ *  3. Buyers who are interested in buying through this contract
+ *      - bid(price : int)            // Update the bid amout in negotiation
+ *      - hold()                      // Set HOLD for price negotiation
+ *      - cancel()                    // Back out of a purchase
+ *  4. Maerket (the base contract)
+ *      - reassign(tsuriai : address) // Reset Tsuriai's payable address
+ *  5. The maerket's network service (or the public)
+ *      - price()                     // Check current contract price
+ *      - status()                    // Check contract status
+ */
+
+@compiler == 6.1
+
+contract interface MaerketBase =
+    stateful entrypoint close : (int) => bool
+
+
+contract SalesOffer =
+    record state =
+        {id      : int,
+         maerket : MaerketBase,
+         price   : int,
+         buyer   : option(address),
+         status  : status,
+         tsuriai : address}
+
+    datatype status = OPEN | NEGO | HOLD | DONE
+
+
+// Seller Interface
+    stateful entrypoint init(tsuriai : address,
+                             maerket : MaerketBase,
+                             id      : int,
+                             price   : int) : state =
+        {id      = id,
+         maerket = maerket,
+         price   = price,
+         buyer   = None,
+         status  = OPEN,
+         tsuriai = tsuriai}
+
+    public stateful entrypoint adjust(price : int) : unit =
+        require(state.status != DONE, "HiLlArY wUz HeRe.")
+        require(Call.caller == Contract.creator, "Nacho shop!")
+        require(price > 0, "You can't pay people to buy things, Mr. Keynes.")
+        switch(state.buyer)
+            Some(buyer) =>
+                if(Contract.balance > price)
+                    Chain.spend(buyer, Contract.balance - price)
+                    true
+                else
+                    false
+            None =>
+                dead_claim()
+        put(state{price = price})
+
+    public stateful entrypoint accept() : bool =
+        require(state.status == NEGO, "Sale is not under negotiation.")
+        require(Call.caller == Contract.creator, "Nacho shop!")
+        require(Contract.balance >= state.price, "Insufficient funds!")
+        Chain.spend(state.tsuriai, calc_fee())
+        Chain.spend(Contract.creator, Contract.balance)
+        put(state{status = DONE})
+        state.maerket.close(state.id)
+
+    public stateful entrypoint refuse() : unit =
+        require(state.status == NEGO || state.status == HOLD,
+                "Sale is not under negotiation.")
+        require(Call.caller == Contract.creator, "Nacho shop!")
+        refund()
+        put(state{buyer = None})
+        put(state{status = OPEN})
+
+    public stateful entrypoint revoke() : bool =
+        require(state.status != DONE, "HiLlArY wUz HeRe.")
+        require(Call.caller == Contract.creator, "Nacho shop!")
+        switch(state.status)
+            OPEN => dead_claim()
+            NEGO => refund()
+            HOLD => refund()
+        put(state{status = DONE})
+        state.maerket.close(state.id)
+
+
+// Buyer Interface
+    public stateful payable entrypoint bid(amount: int) : unit =
+        require(state.status != DONE, "HiLlArY wUz HeRe.")
+        require(amount >= state.price, "Stop being poor.")
+        switch(state.status)
+            OPEN =>
+                require(Call.value >= state.price, "Stop being poor.")
+                put(state{status = NEGO})
+                put(state{buyer = Some(Call.caller)})
+            NEGO =>
+                switch(state.buyer)
+                    Some(buyer) =>
+                        require(Call.caller == buyer, "Nacho bid.")
+                        require(Contract.balance >= state.price, "Stop being poor.")
+                        if(Contract.balance > amount)
+                            Chain.spend(buyer, Contract.balance - amount)
+            HOLD =>
+                switch(state.buyer)
+                    Some(buyer) =>
+                        require(Call.caller == buyer, "Nacho bid.")
+                        require(Contract.balance >= state.price, "Stop being poor.")
+                        if(Contract.balance > amount)
+                            Chain.spend(buyer, Contract.balance - amount)
+                put(state{status = NEGO})
+
+    public stateful entrypoint hold() : unit =
+        require(state.status == NEGO, "Sale is not in negotiation")
+        switch(state.buyer)
+            Some(buyer) =>
+                require(Call.caller == buyer, "Nacho bid!")
+                put(state{status = HOLD})
+            None =>
+                abort("Nacho bid!")
+
+    public stateful entrypoint cancel() : unit =
+        require(state.status == NEGO || state.status == HOLD, "Wrong status")
+        switch(state.buyer)
+            Some(buyer) =>
+                require(Call.caller == buyer, "Nacho bid!")
+                Chain.spend(state.tsuriai, calc_fee())
+                put(state{buyer = None})
+                put(state{status = OPEN})
+                Chain.spend(buyer, Contract.balance)
+            None =>
+                abort("Nacho bid!")
+
+
+// Maerket Interface
+    public stateful entrypoint reassign(tsuriai : address) : unit =
+        require(Call.caller == state.maerket.address || Call.origin == state.tsuriai,
+                "Knock it off, stinky")
+        put(state{tsuriai = tsuriai})
+
+    public stateful entrypoint sweep_the_table() : bool =
+        require(state.status == DONE, "Hillary has not yet arrived.")
+        require(Call.caller == state.tsuriai, "Nope.")
+        dead_claim()
+
+
+// Service/Public Network Interface
+    public entrypoint price() : int =
+        state.price
+
+    public entrypoint status() : string =
+        switch(state.status)
+            OPEN => "open"
+            NEGO => "nego"
+            HOLD => "hold"
+            DONE => "done"
+
+
+// Utilities
+    function calc_fee() : int =
+        Contract.balance / 50
+
+    private stateful function refund() : bool =
+        if(Contract.balance > 0)
+            switch(state.buyer)
+                Some(buyer) =>
+                    Chain.spend(buyer, Contract.balance)
+                    true
+                None =>
+                    false
+        else
+            false
+
+    private stateful function dead_claim() : bool =
+        if(Contract.balance > 0)
+            Chain.spend(state.tsuriai, Contract.balance)
+            true
+        else
+            false

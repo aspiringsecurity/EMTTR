@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Hello world: Sidekick</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+            <ul>
+                <li><a href="../">Examples</a></li>
+                <ul><li><b>Hello world</b></li></ul>
+            </ul>
+        </li>
+    </ul>
+
+    <h1>Sidekick Example: Hello World</h1>
+
+    <h4>Check the console</h4>
+    <script type="module">
+        import * as sk from '../sidekick_dist/dist_js/sidekick.js';
+        sk.hello();
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/*
+ * Maerket Base Contract
+ *
+ * Author:      Craig Everett <ceverett@tsuriai.jp>
+ * Copyright:   Tsuriai Corporation (2022)
+ * License:     GPLv3
+ * Version:     0.1
+ *
+ * This is the base contract for the maerket.
+ * It is responsible for:
+ *   - A library of valid contracts by type (sales offers, auctions, etc.)
+ *   - Managing the authorized key list of maerket maesters
+ *   - Providing a single known endpoint to discover deployed, active contracts
+ *   - Managing the lifecycle of a maerket contract
+ *
+ * Lifecycle of a sales offer:
+ *   1. The seller calls MaerketBase.post_sale() to create his SaleOffer
+ *   2. Sale proceeds
+ *     IF it is succesful, the contract calls MaerketBase.close()
+ *     IF it is revoked by seller, the contract calls MaerketBase.close()
+ *     IF it times out or is killed by the maesters, one calls MaerketBase.kill()
+ */
+
+@compiler == 6.1
+
+include "List.aes"
+
+contract interface SaleOffer =
+    entrypoint init : (address, address, int, int) => void
+    payable entrypoint do_a_backflip : () => void
+
+
+contract MaerketBase =
+    record state =
+        {contracts : map(int, SaleOffer),
+         template  : SaleOffer,
+         maesters  : list(address),
+         tsuriai   : address}
+
+    stateful entrypoint init(template : SaleOffer,
+                             maesters : list(address),
+                             tsuriai  : address) : state = 
+        {contracts = {},
+         template  = template,
+         maesters  = maesters,
+         tsuriai   = tsuriai}
+
+    public entrypoint template() : SaleOffer =
+        state.template
+
+    public entrypoint lookup(id: int) : SaleOffer =
+        switch(Map.lookup(id, state.contracts))
+            Some(target) =>
+                target
+            None =>
+                abort("Bad ID!")
+
+    public stateful entrypoint post_sale(id: int, price: int) : SaleOffer =
+        require(price > 0, "You cannot pay someone to buy things, Mr. Keynes.")
+        require(!Map.member(id, state.contracts),
+                "People don't think it be like it is, but it do.")
+        switch(Chain.clone(ref       = state.template,
+                           protected = true,
+                           state.tsuriai,
+                           Contract.address,
+                           id,
+                           price))
+            Some(posted) =>
+                put(state{contracts = state.contracts{[id] = posted}})
+                posted
+            None =>
+                abort("Bad sale!")
+
+    public stateful entrypoint close(id: int) : bool =
+        switch(Map.lookup(id, state.contracts))
+            Some(target) =>
+                require(target.address == Call.caller, "Bad caller")
+                put(state{contracts = Map.delete(id, state.contracts)})
+                true
+            None =>
+                false
+
+    public stateful entrypoint update_maesters(keys: list(address)) : unit =
+        require(Call.caller == state.tsuriai, "Nuh, uh uh! You didn't say the magic word!")
+        put(state{maesters = keys})
+
+    public stateful entrypoint epstein(id: int) : bool =
+        require(List.contains(Call.caller, state.maesters),
+                "C'mon, man! You only got the husband and son!")
+        switch(Map.lookup(id, state.contracts))
+            Some(target) =>
+                put(state{contracts = Map.delete(id, state.contracts)})
+                target.do_a_backflip()
+                true
+            None =>
+                false

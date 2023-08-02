@@ -1,0 +1,11 @@
+contract Floyd =
+    type state = unit
+
+    stateful entrypoint init() =
+        ()
+
+    entrypoint sayHello() : string =
+        "hello"
+
+    entrypoint x() : int =
+        0

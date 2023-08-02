@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Do a transfer: Sidekick</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="../../">Sidekick</a>
+            <ul>
+                <li><a href="../">Examples</a></li>
+                <ul><li><b>Do a transfer</b></li></ul>
+            </ul>
+        </li>
+    </ul>
+
+    <h1>Sidekick Example: Do A Transfer</h1>
+
+    <!-- Connect to a wallet -->
+    <h3>Example 1: transfer 1 aetto to <code>@mystery</code></h1>
+    <ol>
+        <li class="step1 current">
+            <p>Connect to Superhero:</p>
+            <button class="step1 current" id="btn-step1">Click Me</button>
+
+            <p>
+                Address: <code id="user-wallet-address">(not connected)</code>
+            </p>
+        </li>
+
+        <li class="step2 disabled">
+            Enter address of recipient and amount:
+
+                <label for="recip">Recipient:</label>
+                <input id="step2-recip" class="step2 disabled" type="text" value="ak_dvNHMgVvdSgDchLsmcUpuFTbMBGfG3E5V9KZnNjLYPyEhcqnL">
+                <br>
+
+                <label for="amt">Amount (aettos):</label>
+                <input id="step2-amt" class="step2 diabled" type="text" value="1">
+
+                <br>
+                <button class="step2 disabled" id="btn-step2">Go!</button>
+        </li>
+        <li class="step3 disabled">
+            Transaction:
+
+            <pre><code id="step3-transaction-info"></code></pre>
+        </li>
+    </ol>
+    <script type="module" src="../examples_dist_js/do_a_transfer.js"></script>
+</body>
+</html>

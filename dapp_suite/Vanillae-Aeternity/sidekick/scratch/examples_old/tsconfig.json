@@ -1,0 +1,13 @@
+{"compilerOptions" : {"target"                           : "es2022",
+                      "strict"                           : true,
+                      "esModuleInterop"                  : true,
+                      "skipLibCheck"                     : true,
+                      "forceConsistentCasingInFileNames" : true,
+                      "noImplicitAny"                    : true,
+                      "strictNullChecks"                 : true,
+                      "strictPropertyInitialization"     : true,
+                      "sourceMap"                        : true,
+                      "outDir"                           : "examples_dist_js"},
+ "$schema"         : "https://json.schemastore.org/tsconfig",
+ "display"         : "Recommended",
+ "include"         : ["examples_src_ts/**/*"]}

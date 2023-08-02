@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Sidekick Example: Sophia Development IDE</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+            <ul>
+                <li><a href="../">Examples</a></li>
+                <ul><li><b>Sophia IDE</b></li></ul>
+            </ul>
+        </li>
+    </ul>
+
+
+    <h1>Sidekick Example: Sophia IDE</h1>
+
+<!-- USER INPUT -->
+    <ul>
+        <li>
+            <label for="template-name">Insert Template:</label>
+            <select name="template-name" id="template-name">
+                <option value="floyd.aes">floyd.aes</option>
+                <option value="crypto_hamster.aes">crypto_hamster.aes</option>
+                <option value="base_contract.aes">Maerket base contract</option>
+                <option value="sales_contract.aes">Maerket sales contract</option>
+            </select>
+            <button id="insert-template-button">Insert!</button>
+        </li>
+        <!-- filename -->
+        <li>
+            <label for="the-filename">Filename (optional)</label>
+            <input type="text" id="the-filename" value="floyd.aes">
+        </li>
+        <!-- code -->
+        <li>
+            <label for="the-code">Code:</label>
+            <br/>
+            <textarea id="the-code" cols="80" rows="25">contract Floyd =
+    type state = unit
+
+    stateful entrypoint init() =
+        ()
+
+    entrypoint sayHello() : string =
+        "hello"
+
+    entrypoint x() : int =
+        0
+            </textarea>
+        </li>
+    </ul>
+
+<!-- COMPILE SHIT -->
+    <h3>Compile</h3>
+
+    <ul>
+        <!-- compile button -->
+        <li>
+            <button id="compile-button">Compile</button>
+        </li>
+        <!-- clear button -->
+        <li>
+            <button id="compile-clear">Clear Result</button>
+        </li>
+        <!-- result code -->
+        <li>
+            <label for="compile-result-status">Status:</label>
+            <div id="compile-result-status"></div>
+        </li>
+        <!-- result -->
+        <li>
+            <label for="compile-result-json">Result:</li>
+            <br>
+            <textarea id="compile-result-json" cols="80" rows="5" disabled></textarea>
+        </li>
+    </ul>
+
+<!-- ENCODE CALLDATA -->
+    <h3>Encode Calldata</h3>
+
+    <ul>
+        <!-- function name input-->
+        <li>
+            Function name (to call constructor, call <code>init</code>)
+            <br>
+            <input type="text" id="EncodeCalldata-function-name">
+        </li>
+        <!-- function args input-->
+        <li>
+            Function arguments
+
+            <br>
+            Rules:
+
+            <ol>
+                <li>Arguments must be an array of JSON strings</li>
+                <li>Strings must be double-quoted <a href="/why.html">(why?)</a></li>
+                <li>
+                    Literal strings must be escape-quoted.
+                    <br>
+
+                    For instance, to call function <code>foo</code> with argument
+                    <code>"bar"</code>, you would put
+                    <code>foo</code>
+                    above, and put below <code>["\"bar\""]</code>.
+                </li>
+            </ol>
+
+            <br>
+            <textarea id="EncodeCalldata-function-args" cols="80" rows="1">[]</textarea>
+        </li>
+        <!-- encode button-->
+        <li>
+            <button id="EncodeCalldata-button">Encode</button>
+        </li>
+        <!-- clear button-->
+        <li>
+            <button id="EncodeCalldata-button-clear">Clear</button>
+        </li>
+        <!-- encode result status -->
+        <li>
+            <label for="EncodeCalldata-result-status">Encode Result Status:</label>
+            <div id="EncodeCalldata-result-status"></div>
+        </li>
+        <!-- encode result json -->
+        <li>
+            <label for="EncodeCalldata-result-json">Encode Result:</label>
+            <br>
+            <textarea id="EncodeCalldata-result-json" cols="80" rows="5" disabled></textarea>
+        </li>
+    </ul>
+
+<!-- CONNECT TO SUPERHERO -->
+    <h3>Deploy contract</h3>
+    <ol>
+        <li>
+            <button id="connect-to-superhero">Connect to Superhero</button>
+            <br>
+            User wallet address:
+            <br>
+            <textarea id="user-wallet-address" cols="80" rows="1" disabled></textarea>
+        </li>
+
+        <!-- function args input-->
+        <li>
+            Constructor arguments
+
+            <br>
+            Rules:
+
+            <ol>
+                <li>Arguments must be an array of JSON strings</li>
+                <li>Strings must be double-quoted <a href="/why.html">(why?)</a></li>
+                <li>
+                    Literal strings must be escape-quoted.
+                    <br>
+
+                    For instance, to call function <code>foo</code> with argument
+                    <code>"bar"</code>, you would put
+                    <code>foo</code>
+                    above, and put below <code>["\"bar\""]</code>.
+                </li>
+            </ol>
+
+            <br>
+            <textarea id="deploy-function-args" cols="80" rows="1">[]</textarea>
+        </li>
+        <li>
+            <button id="contract-create-button">Deploy</button>
+        </li>
+
+        <!-- contract-create result status -->
+        <li>
+            <label for="contract-create-result-status">ContractCreate Result Status:</label>
+            <div id="contract-create-result-status"></div>
+        </li>
+        <!-- contract-create result json -->
+        <li>
+            <label for="contract-create-result-json">ContractCreate Result:</label>
+            <br>
+            <textarea id="contract-create-result-json" cols="80" rows="10" disabled></textarea>
+        </li>
+        <!--
+            <li>
+                <button id="superhero-sign-btn">Have Superhero Sign It</button>
+            </li>
+        -->
+        <li>
+            Sign Result:
+            <br>
+            <textarea id="superhero-sign-result-json" cols="80" rows="35" disabled></textarea>
+        </li>
+        <!-- Deploy Result -->
+        <li>
+            PostTransaction Return Status:
+            <div id="post-transaction-result-status"></div>
+        </li>
+        <!-- Deploy Result -->
+        <li>
+            PostTransaction Result:
+            <br>
+            <textarea id="post-transaction-result-json" cols="80" rows="35" disabled></textarea>
+        </li>
+    </ol>
+
+<!-- CONTRACT CREATE TRANSACTION -->
+
+<!-- CONTRACT CALL TRANSACTION -->
+
+<!-- SCRIPT -->
+    <script type="module" src="../examples_dist_js/ide.js"></script>
+</body>
+</html>

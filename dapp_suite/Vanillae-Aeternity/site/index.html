@@ -1,0 +1,148 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="favicon" type="image/x-icon" src="favicon.ico">
+    <title>Vanillae Project</title>
+    <!--
+        old skyish:
+            background: #c5f1ff;
+    -->
+    <style type="text/css">
+        body {
+            background: #c7ffef;
+            font-family: monospace;
+        }
+
+        .section {
+            border-top: 2px solid #333;
+            border-left: 5px solid #333;
+            border-right: 1px solid #333;
+            border-bottom: 1px solid #333;
+            border-radius: 5px;
+            padding-left: 5px;
+            margin-bottom: 10px;
+        }
+
+        .orangeish {
+            background: #ffe2d6;
+        }
+
+        .skyish {
+            background: #9fe8ff;
+        }
+
+        .pinkish {
+            background: #ffcdfe;
+        }
+
+        .yellowish {
+            background: #feffb3;
+        }
+
+        .reddish {
+            background: #ffb3b3;
+        }
+    </style>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+<body>
+
+<center>
+    <img src="./art/Vanillae_circle_logo_256.png" width="128px" height="128px">
+    <h1 style="font-size: 32px">
+        Vanillae Project
+    </h1>
+</center>
+
+<div class="section orangeish" id="s-tldr">
+    <h2>1. tl;dr</h2>
+
+    <p>
+        This is a set of libraries, applications, and utilities which make it
+        easy to for developers to use the Æternity payment network. Including:
+    </p>
+
+    <ol>
+        <li><b>Vanillae.erl:</b> talk to an Æternity node from an Erlang application</li>
+        <li><b>Sidekick:</b> talk to an Æternity browser wallet extension from a page script</li>
+        <li><b>Jex:</b> a more intelligent alternative to NPM, specifically for packaging page scripts</li>
+        <li><b>Jack Russell:</b> a browser wallet extension</li>
+        <li><b>VDK:</b> a set of self-contained TS/JS libraries</li>
+    </ol>
+</div>
+
+<div class="section pinkish" id="s-contents">
+    <h2>2. Contents</h2>
+
+    <ol>
+        <li><a href="#s-tldr">tl;dr</a></li>
+        <li><a href="#s-contents">Contents</a></li>
+        <li><a href="#s-motivation-history">Motivation/History</a></li>
+        <li><a href="#s-vanillae-erl">Vanillae.erl</a></li>
+        <li><a href="#s-sidekick">Sidekick</a></li>
+    </ol>
+</div>
+
+<div class="section reddish" id="s-motivation-history">
+    <h2>3. Motivation/History</h2>
+
+    <p>The two developers on this project are Craig Everett and Peter
+    Harpending.  Craig is an Erlang graybeard. Peter is a recovering
+    mathematician who reluctantly programs because food is kind of expensive.
+    For the most part, Craig handles the Erlang stuff, and Peter handles the
+    TypeScript stuff (hurray).</p>
+
+    <p>Vanillae started as our own internal toolset that we developed in the
+    process of making <a href="https://aegora.jp/">Aegora.jp</a>.  In
+    particular, Craig developed Vanillae.erl because talking to the blockchain
+    was needlessly annoying, and Peter developed Sidekick because the Æternity
+    JavaScript SDK was (is) impossible to use.  We then open-sourced our
+    tooling, and the Æternity Foundation decided to pay us to continue to
+    develop it and expand it.</p>
+
+    <p>Aegora is the first normal e-commerce platform that utilizes any form of
+    cryptocurrency.  We would like if Aegora made us billionaires, but really
+    Aegora is really a proof-of-concept; that concept being
+    &quot;cryptocurrency could actually be useful.&quot;</p>
+
+    <p>Our hope is that you (yes, <i>you</i>) will be inspired by Aegora, and
+    go off and use Æternity for your own commercial projects.  The point of the
+    Vanillae project is to make it easy for you to do that.  Craig and I are
+    also working on a number of other projects to make Æternity useful to
+    ordinary people, not just developers.</p>
+
+    <p>Cryptocurrency has thus far failed to penetrate the economy of ordinary
+    goods and services.  Cryptocurrency has been used on the dark web for
+    buying babies and cocaine, and for various scams such as NFTs, fraudulent
+    crypto exchanges, and pump-and-dump schemes. One has to ask: why?</p>
+
+    <p>Our hypothesis is that most cryptocurrencies (i.e. every coin except
+    Æternity) are technically deficient to the point that they are totally
+    useless in the space of Things That Actually Have To Work (i.e.
+    business).</p>
+</div>
+
+<div class="section yellowish" id="s-vanillae-erl">
+    <h2>4. Vanillae.erl</h2>
+
+    <p>
+        This is an Erlang application that smooths over the rough edges
+        involved in talking to Æternity nodes.
+    </p>
+</div>
+
+<div class="section skyish" id="s-sidekick">
+    <h2>5. Sidekick</h2>
+
+    <p>Sidekick is a simple, transparent, and self-contained library for
+    talking to an Æternity browser wallet extension (e.g. Superhero [hence the
+    name] or Jack Russell) from your page script.</p>
+</div>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightall();</script>
+</body>
+</html>

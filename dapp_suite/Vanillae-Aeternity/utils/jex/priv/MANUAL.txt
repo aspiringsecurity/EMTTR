@@ -1,0 +1,60 @@
+INTRODUCTION
+    Jex is a simple packaging/dependency system for TypeScript/JavaScript
+    projects.
+
+    As of now, Jex is a glorified shell script that automates a lot of the
+    tedium in building sidekick, JR, etc.  Jex is very much a work in progress,
+    so these instructions are subject to change.
+
+    Jex is currently hyper-specialized to our use cases inside of Vanillae, and
+    is probably (currently) unsuitable for your use case.  For instance, Jex
+    assumes you are running a UNIX-like system with standard UNIX programs
+    installed (e.g. tree, rsync, tar, etc).  It also makes very strong
+    assumptions about your project structure and how you want to distribute
+    your project.
+
+    Our long-term goal is to build Jex out into a proper secure packaging
+    system, and completely remove any dependency on NPM.  NPM comes with a lot
+    of unfixable security issues that present an unacceptable risk in a
+    business context.  Developing software for the business context is the
+    focus of the Vanillae project.
+
+jex.eterms CONFIG FILE
+    Every project requires a file called `jex.eterms` in the root of the
+    project.
+
+    The config file is a list of Erlang terms separated by `.`s
+
+    The following keys must exist, the rest are ignored
+
+        {type, library | external | extension}.
+            This key implies other settings in the build process
+
+            library ->
+                The standard option. Pulls in dependencies and builds them,
+                assuming normal project layout. This is what you want in most
+                cases, even for things that are not libraries.
+
+            external ->
+                This is for external pre-built packages that we didn't develop,
+                such as TweetNaCl. This does not run `tsc`, etc. Jex assumes
+                the project has already been built, and so "install" etc just
+                copies stuff.
+
+            extension ->
+                Used for Jack Russell. Extensions have a much more complicated
+                build process because there are three different execution
+                contexts with three different constraint sets.
+
+        {realm, atom()}.
+        {name, atom()}.
+        {version, string()}.
+        {deps, [string()]}.
+
+PROJECT STRUCTURE
+    Jex makes very strong assumptions about your project structure
+
+        README.md       used by documentation tool `typedoc`
+        jex.eterms      explained above
+        tsconfig.json   needed for tsc
+        src/            typescript source code

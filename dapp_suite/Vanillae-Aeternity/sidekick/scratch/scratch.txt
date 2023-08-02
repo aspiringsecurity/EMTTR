@@ -1,0 +1,244 @@
+ *
+ * As far as I can tell, AWCP isn't formally defined anywhere. I
+ * figured this out by fuzzing the messaging protocol. So I suppose
+ * this is a candidate for a formal definition.
+ *
+ * This currently does not implement the full kitchen sink
+ * functionality, only what is needed for the limited functionality that
+ * sidekick provides.  That said, the framework and design pattern laid
+ * out here can easily be extended to implement the entire kitchen sink.
+ *
+ * The pattern here is to define all of the types involved. At the end,
+ * an interface called `AWCP_Aepp` is defined. This enumerates all of
+ * the functions that you an aepp needs to have defined in order to do
+ * stuff with a waellet.
+ *
+ * The functions are listed in the order that they are used in practice.
+ * So for instance,
+ *
+ *  - before you can `connection.open` with the waellet, you must wait
+ *    for the waellet to `connection.announcePresence`
+ *  - before you can `address.subscribe` the waellet, you must wait
+ *    for the waellet to `connection.open`
+ *
+ * An implementation of `AWCP_Aepp` is given in the `msgr.ts` file in
+ * this directory. In particular, msgr implements the "selective ignore"
+ * special behavior needed to deal with `connection.announcePresence`.
+ *
+ * `skylight.ts` (parent directory) includes some convenience functions
+ * wrapped on top of msgr. In particular, it black-boxes away things
+ * like "increment the message id each time you send a new message"
+ *
+ * Moreover, `skylight.ts` includes some subset of porcelain (dwim)
+ * functions like "just connect to the wallet, do what I mean", which
+ * does the "wait for `connection.announcePresence`, then do
+ * `connection.open`, then do `address.subscribe`" dance.
+ *
+ * Crucially, skylight only contains porcelain functions that are of the
+ * flavor of black-boxing away complexity related to talking to the
+ * waellet. For instance, Skylight will never directly communicate with
+ * a node.
+ *
+ * This "design pattern" of "define the types for a messaging protocol,
+ * and separately implement it, then black-box away the complexity in a
+ * porcelain module" will probably also be done for talking to a node
+ * and talking to a compiler.
+ *
+ * sidekick.ts (parent directory) includes programmer-facing porcelain
+ * functions such as "I just want to perform a transaction". In other
+ * words, sidekick.ts black-boxes away the complexity in coordinating
+ * between the compiler, the node, and the waellet.
+ * This is entirely types and type definitions
+ *
+ * See:
+ *  - JSON RPC 2.0 definition: https://www.jsonrpc.org/specification
+ *  - Typescript generics: https://www.typescriptlang.org/docs/handbook/2/generics.html
+ *
+ * @module
+ */
+
+
+%       Every operation, calculation, and concept, no matter how
+%       arbitrarily complex, reduces to adding integers together.
+%       There are no new concepts in QAnal. Everything is just
+%       putting lipstick on adding integers together.
+%
+%   -- Dr. Ajay Kumar PHD, The Founder
+%
+% a word is the smallest unit in a reduced sum. In for instance
+% 1 + a + ab, the words are 1, a, and ab, which are represented as
+% the sets {}, {a}, and {a, b}, respectively.
+%
+% - a word is a tuple {w, SetOfWFChars}
+%   - the empty set means 1
+%
+% - a wfchar is a Binary
+%   - if you wish to use pf/1, the binary must be string-formattable
+%
+% in WF algebra, anything times itself equals itself, therefore we
+% don't need to keep track of exponents. That is why the set
+% representation makes sense.
+%
+% with a word, multiplication is implied
+% with a sentence, summation is implied
+-module(wfc_word).
+-vsn("1.0.0").
+
+-export_type([
+    wfchar/0,
+    word/0
+]).
+-export([
+    one/0,
+    is_one/1,
+    is_valid_word/1,
+    from_binary/1,
+    from_list/1,
+    to_list/1,
+    times/1,
+    times/2,
+    pf/1,
+    pp/1
+]).
+
+-type wfchar() :: binary().
+-type word()   :: {w, sets:set(wfchar())}.
+
+
+%%% API
+
+
+-spec one() -> word().
+% @doc The word corresponding to the concept "1"; it is a tagged
+% tuple of {w, EmptySet}.
+
+one() ->
+    {w, sets:new()}.
+
+
+
+-spec is_one(term()) -> boolean().
+% @doc a word is one if it {w, EmptySet}.
+
+is_one(Word) ->
+    Word =:= one().
+
+
+
+-spec is_valid_word(term()) -> boolean().
+% @doc
+% a word is valid if exactly one of these conditions are true:
+%
+%   - is empty
+%   - contains only valid wfchars
+%
+% return false on anything failing to pattern match {w, Set}
+
+is_valid_word({w, Set}) ->
+    Chars = sets:to_list(Set),
+    lists:all(fun is_valid_char/1, Chars);
+is_valid_word(_) ->
+    false.
+
+is_valid_char(X) ->
+    is_binary(X).
+
+
+
+-spec from_binary(binary()) -> word().
+% @doc
+% Convert a binary into a word
+
+from_binary(Bin) when is_binary(Bin) ->
+    Set = sets:from_list([Bin]),
+    Word = {w, Set},
+    true = is_valid_word(Word),
+    Word.
+
+
+
+-spec from_list([binary()]) -> word().
+% @doc
+% Given a list of binaries, take their "product" and put it into a
+% word.
+
+from_list(Binaries) ->
+    Set = sets:from_list(Binaries),
+    ResultWord = {w, Set},
+    true = is_valid_word(ResultWord),
+    ResultWord.
+
+
+
+-spec to_list(word()) -> [binary()].
+% @doc
+% pull out the set in the tagged tuple, convert it to a list, and
+% return the SORTED list of BINARIES
+% @end
+
+to_list({w, Set}) ->
+    Chars = sets:to_list(Set),
+    lists:sort(Chars).
+
+
+
+-spec times([word()]) -> word().
+% @doc product of a list of words
+
+times(Words) ->
+    Result = times_acc(Words, one()),
+    true = is_valid_word(Result),
+    Result.
+
+
+times_acc([], FinalAcc) ->
+    FinalAcc;
+times_acc([W | Ws], Acc) ->
+    NewAcc = times(W, Acc),
+    times_acc(Ws, NewAcc).
+
+
+
+-spec times(word(), word()) -> word().
+% @doc
+% Multiply two words. This amounts to just taking the union of the
+% characters contained in the words
+% @end
+
+times({w, L}, {w, R}) ->
+    % take the unions of the things it contains
+    LR = sets:union(L, R),
+    Word = {w, LR},
+    true = is_valid_word(Word),
+    Word.
+
+
+
+-spec pp(word()) -> ok.
+% @doc pretty print a word (wraps an io:format/2 call around pf/1).
+
+pp(Word) ->
+    io:format("~ts~n", [pf(Word)]).
+
+
+
+-spec pf(word()) -> iolist().
+% @doc
+% returns iolist
+%
+% "(*)"         if word is 1
+% "(* a b c)"   if word is the set containing {a,b,c}
+
+pf(Word) ->
+    true = is_valid_word(Word),
+    Chars = to_list(Word),
+    Strs = pf_wfchars(Chars, []),
+    ["(*", Strs, ")"].
+
+pf_wfchars([Binary | Rest], Accum) when is_binary(Binary) ->
+    BinStr = io_lib:format("~s", [Binary]),
+    NewAccum = [Accum, " ", BinStr],
+    pf_wfchars(Rest, NewAccum);
+pf_wfchars([], Accum) ->
+    Accum.
+

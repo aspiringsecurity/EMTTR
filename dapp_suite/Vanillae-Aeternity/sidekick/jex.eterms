@@ -1,0 +1,5 @@
+{type, library}.
+{realm, local}.
+{name, sidekick}.
+{version, "0.2.1"}.
+{deps, ["local-awcp-0.2.1"]}.

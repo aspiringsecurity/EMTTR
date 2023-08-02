@@ -1,0 +1,17 @@
+{a_email,"peter.harpending@gmail.com"}.
+{author,"Peter Harpending"}.
+{c_email,"peter.harpending@gmail.com"}.
+{copyright,"Peter Harpending"}.
+{deps,[]}.
+{desc,"Vanillae's implementation of the Ethereum Recursive-Length-Prefix (RLP) codec"}.
+{file_exts,[]}.
+{key_name,none}.
+{license,"ISC"}.
+{modules,[]}.
+{name,"Vanillae Recursive Length Prefix"}.
+{package_id,{"otpr","vrlp",{0,1,0}}}.
+{prefix,none}.
+{repo_url,"https://github.com/aeternity/Vanillae"}.
+{tags,[]}.
+{type,lib}.
+{ws_url,"https://github.com/aeternity/Vanillae"}.

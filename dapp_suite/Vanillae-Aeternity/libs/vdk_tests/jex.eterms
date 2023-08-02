@@ -1,0 +1,8 @@
+{type, library}.
+{realm, local}.
+{name, vdk_tests}.
+{version, "0.1.0"}.
+{deps, ["local-vdk_base58-0.1.0",
+        "local-vdk_base64-0.1.0",
+        "local-vdk_rlp-0.1.0",
+        "local-vdk_tests_cases-0.1.0"]}.

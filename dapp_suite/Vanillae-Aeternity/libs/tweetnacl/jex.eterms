@@ -1,0 +1,5 @@
+{type, external}.
+{realm, local}.
+{name, tweetnacl}.
+{version, "1.0.3"}.
+{deps, []}.

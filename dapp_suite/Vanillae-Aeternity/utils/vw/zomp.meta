@@ -1,0 +1,18 @@
+{a_email,"ceverett@tsuriai.jp"}.
+{author,"Peter Harpending"}.
+{c_email,"ceverett@tsuriai.jp"}.
+{copyright,"Peter Harpending"}.
+{deps,[]}.
+{desc,"Simple command line ae wallet"}.
+{file_exts,[]}.
+{key_name,none}.
+{license,skip}.
+{mod,"vw"}.
+{modules,[]}.
+{name,"Vanillae Wallet"}.
+{package_id,{"otpr","vw",{0,1,0}}}.
+{prefix,none}.
+{repo_url,"https://github.com/aeternity/Vanillae"}.
+{tags,[]}.
+{type,cli}.
+{ws_url,"https://github.com/aeternity/Vanillae"}.
