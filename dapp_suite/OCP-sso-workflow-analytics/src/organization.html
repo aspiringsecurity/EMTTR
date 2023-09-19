@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Application</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/javascript" src="auth.js"></script>
+  <script type="application/javascript" src="auth-utils.js"></script>
+  <script type="application/javascript" src="shared-ui.js"></script>
+  <script type="application/javascript" src="ui-utils.js"></script>
+  <script type="application/javascript" src="xhr-utils.js"></script>
+  <script type="application/javascript">
+    const keys = ['apiUrl', 'invokeApiUrlDirectly', 'organizationId'];
+    const propertyScope = 'organization';
+    const accessTokenKey = 'organizationAccessToken';
+
+    async function getOpenIdConfiguration() {
+      return promiseOrganizationOpenIdConfiguration(getLoginFormValue('organizationId'));
+    }
+
+    async function pageSpecificInitialize() {
+      await initialize(true);
+      const requestField = getField('appClient', 'request');
+      const apiUrl = getLoginFormValue('apiUrl');
+      requestField.value = requestField.value.replace('$redirectUrl', window.location.origin);
+      requestField.value = requestField.value.replace('$apiUrl', apiUrl);
+      document.getElementById("tenantIdRow").style.display = 'none';
+    }
+  </script>
+</head>
+<body onload="pageSpecificInitialize();">
+
+<a href="/" style="text-decoration: none"><div class="ot2-sample-header">Organization</div></a>
+<p>
+<div class="ot2-body">
+LOGIN_CONTENT
+
+  <p>
+  <h2>Create App</h2>
+  <form onsubmit="createRequest(this); return false;" id="app" method="post">
+  <span style="display: inline-block">
+  <span>
+    <input type="text" name="method" value="POST" class="labelInput method" disabled>
+    <input type="text" name="path" value="/admin/api/v1/organizations/{organizationId}/apps" class="labelInput path" disabled>
+  </span><br>
+  <textarea name="request" rows="8" cols="80">
+{
+  "name": "myApp",
+  "displayName": "My App",
+  "description": "A demo application",
+  "version": "1.0",
+  "url": "http://localhost"
+}
+  </textarea>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="8" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p>
+  <h2>Set Redirects</h2>
+  <form onsubmit="createRequest(this); return false;" id="appClient" method="patch">
+  <span style="display: inline-block">
+  <span>
+    <input type="text" name="method" value="PATCH" class="labelInput method" disabled>
+    <input type="text" name="path" value="/admin/api/v1/organizations/{organizationId}/apps/{appId}/clients/{clientId}"
+           class="labelInput path" disabled>
+  </span><br>
+  <textarea name="request" rows="9" cols="80">
+{
+  "redirectURLs": [
+    "$redirectUrl/.*",
+    "$apiUrl/.*"
+  ]
+}
+  </textarea>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="9" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <span>
+    <table>
+      <tr>
+        <th scope="row"><label>App Id</label></th>
+        <td><input type="text" name="appId" class="uuid"/></td>
+      </tr>
+      <tr>
+        <th scope="row"><label>Client Id</label></th>
+        <td><input type="text" name="clientId" class="uuid"/></td>
+      </tr>
+    </table>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p>
+  <h2>Create Tenant</h2>
+  <form onsubmit="createRequest(this); return false;" id="tenant" method="post">
+  <span style="display: inline-block">
+  <span>
+    <input type="text" name="method" value="POST" class="labelInput method" disabled>
+    <input type="text" name="path" value="/admin/api/v1/organizations/{organizationId}/tenants" class="labelInput path" disabled>
+  </span><br>
+  <textarea name="request" rows="5" cols="80">
+{
+  "displayName": "myTenant",
+  "associatedEmail": ""
+}
+  </textarea>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="5" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p>
+  <h2>Add App to Tenant</h2>
+  <form onsubmit="createRequest(this); return false" id="appSubscription" method="post">
+  <span style="display: inline-block; vertical-align: top;">
+  <span>
+    <input type="text" name="method" value="PUT" class="labelInput method" disabled>
+    <input type="text" name="path" value="/admin/api/v1/organizations/{organizationId}/tenants/{tenantId}/apps/{appId}"
+           class="labelInput path"
+           disabled>
+  </span><br>
+  <span>
+    <table>
+      <tr>
+        <th scope="row"><label>Tenant Id</label></th>
+        <td><input type="text" name="tenantId" class="uuid"/></td>
+      </tr>
+      <tr>
+        <th scope="row"><label>App Id</label></th>
+        <td><input type="text" name="appId" class="uuid"/></td>
+      </tr>
+    </table>
+  </span>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="5" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- p>
+  <h2>Create Authenticator</h2>
+  <form onsubmit="createRequest(this); return false;" id="authenticator" method="post">
+  <span style="display: inline-block">
+    <span>
+      <input type="text" name="method" value="POST" class="labelInput method" disabled>
+      <input type="text" name="path" value="/admin/api/v1/organizations/{organizationId}/authenticators" class="labelInput path" disabled>
+    </span><br>
+  <textarea name="request" rows="8" cols="80">
+{
+  "name": "myAuthenticator",
+  "providerName": "ssoCircle",
+  "providerUrl": "https://idp.ssocircle.com/meta-idp.xml",
+  "autoProvision": true,
+  "signSamlFlag": true
+}
+  </textarea>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="8" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+  </form -->
+
+</div>
+</body>
+</html>

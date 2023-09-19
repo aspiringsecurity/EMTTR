@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Application</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="application/javascript" src="auth.js"></script>
+    <script type="application/javascript" src="auth-utils.js"></script>
+    <script type="application/javascript" src="shared-ui.js"></script>
+    <script type="application/javascript" src="ui-utils.js"></script>
+    <script type="application/javascript" src="xhr-utils.js"></script>
+    <script type="application/javascript">
+      const keys = ['apiUrl', 'invokeApiUrlDirectly', 'organizationId', 'tenantId'];
+      const propertyScope = 'user';
+      const accessTokenKey = 'userAccessToken';
+
+      async function getOpenIdConfiguration() {
+        return promiseTenantOpenIdConfiguration(getLoginFormValue('tenantId'));
+      }
+
+      async function uploadFile(form) {
+        const requestBody = new FormData();
+        requestBody.append('my-file', new Blob([JSON.stringify({
+          'message': 'This json content is a sample document',
+          'Upload timestamp': new Date().getTime(),
+          'Upload date': new Date()
+        })], {type: 'application/json'}), 'file-to-upload.json')
+
+        return createRequest(form, requestBody);
+      }
+    </script>
+</head>
+<body onload="initialize(false);">
+
+<a href="/" style="text-decoration: none"><div class="ot2-sample-header">User</div></a>
+<p>
+<div class="ot2-body">
+  LOGIN_CONTENT
+  <p>
+<p>
+<h1>Upload File</h1>
+<form onsubmit="uploadFile(this); return false;" id="fileUpload" method="post">
+  <span style="display: inline-block; vertical-align: top;">
+  <span>
+    <input type="text" name="method" value="POST" class="labelInput method" width="40px" disabled>
+    <input type="text" name="path" value="/css/v2/tenant/{tenantId}/content?avs-scan=false" class="labelInput path" disabled>
+  </span><br>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="30" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+<p>
+<h1>Download File</h1>
+<form onsubmit="createRequest(this); return false;" id="fileDownload" method="post">
+  <span style="display: inline-block; vertical-align: top;">
+  <span>
+    <input type="text" name="method" value="GET" class="labelInput method" width="40px" disabled>
+    <input type="text" name="path" value="/css/v2/content/{contentId}/download" class="labelInput path" disabled>
+  </span><br>
+  <span>
+    <table>
+      <tr>
+        <th scope="row"><label>Content Id</label></th>
+        <td><input type="text" name="contentId" class="uuid"/></td>
+      </tr>
+    </table>
+  </span>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="8" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

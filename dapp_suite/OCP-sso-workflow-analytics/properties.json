@@ -1,0 +1,22 @@
+{
+  "hostname": "",
+  "https": "",
+  "apiUrl": "https://na-1-dev.api.opentext.com",
+  "organizationId": "",
+  "tenantId": "",
+  "organization": {
+    "username": "",
+    "password": "",
+    "publicClientId": "",
+    "confidentialClientId": "",
+    "clientSecret": ""
+  },
+  "tenant": {
+    "username": "",
+    "password": "",
+    "publicClientId": "",
+    "confidentialClientId": "",
+    "clientSecret": ""
+  }
+}
+

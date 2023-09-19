@@ -1,0 +1,84 @@
+  <h2>Login</h2>
+  <p>
+  <form onsubmit="login(); return false;" id="login" autocomplete="off">
+    <table>
+      <tr>
+        <th scope="row"><label>Api url</label></th>
+        <td><input type="text" name="apiUrl"/></td>
+      </tr>
+      <tr>
+        <th scope="row"><label>Invoke directly</label></th>
+        <td><input type="checkbox" name="invokeApiUrlDirectly" checked/></td>
+      </tr>
+      <tr>
+        <th scope="row"><label>Organization Id</label></th>
+        <td><input type="text" name="organizationId" class="uuid"/></td>
+      </tr>
+      <tr id="tenantIdRow">
+        <th scope="row"><label>Tenant Id</label></th>
+        <td><input type="text" name="tenantId" class="uuid"/></td>
+      </tr>
+    </table>
+    <p>
+    <table>
+      <thead>
+      <tr>
+      <th scope="col">
+        <input type="radio" name="flow" value="password_flow" id="passwordFlow" checked/>
+        <label for="passwordFlow">Password grant</label>
+      </th>
+      <th scope="col">
+        <input type="radio" name="flow" value="auth_code_pkce" id="authCodeFlow"/>
+        <label for="authCodeFlow" style="width: 32ch;">Authorization Code with PKCE</label>
+      </th>
+      </tr>
+      </thead>
+      <tr>
+        <td style="vertical-align: top; border-right-style: solid">
+          <table>
+            <tr>
+              <th scope="row"><label>Client Id</label></th>
+              <td><input type="text" name="confidentialClientId"/></td>
+            </tr>
+            <tr>
+              <th scope="row"><label>Client Secret</label></th>
+              <td><input type="password" name="clientSecret"/></td>
+            </tr>
+            <tr>
+              <th scope="row"><label>Username</label></th>
+              <td><input type="text" name="username"/></td>
+            </tr>
+            <tr>
+              <th scope="row"><label>Password</label></th>
+              <td><input type="password" name="password"/></td>
+            </tr>
+          </table>
+        </td>
+        <td style="vertical-align: top">
+          <table>
+            <tr>
+              <td colspan="2">
+                <span style="display: block; background-color: antiquewhite; width: 46ch">
+                  This flow is interactive. The UI will navigate to the authenticator, and come back to this page
+                  after login. For this to work, register the following URL as a "Redirect URL" for the public
+                  "service client":
+                  <input disabled type="text" id="publicRedirectUrl">
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><label>Client Id</label></th>
+              <td><input type="text" name="publicClientId"/></td>
+            </tr>
+            <tr>
+              <th scope="row"><label>Authenticator</label></th>
+              <td><input type="text" name="authenticator" class="uuid" value=""></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="Login" id="loginSubmit">
+    <input type="button" value="Logout" id="logoutSubmit" onclick="logout(); return false;" style="margin-left: 12px"><br><br>
+    <label>Token: <input type="password" name="token"></label><br><br>
+  </form>

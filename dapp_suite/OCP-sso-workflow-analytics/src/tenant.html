@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Application</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="application/javascript" src="auth.js"></script>
+    <script type="application/javascript" src="auth-utils.js"></script>
+    <script type="application/javascript" src="shared-ui.js"></script>
+    <script type="application/javascript" src="ui-utils.js"></script>
+    <script type="application/javascript" src="xhr-utils.js"></script>
+    <script type="application/javascript">
+      const keys = ['apiUrl', 'invokeApiUrlDirectly', 'organizationId', 'tenantId'];
+      const propertyScope = 'tenant';
+      const accessTokenKey = 'tenantAccessToken';
+
+      async function getOpenIdConfiguration() {
+        return promiseTenantOpenIdConfiguration(getLoginFormValue('tenantId'));
+      }
+    </script>
+</head>
+<body onload="initialize(false);">
+
+<a href="/" style="text-decoration: none"><div class="ot2-sample-header">Tenant</div></a>
+<p>
+<div class="ot2-body">
+  LOGIN_CONTENT
+<p>
+<h1>Create User</h1>
+<form onsubmit="createRequest(this); return false;" id="user" method="post">
+  <span style="display: inline-block">
+  <span>
+    <input type="text" name="method" value="POST" class="labelInput method" width="40px" disabled>
+    <input type="text" name="path" value="/admin/api/v1/organizations/{organizationId}/tenants/{tenantId}/users" class="labelInput path" disabled>
+  </span><br>
+  <textarea name="request" rows="8" cols="80">
+{
+  "firstName": "",
+  "lastName": "",
+  "email": ""
+}
+  </textarea>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="8" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+<p>
+<h1>Add User to App</h1>
+<form onsubmit="createRequest(this); return false;" id="userSubscription" method="post">
+  <span style="display: inline-block; vertical-align: top;">
+  <span>
+    <input type="text" name="method" value="PUT" class="labelInput method" width="40px" disabled>
+    <input type="text" name="path" value="/admin/api/v1/organizations/{organizationId}/tenants/{tenantId}/apps/{appId}/users/{userId}" class="labelInput path" disabled>
+  </span><br>
+  <span>
+    <table>
+      <tr>
+        <th scope="row"><label>App Id</label></th>
+        <td><input type="text" name="appId" class="uuid"/></td>
+      </tr>
+      <tr>
+        <th scope="row"><label>User Id</label></th>
+        <td><input type="text" name="userId" class="uuid"/></td>
+      </tr>
+    </table>
+  </span>
+  </span>
+    <span style="display: inline-block">
+    <input type="text" name="responseCode" disabled><br>
+    <textarea name="response" rows="8" cols="80" disabled></textarea>
+  </span>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+<p>
+<h1>Create Authenticator</h1>
+<form onsubmit="createRequest(this); return false;" id="authenticator" method="post">
+<span style="display: inline-block">
+  <span>
+    <input type="text" name="method" value="POST" class="labelInput method" width="40px" disabled>
+    <input type="text" name="path" value="/admin/api/v1/organizations/{organizationId}/tenants/{tenantId}/authenticators" class="labelInput path" disabled>
+  </span><br>
+<textarea name="request" rows="8" cols="80">
+{
+"name": "myAuthenticator",
+"providerName": "ssoCircle",
+"providerUrl": "https://idp.ssocircle.com/meta-idp.xml",
+"autoProvision": true,
+"signSamlFlag": true
+}
+</textarea>
+</span>
+  <span style="display: inline-block">
+  <input type="text" name="responseCode" disabled><br>
+  <textarea name="response" rows="8" cols="80" disabled></textarea>
+</span>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+</div>
+</body>
+</html>
