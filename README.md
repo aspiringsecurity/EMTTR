@@ -60,7 +60,7 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 Signature workflow in Medical Documents using Open Text API: We are building a docusign type workflow for medical documents powered by Vue.js, flask, Open Text API. We are extending the core signature demo workflow solution.Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/signature-workflow-opentext-api
 
-Contract Approval Workflow Application for Medical Counselor: We are developing a contract approval application for Medical Counselors using OpenText Cloud Platform. We are consuming IM services from the OpenText Cloud Platform and extending the demo example. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/demo-contract-approval-CROs
+Contract Approval Workflow Application for CROS and pharma organizations: We are developing a contract approval application for CROS and pharma organizations using OpenText Cloud Platform. We are consuming IM services from the OpenText Cloud Platform and extending the demo example. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/demo-contract-approval-CROs
 
 OCT SSO workflow: REST service calls required to login to OCP and access information management services (IMS) from OpenText. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/OCP-sso-workflow-analytics
 
