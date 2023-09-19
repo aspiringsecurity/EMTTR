@@ -1,0 +1,10 @@
+{
+  "id": "b60cbccf-8d01-4c7f-b11b-730a4077ceb2",
+  "schemaId": "https://www.opentext.com/ocp/devx/security/1.0.0/Group",
+  "data": {
+    "group_name": "risk_managers",
+    "description": "Group containing the users that have the Risk Manager role",
+    "nested_groups": []
+  },
+  "serviceName": "security"
+}

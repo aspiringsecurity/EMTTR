@@ -1,0 +1,9 @@
+{
+    "short_name": "Contract Approval",
+    "name": "Contract Approval demo application",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }

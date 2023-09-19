@@ -1,0 +1,10 @@
+{
+  "id": "09f74bb9-0542-4b45-93d2-4243516158ec",
+  "schemaId": "https://www.opentext.com/ocp/devx/security/1.0.0/Group",
+  "data": {
+    "group_name": "line_managers",
+    "description": "Group containing the users that have the Line Manager role",
+    "nested_groups": []
+  },
+  "serviceName": "security"
+}

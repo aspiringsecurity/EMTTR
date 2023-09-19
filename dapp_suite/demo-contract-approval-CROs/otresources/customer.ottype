@@ -1,0 +1,41 @@
+{
+  "id": "6e965b48-6015-46f3-8c58-f37d20b0d877",
+  "schemaId": "https://www.opentext.com/ocp/devx/metadata/1.0.0/Type",
+  "data": {
+    "category": "folder",
+    "name": "customer",
+    "display_name": "Customer",
+    "namespace": "f5840219-d3ca-4758-81ef-dd22ef10f8ba",
+    "attributes": [
+      {
+        "data_type": "string",
+        "display_name": "Customer email",
+        "name": "customer_email",
+        "size": 256,
+        "searchable": true,
+        "sortable": true,
+        "required": true,
+        "validators": [],
+        "ot2mc-row-id": "6c4f0d05-2b1e-4dac-9199-17e794e7670b"
+      }
+    ],
+    "description": "Customer Type",
+    "operations": [],
+    "indexes": [
+      {
+        "name": "customer_email",
+        "unique": false,
+        "columns": [
+          "customer_email"
+        ],
+        "ot2mc-row-id": "ba5f78f8-6c79-4a29-87b6-5e9d901620e3"
+      }
+    ],
+    "methods": [],
+    "scripts": [],
+    "required_traits": [],
+    "non_auditable_actions": [],
+    "events": []
+  },
+  "serviceName": "cms"
+}

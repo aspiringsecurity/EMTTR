@@ -1,0 +1,20 @@
+env:
+  browser: true
+  es2021: true
+  jest: true
+extends:
+  - 'plugin:react/recommended'
+  - airbnb
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - react
+rules:
+  linebreak-style: ["error", "windows"]
+  react/react-in-jsx-scope: off
+settings:
+  react:
+    version: detect

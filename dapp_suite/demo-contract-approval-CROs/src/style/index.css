@@ -1,0 +1,37 @@
+@font-face {
+	font-family: OpenTextSans;
+	src: url(./fonts/OpenTextSans_W_Lt.woff2) format('woff2'),
+		 url(./fonts/OpenTextSans_W_Lt.woff) format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: OpenTextSans;
+	src: url(./fonts/OpenTextSans_W_Rg.woff2) format('woff2'),
+		 url(./fonts/OpenTextSans_W_Rg.woff) format('woff');
+	font-weight: 400;
+	font-style: normal;
+} 
+@font-face {
+	font-family: OpenTextSans;
+	src: url(./fonts/OpenTextSans_W_Bd.woff2) format('woff2'),
+		 url(./fonts/OpenTextSans_W_Bd.woff) format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+html, 
+body  { 
+	font-size: 16px;
+	font-family: OpenTextSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height : 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	-ms-overflow-style: none;
+	background: -webkit-linear-gradient(29deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+	background: -o-linear-gradient(29deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+	background: -ms-linear-gradient(29deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+	background: -moz-linear-gradient(29deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+	background: linear-gradient(61deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+	background-color: #111b58;
+	margin: 0px;
+}

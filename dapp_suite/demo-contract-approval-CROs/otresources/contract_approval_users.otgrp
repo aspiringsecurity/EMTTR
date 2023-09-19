@@ -1,0 +1,13 @@
+{
+  "id": "6d5b69fc-6f20-465c-bb59-31402a3eaa0b",
+  "schemaId": "https://www.opentext.com/ocp/devx/security/1.0.0/Group",
+  "data": {
+    "group_name": "contract_approval_users",
+    "description": "Group containing the users that are allowed to use the Contract Approval application\n",
+    "nested_groups": [
+      "09f74bb9-0542-4b45-93d2-4243516158ec",
+      "b60cbccf-8d01-4c7f-b11b-730a4077ceb2"
+    ]
+  },
+  "serviceName": "security"
+}

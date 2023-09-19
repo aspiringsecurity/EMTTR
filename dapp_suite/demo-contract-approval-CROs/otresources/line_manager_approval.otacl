@@ -1,0 +1,63 @@
+{
+  "id": "2e2a020a-79e2-4263-ae8f-bb4394ddf12a",
+  "schemaId": "https://www.opentext.com/ocp/devx/security/1.0.0/ACL",
+  "data": {
+    "name": "line_manager_approval",
+    "permits": [
+      {
+        "identity_alias": "owner",
+        "permission_level": "Read",
+        "permissions": [
+          "browse",
+          "read_content"
+        ],
+        "ot2mc-row-id": "4c022ed2-f262-4858-9ba5-c2981fe08766"
+      },
+      {
+        "identity_alias": "group",
+        "permission_level": "Read",
+        "group_id": "6d5b69fc-6f20-465c-bb59-31402a3eaa0b",
+        "permissions": [
+          "browse",
+          "read_content"
+        ],
+        "ot2mc-row-id": "f47d6958-b66d-4b69-82b3-d5e75cea200c"
+      },
+      {
+        "identity_alias": "group",
+        "permission_level": "Custom",
+        "group_id": "09f74bb9-0542-4b45-93d2-4243516158ec",
+        "permissions": [
+          "browse",
+          "read_content",
+          "modify",
+          "attributes",
+          "edit_permissions"
+        ],
+        "ot2mc-row-id": "9a922966-b9eb-47b1-9d5a-8df60d003c1e"
+      },
+      {
+        "identity_alias": "group",
+        "permission_level": "Full control",
+        "group_id": "9b7a150c-072d-4140-b02c-58850dce2c42",
+        "permissions": [
+          "browse",
+          "read_content",
+          "modify",
+          "attributes",
+          "relate",
+          "lock",
+          "create_version",
+          "add_move_items",
+          "change_location",
+          "delete_content",
+          "edit_permissions",
+          "change_owner"
+        ],
+        "ot2mc-row-id": "bfa90c51-ac0b-4d80-800d-f18b24c0c86b"
+      }
+    ],
+    "description": "ACL for objects that are in \"Line Manager Approval\" state"
+  },
+  "serviceName": "security"
+}

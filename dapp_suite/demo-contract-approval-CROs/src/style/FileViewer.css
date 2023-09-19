@@ -1,0 +1,7 @@
+#file-viewer-root {
+  height: 100%;
+}
+
+#file-viewer-root .ot-iv-Toolbar-title {
+  display: none !important;
+}

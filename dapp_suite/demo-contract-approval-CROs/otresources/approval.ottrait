@@ -1,0 +1,62 @@
+{
+  "id": "1b42a482-41de-4c26-a7a0-2ceff39e0f29",
+  "schemaId": "https://www.opentext.com/ocp/devx/metadata/1.0.0/Trait",
+  "data": {
+    "name": "approval",
+    "display_name": "Approval",
+    "namespace": "f5840219-d3ca-4758-81ef-dd22ef10f8ba",
+    "attributes": [
+      {
+        "data_type": "boolean",
+        "display_name": "Is required",
+        "name": "is_required",
+        "searchable": true,
+        "sortable": true,
+        "validators": [],
+        "ot2mc-row-id": "40293f9e-b0e7-4e6b-ba82-7633341b158a"
+      },
+      {
+        "data_type": "boolean",
+        "display_name": "Has been granted",
+        "name": "has_been_granted",
+        "searchable": true,
+        "sortable": true,
+        "validators": [],
+        "ot2mc-row-id": "7e0efe53-a090-49f4-8dd9-85ff81c563a9"
+      },
+      {
+        "data_type": "string",
+        "display_name": "Approver",
+        "name": "approver",
+        "size": 128,
+        "searchable": true,
+        "sortable": true,
+        "validators": [],
+        "ot2mc-row-id": "ff50ae0a-1619-4f8d-9e86-f15ad07b1556"
+      },
+      {
+        "data_type": "string",
+        "display_name": "Approver role",
+        "name": "approver_role",
+        "size": 64,
+        "searchable": true,
+        "sortable": true,
+        "validators": [],
+        "ot2mc-row-id": "1d99876f-fa06-43e4-9b75-a0239fa63d6e"
+      },
+      {
+        "data_type": "date",
+        "display_name": "Approval date",
+        "name": "approval_date",
+        "searchable": true,
+        "sortable": true,
+        "validators": [],
+        "ot2mc-row-id": "21e7ea6b-be32-4fa5-9060-a6ef2716854b"
+      }
+    ],
+    "description": "Approval Trait",
+    "indexes": [],
+    "methods": []
+  },
+  "serviceName": "cms"
+}

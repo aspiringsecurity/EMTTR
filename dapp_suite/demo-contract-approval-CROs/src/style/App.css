@@ -1,0 +1,121 @@
+.page-header {
+  height: 4rem;
+  line-height: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 0;
+  color: #fff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.page-header .logo {
+  width: 10rem;
+  height: 2rem;
+  margin: 1rem auto 1rem 0;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
+}
+.page-header .logo.logo-ot-appworks {
+  background-image: url("data:image/svg+xml,%3Csvg id='logo-ot' width='128' height='28' viewBox='0 0 128 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4 14.4C16.4 18.2 14.2 22.3 8.40002 22.3C4.20002 22.3 0.400024 20 0.400024 14.4C0.400024 9.79996 3.30002 6.29996 9.00002 6.59996C15.1 6.89996 16.4 11.6 16.4 14.4ZM5.60003 11.5C5.10003 12.3 4.90002 13.3 4.90002 14.3C4.90002 16.6 6.00002 18.7 8.50002 18.7C10.9 18.7 12 16.8 12 14.5C12 12.9 11.6 11.6 10.8 10.8C9.90003 9.99996 8.90002 9.89996 8.20002 9.99996C6.90002 10.1 6.20003 10.6 5.60003 11.5Z' fill='white'/%3E%3Cpath d='M55.5 8.29997C55.9 7.79997 56.2 7.49998 57 7.09998C57.7 6.79998 58.7 6.59998 59.7 6.59998C60.6 6.59998 61.6 6.69998 62.4 7.19998C64 7.99997 64.4 9.39998 64.4 11.7V21.9H60V13.5C60 12.2 60 11.7 59.8 11.3C59.5 10.5 58.7 10.2 57.8 10.2C55.5 10.2 55.5 12.1 55.5 13.9V22H51.1V6.89997H55.5V8.29997Z' fill='white'/%3E%3Cpath d='M49 18C48.6 18.9 47.3 22.2 41.6 22.2C37.2 22.2 34 19.5 34 14.6C34 11 35.8 6.50002 41.7 6.50002C42.6 6.50002 45.2 6.40002 47.1 8.50002C49 10.6 49.2 13.5 49.2 15.2H38.5C38.5 17.1 39.5 18.9 41.9 18.9C44.3 18.9 45.1 17.3 45.7 16.3L49 18ZM44.6 12.5C44.5 11.9 44.4 11 43.8 10.4C43.3 9.90002 42.4 9.60002 41.7 9.60002C40.6 9.60002 39.9 10.1 39.5 10.6C38.9 11.3 38.8 11.9 38.6 12.6H44.6V12.5Z' fill='white'/%3E%3Cpath d='M110.3 10H113.2V6.90005H110.3V3.80005H105.9V6.90005H105.2L103.2 10H105.9V17.1C105.9 18.5 105.9 19.6 106.5 20.5C107.4 21.9 109.1 22 110.6 22C111.4 22 112 21.9 112.9 21.8V18.4L111.3 18.5C110.1 18.5 110.1 17.7 110.2 16.8V10H110.3Z' fill='white'/%3E%3Cpath d='M66.6 3.80005H70.9V6.90005H75.5L73.5 10H70.9V16.6C70.9 17.5 70.9 18.3 72 18.3L73.6 18.2V21.6C72.7 21.7 72.1 21.8 71.3 21.8C69.8 21.8 68.1 21.7 67.2 20.3C66.6 19.4 66.6 18.4 66.6 16.9V3.80005Z' fill='white'/%3E%3Cpath d='M117.3 10H116.8V7.40002H115.8V6.90002H118.3V7.40002H117.3V10ZM121.5 10H121V8.10003V7.50002L120.9 8.00002L120.3 10H119.8L119.2 8.00002L119 7.50002V8.10003V10H118.5V6.90002H119.2L120 9.30002L120.8 6.90002H121.5V10Z' fill='white'/%3E%3Cpath d='M89.3 18L88.5 19.3C87.7 20.5 86.2 22.2 82 22.2C77.6 22.2 74.6 19.5 74.6 14.6C74.6 11 76.4 6.50002 82.3 6.50002C83.2 6.50002 85.8 6.40002 87.7 8.50002C89.6 10.6 89.8 13.5 89.8 15.2H79.1C79.1 17.1 80 18.9 82.4 18.9C84.8 18.9 85.5 17.3 86 16.3L89.3 18ZM85.2 12.5C85.1 11.9 85 11 84.4 10.4C83.9 9.90002 83 9.60002 82.3 9.60002C81.2 9.60002 80.5 10.1 80.1 10.6C79.5 11.3 79.4 11.9 79.2 12.6H85.2V12.5Z' fill='white'/%3E%3Cpath d='M104.3 21.9L98.8 14L103.4 6.90002H98.4L96.2 10.3L93.9 6.90002H88.9L93.8 14L88.7 21.9H93.7L96.4 17.7L99.3 21.9H104.3Z' fill='white'/%3E%3Cpath d='M22.5 8.29997C22.9 7.69997 24.3 6.59998 26.4 6.59998C30.1 6.59998 32.6 9.39997 32.6 14.4C32.6 17.5 31.5 22.3 26.2 22.3C24.3 22.3 22.8 21.2 22.4 20.6V26.9H18V6.89997H22.4V8.29997H22.5ZM25.5 9.99998C24.7 9.99998 23.9 10.3 23.2 11.1C22.6 11.9 22.3 13.1 22.3 14.4C22.3 16.2 22.8 17.2 23.4 17.8C23.9 18.4 24.7 18.7 25.4 18.7C27.5 18.7 28.5 16.4 28.5 14.3C28.5 12.5 28 10.5 26.2 10.1C25.9 9.99998 25.7 9.99998 25.5 9.99998Z' fill='white'/%3E%3C/svg%3E");
+}
+.page-header .header-title {
+  display: block;
+  float: left;
+  margin: 1.5rem 1rem;
+  font-size: 1.25rem;
+}
+.page-header .header-menu {
+  position: absolute;
+  right: 50px;
+  top: 15px;
+}
+.page-header .header-menu > button > span.MuiButton-label {
+  color: white;
+}
+.login-dialog .title-icon {
+  float: right;
+}
+.configuration-dialog {
+  margin: 20px;
+}
+.configuration-dialog .top-margin {
+  margin-top: 20px;
+}
+.configuration-dialog .message {
+  font-weight: bold;
+  color: #63a84e;
+  margin-top: 20px !important;
+}
+.configuration-dialog .message.error {
+  color: #da4148;
+}
+.page-content {
+  height: calc(100vh - 4rem);
+  background-color: #fff;
+  overflow-y: auto;
+}
+.page-content .content-header {
+  font-size: 1.25rem;
+  color: #757575;
+  background-color: #eee;
+  line-height: 2rem;
+  padding: 0.75rem 1rem;
+}
+.page-content .MuiTableRow-head {
+  background-color: #e1e1e1;
+}
+.page-content .MuiTableRow-head .MuiTableCell-head {
+  font-weight: bold;
+}
+.page-content .tab-caption {
+  background-color: #e2e2e2;
+}
+.align-left {
+  float: left;
+  margin-inline-start: 5px;
+}
+.align-right {
+  float: right;
+  margin-inline-end: 5px;
+}
+.MuiDialog-container .MuiPaper-root {
+  max-width: 100%;
+}
+.contract-details {
+  height: 520px;
+  width: 800px;
+}
+.contract-details th {
+  font-weight: bold;
+}
+.add-contract {
+  height: 400px;
+}
+.add-contract .file-input {
+  visibility: hidden;
+  width: 0px;
+}
+.add-contract .inline {
+  display: inline;
+}
+.add-contract .margin-start {
+  margin-inline-start: 5px;
+}
+.loading {
+  display: flex;
+  height: calc(100vh - 4rem);
+  background-color: #fff;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+}
+.error {
+  display: flex;
+  height: calc(100vh - 4rem);
+  background-color: #fff;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+}
