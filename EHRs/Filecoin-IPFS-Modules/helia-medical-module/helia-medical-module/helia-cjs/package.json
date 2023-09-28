@@ -1,0 +1,21 @@
+{
+  "name": "helia-cjs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Using Helia from CommonJS",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "serve": "npm run start",
+    "test": "test-node-example test/*"
+  },
+  "dependencies": {
+    "@helia/unixfs": "^1.2.1",
+    "helia": "^1.0.0"
+  },
+  "devDependencies": {
+    "test-ipfs-example": "^1.0.0"
+  }
+}

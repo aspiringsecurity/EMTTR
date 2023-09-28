@@ -1,0 +1,50 @@
+{
+  "name": "helia-examples",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "reset": "aegir run clean && aegir clean **/node_modules **/package-lock.json",
+    "test": "aegir run test",
+    "clean": "aegir run clean",
+    "build": "aegir run build",
+    "lint": "aegir exec aegir -- lint --files '**/*.{js,ts,jsx}' '!**/node_modules/**' '!**/dist/**'",
+    "dep-check": "aegir run dep-check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipfs-examples/helia-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ipfs-examples/helia-examples/issues"
+  },
+  "homepage": "https://github.com/ipfs-examples/helia-examples#readme",
+  "devDependencies": {
+    "aegir": "^39.0.6",
+    "eslint-plugin-react": "^7.32.2"
+  },
+  "workspaces": [
+    "examples/*"
+  ],
+  "private": true,
+  "eslintConfig": {
+    "extends": [
+      "ipfs",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2023
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+    <!-- Add Saturn script tag here -->
+    <script src="https://saturn.tech/widget.js" async></script>
+  </head>
+
+  <body>
+    <audio id="my-audio" class="video-js vjs-audio" controls preload="auto" data-setup='{ "fluid": true }'>
+    <!-- ADD URL here to fetch CID which gets intercepted by the SW -->
+      <source src="/ipfs/QmdjRK1qVDkttMTkpzxXXF349dbV4xUAxrRqQXDq4XhD9A/index.m3u8" type="application/x-mpegURL">
+    </audio>
+
+    <script>
+      var player = videojs('my-audio', {
+        preload: 'metadata'
+      });
+      player.play();
+    </script>
+  </body>
+
+</html>

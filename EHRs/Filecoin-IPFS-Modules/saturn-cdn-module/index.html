@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <!-- Add Saturn script tag here -->
+    <script src="https://saturn.tech/widget.js" async></script>
+  </head>
+
+  <body>
+    <video id="bunny-video" class="video-js vjs-16-9" data-setup='{}' controls>
+    <!-- ADD URL here to fetch CID which gets intercepted by the SW -->
+      <source src="/ipfs/QmS29VtmK7Ax6TMmMwbwqtuKSGRJTLJAmHMW83qGvBBxhV/bunny.m3u8" type="application/x-mpegURL">
+    </video>
+
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+  </body>
+
+</html>

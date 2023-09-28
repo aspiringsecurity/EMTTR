@@ -1,0 +1,43 @@
+{
+  "createDapp": {
+    "id": "9e559191-f51c-4964-8c28-6acf094a7dbf",
+    "streamIDs": [
+      {
+        "name": "test001_profile",
+        "stream_id": "kjzl6hvfrbw6c63ph9w9ya4y5x069g6t4neess76ut792wz4l27vhz7a7mohso9",
+        "isPublicDomain": true,
+        "encryptable": null
+      },
+      {
+        "name": "test001_post",
+        "stream_id": "kjzl6hvfrbw6c9k5a5v8gph1asovcygtq10fhuhp96q527ss6czmy95eclkdhxo",
+        "isPublicDomain": false,
+        "encryptable": ["text", "images", "videos"]
+      },
+      {
+        "name": "test001_indexFolders",
+        "stream_id": "kjzl6hvfrbw6c88omz2evxcsot8u2wh9mk63locjdaqtg8i80dc77e4zykwzdix",
+        "isPublicDomain": false,
+        "encryptable": null
+      },
+      {
+        "name": "test001_contentFolders",
+        "stream_id": "kjzl6hvfrbw6c7rx6onxtx2egnx0wqlo5apoh7ne5lwsyzmkksepnlt2i0hif3e",
+        "isPublicDomain": false,
+        "encryptable": null
+      },
+      {
+        "name": "test001_indexFiles",
+        "stream_id": "kjzl6hvfrbw6c8gbujjy52lqt1mke6m55d6s2a3xze19nxdbg7vdg7eh0klt9qw",
+        "isPublicDomain": false,
+        "encryptable": null
+      }
+    ],
+    "website": "",
+    "name": "test001",
+    "slug": "test001",
+    "logo": "",
+    "description": "",
+    "defaultFolderName": "Untitled"
+  }
+}

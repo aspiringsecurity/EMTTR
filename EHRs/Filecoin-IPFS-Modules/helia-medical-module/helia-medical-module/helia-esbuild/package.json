@@ -1,0 +1,30 @@
+{
+  "name": "helia-esbuild",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bundle Helia with esbuild",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "mkdir -p dist && cp src/index.html src/style.css dist && node esbuild.js",
+    "start": "npm run build && esbuild --servedir=dist",
+    "test": "npm run build && test-browser-example test"
+  },
+  "browserslist": "last 1 Chrome version",
+  "dependencies": {
+    "@helia/unixfs": "^1.2.1",
+    "helia": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@playwright/test": "^1.12.3",
+    "esbuild": "^0.17.16",
+    "playwright": "^1.12.3",
+    "process": "^0.11.10",
+    "rimraf": "^5.0.0",
+    "test-ipfs-example": "^1.0.0"
+  }
+}

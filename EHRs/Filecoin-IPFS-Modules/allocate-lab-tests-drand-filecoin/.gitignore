@@ -1,0 +1,10 @@
+/node_modules
+.parcel-cache/
+/coverage
+/build
+/dist
+/.vscode
+/.idea*
+/cache
+/artifacts
+/typechain-types

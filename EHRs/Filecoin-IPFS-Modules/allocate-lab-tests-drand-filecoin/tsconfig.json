@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./tasks/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "hardhat.config.ts",
+    "./deploy",
+    "./scripts",
+    "./typechain-types"
+  ]
+}
