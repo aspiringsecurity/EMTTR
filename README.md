@@ -59,6 +59,21 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 # BlockChain Eco-system
 
+# IPFS and Filecoin eco-system, Ethereum, Embark, Status
+
+1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
+
+Please visit DataDAO for DICOM image and patient metadata in FVM Medicine solution: https://github.com/aspiringsecurity/EMTTR/tree/main/fvm-dicom-data-dao
+
+We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
+
+Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/ehrs-medical-history-module
+
+FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel oneapi, medical billing and invoicing: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/medical-invoice-to-cash-automation-oneapi
+
+IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
+
+
 # Optimism
 
 ## Optimism User Interaction 
@@ -96,21 +111,6 @@ Sharing a smart contract for creating NFT in Optimism by one of our collaborator
 
 6. Attestation Hub Contract for Medical Reports: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
 We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports
-
-
-# IPFS and Filecoin eco-system, Ethereum, Embark, Status
-
-1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
-
-Please visit DataDAO for DICOM image and patient metadata in FVM Medicine solution: https://github.com/aspiringsecurity/EMTTR/tree/main/fvm-dicom-data-dao
-
-We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
-
-Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/ehrs-medical-history-module
-
-FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel oneapi, medical billing and invoicing: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/medical-invoice-to-cash-automation-oneapi
-
-IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
 
 
 # Chainlink Eco-system
