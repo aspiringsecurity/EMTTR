@@ -59,45 +59,6 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 # BlockChain Eco-system
 
-# IPFS and Filecoin eco-system, Ethereum, Embark, Status
-
-1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
-
-Please visit DataDAO for DICOM image and patient metadata in FVM Medicine solution: https://github.com/aspiringsecurity/EMTTR/tree/main/fvm-dicom-data-dao
-
-We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
-
-Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/ehrs-medical-history-module
-
-FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel oneapi, medical billing and invoicing: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/medical-invoice-to-cash-automation-oneapi
-
-IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
-
-We are utilizing Chainlink VRF as follows:
-
-Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
-
-Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
-
-NFT and Certificate for Good research services in drug discovery: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating
-
-Drug Discovery Service Providers (CRO) and Pharma Service Organizations Payouts: Chainlink Parametric Insurance dapp at https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout
-
-Truflation Market Insight modules for Chainlink services and Covalent End-points/Dashboard: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/truflation-insight
-
-Tableland: We are using tableland to develop a notes application and are maintaining it along with dicom file assets. This enables us to make the dicom asset files searchable, sortable and enables us to reuse and repurpose them for user training. Tableland enables us to document the dicom file output files and store the notes in an RDBMS (SQL) type database.
-
-Filecoin Data tools: We are developing FVM Calc, an open-source analytics tool and an OSS spreadsheet to enable data tabulation, visualization, organization, collaboration for dicom asset files on Filecoin network.
-
-Filecoin saturn dapp for discovery and retrieval of NFTs uploaded to IPFS via NFT.Storage: We are developing a socially scalable and open-source metadata retrieval, indexing, and management tooling for decentralized bulk query and retrieval of dicom data and user training. Bandwidth is a major issue in South Asian hospitals and Filecoin Data tools fit right at the spot for quick data retrieval where learning via video streaming is not possible due to high latency or unavailability of a network for streaming.
-
-IPFS Helia implementation: We are developing a dapp using Helia (JS implementation of IPFS) along with NFT.storage that let us export the dicom file generated from Web3 Orthanc tools as an NFT and upload it to IPFS using NFT.Storage. We are using the Electron example of Helia and are adding features like File (Edit/Delete), Save, save As, Email and print using ionic Capacitor framework plugins to our dapp.
-
-Lilypad: Creating an NFT for the dicom file on the Filecoin Virtual Machine (FVM / FEVM) with Bacalhau Stable Diffusion. We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
-
-Invoice Automation: We have developed an invoice dapp with integration with bacalhau for just in time invoicing for design contracts. 
-
-
 # Optimism
 
 ## Optimism User Interaction 
@@ -135,6 +96,45 @@ Sharing a smart contract for creating NFT in Optimism by one of our collaborator
 
 6. Attestation Hub Contract for Medical Reports: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
 We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports
+
+
+# IPFS and Filecoin eco-system, Ethereum, Embark, Status
+
+1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
+
+Please visit DataDAO for DICOM image and patient metadata in FVM Medicine solution: https://github.com/aspiringsecurity/EMTTR/tree/main/fvm-dicom-data-dao
+
+We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
+
+Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/ehrs-medical-history-module
+
+FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel oneapi, medical billing and invoicing: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/medical-invoice-to-cash-automation-oneapi
+
+IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
+
+We are utilizing Chainlink VRF as follows:
+
+Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
+
+Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
+
+NFT and Certificate for Good research services in drug discovery: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating
+
+Drug Discovery Service Providers (CRO) and Pharma Service Organizations Payouts: Chainlink Parametric Insurance dapp at https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout
+
+Truflation Market Insight modules for Chainlink services and Covalent End-points/Dashboard: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/truflation-insight
+
+Tableland: We are using tableland to develop a notes application and are maintaining it along with dicom file assets. This enables us to make the dicom asset files searchable, sortable and enables us to reuse and repurpose them for user training. Tableland enables us to document the dicom file output files and store the notes in an RDBMS (SQL) type database.
+
+Filecoin Data tools: We are developing FVM Calc, an open-source analytics tool and an OSS spreadsheet to enable data tabulation, visualization, organization, collaboration for dicom asset files on Filecoin network.
+
+Filecoin saturn dapp for discovery and retrieval of NFTs uploaded to IPFS via NFT.Storage: We are developing a socially scalable and open-source metadata retrieval, indexing, and management tooling for decentralized bulk query and retrieval of dicom data and user training. Bandwidth is a major issue in South Asian hospitals and Filecoin Data tools fit right at the spot for quick data retrieval where learning via video streaming is not possible due to high latency or unavailability of a network for streaming.
+
+IPFS Helia implementation: We are developing a dapp using Helia (JS implementation of IPFS) along with NFT.storage that let us export the dicom file generated from Web3 Orthanc tools as an NFT and upload it to IPFS using NFT.Storage. We are using the Electron example of Helia and are adding features like File (Edit/Delete), Save, save As, Email and print using ionic Capacitor framework plugins to our dapp.
+
+Lilypad: Creating an NFT for the dicom file on the Filecoin Virtual Machine (FVM / FEVM) with Bacalhau Stable Diffusion. We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
+
+Invoice Automation: We have developed an invoice dapp with integration with bacalhau for just in time invoicing for design contracts. 
 
 
 # Chainlink Eco-system
