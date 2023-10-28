@@ -112,7 +112,7 @@ Sharing a smart contract for creating NFT in Optimism by one of our collaborator
 We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports
 
 
-# IPFS and Filecoin eco-system, Ethereum, Embark, Status
+# IPFS and Filecoin eco-system, Ethereum and Optimism, Embark, Status
 
 1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
 
@@ -151,7 +151,7 @@ Lilypad: Creating an NFT for the dicom file on the Filecoin Virtual Machine (FVM
 Invoice Automation: We have developed an invoice dapp with integration with bacalhau for just in time invoicing for design contracts. 
 
 
-# Chainlink Eco-system
+# Chainlink and Optimism Eco-system
 
 Chainlink: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
 
@@ -176,6 +176,7 @@ Space and Time: Dynamic NFT generator for DICOM images using SxT and Chainlink a
 Verse DEX tokens: Creating custom EMTTR token at Verse for DICOM images. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout/Token-verse-dex
 
 
+# Web3 Ecosystem Tools
 
 2. MultiChain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit the link at https://github.com/aspiringsecurity/EMTTR/tree/main/nft-dao-l2-scaling-multichain/multichain-webapp
 
@@ -192,6 +193,9 @@ Audit portal in EMTTR using Mantle: We are extending the audit portal using Mant
 Blockchain Communication: Axelar for communication between Polygon blockchain and Fantom destination chain, MultiChain. Covalent endpoint for aggregated view (please visit Covalent-NFT-Dashboard which enables us to analyze, observe all NFTs from wallet address in different networks. Links at the bottom of the readme section)
 
 Moralis deployment URL: https://3gtivnurtulj.usemoralis.com:2053/server (to be deployed)
+
+
+# Details
 
 Improving Data Transparency in Drug Testing Using Blockchain Smart Contracts
 
