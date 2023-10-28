@@ -1,17 +1,17 @@
 # About
 
-OP Developer tools for making personalized medicine affordable and accessible.
+Web3 Developer tools for making personalized medicine affordable and accessible.
 
-## Contribution to Optimism and OP ecosystem
+## Contribution to Optimism and OP ecosystem for RetroPGF3
 
 Wish to share our contribution to Optimism and OP ecosystem: <br>
-⭐️Developer, DAO tools on Optimism Stack for organization, tabulation, visualization of on-chain & off-chain data; <br>
-⭐️Low code tools to enable automation & expand the utility of healthcare delivery, medicine testing & research on OP Stack; <br>
-⭐️OP solutions for zero knowledge proofs & privacy preserving initiatives, on-chain reputation models. <br>
-⭐️OP solutions for soul bonding ID,  proxy re-encryption protocols, interoperability & sharding tools; <br>
-⭐️Tools for NFT creation, management & marketplaces; <br>
+⭐️ Developer, DAO tools on Optimism Stack for organization, tabulation, visualization of on-chain & off-chain data; <br>
+⭐️ Low code tools to enable automation & expand the utility of healthcare delivery, medicine testing & research on OP Stack; <br>
+⭐️ Tools for NFT creation, management & marketplaces; <br>
 ⭐️ Enable developers to become builders of personalised medicine, De-Science, public goods initiatives; <br>
-⭐️Collaboration with OP projects like Base, Wormhole to increase on-chain volume, OP user adoption and building interoperability. <br>
+⭐️ Collaboration with OP projects like Base, Wormhole to increase on-chain volume, OP user adoption and building interoperability. <br>
+⭐️ OP solutions for zero knowledge proofs & privacy preserving initiatives, on-chain reputation models. <br>
+⭐️ OP solutions for soul bonding ID,  proxy re-encryption protocols, interoperability & sharding tools; <br>
 
 
 EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools.
