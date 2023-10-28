@@ -4,7 +4,7 @@ OP Developer tools for making personalized medicine affordable and accessible.
 
 Contribution to Optimism and OP ecosystem
 
-Wish to share our contribution to Optimism and OP ecosystem: 
+Wish to share our contribution to Optimism and OP ecosystem: <br>
 ⭐️Developer, DAO tools on Optimism Stack for organization, tabulation, visualization of on-chain & off-chain data; 
 ⭐️Low code tools to enable automation & expand the utility of healthcare delivery, medicine testing & research on OP Stack;
 ⭐️OP solutions for zero knowledge proofs & privacy preserving initiatives, on-chain reputation models.
