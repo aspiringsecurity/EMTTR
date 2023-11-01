@@ -2,6 +2,17 @@
 
 Web3 Developer tools for making personalized medicine affordable and accessible.
 
+
+EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools.
+
+Optimism Deployment Website: https://op-medicine-deploy.vercel.app/
+
+Information Website for Civic Bodies: https://sites.google.com/view/emttrservice/
+
+Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
+
+EMTTRs' Website: https://emttr-deploy.vercel.app/
+
 ## Contribution to Optimism and OP ecosystem for RetroPGF3
 
 Wish to share our contribution to Optimism and OP ecosystem: <br>
@@ -13,15 +24,7 @@ Wish to share our contribution to Optimism and OP ecosystem: <br>
 ⭐️ OP solutions for soul bonding ID,  proxy re-encryption protocols, interoperability & sharding tools; <br>
 ⭐️ Collaboration with OP projects like Base, Wormhole to increase on-chain volume, OP user adoption and building interoperability. <br>
 
-EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools.
-
-Optimism Deployment Website: https://op-medicine-deploy.vercel.app/
-
-Information Website for Civic Bodies: https://sites.google.com/view/emttrservice/
-
-Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
-
-EMTTRs' Website: https://emttr-deploy.vercel.app/
+Please visit OP RetroPGF3 supporting documentation at https://drive.google.com/drive/u/4/folders/1Mlcb3gKfyNxYpmgCkIo8ZvJCdJuQ8T0a
 
 
 # Grants and Notable Achievements 
