@@ -9,10 +9,9 @@ Wish to share our contribution to Optimism and OP ecosystem: <br>
 ⭐️ Low code tools to enable automation & expand the utility of healthcare delivery, medicine testing & research on OP Stack; <br>
 ⭐️ Tools for NFT creation, management & marketplaces; <br>
 ⭐️ Enable developers to become builders of personalised medicine, De-Science, public goods initiatives; <br>
-⭐️ Collaboration with OP projects like Base, Wormhole to increase on-chain volume, OP user adoption and building interoperability. <br>
 ⭐️ OP solutions for zero knowledge proofs & privacy preserving initiatives, on-chain reputation models. <br>
 ⭐️ OP solutions for soul bonding ID,  proxy re-encryption protocols, interoperability & sharding tools; <br>
-
+⭐️ Collaboration with OP projects like Base, Wormhole to increase on-chain volume, OP user adoption and building interoperability. <br>
 
 EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools.
 
