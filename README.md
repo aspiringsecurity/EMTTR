@@ -34,11 +34,11 @@ Web3 Dev Tooling: Web3 low code modules using wiki like spreadsheet with ionic f
 
 # Summary 
 
-Enabling the bottom of pyramid through empowering pharma companies and the medical eco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud, Optimism, Ethereum, Embark, Filecoin and IPFS eco-system tools. EMTTRs as a service aims at providing
+Enabling the bottom of pyramid through empowering pharma companies and the medical eco-system to do medicine trial testing and clinical trials via blockchain and IPFS enabled EMTTRs(Electronic Medicine Trial and Test Records as a Service), EHR and Radiology services on the decentralized cloud, Chainlink VRF, Optimism, Ethereum, Embark, Filecoin and IPFS eco-system tools. EMTTRs as a service aims at providing
 
-■ Secure data storage, transparent data movement and data authenticity using Optimism, Ethereum, Filecoin and IPFS eco-system tools.
+■ Secure data storage, transparent data movement and data authenticity using Chainlink VRF, Optimism, Ethereum, Filecoin and IPFS eco-system tools.
 
-■ Improving Data Transparency in Drug Testing Using Optimism, Ethereum Blockchain and Filecoin perpetual storage.
+■ Improving Data Transparency in Drug Testing Using Chainlink, Optimism, Ethereum Blockchain and Filecoin perpetual storage.
 
 ■ Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using smart contracts compiled on EVM and FVM.
 
@@ -47,13 +47,13 @@ Enabling the bottom of pyramid through empowering pharma companies and the medic
 
 # Features
 
-Just in Time Service: Availability of pharma companies medicine records across differentstakeholder through secure Ethereum, Optimism and Filecoin eco-system tools.
+Just in Time Service: Availability of pharma companies medicine records across differentstakeholder through secure Ethereum, Chainlink, Optimism and Filecoin eco-system tools.
 
 • Record Management: Quality documentation reduces the issues regarding testing proceduresand standardization.• Research: Enabling the healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently.
 
 • Data Security: Efficiently sharing of data (including personal data), privacy concerns andpatient enrollment strategies.
 
-• Transparency: Improving Data Transparency in Drug Testing Using Ethereum, Optimism Blockchain, Filecoin and IPFS eco-system tools.
+• Transparency: Improving Data Transparency in Drug Testing Using Ethereum, Chainlink Optimism Blockchain, Filecoin and IPFS eco-system tools.
 
 A greater and more seamless flow of information within a digital drug discovery infrastructure,created by electronic medicine trial and test records as a service (EMTTRs), encompasses andleverages digital progress and can transform the way medicines are developed, tested anddistributed to improve the global health economy and achievement of Sustainable DevelopmentGoals in Healthcare.
 
@@ -115,6 +115,21 @@ FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel o
 
 Tableland: We are using tableland to develop a notes application and are maintaining it along with dicom file assets. This enables us to make the dicom asset files searchable, sortable and enables us to reuse and repurpose them for user training. Tableland enables us to document the dicom file output files and store the notes in an RDBMS (SQL) type database.
 
+# Chainlink
+
+We are utilizing Chainlink VRF as follows:
+
+Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
+
+Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
+
+NFT and Certificate for Good research services in drug discovery: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating
+
+Drug Discovery Service Providers (CRO) and Pharma Service Organizations Payouts: Chainlink Parametric Insurance dapp at https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout
+
+Truflation Market Insight modules for Chainlink services and Covalent End-points/Dashboard: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/truflation-insight
+
+IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
 
 
 # Details
