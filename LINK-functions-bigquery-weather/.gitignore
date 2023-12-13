@@ -1,0 +1,16 @@
+node_modules
+coverage
+coverage.json
+typechain
+typechain-types
+
+#secrets
+*.env
+*-secrets.json
+*-secrets.js
+.env.enc
+
+#Hardhat files
+cache
+artifacts
+

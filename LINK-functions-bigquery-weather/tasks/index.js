@@ -1,0 +1,7 @@
+exports.encryptSecrets=require("./03_encryptSecrets")
+exports.uploadSecretsToDon=require("./04_uploadSecretsToDon")
+exports.addConsumer=require("./02_addConsumer")
+exports.deployConsumer=require("./01_deployConsumer")
+exports.makeRequest=require("./05_makeRequest")
+exports.readWeather=require("./06_readWeather")
+exports.getSubInfo=require("./getSubInfo")
