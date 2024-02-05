@@ -1,0 +1,36 @@
+specVersion: 0.0.5
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: PredictionMarket
+    network: goerli
+    source:
+      address: "0xB63C65d86df9C239134b04e9799B9FE16fAbEBec"
+      abi: PredictionMarket
+      startBlock: 9788169
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ConcludeFatalError
+        - HandlerProgress
+        - OwnershipTransferred
+        - PredictionConcluded
+        - PredictionCreated
+      abis:
+        - name: PredictionMarket
+          file: PredictionMarket/abis/PredictionMarket.json
+      eventHandlers:
+        - event: ConcludeFatalError(indexed uint256,uint256,bool,indexed int224,indexed int224)
+          handler: handleConcludeFatalError
+        - event: HandlerProgress(indexed uint256,indexed address,indexed address,int256,int256)
+          handler: handleHandlerProgress
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: PredictionConcluded(indexed uint256,uint256)
+          handler: handlePredictionConcluded
+        - event: PredictionCreated(indexed uint256,indexed address,address,uint256,indexed uint256)
+          handler: handlePredictionCreated
+      file: PredictionMarket/PredictionMarket.wasm

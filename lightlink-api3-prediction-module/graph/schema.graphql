@@ -1,0 +1,53 @@
+type ConcludeFatalError @entity(immutable: true) {
+  id: Bytes!
+  predictionId: BigInt! # uint256
+  timestamp: BigInt! # uint256
+  isAbove: Boolean! # bool
+  priceReading: BigInt! # int224
+  priceTarget: BigInt! # int224
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type HandlerProgress @entity(immutable: true) {
+  id: Bytes!
+  predictionId: BigInt! # uint256
+  marketHandler: Bytes! # address
+  trader: Bytes! # address
+  amountYes: BigInt! # int256
+  amountNo: BigInt! # int256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PredictionConcluded @entity(immutable: true) {
+  id: Bytes!
+  predictionId: BigInt! # uint256
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PredictionCreated @entity(immutable: true) {
+  id: Bytes!
+  predictionId: BigInt! # uint256
+  marketHandler: Bytes! # address
+  creator: Bytes! # address
+  timestamp: BigInt! # uint256
+  deadline: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

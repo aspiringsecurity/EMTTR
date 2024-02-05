@@ -1,0 +1,608 @@
+{
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_fee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_basePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "_usdcTokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_vaultAddress",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "PM_InsufficienTradeTokens",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PM_InsufficientApprovedAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PM_InvalidAmountSet",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PM_IsClosedForTrading",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PM_IsOpenForTrading",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PM_RewardAlreadyCollected",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PM_RewardsNotAvailable",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PM_TokenTransferFailed",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "PM_UserDidNotWin",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amountYes",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amountNo",
+            "type": "uint256"
+          }
+        ],
+        "name": "BuyOrder",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amountWon",
+            "type": "uint256"
+          }
+        ],
+        "name": "RewardCollected",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amountYes",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amountNo",
+            "type": "uint256"
+          }
+        ],
+        "name": "SellOrder",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "int256",
+            "name": "amountYes",
+            "type": "int256"
+          },
+          {
+            "indexed": false,
+            "internalType": "int256",
+            "name": "amountNo",
+            "type": "int256"
+          }
+        ],
+        "name": "SwapOrder",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "winner",
+            "type": "bool"
+          }
+        ],
+        "name": "WinnerDeclared",
+        "type": "event"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "fallback"
+      },
+      {
+        "inputs": [],
+        "name": "I_BASE_PRICE",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "I_DEADLINE",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "I_DECIMALS",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "I_FEE",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "I_SELF_ID",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "I_USDC_CONTRACT",
+        "outputs": [
+          {
+            "internalType": "contract IERC20",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "RewardsClaimable",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "buyNoToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "buyYesToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "collectRewards",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bool",
+            "name": "vote",
+            "type": "bool"
+          }
+        ],
+        "name": "concludePrediction_3",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "getFee",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getNoReserve",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_add",
+            "type": "address"
+          }
+        ],
+        "name": "getNoTokenCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getYesReserve",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_add",
+            "type": "address"
+          }
+        ],
+        "name": "getYesTokenCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reserveFEE",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reserveNo",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reserveUSDC",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reserveYes",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "rewardCollected",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "sellNoToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "sellYesToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapTokenNoWithYes",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapTokenYesWithNo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "winner",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "receive"
+      }
+    ]
+  }
