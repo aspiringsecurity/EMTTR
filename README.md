@@ -15,7 +15,7 @@ Optimism Deployment Website: https://op-medicine-deploy.vercel.app/
 
 ## Update
 
-Liteflow powered Optimism NFT marketplace for DICOM images for research organizations and radioligists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and Optimism NFT marketplace. Sharing a smart contract for creating NFT in Optimism by one of our collaborators in Optimism Bedrock Goerli testnet: https://goerli-optimism.etherscan.io/address/0x1d807750029b3b345052b155123908968298bb9e
+Liteflow powered NFT marketplace for DICOM images for research organizations and radiologists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and NFT marketplace. 
 
 Blockscout interactions with Lightlink modules and OP Modules: Blockscout provides a comprehensive, easy-to-use interface for users to view, confirm, inspect and interact on EVM (Ethereum Virtual Machine) blockchains.  We are developing 2 transparent tools for OP Medicine, which are needed to analyze and validate OP Medicine transactions. Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: trace optimism transactions in DICOM NFT marketplace for enabling data authenticity and transparency.
 
