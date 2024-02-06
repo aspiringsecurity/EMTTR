@@ -19,13 +19,13 @@ Liteflow powered NFT marketplace for DICOM images for research organizations and
 
 Blockscout interactions with Lightlink modules and OP Modules: Blockscout provides a comprehensive, easy-to-use interface for users to view, confirm, inspect and interact on EVM (Ethereum Virtual Machine) blockchains.  We are developing 2 transparent tools for OP Medicine, which are needed to analyze and validate OP Medicine transactions. Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: trace optimism transactions in DICOM NFT marketplace for enabling data authenticity and transparency. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/lightlink-api3-prediction-module/blockscout-rs and https://github.com/aspiringsecurity/EMTTR/tree/main/lightlink-api3-prediction-module
 
-OP MED: Low code analytics framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling and Blockscout analytics.
-
-Optimism TestXLS: Patient’s visit and Diagnosis Tooling with Blockscout based analytics tool for validation, ionic framework within OP NFT marketplace.
-
 Using Lightlink for giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending Lightlink API modules and OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library.
 
 Attestation Hub Contract for Medical Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports. We look forward to enabling patients to use OP for all their medi-claim transaction needs and collaborating with Third Party administrators.
+
+OP MED: Low code analytics framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling and Blockscout analytics. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/MedicationLog
+
+Optimism TestXLS: Patient’s visit and Diagnosis Tooling with Blockscout based analytics tool for validation, ionic framework within OP NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
 
 # Grants and Notable Achievements 
