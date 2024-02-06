@@ -15,7 +15,7 @@ Optimism Deployment Website: https://op-medicine-deploy.vercel.app/
 
 ## Update
 
-Liteflow powered NFT marketplace for DICOM images for research organizations and radiologists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and NFT marketplace. 
+Liteflow powered NFT marketplace for DICOM images for research organizations and radiologists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/liteflow-nft-marketplace
 
 Blockscout interactions with Lightlink modules and OP Modules: Blockscout provides a comprehensive, easy-to-use interface for users to view, confirm, inspect and interact on EVM (Ethereum Virtual Machine) blockchains.  We are developing 2 transparent tools for OP Medicine, which are needed to analyze and validate OP Medicine transactions. Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: trace optimism transactions in DICOM NFT marketplace for enabling data authenticity and transparency.
 
@@ -54,22 +54,24 @@ Enabling the bottom of pyramid through empowering pharma companies and the medic
 
 ■ Improving Data Transparency in Drug Testing Using Chainlink, Optimism, Ethereum Blockchain and Filecoin perpetual storage.
 
-■ Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently using smart contracts compiled on EVM and FVM.
+■ Enabling healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, and transparently using smart contracts compiled on EVM and FVM.
 
 ■ Developer Tools to enable medical trial testing, clinical trials via EMTTRs (Electronic Medicine Trial and Test Records as a Service) and EHR and Radiology services.
 
 
 # Features
 
-Just in Time Service: Availability of pharma companies medicine records across differentstakeholder through secure Ethereum, Chainlink, Optimism and Filecoin eco-system tools.
+Just in Time Service: Availability of pharma companies medicine records across different stakeholders through secure Ethereum, Chainlink, Optimism and Filecoin eco-system tools.
 
-• Record Management: Quality documentation reduces the issues regarding testing proceduresand standardization.• Research: Enabling the healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, transparently.
+• Record Management: Quality documentation reduces the issues regarding testing procedures and standardization.
+
+• Research: Enabling the healthcare community by empowering pharma companies & the medical eco-system to do medicine trial testing securely, and transparently.
 
 • Data Security: Efficiently sharing of data (including personal data), privacy concerns andpatient enrollment strategies.
 
 • Transparency: Improving Data Transparency in Drug Testing Using Ethereum, Chainlink Optimism Blockchain, Filecoin and IPFS eco-system tools.
 
-A greater and more seamless flow of information within a digital drug discovery infrastructure,created by electronic medicine trial and test records as a service (EMTTRs), encompasses andleverages digital progress and can transform the way medicines are developed, tested anddistributed to improve the global health economy and achievement of Sustainable DevelopmentGoals in Healthcare.
+A greater and more seamless flow of information within a digital drug discovery infrastructure, created by electronic medicine trial and test records as a service (EMTTRs), encompasses and leverages digital progress and can transform the way medicines are developed, tested and distributed to improve the global health economy and achievement of Sustainable DevelopmentGoals in Healthcare.
 
 ![Eco-system Benefits](https://github.com/aspiringsecurity/EMTTR/blob/main/EHRs/benefits.png)
 
