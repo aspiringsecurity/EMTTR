@@ -23,9 +23,9 @@ OP MED: Low code analytics framework tool for Medication Log. Secure data storag
 
 Optimism TestXLS: Patient’s visit and Diagnosis Tooling with Blockscout based analytics tool for validation, ionic framework within OP NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
 
-Using Lightlink for giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending Lightlink API modules and OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library.
+Using Lightlink for giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending Lightlink API modules and OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers
 
-Attestation Hub Contract for Medical Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports. We look forward to enabling patients to use OP for all their medi-claim transaction needs and collaborating with Third Party administrators.
+Attestation Hub Contract for Medical Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports. We look forward to enabling patients to use OP for all their medi-claim transaction needs and collaborating with Third Party administrators. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
 
 
 # Grants and Notable Achievements 
