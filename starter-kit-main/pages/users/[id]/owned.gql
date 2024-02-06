@@ -1,0 +1,25 @@
+query FetchOwnedAssets(
+  $address: Address!
+  $currentAddress: Address!
+  $now: Datetime!
+  $limit: Int!
+  $offset: Int!
+  $orderBy: [OwnershipsOrderBy!]
+) {
+  owned: ownerships(
+    filter: { ownerAddress: { equalTo: $address }, assetExists: true }
+    first: $limit
+    offset: $offset
+    orderBy: $orderBy
+  ) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    nodes {
+      asset {
+        ...AssetDetail
+      }
+    }
+  }
+}

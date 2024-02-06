@@ -1,0 +1,39 @@
+query FetchOwners(
+  $chainId: Int!
+  $collectionAddress: Address!
+  $tokenId: String!
+  $offset: Int!
+  $limit: Int!
+) {
+  ownerships(
+    filter: {
+      chainId: { equalTo: $chainId }
+      collectionAddress: { equalTo: $collectionAddress }
+      tokenId: { equalTo: $tokenId }
+    }
+    offset: $offset
+    first: $limit
+    orderBy: [
+      QUANTITY_DESC
+      ACCOUNT_BY_OWNER_ADDRESS__NAME_ASC
+      OWNER_ADDRESS_ASC
+    ]
+  ) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    nodes {
+      quantity
+      ownerAddress
+      owner {
+        address
+        name
+        image
+        verification {
+          status
+        }
+      }
+    }
+  }
+}

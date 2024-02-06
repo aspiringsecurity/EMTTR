@@ -1,0 +1,93 @@
+query OfferForAsset(
+  $chainId: Int!
+  $collectionAddress: Address!
+  $tokenId: String!
+  $address: Address
+  $now: Datetime!
+) {
+  asset(
+    chainId: $chainId
+    collectionAddress: $collectionAddress
+    tokenId: $tokenId
+  ) {
+    id
+    deletedAt
+    chainId
+    collectionAddress
+    tokenId
+    collection {
+      chainId
+      address
+      name
+      standard
+    }
+    name
+    image
+    imageMimetype
+    royalties {
+      value
+    }
+    owned: ownership(ownerAddress: $address) {
+      quantity
+    }
+    quantity
+    bestBid: bids(
+      orderBy: [UNIT_PRICE_IN_REF_DESC, CREATED_AT_ASC]
+      filter: { expiredAt: { greaterThan: $now } }
+      first: 1
+    ) {
+      nodes {
+        unitPrice
+        amount
+        currency {
+          image
+          name
+          id
+          decimals
+          symbol
+        }
+      }
+    }
+    firstSale: sales(
+      first: 1
+      orderBy: [UNIT_PRICE_IN_REF_ASC, CREATED_AT_ASC]
+      filter: { expiredAt: { greaterThan: $now } }
+    ) {
+      totalCount
+      totalCurrencyDistinctCount
+      nodes {
+        id
+        unitPrice
+        currency {
+          image
+          name
+          id
+          decimals
+          symbol
+        }
+      }
+    }
+    creator {
+      address
+      name
+      image
+      verification {
+        status
+      }
+    }
+  }
+  currencies(
+    orderBy: CREATED_AT_ASC
+    filter: { chainId: { equalTo: $chainId } }
+  ) {
+    nodes {
+      id
+      chainId
+      address
+      decimals
+      symbol
+      name
+      image
+    }
+  }
+}

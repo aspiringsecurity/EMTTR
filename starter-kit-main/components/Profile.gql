@@ -1,0 +1,15 @@
+query FetchAccountDetail($address: Address!) {
+  account(address: $address) {
+    address
+    name
+    description
+    cover
+    image
+    twitter
+    instagram
+    website
+    verification {
+      status
+    }
+  }
+}

@@ -1,0 +1,910 @@
+{
+  "cart": {
+    "add-to-cart": {
+      "button": {
+        "add": "添加到购物车",
+        "remove": "从购物车中删除"
+      },
+      "toast": {
+        "add": "已添加到购物车",
+        "remove": "已从购物车中删除"
+      }
+    },
+    "drawer": {
+      "title": "大车",
+      "back": "返回购物车",
+      "error": "再试一次",
+      "clear-all": "全部清除",
+      "list-item": {
+        "not-available": "无法使用",
+        "tooltip": "该商品不可用，因为它已被其他人购买、卖家已将其下架或列表已过期。",
+        "remove": "消除"
+      }
+    },
+    "step": {
+      "error": {
+        "title": "错误",
+        "description": "您的交易出现错误",
+        "action": "回去"
+      },
+      "selection": {
+        "empty": {
+          "title": "购物车中没有商品",
+          "description": "添加项目以开始使用。",
+          "action": "探索 NFT"
+        },
+        "button": {
+          "label": "继续",
+          "aria-label": "继续"
+        }
+      },
+      "success": {
+        "title": "恭喜你",
+        "description": "您的交易已成功",
+        "action": "查看交易",
+        "owned": "检查项目",
+        "back": "继续购物"
+      },
+      "transaction": {
+        "empty": {
+          "title": "缺货商品",
+          "description": "您购物车中的商品已被其他人购买、卖家已将其下架或商品列表已过期。"
+        },
+        "summary": {
+          "title": "概括",
+          "price": "价格"
+        },
+        "button": {
+          "approve": "批准 {{value}}",
+          "purchase": "购买",
+          "aria-label": "继续",
+          "insufficient": "资金不足"
+        }
+      }
+    }
+  },
+  "account": {
+    "title": "帐户",
+    "tabs": {
+      "wallet": "钱包",
+      "edit-profile": "编辑个人资料"
+    }
+  },
+  "network": {
+    "button": {
+      "sign-in": "登录",
+      "signing-in": "登录中...",
+      "switch-network": "交换网络"
+    }
+  },
+  "bid": {
+    "list": {
+      "none": "无出价"
+    },
+    "detail": {
+      "per-edition-single": "<0/>",
+      "per-edition-multiple": "每个版本各 <0/> 件",
+      "requested": "已请求 <0>{{quantity}}</0> 件",
+      "expires": ". 过期日期：{{date}}",
+      "accept": "接受出价",
+      "cancel": "取消",
+      "modal": {
+        "accept": {
+          "title": "接受出价"
+        },
+        "cancel": {
+          "title": "取消要约"
+        }
+      }
+    },
+    "modal": {
+      "accept": {
+        "title": "接受出价",
+        "description": "选择您要出售给投标人的版本数量",
+        "submit": "接受出价",
+        "quantity": {
+          "label": "数量",
+          "suffix": "版",
+          "placeholder": "输入数量",
+          "available": "投标人要求的 {{count}} 个版本"
+        },
+        "validation": {
+          "required": "这是必填栏",
+          "in-range": "该字段必须介于 1 和 {{ max }} 之间",
+          "integer": "该字段必须是整数"
+        },
+        "owned": {
+          "label": "你拥有",
+          "unit": "{{count}} 个版本"
+        }
+      }
+    }
+  },
+  "collection": {
+    "listItem": {
+      "allTime": "所有时间",
+      "floor": "底价: {{price}}"
+    }
+  },
+  "countdown": {
+    "day": "{{value}} 天",
+    "day-long": "天",
+    "hour": "{{value}} 小时",
+    "hour-long": "小时",
+    "min": "{{value}} 分钟",
+    "min-long": "分钟",
+    "sec": "{{value}} 秒",
+    "sec-long": "秒"
+  },
+  "drop": {
+    "timeline": {
+      "upcoming": "Upcoming",
+      "in-progress": "In progress",
+      "ended": "Ended"
+    },
+    "by": "By {{address}}",
+    "supply": {
+      "available_one": "<0/> item",
+      "available_other": "<0/> items",
+      "infinite": "Open edition"
+    },
+    "progress": {
+      "percentage": "{{percentage}}% minted",
+      "minted": "Minted"
+    },
+    "listItem": {
+      "price": "Price: <0/>",
+      "startDate": "Starts: {{startDate}}",
+      "endDate": "Ends: {{endDate}}",
+      "supply": "Supply: {{supply}}",
+      "maxQuantityPerWallet": "Mint limit: {{maxQuantityPerWallet}} per wallet",
+      "eligible": "Eligible",
+      "notEligible": "Not eligible"
+    },
+    "form": {
+      "ended": {
+        "title": "Mint ended",
+        "minted": "Minted:",
+        "totalMinted": "{{totalMinted}} items",
+        "viewCollection": "View collection"
+      },
+      "in-progress": {
+        "price": "Price:",
+        "supply": "Supply:",
+        "mintLimit": "Mint limit:",
+        "limit": "{{maxQuantityPerWallet}} per wallet",
+        "mintedOut": "Minted out",
+        "mint": "Mint",
+        "notEligible": "You're not eligible for this mint stage",
+        "endsIn": "Ends in <0/>"
+      },
+      "upcoming": {
+        "price": "Price:",
+        "supply": "Supply:",
+        "mintLimit": "Mint limit:",
+        "limit": "{{maxQuantityPerWallet}} per wallet",
+        "disabled": "Minting soon",
+        "startsIn": "Starts in <0/>"
+      }
+    }
+  },
+  "dropzone": {
+    "required": "此字段为必填字段",
+    "gifTooLarge": "GIF 文件太大。最大大小为 5MB。",
+    "gifLimit": "GIF。最大 5 MB。"
+  },
+  "filters": {
+    "nav": {
+      "title": "过滤 器",
+      "clear": "清除过滤器"
+    },
+    "collections": {
+      "more": "装载更多",
+      "chains": {
+        "label": "链"
+      },
+      "empty": {
+        "title": "未找到收藏",
+        "description": "请更新筛选条件来查找更多收藏。"
+      }
+    },
+    "traits": {
+      "more": "装载更多",
+      "empty": {
+        "title": "未发现特征",
+        "description": "更新您的过滤器以发现更多特征。"
+      }
+    },
+    "assets": {
+      "submit": "应用",
+      "clear": "全部清空",
+      "chains": {
+        "label": "链"
+      },
+      "currency": {
+        "label": "价格范围",
+        "placeholder": "选择货币"
+      },
+      "min-price": {
+        "placeholder": "从",
+        "validation": {
+          "positive": "最低价格必须大于 0",
+          "decimals": "最低价格支持最多 {{ nbDecimals }} 位小数"
+        }
+      },
+      "max-price": {
+        "placeholder": "到",
+        "validation": {
+          "positive": "最高价格必须大于 0",
+          "decimals": "最高价格支持最多 {{ nbDecimals }} 位小数"
+        }
+      },
+      "offers": {
+        "label": "状态",
+        "values": {
+          "all": "都",
+          "fixed": "固定价格",
+          "bids": "有优惠"
+        }
+      },
+      "categories": {
+        "label": "类别"
+      },
+      "collections": {
+        "label": "收NFT",
+        "search": {
+          "placeholder": "按产品系列搜索"
+        }
+      },
+      "properties": {
+        "label": "性能",
+        "labelWithCollection": "收藏",
+        "search": {
+          "placeholder": "筛选器属性"
+        }
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {{date}} {{name}} 保留所有权利。"
+  },
+  "history": {
+    "none": "无历史记录",
+    "filter": {
+      "all": "全部",
+      "lazymint": "懒人铸造",
+      "listing": "上架",
+      "purchase": "购买",
+      "transfer": "转让",
+      "mint": "铸造",
+      "burn": "烧毁"
+    },
+    "listing": {
+      "by": "截至 <0/>",
+      "listed_one": "已上架 <0>{{count}}</0> 个版本，价格为 <1/>",
+      "listed_other": "已上架 <0>{{count}}</0> 个版本，单价为 <1/>"
+    },
+    "mint": {
+      "by": "截至 <0/>",
+      "minted_one": "已铸造 <0>{{count}}</0> 个版本",
+      "minted_other": "已铸造 <0>{{count}}</0> 个版本"
+    },
+    "lazymint": {
+      "by": "截至 <0/>",
+      "minted_one": "<0>{{count}}</0> 版懒人铸造",
+      "minted_other": "<0>{{count}}</0> 个版本的懒人铸造"
+    },
+    "transfer": {
+      "from": "自 <0/> 起",
+      "transferred_one": "已向 <1/> 转入 <0>{{count}}</0> 个版本",
+      "transferred_other": "已向 <1/> 转入 <0>{{count}}</0> 个版本"
+    },
+    "purchase": {
+      "from": "从 <0/> 至 <1/>",
+      "purchased_one": "已购买 <0>{{count}}</0> 个版本，价格为 <1/>",
+      "purchased_other": "已购买 <0>{{count}}</0> 个版本，单价为 <1/>"
+    },
+    "burn": {
+      "quantity_one": "{{count}} 版本已烧毁",
+      "purchased_other": "{{count}} 个版本已烧毁",
+      "by": "截至 {{user}}"
+    }
+  },
+  "modal": {
+    "accept-offer": {
+      "description": "在钱包中确认交易并继续，此操作将向您收取 gas 费用。",
+      "action": {
+        "permission": "{{name}} 的批准详情",
+        "transaction": "{{name}} 的交易详情"
+      },
+      "approval": {
+        "signature": {
+          "title": "我们需要您的许可",
+          "description": "在钱包中批准许可并继续，此操作将向您收取 gas 费用，但每种代币仅需您支付一次"
+        },
+        "pending": {
+          "title": "正在等待批准",
+          "description": "正在处理请求"
+        },
+        "default": {
+          "title": "许可已获批准",
+          "description": "已完成"
+        }
+      },
+      "transaction": {
+        "approval": {
+          "title": "需要您确认",
+          "description": "在钱包中打开并确认交易"
+        },
+        "signature": {
+          "title": "需要您确认",
+          "description": "在钱包中打开并确认交易"
+        },
+        "pending": {
+          "title": "正在等待确认",
+          "description": "已完成 0/2 - 交易在区块链上待处理"
+        },
+        "ownership": {
+          "title": "正在等待确认",
+          "description": "已完成 1/2 - 正在检查所有权"
+        }
+      }
+    },
+    "cancel-offer": {
+      "description": "在钱包中确认交易并继续，此操作将向您收取 gas 费用。",
+      "action": "在 {{name}} 上查看",
+      "transaction": {
+        "signature": {
+          "title": "需要您确认",
+          "description": "在钱包中打开并确认交易"
+        },
+        "pending": {
+          "title": "正在等待确认",
+          "description": "交易在区块链上待处理"
+        }
+      }
+    },
+    "create-collectible": {
+      "description": "在钱包中确认交易并继续，此操作将向您收取 gas 费用。",
+      "description-lazymint": "签名确认钱包中显示的消息并继续。",
+      "action": "在 {{name}} 上查看",
+      "upload": {
+        "upload": {
+          "title": "文件正在上传",
+          "description": "请等待文件上传完毕"
+        },
+        "default": {
+          "title": "文件已上传",
+          "description": "已完成"
+        }
+      },
+      "transaction": {
+        "upload": {
+          "title": "需要您确认",
+          "description": "在钱包中打开并确认交易"
+        },
+        "signature": {
+          "title": "需要您确认",
+          "description": "在钱包中打开并确认交易"
+        },
+        "pending": {
+          "title": "正在等待确认",
+          "description": "已完成 0/2 - 交易在区块链上待处理"
+        },
+        "ownership": {
+          "title": "正在等待确认",
+          "description": "已完成 1/2 - 正在检查所有权"
+        },
+        "lazymint-signature": {
+          "title": "需要签名",
+          "description": "在钱包中打开并确认交易"
+        },
+        "lazymint-pending": {
+          "title": "创建资产",
+          "description": "正在创建资产"
+        }
+      }
+    },
+    "create-offer": {
+      "description": "签名确认钱包中显示的消息并继续。",
+      "action": "在 {{name}} 上查看",
+      "approval": {
+        "approval": {
+          "title": "我们需要您的许可",
+          "description": "在钱包中批准许可并继续，此操作将向您收取 gas 费用，但每种代币仅需您支付一次"
+        },
+        "pending": {
+          "title": "正在等待批准",
+          "description": "正在处理请求"
+        },
+        "signature": {
+          "title": "许可已获批准",
+          "description": "已完成"
+        }
+      },
+      "signature": {
+        "pending": {
+          "title": "需要签名",
+          "description": "在钱包中打开并签署消息"
+        },
+        "signature": {
+          "title": "需要签名",
+          "description": "在钱包中打开并确认交易"
+        }
+      }
+    },
+    "batch-purchase": {
+      "title": "Purchase",
+      "description": "Confirm transaction in your wallet to continue, this action will cost you gas fees.",
+      "action": "View on {{name}}",
+      "transaction": {
+        "signature": {
+          "title": "Your confirmation is required",
+          "description": "Open and confirm transaction in your wallet"
+        },
+        "pending": {
+          "title": "Confirmation is pending",
+          "description": "0/2 completed - Transaction is pending on Blockchain"
+        },
+        "ownership": {
+          "title": "Confirmation is pending",
+          "description": "1/2 completed - Ownership is being checked"
+        }
+      }
+    },
+    "drop": {
+      "title": "Mint",
+      "description": "Confirm transaction in your wallet to continue, this action will cost you gas fees.",
+      "action": "View on {{name}}",
+      "transaction": {
+        "signature": {
+          "title": "Your confirmation is required",
+          "description": "Open and confirm transaction in your wallet"
+        },
+        "pending": {
+          "title": "Confirmation is pending",
+          "description": "0/2 completed - Transaction is pending on Blockchain"
+        },
+        "ownership": {
+          "title": "Confirmation is pending",
+          "description": "1/2 completed - Ownership is being checked"
+        }
+      }
+    },
+    "login": {
+      "title": "使用钱包登录",
+      "description": "使用以下选项之一进行连接。",
+      "alternative": "或使用"
+    }
+  },
+  "back": "返回",
+  "navbar": {
+    "open-menu": "打开主菜单",
+    "open-activity": "打开活动菜单",
+    "explore": "浏览",
+    "drops": "滴",
+    "create": "创建",
+    "search": "搜索 NFT、集合或账户",
+    "sign-in": "登录",
+    "chat": "讯息",
+    "signing-in": "登录中...",
+    "notifications": "通知",
+    "activity": {
+      "title": "活动",
+      "bids": "出价",
+      "trades": "交易",
+      "offers": "要约"
+    },
+    "user": {
+      "title": "帐户",
+      "profile": "个人资料",
+      "wallet": "钱包",
+      "edit": "编辑个人资料",
+      "top-up": "充值",
+      "sign-out": "退出"
+    }
+  },
+  "network-selection": {
+    "title": "网络错误",
+    "description": "您连接到了错误的网络。",
+    "hint": "请切换至 <0>{{networkName}}</0> 网络。"
+  },
+  "newsletter": {
+    "title": "订阅简报",
+    "action": "订阅",
+    "coming-soon": "功能即将推出",
+    "form": {
+      "validation": {
+        "required": "此字段为必填字段",
+        "email": "请输入有效的电子邮件地址"
+      },
+      "email": {
+        "placeholder": "输入您的电子邮件地址"
+      }
+    }
+  },
+  "notification": {
+    "account-verification-validated": "您的个人资料已验证。<0>查看我的个人资料</0>",
+    "bid": {
+      "accepted": {
+        "one": "恭喜 🎉 您为 <0>{{count}}</0> 个版本 <1>{{name}}</1> 的出价 <2/> 已被接受。",
+        "other": "恭喜 🎉 您为 <0>{{count}}</0> 个版本 <1>{{name}}</1> 每件的出价 <2/> 已被接受。"
+      },
+      "created": {
+        "one": "您拍卖的 <0>{{count}}</0> 个版本 <1>{{name}}</1> 已收到 <2/> 的出价。",
+        "other": "您拍卖的 <0>{{count}}</0> 个版本 <1>{{name}}</1> 已收到每件 <2/> 的出价。"
+      },
+      "expired": {
+        "one": "您对 <0>{{count}}</0> 个版本 <1>{{name}}</1>的出价 <2/> 已过期。出价已被取消。",
+        "other": "您对 <0>{{count}}</0> 个版本 <1>{{name}}</1> 各自的出价 <2/> 已过期。出价已被取消。"
+      }
+    },
+    "offer": {
+      "expired": "{{name}} 已过期。请创建新的售卖！",
+      "purchased": {
+        "one": "恭喜 🎉 您以 <3/> 的价格向 <2>{{account}}</2> 售出了 <0>{{count}}</0> 个版本 <1>{{name}}</1>",
+        "other": "恭喜 🎉 您以每件 <3/> 的价格向 <2>{{account}}</2> 售出了 <0>{{count}}</0> 个版本 <1>{{name}}</1>",
+        "short": "恭喜 🎉 您以 <1/> 的价格售出了<0>{{name}}</0>"
+      }
+    },
+    "referral-referee-registered": "<0>{{username}}</0> 使用您的球探链接成功注册"
+  },
+  "offer": {
+    "summary": {
+      "single": "单份版",
+      "price": "每个版本的价格",
+      "quantity": "版本数量",
+      "fees": "服务费 {{value}}%",
+      "total": "支付总额"
+    },
+    "form": {
+      "bid": {
+        "submit": "提交出价",
+        "title": "提交出价",
+        "validation": {
+          "required": "此字段为必填字段",
+          "integer": "此字段必须是整数",
+          "decimals": "此字段最多支持 {{ nbDecimals }} 位小数。",
+          "in-range": "此字段必须介于 1 和 {{ max }} 之间",
+          "positive": "此字段必须大于 0"
+        },
+        "currency": {
+          "label": "货币",
+          "hint": "设置您希望用于提交公开出价的货币",
+          "placeholder": "选择货币"
+        },
+        "price": {
+          "label": "您的价格",
+          "placeholder": "请输入出价价格"
+        },
+        "quantity": {
+          "label": "数量",
+          "placeholder": "输入数量",
+          "suffix": "版本"
+        },
+        "expiration": {
+          "label": "到期日期",
+          "tooltip": "所选期限结束后，您的出价将被取消。此设置可避免长期出价或遗忘出价。"
+        },
+        "supply_one": "现有 {{count}} 个版本可用",
+        "supply_other": "现有 {{count}} 个版本可用"
+      },
+      "checkout": {
+        "title": "购买藏品",
+        "submit": "继续付款",
+        "validation": {
+          "required": "此字段为必填字段",
+          "integer": "此字段必须是整数",
+          "in-range": "此字段必须介于 1 和 {{ max }} 之间"
+        },
+        "quantity": {
+          "label": "数量",
+          "placeholder": "输入金额",
+          "suffix": "版本"
+        },
+        "ownership": {
+          "title": "自动转让所有权",
+          "description": "购买 NFT 之后，其所有权会自动转让给您。您无需任何额外操作。"
+        },
+        "available_one": "现有 {{count}} 个版本可用",
+        "available_other": "现有 {{count}} 个版本可用"
+      }
+    }
+  },
+  "pagination": {
+    "label": "每页结果数"
+  },
+  "referral": {
+    "form": {
+      "connect": "登录以生成您的推荐链接",
+      "copy": "复制到剪贴板的链接"
+    }
+  },
+  "sales": {
+    "direct": {
+      "button": {
+        "place-bid": "提交出价",
+        "buy": "购买藏品",
+        "view": "查看藏品"
+      },
+      "card-footer": {
+        "price": "价格",
+        "from": "从",
+        "purchase": "购买",
+        "view": "查看我的 NFT",
+        "offers": "有 {{count}} 份要约"
+      },
+      "form": {
+        "submit": "创建要约",
+        "title": "创建售卖",
+        "validation": {
+          "positive": "此字段必须大于 0",
+          "integer": "此字段必须是整数",
+          "in-range": "此字段必须介于 1 和 {{ max }} 之间。",
+          "decimals": "此字段最多支持 {{ nbDecimals }} 位小数。",
+          "required": "此字段为必填字段"
+        },
+        "currency": {
+          "label": "货币",
+          "hint": "设置售卖时买家可以用于购买的货币",
+          "placeholder": "选择货币"
+        },
+        "price": {
+          "label": "价格",
+          "placeholder": "输入价格"
+        },
+        "quantity": {
+          "label": "数量",
+          "placeholder": "输入数量",
+          "suffix": "版本"
+        },
+        "expiration": {
+          "label": "到期日期",
+          "tooltip": "您的售卖将在所选期限结束后取消。此设置可避免长期售卖或遗忘。您始终可以在有效期结束后重新创建售卖。"
+        },
+        "fees": "服务费 {{value}}%",
+        "royalties": "版税 {{value}}%",
+        "total-fees": "服务费总计 {{value}}%",
+        "total-royalties": "版税总计 {{value}}%",
+        "total-receive": "您总共将收到",
+        "receive-single": "您将收到",
+        "receive-multiple": "每个版本的价格",
+        "available_one": "现有 {{count}} 个版本可用",
+        "available_other": "现有 {{count}} 个版本可用",
+        "quantity-for-sale": "售卖数量",
+        "quantities_one": "{{count}} 个版本",
+        "quantities_other": "{{count}} 个版本"
+      },
+      "info": {
+        "cancel-confirmation": "确定要取消要约吗？",
+        "price": "要价：",
+        "cancel": "取消要约"
+      },
+      "modal": {
+        "title": "可用要约",
+        "button": "查看要约"
+      },
+      "modal-item": {
+        "cancel-confirmation": "确定要取消要约吗？",
+        "per-edition": " 每个版本",
+        "available_one": "现有 {{count}} 个版本可用",
+        "available_other": "现有 {{count}} 个版本可用",
+        "expiration": "售卖过期日期：{{date}}",
+        "cancel": "取消要约",
+        "buy": "购买"
+      },
+      "summary": {
+        "offer_one": "{{count}} 份要约",
+        "offer_other": "{{count}} 份要约",
+        "per-edition": "每个版本",
+        "available": "可用",
+        "on-sale-from": "售卖起始日期",
+        "on-sale-for": "售卖时长为",
+        "expires": "售卖过期日期"
+      }
+    },
+    "open": {
+      "button": {
+        "view": "查看藏品",
+        "place-bid": "提交出价"
+      },
+      "card-footer": {
+        "highest-bid": "出价",
+        "open": "开放接受出价",
+        "place-bid": "提交出价",
+        "view": "查看我的 NFT"
+      },
+      "info": {
+        "owner": "您拥有此藏品",
+        "sell": "出售藏品"
+      },
+      "summary": {
+        "open": "开放接受出价",
+        "offer": "发起要约"
+      }
+    }
+  },
+  "token": {
+    "form": {
+      "create": {
+        "submit": "创建商品",
+        "title": "创建藏品",
+        "validation": {
+          "required": "此字段为必填字段",
+          "positive": "此字段必须大于 0",
+          "integer": "此字段必须是整数",
+          "in-range": "此字段必须介于 0 和 {{ max }} 之间",
+          "decimals": "此字段最多支持 {{ nbDecimals }} 位小数。"
+        },
+        "file": {
+          "label": "上传文件",
+          "heading": "拖放文件或",
+          "hint": "JPG、PNG、WEBP、WEBM 或 MP4。大小不得超过 100 MB。",
+          "file": {
+            "chose": "选择文件",
+            "replace": "替换文件"
+          }
+        },
+        "preview": {
+          "label": "上传预览",
+          "heading": "拖放文件或",
+          "hint": "JPG、PNG、WEBP。大小不得超过 100 MB。",
+          "file": {
+            "chose": "选择文件",
+            "replace": "替换文件"
+          }
+        },
+        "name": {
+          "label": "名称",
+          "placeholder": "为您的藏品提供名称"
+        },
+        "description": {
+          "label": "描述",
+          "placeholder": "为您的藏品添加描述",
+          "info": "（可选）"
+        },
+        "amount": {
+          "label": "份数",
+          "placeholder": "例如：10"
+        },
+        "royalties": {
+          "label": "版税",
+          "placeholder": "每笔售出按一定百分比添加版税",
+          "info": "（可选）"
+        },
+        "category": {
+          "label": "类别",
+          "placeholder": "选择类别"
+        }
+      }
+    },
+    "owners": {
+      "title": "所有者"
+    },
+    "modal-item": {
+      "owns_one": "拥有 {{count}} 个版本",
+      "owns_other": "拥有 {{count}} 个版本"
+    },
+    "grid": {
+      "empty": {
+        "title": "未找到藏品",
+        "description": "浏览市场查找更多藏品",
+        "action": "浏览市场"
+      },
+      "sort": {
+        "label": "排序方式"
+      }
+    },
+    "metadata": {
+      "creator": "创建者",
+      "minted_by": "创建者",
+      "owner": "所有者",
+      "owners": "所有者",
+      "edition": "版本",
+      "single": "单份"
+    },
+    "supply": {
+      "available": "有 {{current}} 件可用，共 {{total}} 件"
+    }
+  },
+  "traits": {
+    "percent": "{{value}}%"
+  },
+  "truncate": {
+    "show-less": "显示更少",
+    "show-more": "显示更多"
+  },
+  "user": {
+    "balance": {
+      "title": "您的余额",
+      "add-funds": "添加资金"
+    },
+    "info": {
+      "verified": "已验证",
+      "edit": "编辑个人资料",
+      "bio": "简介"
+    },
+    "referral": {
+      "title": "推荐创作者",
+      "description": "分享您的推荐链接以加入新用户"
+    },
+    "navigation": {
+      "on-sale": "售卖中",
+      "owned": "已拥有",
+      "created": "已创建",
+      "bids": "出价",
+      "trades": "交易",
+      "offers": "要约"
+    },
+    "form": {
+      "edit": {
+        "submit": "保存更改",
+        "image": {
+          "label": "上传个人资料图片",
+          "heading": "拖放文件或",
+          "hint": "推荐分辨率：400x400 像素。JPG、PNG、WEBP。文件大小不得超过 10 MB。",
+          "file": {
+            "chose": "选择文件",
+            "replace": "替换文件"
+          }
+        },
+        "cover": {
+          "label": "上传封面图片",
+          "heading": "拖放文件或",
+          "hint": "推荐分辨率：1128x200 像素。JPG、PNG、WEBP。文件大小不得超过 10 MB。",
+          "file": {
+            "chose": "选择文件",
+            "replace": "替换文件"
+          }
+        },
+        "name": {
+          "label": "显示名称",
+          "placeholder": "输入您的显示名称"
+        },
+        "description": {
+          "label": "简介",
+          "placeholder": "输入简短的自我介绍"
+        },
+        "email": {
+          "label": "电子邮件通知",
+          "placeholder": "输入您的电子邮件地址",
+          "validation": {
+            "invalid": "电子邮件地址无效"
+          }
+        },
+        "twitter": {
+          "label": "Twitter 用户名",
+          "placeholder": "@"
+        },
+        "instagram": {
+          "label": "Instagram 用户名",
+          "placeholder": "@"
+        },
+        "website": {
+          "label": "个人网站",
+          "placeholder": "https://"
+        }
+      }
+    }
+  },
+  "wallet": {
+    "address": {
+      "copy": "地址已复制到剪贴板"
+    },
+    "connectors": {
+      "email": {
+        "label": "使用电子邮件登录"
+      }
+    },
+    "wallet": {
+      "deposit": {
+        "title": "存入代币",
+        "description": "您可以随时向下列地址存入代币并转移地址上的资金"
+      },
+      "balances": "余额"
+    },
+    "balances": {
+      "none": "无可用余额。"
+    }
+  }
+}

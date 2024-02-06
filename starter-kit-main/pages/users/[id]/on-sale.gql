@@ -1,0 +1,31 @@
+query FetchOnSaleAssets(
+  $address: Address!
+  $currentAddress: Address!
+  $now: Datetime!
+  $limit: Int!
+  $offset: Int!
+  $orderBy: [AssetsOrderBy!]
+) {
+  onSale: assets(
+    filter: {
+      quantity: { greaterThan: "0" }
+      sales: {
+        some: {
+          makerAddress: { equalTo: $address }
+          expiredAt: { greaterThan: $now }
+        }
+      }
+    }
+    first: $limit
+    offset: $offset
+    orderBy: $orderBy
+  ) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    nodes {
+      ...AssetDetail
+    }
+  }
+}

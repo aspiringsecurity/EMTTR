@@ -1,0 +1,60 @@
+query FetchAssetHistory(
+  $chainId: Int!
+  $collectionAddress: Address!
+  $tokenId: String!
+  $limit: Int!
+  $offset: Int!
+  $filter: [AssetHistoryAction!]
+) {
+  asset(
+    chainId: $chainId
+    collectionAddress: $collectionAddress
+    tokenId: $tokenId
+  ) {
+    chainId
+    collectionAddress
+    tokenId
+    histories(
+      filter: { action: { in: $filter } }
+      orderBy: DATE_DESC
+      first: $limit
+      offset: $offset
+      includeWhenAssetDeleted: YES
+      includeWhenCurrencyDeleted: YES
+    ) {
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+      }
+      nodes {
+        action
+        date
+        unitPrice
+        quantity
+        fromAddress
+        from {
+          address
+          name
+          image
+          verification {
+            status
+          }
+        }
+        toAddress
+        to {
+          address
+          name
+          image
+          verification {
+            status
+          }
+        }
+        transactionHash
+        currency {
+          decimals
+          symbol
+        }
+      }
+    }
+  }
+}

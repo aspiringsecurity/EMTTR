@@ -1,0 +1,60 @@
+query FetchUserTradeSold(
+  $limit: Int!
+  $offset: Int!
+  $orderBy: [TradesOrderBy!]
+  $address: Address!
+) {
+  trades(
+    orderBy: $orderBy
+    first: $limit
+    offset: $offset
+    filter: {
+      sellerAddress: { equalTo: $address }
+      or: [
+        { deletedAt: { isNull: true } } # include trades not deleted
+        { deletedAt: { isNull: false }, offerExists: true } # include trades deleted but related to an offer
+      ]
+    }
+    includeWhenAssetDeleted: YES
+    includeWhenCollectionDeleted: YES
+    includeWhenCurrencyDeleted: YES
+  ) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    nodes {
+      transactionHash
+      timestamp
+      buyerAddress
+      buyer {
+        address
+        name
+        image
+        verification {
+          status
+        }
+      }
+      sellerAddress
+      amount
+      quantity
+      currency {
+        name
+        image
+        id
+        decimals
+        symbol
+      }
+      asset {
+        id
+        chainId
+        collectionAddress
+        tokenId
+        name
+        image
+        imageMimetype
+        deletedAt
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+query FetchUserBidsPlaced(
+  $limit: Int!
+  $offset: Int!
+  $orderBy: [OffersOrderBy!]
+  $address: Address!
+) {
+  bids: offers(
+    orderBy: $orderBy
+    first: $limit
+    offset: $offset
+    filter: {
+      type: { equalTo: BUY }
+      availableQuantity: { greaterThan: "0" }
+      signature: { isNull: false }
+      makerAddress: { equalTo: $address }
+    }
+    includeWhenAssetDeleted: YES
+    includeWhenCurrencyDeleted: YES
+  ) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    nodes {
+      id
+      unitPrice
+      amount
+      availableQuantity
+      expiredAt
+      createdAt
+      maker {
+        address
+        name
+        image
+        verification {
+          status
+        }
+      }
+      currency {
+        image
+        name
+        id
+        decimals
+        symbol
+      }
+      asset {
+        id
+        chainId
+        collectionAddress
+        tokenId
+        name
+        image
+        imageMimetype
+        deletedAt
+      }
+    }
+  }
+}

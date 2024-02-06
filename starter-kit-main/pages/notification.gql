@@ -1,0 +1,69 @@
+query GetNotifications($address: Address!, $cursor: Cursor) {
+  notifications(
+    filter: {
+      accountAddress: { equalTo: $address }
+      action: {
+        in: [
+          ACCOUNT_VERIFICATION_VALIDATED
+          BID_ACCEPTED
+          BID_CREATED
+          OFFER_PURCHASED
+          BID_EXPIRED
+          OFFER_EXPIRED
+          REFERRAL_REFEREE_REGISTERED
+        ]
+      }
+    }
+    first: 12
+    orderBy: CREATED_AT_DESC
+    after: $cursor
+    includeWhenCollectionDeleted: YES
+    includeWhenTradeDeleted: YES
+  ) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      action
+      createdAt
+      accountVerification {
+        status
+        account {
+          address
+          image
+        }
+      }
+      offer {
+        amount
+        unitPrice
+        quantity
+        asset {
+          chainId
+          collectionAddress
+          tokenId
+          image
+          name
+        }
+        currency {
+          decimals
+          symbol
+        }
+      }
+      trade {
+        quantity
+        buyerAddress
+        buyer {
+          address
+          username
+        }
+      }
+      refereeAccount {
+        address
+        username
+        image
+      }
+    }
+  }
+}

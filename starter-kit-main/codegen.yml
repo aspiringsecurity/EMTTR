@@ -1,0 +1,30 @@
+schema: './node_modules/@nft/api-graphql/schema.graphql'
+documents:
+  - './pages/**/*.gql'
+  - './components/**/*.gql'
+  - './layouts/**/*.gql'
+  - './hooks/**/*.gql'
+generates:
+  graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      avoidOptionals: true
+      enumsAsTypes: true
+config:
+  scalars:
+    URI: 'URI'
+    UUID: 'UUID'
+    Datetime: 'Date' # FIXME: wrong type, it's actually a string
+    Cursor: 'string'
+    JSON: '{ [key: string]: any }'
+    Uint256: 'string'
+    Int256: 'string'
+    Address: 'string'
+    TransactionHash: 'string'
+    BigFloat: 'string'
+    # BigInt: 'string' # FIXME: this breaks the build. Need to fix the type in the codebase
+    Bytes32: 'string'
+    FullText: 'string'

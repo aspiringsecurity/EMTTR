@@ -1,0 +1,439 @@
+{
+  "error": {
+    "404": {
+      "title": "Datos no encontrados",
+      "description": "¡Ups! No pudimos encontrar los datos que está buscando en nuestro servidor. Si el problema persiste, no dude en ponerse en contacto con nuestro equipo de soporte para obtener ayuda."
+    },
+    "500": {
+      "short": "Lo sentimos, algo salió mal.",
+      "title": "Error Interno del Servidor",
+      "description": "¡Ups! Encontramos un problema inesperado en nuestro servidor. Si el problema persiste, no dude en ponerse en contacto con nuestro equipo de soporte para obtener ayuda."
+    },
+    "button": "Soporte de contacto"
+  },
+  "home": {
+    "collections": {
+      "title": "Colecciones notables",
+      "explore": "Explorar colecciones"
+    },
+    "users": {
+      "title": "Usuarias notables",
+      "explore": "Explorar usuarias"
+    },
+    "nfts": {
+      "title": "NFT notables",
+      "explore": "Explorar NFT"
+    },
+    "resources": "Recursos"
+  },
+  "explore": {
+    "title": "Explorar",
+    "tabs": {
+      "nfts": "NFTs",
+      "users": "Usuarios",
+      "collections": "Colecciones"
+    },
+    "nfts": {
+      "filter": "Filtros",
+      "empty": {
+        "title": "No hemos conseguido nada",
+        "description": "Actualiza tus filtros para encontrar más NFTs."
+      },
+      "orderBy": {
+        "label": "Ordenar por",
+        "values": {
+          "priceAsc": "Precio: Bajo - Alto",
+          "priceDesc": "Precio: Alto - Bajo",
+          "createdAtDesc": "Fecha: más recientes",
+          "createdAtAsc": "Fecha: más antiguos"
+        }
+      }
+    },
+    "users": {
+      "empty": {
+        "title": "No se encontraron usuarios",
+        "description": "Actualiza tus filtros para encontrar más usuarios."
+      },
+      "orderBy": {
+        "label": "Ordenar por",
+        "values": {
+          "createdAtDesc": "Fecha: más recientes",
+          "createdAtAsc": "Fecha: más antiguos",
+          "nameAsc": "Alfabética"
+        }
+      }
+    },
+    "collections": {
+      "empty": {
+        "title": "No se encontraron colecciones",
+        "description": "Actualiza tus filtros para encontrar más colecciones."
+      },
+      "orderBy": {
+        "values": {
+          "totalVolDesc": "Volumen: Todo el tiempo",
+          "24hVolDesc": "Volumen: 24h",
+          "7dVolDesc": "Volumen: 7d",
+          "14dVolDesc": "Volumen: 14d",
+          "28dVolDesc": "Volumen: 28d"
+        }
+      }
+    }
+  },
+  "drops": {
+    "title": "Gotas",
+    "empty": {
+      "title": "¿Su caída en la plataforma?",
+      "description": "¡Póngase en contacto con el soporte para crear su primera gota en la plataforma!",
+      "action": "Soporte de contacto"
+    },
+    "past-drops": "Gotas pasadas"
+  },
+  "collection": {
+    "filter": "Filtros",
+    "card": {
+      "floor-price": "Precio piso",
+      "total-volume": "Volumen total"
+    },
+    "header": {
+      "data-labels": {
+        "floor-price": "Precio piso",
+        "total-volume": "Volumen total",
+        "owners": "Propietarios",
+        "items": "Elementos",
+        "chain": "Cadena"
+      },
+      "by": "Por",
+      "menu": {
+        "report": "Informe"
+      }
+    },
+    "orderBy": {
+      "values": {
+        "priceAsc": "Precio: Bajo - Alto",
+        "priceDesc": "Precio: Alto - Bajo",
+        "createdAtDesc": "Fecha: Más reciente",
+        "createdAtAsc": "Fecha: Más antiguo"
+      }
+    },
+    "empty": {
+      "title": "No se encontraron NFT",
+      "description": "Actualiza tus filtros para encontrar más NFT"
+    }
+  },
+  "asset": {
+    "detail": {
+      "show-preview": "Ver previsualización",
+      "description": "Descripción",
+      "traits": "Atributos",
+      "tabs": {
+        "bids": "Ofertas",
+        "history": "Historia"
+      },
+      "menu": {
+        "report": {
+          "label": "Reportar",
+          "subject": "Reportar un NFT",
+          "body": "Quisiera reportar el siguiente NFT: {{name}} (#{{id}})\nReason: "
+        },
+        "refresh-metadata": "Actualizar metadatos"
+      },
+      "supply": "X{{supply}}",
+      "details": {
+        "title": "Detalles",
+        "chain": "Cadena",
+        "explorer": "Ver en el explorador",
+        "media": "Ver medios",
+        "metadata": "Ver metadatos"
+      }
+    },
+    "form": {
+      "title": {
+        "single": "Crear NFT Individual",
+        "multiple": "Crear Multiples NFTs"
+      },
+      "preview": "Previsualizar",
+      "notifications": {
+        "created": "¡Tu NFT ha sido creado!"
+      },
+      "notFound": {
+        "title": "Colección no encontrada",
+        "description": "La colección en la que está intentando crear un NFT no existe",
+        "link": "Crear en otra colección"
+      }
+    },
+    "typeSelector": {
+      "title": "Crear NFT",
+      "description": "Elige \"Individual\" si quieres que tu NFT sea único, ó \"Multiple\" si quieres que existan multiples copias de un mismo NFT.",
+      "single": {
+        "title": "Individual",
+        "type": "ERC721"
+      },
+      "multiple": {
+        "title": "Multiple",
+        "type": "ERC1155"
+      },
+      "empty": {
+        "title": "No se ha encontrado ninguna colección",
+        "description": "Ninguna colección está abierta a la menta"
+      }
+    },
+    "restricted": {
+      "title": "Creación Restringida para Usuarios Verificados",
+      "description": "Para solicitar la verificación de tu cuenta, por favor contacta a nuestro equipo de soporte en <0/> y te ayudaremos en cada paso del proceso.",
+      "info": "Una vez tu cuenta haya sido verificada, recibirás una notificación y podrás acceder a las funciones de creación en nuestra plataforma."
+    }
+  },
+  "login": {
+    "title": "¡Bienvenido!",
+    "subtitle": "Inicia sesión con tu Wallet",
+    "description": "Conéctate con alguna de las siguientes opciones:",
+    "alternative": "O inicia sesión con:",
+    "successes": {
+      "invitation": "Tu invitación ha sido asociada a tu cuenta."
+    },
+    "errors": {
+      "wrong-network": "Estás en la red incorrecta. Por favor, conéctate a la red {{networkName}}.",
+      "invitation": "Tu invitación no pudo ser asociada a ésta cuenta. Asegúrate que la cuenta no haya sido asociada a otro código de invitación previamente."
+    }
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "loadMore": "Mostrar más",
+    "empty": {
+      "title": "No Hay Notificaciones",
+      "description": "Vuelve más tarde o explora la plataforma mientras tanto"
+    }
+  },
+  "offers": {
+    "bid": {
+      "meta": {
+        "title": "Crea una oferta para {{name}}",
+        "description": "Crea una oferta para {{name}} creado por {{creator}}"
+      },
+      "title": "Crea una oferta",
+      "notifications": {
+        "created": "¡Tu oferta ha sido creada!"
+      },
+      "highestBid": "Oferta más alta"
+    },
+    "checkout": {
+      "from": "Vendedor",
+      "meta": {
+        "title": "Comprar {{name}}",
+        "description": "Comprar {{name}} creado por {{creator}}"
+      },
+      "title": "Finalizar Compra",
+      "notifications": {
+        "purchased": "¡La compra se realizó exitosamente!"
+      },
+      "on-sale": "En venta por",
+      "per-edition": "per edition"
+    },
+    "form": {
+      "meta": {
+        "title": "Crea una oferta por {{name}}",
+        "description": "Crea una oferta por {{name}}"
+      },
+      "title": "Oferta por el NFT",
+      "notifications": {
+        "created": "Tu oferta ha sido creada."
+      }
+    }
+  },
+  "user": {
+    "bid-placed": {
+      "nav": {
+        "received": "Recibida",
+        "placed": "Colocada"
+      },
+      "notifications": {
+        "canceled": "Oferta cancelada"
+      },
+      "actions": {
+        "cancel": "Cancelar",
+        "new": "Nueva oferta"
+      },
+      "orderBy": {
+        "label": "Ordenar por",
+        "values": {
+          "createdAtDesc": "Fecha: más recientes",
+          "createdAtAsc": "Fecha: más antiguos"
+        }
+      },
+      "table": {
+        "item": "Item",
+        "price": "Monto Total",
+        "status": "Estatus",
+        "created": "Colocada",
+        "empty": {
+          "title": "No Se Han Encontrado Resultados",
+          "description": "Vuelve más tarde o explora la plataforma mientras tanto"
+        }
+      },
+      "requested": "{{value}} solicitado",
+      "status": {
+        "expired": "Expirada",
+        "active": "Activa"
+      },
+      "cancel": {
+        "title": "Cancelar Oferta"
+      }
+    },
+    "bid-received": {
+      "nav": {
+        "received": "Recibida",
+        "placed": "Colocada"
+      },
+      "notifications": {
+        "accepted": "Oferta Aceptada"
+      },
+      "actions": {
+        "accept": "Aceptar",
+        "view": "Ver NFT"
+      },
+      "orderBy": {
+        "label": "Ordenar por",
+        "values": {
+          "createdAtDesc": "Fecha: más recientes",
+          "createdAtAsc": "Fecha: más antiguos"
+        }
+      },
+      "table": {
+        "item": "Item",
+        "price": "Monto Total",
+        "from": "Comprador",
+        "created": "Recibida",
+        "empty": {
+          "title": "No Se Han Encontrado Resultados",
+          "description": "Vuelve más tarde o explora la plataforma mientras tanto"
+        }
+      },
+      "requested": "{{value}} solicitado",
+      "accept": {
+        "title": "Aceptar Oferta"
+      }
+    },
+    "created-assets": {
+      "orderBy": {
+        "values": {
+          "createdAtDesc": "Fecha: más recientes",
+          "createdAtAsc": "Fecha: más antiguos"
+        }
+      }
+    },
+    "fixed": {
+      "nav": {
+        "fixed": "Precio Fijo"
+      },
+      "notifications": {
+        "canceled": "Oferta cancelada"
+      },
+      "actions": {
+        "cancel": "Cancelar",
+        "new": "Nueva venta"
+      },
+      "orderBy": {
+        "label": "Ordenar por",
+        "values": {
+          "createdAtDesc": "Fecha: más recientes",
+          "createdAtAsc": "Fecha: más antiguos",
+          "unitPriceAsc": "Precio: menor a mayor",
+          "unitPriceDesc": "Precio: mayor a menor"
+        }
+      },
+      "table": {
+        "item": "Item",
+        "price": "Precio (individual)",
+        "status": "Estatus",
+        "created": "Creado",
+        "empty": {
+          "title": "No Se Han Encontrado Resultados",
+          "description": "Vuelve más tarde o explora la plataforma mientras tanto"
+        }
+      },
+      "status": {
+        "active": "Activa",
+        "expired": "Expirada"
+      },
+      "available": "{{value}} a la venta",
+      "cancel": {
+        "title": "Cancelar Oferta"
+      }
+    },
+    "on-sale-assets": {
+      "orderBy": {
+        "values": {
+          "createdAtDesc": "Lo más reciente",
+          "createdAtAsc": "Lo más antiguo"
+        }
+      }
+    },
+    "owned-assets": {
+      "orderBy": {
+        "values": {
+          "createdAtDesc": "Fecha: más recientes",
+          "createdAtAsc": "Fecha: más antiguos"
+        }
+      }
+    },
+    "trade-purchased": {
+      "nav": {
+        "sold": "Vendido",
+        "purchased": "Comprado"
+      },
+      "orderBy": {
+        "label": "Ordenar por",
+        "values": {
+          "timestampDesc": "Fecha: lo más reciente",
+          "timestampAsc": "Fecha: lo más antiguo",
+          "amountAsc": "Cantidad: menor a mayor",
+          "amountDesc": "Cantidad: mayor a menor"
+        }
+      },
+      "table": {
+        "item": "Item",
+        "price": "Monto Total",
+        "from": "Vendedor",
+        "created": "Comprado",
+        "empty": {
+          "title": "No Se Han Encontrado Resultados",
+          "description": "Vuelve más tarde o explora la plataforma mientras tanto"
+        }
+      },
+      "purchased": "{{value}} comprado"
+    },
+    "trade-sold": {
+      "nav": {
+        "sold": "Vendido",
+        "purchased": "Comprado"
+      },
+      "orderBy": {
+        "label": "Ordenar por",
+        "values": {
+          "timestampDesc": "Fecha: lo más reciente",
+          "timestampAsc": "Fecha: lo más antiguo",
+          "amountAsc": "Cantidad: menor a mayor",
+          "amountDesc": "Cantidad: mayor a menor"
+        }
+      },
+      "table": {
+        "item": "Item",
+        "price": "Monto Total",
+        "to": "Comprador",
+        "created": "Vendido",
+        "empty": {
+          "title": "No Se Han Encontrado Resultados",
+          "description": "Vuelve más tarde o explora la plataforma mientras tanto"
+        }
+      },
+      "sold": "{{value}} vendido"
+    }
+  },
+  "users": {
+    "form": {
+      "notifications": {
+        "updated": "Tu perfil ha sido actualizado."
+      }
+    }
+  }
+}
