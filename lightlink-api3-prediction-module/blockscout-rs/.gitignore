@@ -1,0 +1,28 @@
+## File system
+.DS_Store
+desktop.ini
+
+## Editor
+*.swp
+*.swo
+Session.vim
+.cproject
+.idea
+*.iml
+.vscode
+.project
+.favorites.json
+.settings/
+
+## Build
+**/target
+
+.pre-commit-config.yaml
+config.toml
+
+## Cargo.lock for libs
+libs/Cargo.lock
+
+## Secrets
+**.decrypted~**
+**.dec**

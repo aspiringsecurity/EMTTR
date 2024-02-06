@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = [
+    "stats",
+    "stats-proto",
+    "stats-server",
+    "stats/migration",
+    "stats/entity",
+]
+
+[workspace.dependencies]
+blockscout-service-launcher = { version = "0.10.0" }

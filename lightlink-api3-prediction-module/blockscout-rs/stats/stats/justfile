@@ -1,0 +1,20 @@
+# just is like `make` but better https://github.com/casey/just
+
+# list all recipes
+default:
+    just --list --unsorted
+
+migrate-up database_url="postgres://postgres:admin@localhost:5432/stats":
+    DATABASE_URL={{database_url}} sea-orm-cli migrate up
+
+migrate-down database_url="postgres://postgres:admin@localhost:5432/stats":
+    DATABASE_URL={{database_url}} sea-orm-cli migrate down
+
+new-migration name:
+    sea-orm-cli migrate generate {{name}}
+
+generate-entities database_url="postgres://postgres:admin@localhost:5432/stats":
+    DATABASE_URL={{database_url}} sea-orm-cli generate entity --lib -o entity/src
+    cargo fmt --all -- --config imports_granularity=Crate
+
+# restart-generate-entities: restart-postgres migrate-up generate-entities stop-postgres
