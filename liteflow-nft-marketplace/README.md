@@ -1,10 +1,22 @@
-# Marketplace template
+# DICOM NFT Marketplace using Liteflow 
 
-This repository is an example of an application running on the [Liteflow](https://liteflow.com) infrastructure to showcase the uses of the infrastructure and/or be used as a starter kit to launch a product fast.
+Liteflow powered NFT marketplace for DICOM images for research organizations and radiologists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and NFT marketplace. 
+
+We are extending the Liteflow template for NFT markteplace to support multiple Ethereum based L2 networks.
+
+Steps:
+
+```
+npm run dev
+```
+
+Dapplication is now accessible at http://localhost:3000
+
+
 
 ## Features included
 
-The Marketplace template includes the following features:
+Features:
 
 - Open collections (User-generated content)
   - Mint ERC-721
