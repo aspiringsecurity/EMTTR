@@ -1,0 +1,19 @@
+repos:
+-   repo: https://github.com/tekwizely/pre-commit-golang
+    rev: master
+    hooks:
+    # Go Mod Tidy
+    -   id: go-mod-tidy-repo
+    # Go Test
+    -   id: go-test-mod
+        args: [-v, -race]
+    # GolangCI-Lint
+    -   id: golangci-lint-repo-mod
+- repo: https://github.com/dnephin/pre-commit-golang
+  rev: master
+  hooks:
+    - id: validate-toml
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: master
+  hooks:
+    - id: markdownlint
