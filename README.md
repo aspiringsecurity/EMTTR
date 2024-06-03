@@ -78,6 +78,24 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 # BlockChain Eco-system
 
+# Chainlink
+
+We are utilizing Chainlink VRF as follows:
+
+Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
+
+Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
+
+NFT and Certificate for Good research services in drug discovery: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating
+
+Drug Discovery Service Providers (CRO) and Pharma Service Organizations Payouts: Chainlink Parametric Insurance dapp at https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout
+
+Truflation Market Insight modules for Chainlink services and Covalent End-points/Dashboard: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/truflation-insight
+
+IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
+
+
+
 # Optimism
 
 ## Optimism User Interaction 
@@ -130,22 +148,6 @@ Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tr
 FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel oneapi, medical billing and invoicing: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/medical-invoice-to-cash-automation-oneapi
 
 Tableland: We are using tableland to develop a notes application and are maintaining it along with dicom file assets. This enables us to make the dicom asset files searchable, sortable and enables us to reuse and repurpose them for user training. Tableland enables us to document the dicom file output files and store the notes in an RDBMS (SQL) type database.
-
-# Chainlink
-
-We are utilizing Chainlink VRF as follows:
-
-Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
-
-Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
-
-NFT and Certificate for Good research services in drug discovery: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating
-
-Drug Discovery Service Providers (CRO) and Pharma Service Organizations Payouts: Chainlink Parametric Insurance dapp at https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout
-
-Truflation Market Insight modules for Chainlink services and Covalent End-points/Dashboard: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/truflation-insight
-
-IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
 
 
 # Details
