@@ -13,6 +13,8 @@ Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=
 
 Optimism Deployment Website: https://op-medicine-deploy.vercel.app/
 
+PPT Token Deployment on Optimism: https://sepolia-optimism.etherscan.io/address/0xC00BBC9A2C88712dC1e094866973F036373C7134#code and https://sepolia-optimism.etherscan.io/address/0xFC27e0420faBA3965dBdd7B3bAF202A10c6d258a#code .
+
 ## Update
 
 Chainlink powered NFT marketplace for DICOM images for research organizations and radiologists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/liteflow-nft-marketplace
