@@ -3,7 +3,7 @@
 Mission: Web3 Developer tools for making personalized medicine affordable and accessible.
 
 
-EMTTRs: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools like Lightlink, Blockscout and Liteflow NFT marketplaces.
+EMTTR: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools like Lightlink, Blockscout and Liteflow NFT marketplaces.
 
 EMTTRs' Website: https://emttr-deploy.vercel.app/
 
