@@ -19,6 +19,14 @@ PPT Token Deployment on Optimism: https://sepolia-optimism.etherscan.io/address/
 
 Usage in Decentralized Health Care Portal dapp in India: please visit demo and community deck at https://drive.google.com/drive/folders/1ujDwzGw_chF3PYNK8tgcLmS6l9DRJxJG?usp=drive_link 
 
+## Github Impact Metrics for EMTTR x Py-libp2p
+
+Please visit: https://docs.google.com/document/d/1EeDx_V51FxeZzRoFQjIaboOf2HTlVzHRHHEdV1tN0sc/edit?usp=sharing
+
+Testimonials and Impact Metrics: https://op-medicine-pylibp2p.vercel.app/testimonials 
+
+Community Page on Google sites (received a prize from Google at Blocktest hackathon): https://sites.google.com/view/emttrservice/  
+
 ## Updates
 
 Chainlink powered NFT marketplace for DICOM images for research organizations and radiologists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/liteflow-nft-marketplace
