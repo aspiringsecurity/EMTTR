@@ -57,8 +57,7 @@ Our goal is to make **personalized medicine affordable and accessible** by offer
 ## 🧰 Repositories
 
 ### 🧩 Ionic Versions
-- [fil-token-gated-dapp-de-storage](https://github.com/seetadev/fil-token-gated-dapp-de-storage)  
-- [fil-token-gated-dapp-storacha](https://github.com/seetadev/fil-token-gated-dapp-storacha)  
+- [fil-token-gated-dapp-de-storage](https://github.com/seetadev/fil-token-gated-dapp-de-storage)   
 - [Invoice-PPT-Subscribe-Storacha-Storage (main)](https://github.com/seetadev/Invoice-PPT-Subscribe-Storacha-Storage/tree/main)  
 - [Invoice-PPT-Subscribe-Storacha-Storage (v2)](https://github.com/seetadev/Invoice-PPT-Subscribe-Storacha-Storage/tree/v2)
 
