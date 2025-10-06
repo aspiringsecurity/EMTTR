@@ -1,9 +1,9 @@
 # About
 
-Mission: Web3 Developer tools for making personalized medicine affordable and accessible on Filecoin, Ethereum and Optimism.
+Mission: Web3 Developer tools for making personalized medicine affordable and accessible.
 
 
-EMTTR (OP Medicine): Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools like Lightlink, Blockscout and Liteflow NFT marketplaces.
+EMTTR (OP Medicine): Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools powered by **Filecoin**, **Ethereum** and **Optimism**.
 
 Project Website: https://op-medicine-deploy.vercel.app/
 
