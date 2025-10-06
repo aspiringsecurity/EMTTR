@@ -5,13 +5,13 @@ Mission: Web3 Developer tools for making personalized medicine affordable and ac
 
 EMTTR: Electronic Medicine Trial and Test Records as a Service for Secure, Transparent Drug Testing Pipeline. Developer Tools to enable medical trial testing, clinical trials via Electronic Medicine Trial and Test Records as a Service, Electronic Health Records, Open Source Radiology platform & solutions, Web3 eco-system tools like Lightlink, Blockscout and Liteflow NFT marketplaces.
 
-EMTTRs' Website: https://emttr-deploy.vercel.app/
+Project Website: https://op-medicine-deploy.vercel.app/
 
 Information Website for Civic Bodies: https://sites.google.com/view/emttrservice/
 
 Medical Invoice Deployment with PPT token on Filecoin Mainnet: https://invoice-ppt-subscribe-storacha-storage.vercel.app/
 
-Deployment Website: https://op-medicine-deploy.vercel.app/
+EMTTRs' Deployment Website: https://emttr-deploy.vercel.app/
 
 ## Filecoin Mainnet Deployments
 
