@@ -56,7 +56,7 @@ Our goal is to make **personalized medicine affordable and accessible** by offer
 
 ## 🧰 Repositories
 
-### 🧩 Ionic Versions
+### 🧩 Filecoin Developer Tooling Repositories (Ionic Versions)
 - [fil-token-gated-dapp-de-storage](https://github.com/seetadev/fil-token-gated-dapp-de-storage)   
 - [Invoice-PPT-Subscribe-Storacha-Storage (main)](https://github.com/seetadev/Invoice-PPT-Subscribe-Storacha-Storage/tree/main)  
 - [Invoice-PPT-Subscribe-Storacha-Storage (v2)](https://github.com/seetadev/Invoice-PPT-Subscribe-Storacha-Storage/tree/v2)
@@ -107,8 +107,11 @@ Filecoin’s programmable storage and verification capabilities enable **verifia
 - **Main Website:** [https://op-medicine-deploy.vercel.app/](https://op-medicine-deploy.vercel.app/)  
 - **Developer Portal:** [https://emttr-deploy.vercel.app/](https://emttr-deploy.vercel.app/)  
 - **Community Page:** [https://sites.google.com/view/emttrservice/](https://sites.google.com/view/emttrservice/)  
-- **Sushiswap Listing (Filecoin):** [Liquidity Pool](https://calibration.filfox.info/en/address/0xb84A2bC5Dd76BcD6548022Ac86e77b84acB94A87)  
-- **PPT Token (Optimism):** [Etherscan](https://optimistic.etherscan.io/address/0xa9c14d3e8ece4d924a4a4a819088f982b55f6734)  
+- **Sushiswap Listing (Filecoin):** [Liquidity Pool](https://calibration.filfox.info/en/address/0xb84A2bC5Dd76BcD6548022Ac86e77b84acB94A87)
+- **PPT Token (Filecoin):** [Filfox](https://filfox.info/en/address/0xC00BBC9A2C88712dC1e094866973F036373C7134) 
+- **PPT Token (Optimism):** [Etherscan](https://optimistic.etherscan.io/address/0xa9c14d3e8ece4d924a4a4a819088f982b55f6734)
+- **Medical Invoice (Filecoin):** [Filfox](https://filfox.info/en/address/0x08bacb51f405a2D793E4F4BE53Ca2B3C8b8cF0CA)
+- **Filecoin Storage Subscription Module:** [Filfox](https://filfox.info/en/address/0xb0Bda1Ad964a55ACB077587e42BDfeC587D7e520)
 
 
 
