@@ -1,4 +1,4 @@
-# 🩺 OP Medicine – Personalized & Affordable Healthcare on Filecoin, Ethereum, IPFS and Optimism
+# 🩺 OP Medicine – Personalized & Affordable Healthcare on Filecoin and Optimism
 
 ## 🎯 Mission
 Empowering developers to build **affordable, accessible, and personalized medicine applications** through **Web3 healthcare infrastructure** — powered by **Filecoin, Ethereum, and Optimism**.
