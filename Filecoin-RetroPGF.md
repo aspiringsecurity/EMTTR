@@ -74,6 +74,7 @@ Our goal is to make **personalized medicine affordable and accessible** by offer
 
 | Version | Type | URL |
 |----------|------|-----|
+| Medical Invoice with PPT token on Filecoin Mainnet | Main | [Filecoin Mainnet Deployment](https://invoice-ppt-subscribe-storacha-storage.vercel.app/) |
 | EMTTR Developer Portal | Main | [https://emttr-deploy.vercel.app/](https://emttr-deploy.vercel.app/) |
 | OP Medicine Platform | Main | [https://op-medicine-deploy.vercel.app/](https://op-medicine-deploy.vercel.app/) |
 | Civic Bodies Info Site | Community | [https://sites.google.com/view/emttrservice/](https://sites.google.com/view/emttrservice/) |
