@@ -9,6 +9,8 @@ EMTTRs' Website: https://emttr-deploy.vercel.app/
 
 Information Website for Civic Bodies: https://sites.google.com/view/emttrservice/
 
+Medical Invoice Deployment with PPT token on Filecoin Mainnet: https://invoice-ppt-subscribe-storacha-storage.vercel.app/
+
 Deployment Website: https://op-medicine-deploy.vercel.app/
 
 ## Filecoin Mainnet Deployments
@@ -24,6 +26,7 @@ Deployment Website: https://op-medicine-deploy.vercel.app/
 - Medical Invoice contract - 0xb0Bda1Ad964a55ACB077587e42BDfeC587D7e520
 - Filefox address: https://filfox.info/en/address/0xb0Bda1Ad964a55ACB077587e42BDfeC587D7e520
 
+Medical Invoice Deployment with PPT token on Filecoin Mainnet: https://invoice-ppt-subscribe-storacha-storage.vercel.app/
 
 
 PPT Token Deployment on OP Mainnet: https://optimistic.etherscan.io/address/0xa9c14d3e8ece4d924a4a4a819088f982b55f6734 
