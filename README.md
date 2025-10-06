@@ -9,9 +9,22 @@ EMTTRs' Website: https://emttr-deploy.vercel.app/
 
 Information Website for Civic Bodies: https://sites.google.com/view/emttrservice/
 
-Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
+Deployment Website: https://op-medicine-deploy.vercel.app/
 
-Optimism Deployment Website: https://op-medicine-deploy.vercel.app/
+## Filecoin Mainnet Deployments
+
+- PPT Token - 0xC00BBC9A2C88712dC1e094866973F036373C7134
+- Filefox address: https://filfox.info/en/address/0xC00BBC9A2C88712dC1e094866973F036373C7134
+
+- Medical Invoice contract - 0x08bacb51f405a2D793E4F4BE53Ca2B3C8b8cF0CA
+- Filefox address: https://filfox.info/en/address/0x08bacb51f405a2D793E4F4BE53Ca2B3C8b8cF0CA
+
+### After adding Subscription Feature the deployed contracts
+
+- Medical Invoice contract - 0xb0Bda1Ad964a55ACB077587e42BDfeC587D7e520
+- Filefox address: https://filfox.info/en/address/0xb0Bda1Ad964a55ACB077587e42BDfeC587D7e520
+
+
 
 PPT Token Deployment on OP Mainnet: https://optimistic.etherscan.io/address/0xa9c14d3e8ece4d924a4a4a819088f982b55f6734 
 
@@ -44,11 +57,13 @@ Attestation Hub Contract for Medical Reports: We are extending the AttestationSt
 
 # Grants and Notable Achievements 
 
-Grant Recipient for Nomination in Tooling and Utilities segment at Optimism Retroactive Public Goods Funding Round 2: https://optimism.mirror.xyz/Upn_LtV2-3SviXgX_PE_LyA7YI00jQyoM1yf55ltvvI?rpgf=2 (please visit shorturl.at/hqESZ)
+- Grant Recipient for Nomination in Tooling and Utilities segment at Optimism Retroactive Public Goods Funding Round 2: https://optimism.mirror.xyz/Upn_LtV2-3SviXgX_PE_LyA7YI00jQyoM1yf55ltvvI?rpgf=2 (please visit shorturl.at/hqESZ)
 
-Optimism Prize Achievement: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 ; https://optimistic.etherscan.io/tx/0x94822e1a9953a5a3c67b51c4f2c2a300cca19103cf85e8761651ad0c54fe3421 
+- Optimism Prize Achievement: https://medium.com/encode-club/metaverse-hackathon-prizewinners-and-summary-5d12353cc214 ; https://optimistic.etherscan.io/tx/0x94822e1a9953a5a3c67b51c4f2c2a300cca19103cf85e8761651ad0c54fe3421 
 
-Filecoin Prize Achievement: Filecoin prize winner at Chainlink Fall hackathon 2022; EVM Ideathon Runner-Up 2022 (Government and Public Goods in Healthcare)
+Pitch Video at Encode Metaverse Hackathon 2022: https://www.youtube.com/watch?v=aIq3JiTlNVA
+
+- Filecoin Prize Achievement: Filecoin prize winner at Chainlink Fall hackathon 2022; EVM Ideathon Runner-Up 2022 (Government and Public Goods in Healthcare)
 
 Other key achievements: Runner-up at HealthChainhack, Boston ($6000 credits recipient); Young Scientist Award in Healthcare at India International Science Festival; Get in the Ring startup winner from India. 
 
@@ -92,24 +107,6 @@ A greater and more seamless flow of information within a digital drug discovery 
 
 # BlockChain Eco-system
 
-# Chainlink
-
-We are utilizing Chainlink VRF as follows:
-
-Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
-
-Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
-
-NFT and Certificate for Good research services in drug discovery: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating
-
-Drug Discovery Service Providers (CRO) and Pharma Service Organizations Payouts: Chainlink Parametric Insurance dapp at https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout
-
-Truflation Market Insight modules for Chainlink services and Covalent End-points/Dashboard: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/truflation-insight
-
-IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
-
-
-
 # Optimism
 
 ## Optimism User Interaction 
@@ -131,7 +128,22 @@ EthGlobal Community: https://twitter.com/ETHGlobal/status/1637180703413530632
 6. Attestation Hub Contract for Medical Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports. We look forward to enabling patients to use OP for all their medi-claim transaction needs and collaborating with Third Party administrators.
 
 
-## Optimism Modules for Developer Tooling and Utilities, References
+# IPFS and Filecoin eco-system, Ethereum and Optimism, Embark, Status
+
+1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
+
+Please visit DataDAO for DICOM image and patient metadata in FVM Medicine solution: https://github.com/aspiringsecurity/EMTTR/tree/main/fvm-dicom-data-dao
+
+We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
+
+Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/ehrs-medical-history-module
+
+FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel oneapi, medical billing and invoicing: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/medical-invoice-to-cash-automation-oneapi
+
+Tableland: We are using tableland to develop a notes application and are maintaining it along with dicom file assets. This enables us to make the dicom asset files searchable, sortable and enables us to reuse and repurpose them for user training. Tableland enables us to document the dicom file output files and store the notes in an RDBMS (SQL) type database.
+
+
+## Optimism and Filecoin Modules for Developer Tooling and Utilities, References
 
 1. Optimism NFT marketplace for DICOM (radiology) images for OP developers, research organizations & radioligists: Improving Data Transparency in Drug Testing Using Ethereum Blockchain and Optimism NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace
 
@@ -149,19 +161,21 @@ Sharing a smart contract for creating NFT in Optimism by one of our collaborator
 We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports
 
 
-# IPFS and Filecoin eco-system, Ethereum and Optimism, Embark, Status
+# Chainlink
 
-1b. FVM enables us to use composable blocks exposed through standardized interfaces, enabling the construction of picture archiving and medical imaging solutions. This improves better outcomes for drug testing, counseling (https://sites.google.com/view/fevm-med/home?authuser=8 ), precision medicine. Links: https://youtu.be/BUiVvhuUdrE (dapp, security), https://youtu.be/BUiVvhuUdrE (dapp, portal).
+We are utilizing Chainlink VRF as follows:
 
-Please visit DataDAO for DICOM image and patient metadata in FVM Medicine solution: https://github.com/aspiringsecurity/EMTTR/tree/main/fvm-dicom-data-dao
+Research Contract Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the research contract bill.
 
-We are generating NFTs for NFC tags of practice license of TPAs and pharma professionals involved in bulk query and retrieve operation of DICOM images. Please find the repository for NFT generation on FVM for NFC tags of TPAs and pharma professionals at https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/nfc-tag-nft-fvm
+Parametric Insurance Solution for medicine discovery with special procedures. We are utilizing an existing example at chainlink github repo to develop an insurance solution for contract researchers. Link: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/Chainlink-VRF
 
-Medical History Journal using IPFS: https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/ehrs-medical-history-module
+NFT and Certificate for Good research services in drug discovery: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/NFT-giveaway-certificate-service-rating
 
-FVM Analytics and Developer Tooling for Invoice to Cash automation using Intel oneapi, medical billing and invoicing: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/medical-invoice-to-cash-automation-oneapi
+Drug Discovery Service Providers (CRO) and Pharma Service Organizations Payouts: Chainlink Parametric Insurance dapp at https://github.com/aspiringsecurity/EMTTR/tree/main/Drug-Discovery-service-payout
 
-Tableland: We are using tableland to develop a notes application and are maintaining it along with dicom file assets. This enables us to make the dicom asset files searchable, sortable and enables us to reuse and repurpose them for user training. Tableland enables us to document the dicom file output files and store the notes in an RDBMS (SQL) type database.
+Truflation Market Insight modules for Chainlink services and Covalent End-points/Dashboard: https://github.com/aspiringsecurity/EMTTR/tree/main/covalent-nft-dashboard/truflation-insight
+
+IPFS Chainlink Monitor: Workflow tool using ethereum blockchain network, store on IPFS/Filecoin via NFT.Storage, Chainlink for storing offchain billing metadata, Chainlink Data Feeds and automation for TPA claims and payments. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/Quotation-dapp-contract-management/IPFS-Chainlink-Monitor
 
 
 # Details
