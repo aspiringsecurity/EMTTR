@@ -40,21 +40,6 @@ Testimonials and Impact Metrics: https://op-medicine-pylibp2p.vercel.app/testimo
 
 Community Page on Google sites (received a prize from Google at Blocktest hackathon): https://sites.google.com/view/emttrservice/  
 
-## Updates
-
-Chainlink powered NFT marketplace for DICOM images for research organizations and radiologists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/liteflow-nft-marketplace
-
-Scroll and Avalanche, Blockscout interactions with Lightlink modules and OP Modules: Blockscout provides a comprehensive, easy-to-use interface for users to view, confirm, inspect and interact on EVM (Ethereum Virtual Machine) blockchains.  We are developing 2 transparent tools for OP Medicine, which are needed to analyze and validate OP Medicine transactions. Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: trace optimism transactions in DICOM NFT marketplace for enabling data authenticity and transparency. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/lightlink-api3-prediction-module/blockscout-rs and https://github.com/aspiringsecurity/EMTTR/tree/main/lightlink-api3-prediction-module
-
-OP MED: Low code analytics framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling and Blockscout analytics. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/MedicationLog
-
-Optimism TestXLS: Patient’s visit and Diagnosis Tooling with Blockscout based analytics tool for validation, ionic framework within OP NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
-
-Using Lightlink for giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending Lightlink API modules and OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers
-
-Attestation Hub Contract for Medical Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports. We look forward to enabling patients to use OP for all their medi-claim transaction needs and collaborating with Third Party administrators. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
-
-
 # Grants and Notable Achievements 
 
 - Grant Recipient for Nomination in Tooling and Utilities segment at Optimism Retroactive Public Goods Funding Round 2: https://optimism.mirror.xyz/Upn_LtV2-3SviXgX_PE_LyA7YI00jQyoM1yf55ltvvI?rpgf=2 (please visit shorturl.at/hqESZ)
@@ -290,6 +275,21 @@ Signature workflow in Medical Documents using Open Text API: We are building a d
 Contract Approval Workflow Application for CROS and pharma organizations: We are developing a contract approval application for CROS and pharma organizations using OpenText Cloud Platform. We are consuming IM services from the OpenText Cloud Platform and extending the demo example. Please visit: https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/demo-contract-approval-CROs
 
 OCT SSO workflow: REST service calls required to login to OCP and access information management services (IMS) from OpenText. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/OCP-sso-workflow-analytics
+
+
+- Optimism and Filecoin deployment updates
+
+Chainlink powered NFT marketplace for DICOM images for research organizations and radiologists: Improving Data Transparency in Drug Testing Using Liteflow templates, Ethereum Blockchain and NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/liteflow-nft-marketplace
+
+Scroll and Avalanche, Blockscout interactions with Lightlink modules and OP Modules: Blockscout provides a comprehensive, easy-to-use interface for users to view, confirm, inspect and interact on EVM (Ethereum Virtual Machine) blockchains.  We are developing 2 transparent tools for OP Medicine, which are needed to analyze and validate OP Medicine transactions. Tracing Optimism transactions to improve user retention and detect, analyze issues in real-time: trace optimism transactions in DICOM NFT marketplace for enabling data authenticity and transparency. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/lightlink-api3-prediction-module/blockscout-rs and https://github.com/aspiringsecurity/EMTTR/tree/main/lightlink-api3-prediction-module
+
+OP MED: Low code analytics framework tool for Medication Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling and Blockscout analytics. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/dapp_suite/MedicationLog
+
+Optimism TestXLS: Patient’s visit and Diagnosis Tooling with Blockscout based analytics tool for validation, ionic framework within OP NFT marketplace. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/dicom-optimism-marketplace/OP-testxls
+
+Using Lightlink for giving free Optimism transactions to medical volunteers sharing anonymized report data: We are extending Lightlink API modules and OpenGSN to enable 0 Optimism transaction fees for medical volunteers sharing anonymized report data using PyDICOM open source library. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/free-OP-transactions-data-volunteers
+
+Attestation Hub Contract for Medical Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Medical Reports. We look forward to enabling patients to use OP for all their medi-claim transaction needs and collaborating with Third Party administrators. Please visit https://github.com/aspiringsecurity/EMTTR/tree/main/EHRs/OP-attest-medical-reports-hub
 
 
 
