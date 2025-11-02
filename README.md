@@ -23,6 +23,8 @@ We combine **Filecoin’s verifiable storage layer** with **Optimism’s scalabl
 
 📊 **EMTTR Dashboard:** [emttr-deploy.vercel.app](https://emttr-deploy.vercel.app/)
 
+🔗 **OP Medicine + Py-libp2p Development:** [Website](https://op-medicine-pylibp2p.vercel.app/)
+
 ---
 
 ## 🧠 Core Architecture
