@@ -144,4 +144,4 @@ By extending Filecoin’s programmable storage to healthcare, OP Medicine transf
 * ⚡ **PPT Token (Optimism):** [Etherscan](https://optimistic.etherscan.io/address/0xa9c14d3e8ece4d924a4a4a819088f982b55f6734)
 * 🧾 **Medical Invoice Contract:** [Filfox](https://filfox.info/en/address/0x08bacb51f405a2D793E4F4BE53Ca2B3C8b8cF0CA)
 * 📦 **Filecoin Subscription Module:** [Filfox](https://filfox.info/en/address/0xb0Bda1Ad964a55ACB077587e42BDfeC587D7e520)
-
+* 🧱 **Community Testimonial:** [AI Research Conclave, NSUT](https://www.linkedin.com/posts/kanishka-kashyap-367429297_researchconclave2025-nsut-aiinscience-ugcPost-7303501622008045569-tbOK)
