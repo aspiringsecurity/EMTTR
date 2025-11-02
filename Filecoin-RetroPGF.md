@@ -145,5 +145,3 @@ By extending Filecoin’s programmable storage to healthcare, OP Medicine transf
 * 🧾 **Medical Invoice Contract:** [Filfox](https://filfox.info/en/address/0x08bacb51f405a2D793E4F4BE53Ca2B3C8b8cF0CA)
 * 📦 **Filecoin Subscription Module:** [Filfox](https://filfox.info/en/address/0xb0Bda1Ad964a55ACB077587e42BDfeC587D7e520)
 
-
-Would you like me to also include a **shorter version (under 1000 words)** formatted specifically for **Filecoin RetroPGF submission** — with focus on *impact, ecosystem contribution, and public goods narrative*?
